@@ -1,0 +1,1282 @@
+{
+  "ReRoutes": [
+
+    //Archive track Service 
+    {
+      "DownstreamPathTemplate": "/api/feeds",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 53302
+        }
+      ],
+      "UpstreamPathTemplate": "/feeds",
+      "Key": "FeedFromArchiveTrackService",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
+    },
+
+    //=============================================================
+    //=================== VehiclesService Start ===================
+    //=============================================================
+    //************************* Vehicle End **************************
+    //Vehicle from vehicle Service
+    {
+      "DownstreamPathTemplate": "/api/vehicles",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/vehicles",
+      "Key": "VehiclesFromVehicleService",
+      "UpstreamHttpMethod": [ "DELETE", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //Get Vehicle By Id from vehicle Service
+    {
+      "DownstreamPathTemplate": "/api/vehicles/{vehicleId=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/vehicles/{vehicleId=0}",
+      "Key": "VehiclesByIdFromVehicleService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //Get Drivers By Vehicle Id from vehicle Service
+    {
+      "DownstreamPathTemplate": "/api/vehicles/{vehicleId=0}/drivers/{driverId=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/vehicles/{vehicleId=0}/drivers/{driverId=0}",
+      "Key": "GetDriversByVehiclesIdFromVehicleService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //Get Vehicle By Id from vehicle Service
+    {
+      "DownstreamPathTemplate": "/api/vehicles/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/vehicles/{id}",
+      "Key": "DeleteVehiclesFromVehicleService",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+    //************************* Vehicle End **************************
+
+    //************************* Search Start **************************
+    //Driver from vehicle Service
+    {
+      "DownstreamPathTemplate": "/api/vehicles/search",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/vehicles/search",
+      "Key": "SearchFromVehicleService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+    //************************* Search End **************************
+
+    //************************* Device End **************************
+    //Driver from vehicle Service
+    {
+      "DownstreamPathTemplate": "/api/devices/{deviceId=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/devices/{deviceId=0}",
+      "Key": "SearchFromVehicleService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //Delete Driver from vehicle Service
+    {
+      "DownstreamPathTemplate": "/api/devices/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/devices/{id}",
+      "Key": "DeleteDeviceFromVehicleService",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //Driver from vehicle Service
+    {
+      "DownstreamPathTemplate": "/api/devices",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/devices",
+      "Key": "DeviceFromVehicleService",
+      "UpstreamHttpMethod": [ "DELETE", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* Device End **************************
+
+    //************************* Driver Start **************************
+    //Driver from vehicle Service
+    {
+      "DownstreamPathTemplate": "/api/drivers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/drivers",
+      "Key": "DriverFromVehicleService",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //Delete Driver from vehicle Service
+    {
+      "DownstreamPathTemplate": "/api/drivers/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/drivers/{id}",
+      "Key": "DeleteDriverFromVehicleService",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //Get Driver with id from vehicle Service
+    {
+      "DownstreamPathTemplate": "/api/drivers/{driverId=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/drivers/{driverId=0}",
+      "Key": "DriverWithIdFromVehicleService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* Driver End **************************
+
+    //************************* Manufacturers Start **************************
+    //Manufacturers from vehicle Service
+    {
+      "DownstreamPathTemplate": "/api/manufacturers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/manufacturers",
+      "Key": "ManufacturersFromVehicleService",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //Delete Manufacturers from vehicle Service
+    {
+      "DownstreamPathTemplate": "/api/manufacturers/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/manufacturers/{id}",
+      "Key": "DeleteManufacturersFromVehicleService",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //Get Manufacturers By Id from vehicle Service
+    {
+      "DownstreamPathTemplate": "/api/manufacturers/{manufacturerId=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/manufacturers/{manufacturerId=0}",
+      "Key": "GetManufacturersWithIdFromVehicleService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //Get Model By Manufacturers Id from vehicle Service
+    {
+      "DownstreamPathTemplate": "/api/manufacturers/{manufacturerId=0}/model",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/manufacturers/{manufacturerId=0}/model",
+      "Key": "ModelFromManufacturersFromVehicleService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* Manufacturers Start **************************
+
+    //************************* Car Models Start **************************
+    //Models from vehicle Service
+    {
+      "DownstreamPathTemplate": "/api/models",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/models",
+      "Key": "ModelsFromVehicleService",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //Delete Models from vehicle Service
+    {
+      "DownstreamPathTemplate": "/api/models/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/models/{id}",
+      "Key": "DeleeteModelsFromVehicleService",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+    //************************* Car Models End **************************
+
+    //=============================================================
+    //==================== VehiclesService End ====================
+    //=============================================================
+
+    //=============================================================
+    //================ AdvertisementsService Start ================
+    //=============================================================
+
+    //************************* Medias Start **************************
+
+    // Medias from Advertisements Service
+    {
+      "DownstreamPathTemplate": "/api/medias",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56411
+        }
+      ],
+      "UpstreamPathTemplate": "/medias",
+      "Key": "MediasFromAdvertisementsService",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Medias by id from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/api/medias/{id=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56411
+        }
+      ],
+      "UpstreamPathTemplate": "/medias/{id=0}",
+      "Key": "MediasByIdFromAdvertisementsService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Medias from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/api/medias/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56411
+        }
+      ],
+      "UpstreamPathTemplate": "/medias/{id}",
+      "Key": "DeleteMediasFromAdvertisementsService",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* Medias End ****************************
+
+    //************************* Interval Start **************************
+    // Intervals from Advertisements Service
+    {
+      "DownstreamPathTemplate": "/api/intervals",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56411
+        }
+      ],
+      "UpstreamPathTemplate": "/intervals",
+      "Key": "IntervalsFromAdvertisementsService",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Intervals by id from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/api/intervals/{id=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56411
+        }
+      ],
+      "UpstreamPathTemplate": "/intervals/{id=0}",
+      "Key": "IntervalsByIdFromAdvertisementsService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Interval from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/api/intervals/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56411
+        }
+      ],
+      "UpstreamPathTemplate": "/intervals/{id}",
+      "Key": "DeleteIntervalsFromAdvertisementsService",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+    //************************* Interval End **************************
+
+    //************************* Campaign Start **************************
+    // Campaigns Medias from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/api/campaigns",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56411
+        }
+      ],
+      "UpstreamPathTemplate": "/campaigns",
+      "Key": "CampaignsFromAdvertisementsService",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Campaigns By Id from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/api/campaigns/{id=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56411
+        }
+      ],
+      "UpstreamPathTemplate": "/campaigns/{id=0}",
+      "Key": "CampaignsByIdFromAdvertisementsService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Advertisements of Campaigns By Id from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/api/campaigns/{id=0}/advertisements/{advertisementsId=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56411
+        }
+      ],
+      "UpstreamPathTemplate": "/campaigns/{id=0}/advertisements/{advertisementsId=0}",
+      "Key": "AdvertisementsOfCampaignsFromAdvertisementsService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Advertisements of active campaign of Campaigns By Id from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/api/campaigns/advertisementsqr",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56411
+        }
+      ],
+      "UpstreamPathTemplate": "/campaigns/advertisementsqr",
+      "Key": "AdvertisementsOfActiveCampaignsFromAdvertisementsService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Campaigns from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/api/campaigns/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56411
+        }
+      ],
+      "UpstreamPathTemplate": "/campaigns/{id}",
+      "Key": "DeleteCampaignsFromAdvertisementsService",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+    //************************* Campaign End **************************
+
+    //************************* Advertisements End **************************
+    // Advertisements from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/api/advertisements",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56411
+        }
+      ],
+      "UpstreamPathTemplate": "/advertisements",
+      "Key": "AdvertisementsFromAdvertisementsService",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Advertisements By Id from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/api/advertisements/{id=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56411
+        }
+      ],
+      "UpstreamPathTemplate": "/advertisements/{id=0}",
+      "Key": "AdvertisementsByIdFromAdvertisementsService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Advertisements By Institution Id from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/api/institutions/{institutionId}/advertisements/{advertisementsId=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56411
+        }
+      ],
+      "UpstreamPathTemplate": "/institutions/{institutionId}/advertisements/{advertisementsId=0}",
+      "Key": "AdvertisementsByInstitutionIdFromAdvertisementsService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Advertisements from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/api/advertisements/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56411
+        }
+      ],
+      "UpstreamPathTemplate": "/advertisements/{id}",
+      "Key": "DeleteAdvertisementsFromAdvertisementsService",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* Advertisements End **************************
+
+
+    //=============================================================
+    //================ AdvertisementsService End ==================
+    //=============================================================
+
+    //=============================================================
+    //================ Institutions Start =========================
+    //=============================================================
+
+    //************************* Institutions Start **************************
+
+    // Institutions from Institutions Service
+    {
+      "DownstreamPathTemplate": "/api/institutions",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 62574
+        }
+      ],
+      "UpstreamPathTemplate": "/institutions",
+      "Key": "InstitutionsFromInstitutionsService",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Institutions By Id from Institutions Service
+    {
+      "DownstreamPathTemplate": "/api/institutions/{institutionId=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 62574
+        }
+      ],
+      "UpstreamPathTemplate": "/institutions/{institutionId=0}",
+      "Key": "InstitutionsByIdFromInstitutionsService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Institutions from Institutions Service
+    {
+      "DownstreamPathTemplate": "/api/institutions/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 62574
+        }
+      ],
+      "UpstreamPathTemplate": "/institutions/{id}",
+      "Key": "DeleteInstitutionsFromInstitutionsService",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* Institutions End **************************
+
+    //************************* Invitation Start **************************
+    // Invitation from Institutions Service
+    {
+      "DownstreamPathTemplate": "/api/officers/{officerid=0}/invitations",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 62574
+        }
+      ],
+      "UpstreamPathTemplate": "/officers/{officerid=0}/invitations",
+      "Key": "InvitationFromInstitutionsService",
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Institutions from Institutions Service
+    {
+      "DownstreamPathTemplate": "/api/officers/{officerid=0}/{invitations}/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 62574
+        }
+      ],
+      "UpstreamPathTemplate": "/officers/{officerid=0}/{invitations}/{id}",
+      "Key": "DeleteInvitationFromInstitutionsService",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Institutions By Id from Institutions Service
+    {
+      "DownstreamPathTemplate": "/invitations/{invitationId=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 62574
+        }
+      ],
+      "UpstreamPathTemplate": "/invitations/{invitationId=0}",
+      "Key": "InvitationByIdFromInstitutionsService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+    //************************* Invitation End **************************
+
+    //************************* Officers Start **************************
+    // Officers from Institutions Service
+    {
+      "DownstreamPathTemplate": "/api/officers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 62574
+        }
+      ],
+      "UpstreamPathTemplate": "/officers",
+      "Key": "OfficersFromInstitutionsService",
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Officers By Id from Institutions Service
+    {
+      "DownstreamPathTemplate": "/api/officers/{officersId=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 62574
+        }
+      ],
+      "UpstreamPathTemplate": "/officers/{officersId=0}",
+      "Key": "OfficersByIdFromInstitutionsService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Officers from Institutions Service
+    {
+      "DownstreamPathTemplate": "/api/officers/{officersId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 62574
+        }
+      ],
+      "UpstreamPathTemplate": "/officers/{officersId}",
+      "Key": "DeleteOfficersFromInstitutionsService",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+    //************************* Officers End **************************
+
+    //************************* Services Start **************************
+    // Services from Institutions Service
+    {
+      "DownstreamPathTemplate": "/api/services",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 62574
+        }
+      ],
+      "UpstreamPathTemplate": "/services",
+      "Key": "ServicesFromInstitutionsService",
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // GetServices By Id from Institutions Service
+    {
+      "DownstreamPathTemplate": "/api/services/{servicesId=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 62574
+        }
+      ],
+      "UpstreamPathTemplate": "/services/{servicesId=0}",
+      "Key": "ServicesByIdFromInstitutionsService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Services from Institutions Service
+    {
+      "DownstreamPathTemplate": "/api/services/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 62574
+        }
+      ],
+      "UpstreamPathTemplate": "/services/{id}",
+      "Key": "DeleteServicesFromInstitutionsService",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+    //************************* Services End **************************
+
+    //************************* ServicesInstitutions Start **************************
+    // ServicesInstitutions from Institutions Service
+    {
+      "DownstreamPathTemplate": "/api/institutions/{institutionsId=0}/services",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 62574
+        }
+      ],
+      "UpstreamPathTemplate": "/institutions/{institutionsId=0}/services",
+      "Key": "ServicesInstitutionsFromInstitutionsService",
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get ServicesInstitutions By Id from Institutions Service
+    {
+      "DownstreamPathTemplate": "/api/institutions/{institutionsId=0}/services/{servicesId=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 62574
+        }
+      ],
+      "UpstreamPathTemplate": "/institutions/{institutionsId=0}/services/{servicesId=0}",
+      "Key": "ServicesInstitutionsByIdFromInstitutionsService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete ServicesInstitutions By Id from Institutions Service
+    {
+      "DownstreamPathTemplate": "/api/institutions/{institutionsId=0}/services/{servicesId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 62574
+        }
+      ],
+      "UpstreamPathTemplate": "/institutions/{institutionsId=0}/services/{servicesId}",
+      "Key": "DeleteServicesInstitutionsFromInstitutionsService",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* ServicesInstitutions End **************************
+
+    //=============================================================
+    //==================== Institutions End =======================
+    //=============================================================
+
+
+    //=============================================================
+    //======================== User Start =========================
+    //=============================================================
+
+    //************************* Accounts Start **************************
+    // Signin v1 from Users Service
+    {
+      "DownstreamPathTemplate": "/api/signin",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51770
+        }
+      ],
+      "UpstreamPathTemplate": "/signin",
+      "Key": "SigninFromUserService",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Verify Signup from Users Service
+    {
+      "DownstreamPathTemplate": "/api/signup",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51770
+        }
+      ],
+      "UpstreamPathTemplate": "/signup",
+      "Key": "VerifySigninV2FromUserService",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Change password from Users Service
+    {
+      "DownstreamPathTemplate": "/api/changepassword",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51770
+        }
+      ],
+      "UpstreamPathTemplate": "/changepassword",
+      "Key": "SignupFromUserService",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Forgot Password email from Users Service
+    {
+      "DownstreamPathTemplate": "/api/forgotpassword",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51770
+        }
+      ],
+      "UpstreamPathTemplate": "/forgotpassword",
+      "Key": "ForgotPasswordFromUserService",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* Accounts End **************************
+
+    //************************* Users Start **************************
+    // Users from Users Service
+    {
+      "DownstreamPathTemplate": "/api/users",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51770
+        }
+      ],
+      "UpstreamPathTemplate": "/users",
+      "Key": "UsersFromUserService",
+      "UpstreamHttpMethod": [ "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Users By Id from Users Service
+    {
+      "DownstreamPathTemplate": "/api/users/{id=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51770
+        }
+      ],
+      "UpstreamPathTemplate": "/users/{id=0}",
+      "Key": "UsersByIdFromUserService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Users from Users Service
+    {
+      "DownstreamPathTemplate": "/api/users/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51770
+        }
+      ],
+      "UpstreamPathTemplate": "/users/{id}",
+      "Key": "DeleteUsersFromUserService",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* Users End **************************
+
+    //************************* UserRoles Start **************************
+    // Roles from Users Service
+    {
+      "DownstreamPathTemplate": "/api/roles",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51770
+        }
+      ],
+      "UpstreamPathTemplate": "/roles",
+      "Key": "RolesFromUserService",
+      "UpstreamHttpMethod": [ "PUT", "GET", "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Roles from Users Service
+    {
+      "DownstreamPathTemplate": "/api/roles/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51770
+        }
+      ],
+      "UpstreamPathTemplate": "/roles/{id}",
+      "Key": "DeleteRolesFromUserService",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Roles By Id from Users Service
+    {
+      "DownstreamPathTemplate": "/api/roles/{id=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51770
+        }
+      ],
+      "UpstreamPathTemplate": "/roles/{id=0}",
+      "Key": "RolesByIdFromUserService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* UserRoles End **************************
+
+    //************************* Verification End **************************
+
+    // Send OTP from Users Service
+    {
+      "DownstreamPathTemplate": "/api/sendotp",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51770
+        }
+      ],
+      "UpstreamPathTemplate": "/sendotp",
+      "Key": "SendOTPFromUserService",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Verify OTP from Users Service
+    {
+      "DownstreamPathTemplate": "/api/verifyotp",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51770
+        }
+      ],
+      "UpstreamPathTemplate": "/verifyotp",
+      "Key": "VerifyOTPFromUserService",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Verify signin OTP from Users Service
+    {
+      "DownstreamPathTemplate": "/api/verifysigninotp",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51770
+        }
+      ],
+      "UpstreamPathTemplate": "/verifysigninotp",
+      "Key": "VerifySigninOTPFromUserService",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Send Email Confirmation from Users Service
+    {
+      "DownstreamPathTemplate": "/api/sendemailconfirmation",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51770
+        }
+      ],
+      "UpstreamPathTemplate": "/sendemailconfirmation",
+      "Key": "SendEmailConfirmationFromUserService",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Verify Email Confirmation from Users Service
+    {
+      "DownstreamPathTemplate": "/api/verifyemailconfirmation",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51770
+        }
+      ],
+      "UpstreamPathTemplate": "/verifyemailconfirmation",
+      "Key": "VerifyEmailConfirmationFromUserService",
+      "UpstreamHttpMethod": [ "GET" ]
+    }
+
+    //************************* Verification End **************************
+
+    //=============================================================
+    //========================= Users End =========================
+    //=============================================================
+
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:56635/"
+  }
+}

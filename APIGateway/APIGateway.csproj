@@ -9,9 +9,6 @@
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.6" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
     <PackageReference Include="Ocelot" Version="15.0.5" />
-    <None Include="appsettings.Staging.json;appsettings.Production.json">
-      <DependentUpon>appsettings.json</DependentUpon>
-    </None>
   </ItemGroup>
 
 

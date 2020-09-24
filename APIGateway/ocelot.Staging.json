@@ -7,11 +7,11 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 53302
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 85
         }
       ],
-      "UpstreamPathTemplate": "/feeds",
+      "UpstreamPathTemplate": "/api/feeds",
       "Key": "FeedFromArchiveTrackService",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
     },
@@ -27,17 +27,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 54282
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 82
         }
       ],
-      "UpstreamPathTemplate": "/vehicles",
+      "UpstreamPathTemplate": "/api/vehicles",
       "Key": "VehiclesFromVehicleService",
-      "UpstreamHttpMethod": [ "DELETE", "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE", "PUT", "GET" ]
     },
 
     //Get Vehicle By Id from vehicle Service
@@ -46,17 +42,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 54282
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 82
         }
       ],
-      "UpstreamPathTemplate": "/vehicles/{vehicleId=0}",
+      "UpstreamPathTemplate": "/api/vehicles/{vehicleId=0}",
       "Key": "VehiclesByIdFromVehicleService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     //Get Drivers By Vehicle Id from vehicle Service
@@ -65,17 +57,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 54282
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 82
         }
       ],
-      "UpstreamPathTemplate": "/vehicles/{vehicleId=0}/drivers/{driverId=0}",
+      "UpstreamPathTemplate": "/api/vehicles/{vehicleId=0}/drivers/{driverId=0}",
       "Key": "GetDriversByVehiclesIdFromVehicleService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     //Get Vehicle By Id from vehicle Service
@@ -84,17 +72,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 54282
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 82
         }
       ],
-      "UpstreamPathTemplate": "/vehicles/{id}",
+      "UpstreamPathTemplate": "/api/vehicles/{id}",
       "Key": "DeleteVehiclesFromVehicleService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
     //************************* Vehicle End **************************
 
@@ -105,17 +89,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 54282
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 82
         }
       ],
-      "UpstreamPathTemplate": "/vehicles/search",
+      "UpstreamPathTemplate": "/api/vehicles/search",
       "Key": "SearchFromVehicleService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
     //************************* Search End **************************
 
@@ -126,17 +106,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 54282
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 82
         }
       ],
-      "UpstreamPathTemplate": "/devices/{deviceId=0}",
+      "UpstreamPathTemplate": "/api/devices/{deviceId=0}",
       "Key": "SearchFromVehicleService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     //Delete Driver from vehicle Service
@@ -145,17 +121,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 54282
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 82
         }
       ],
-      "UpstreamPathTemplate": "/devices/{id}",
+      "UpstreamPathTemplate": "/api/devices/{id}",
       "Key": "DeleteDeviceFromVehicleService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
 
     //Driver from vehicle Service
@@ -164,17 +136,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 54282
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 82
         }
       ],
-      "UpstreamPathTemplate": "/devices",
+      "UpstreamPathTemplate": "/api/devices",
       "Key": "DeviceFromVehicleService",
-      "UpstreamHttpMethod": [ "DELETE", "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE", "PUT", "GET" ]
     },
 
     //************************* Device End **************************
@@ -186,17 +154,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 54282
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 82
         }
       ],
-      "UpstreamPathTemplate": "/drivers",
+      "UpstreamPathTemplate": "/api/drivers",
       "Key": "DriverFromVehicleService",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
 
     //Delete Driver from vehicle Service
@@ -205,17 +169,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 54282
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 82
         }
       ],
-      "UpstreamPathTemplate": "/drivers/{id}",
+      "UpstreamPathTemplate": "/api/drivers/{id}",
       "Key": "DeleteDriverFromVehicleService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
 
     //Get Driver with id from vehicle Service
@@ -224,17 +184,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 54282
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 82
         }
       ],
-      "UpstreamPathTemplate": "/drivers/{driverId=0}",
+      "UpstreamPathTemplate": "/api/drivers/{driverId=0}",
       "Key": "DriverWithIdFromVehicleService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     //************************* Driver End **************************
@@ -246,17 +202,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 54282
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 82
         }
       ],
-      "UpstreamPathTemplate": "/manufacturers",
+      "UpstreamPathTemplate": "/api/manufacturers",
       "Key": "ManufacturersFromVehicleService",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
 
     //Delete Manufacturers from vehicle Service
@@ -265,17 +217,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 54282
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 82
         }
       ],
-      "UpstreamPathTemplate": "/manufacturers/{id}",
+      "UpstreamPathTemplate": "/api/manufacturers/{id}",
       "Key": "DeleteManufacturersFromVehicleService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
 
     //Get Manufacturers By Id from vehicle Service
@@ -284,17 +232,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 54282
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 82
         }
       ],
-      "UpstreamPathTemplate": "/manufacturers/{manufacturerId=0}",
+      "UpstreamPathTemplate": "/api/manufacturers/{manufacturerId=0}",
       "Key": "GetManufacturersWithIdFromVehicleService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     //Get Model By Manufacturers Id from vehicle Service
@@ -303,17 +247,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 54282
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 82
         }
       ],
-      "UpstreamPathTemplate": "/manufacturers/{manufacturerId=0}/model",
+      "UpstreamPathTemplate": "/api/manufacturers/{manufacturerId=0}/model",
       "Key": "ModelFromManufacturersFromVehicleService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     //************************* Manufacturers End **************************
@@ -325,17 +265,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 54282
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 82
         }
       ],
-      "UpstreamPathTemplate": "/models",
+      "UpstreamPathTemplate": "/api/models",
       "Key": "ModelsFromVehicleService",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
 
     //Delete Models from vehicle Service
@@ -344,17 +280,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 54282
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 82
         }
       ],
-      "UpstreamPathTemplate": "/models/{id}",
+      "UpstreamPathTemplate": "/api/models/{id}",
       "Key": "DeleeteModelsFromVehicleService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
     //************************* Car Models End **************************
 
@@ -374,17 +306,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 56411
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 84
         }
       ],
-      "UpstreamPathTemplate": "/medias",
+      "UpstreamPathTemplate": "/api/medias",
       "Key": "MediasFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
 
     // Get Medias by id from Advertisements Services
@@ -393,17 +321,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 56411
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 84
         }
       ],
-      "UpstreamPathTemplate": "/medias/{id=0}",
+      "UpstreamPathTemplate": "/api/medias/{id=0}",
       "Key": "MediasByIdFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Delete Medias from Advertisements Services
@@ -412,17 +336,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 56411
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 84
         }
       ],
-      "UpstreamPathTemplate": "/medias/{id}",
+      "UpstreamPathTemplate": "/api/medias/{id}",
       "Key": "DeleteMediasFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
 
     //************************* Medias End ****************************
@@ -434,17 +354,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 56411
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 84
         }
       ],
-      "UpstreamPathTemplate": "/intervals",
+      "UpstreamPathTemplate": "/api/intervals",
       "Key": "IntervalsFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
 
     // Get Intervals by id from Advertisements Services
@@ -453,17 +369,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 56411
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 84
         }
       ],
-      "UpstreamPathTemplate": "/intervals/{id=0}",
+      "UpstreamPathTemplate": "/api/intervals/{id=0}",
       "Key": "IntervalsByIdFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Delete Interval from Advertisements Services
@@ -472,17 +384,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 56411
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 84
         }
       ],
-      "UpstreamPathTemplate": "/intervals/{id}",
+      "UpstreamPathTemplate": "/api/intervals/{id}",
       "Key": "DeleteIntervalsFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
     //************************* Interval End **************************
 
@@ -493,17 +401,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 56411
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 84
         }
       ],
-      "UpstreamPathTemplate": "/campaigns",
+      "UpstreamPathTemplate": "/api/campaigns",
       "Key": "CampaignsFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
 
     // Get Campaigns By Id from Advertisements Services
@@ -512,17 +416,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 56411
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 84
         }
       ],
-      "UpstreamPathTemplate": "/campaigns/{id=0}",
+      "UpstreamPathTemplate": "/api/campaigns/{id=0}",
       "Key": "CampaignsByIdFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Get Advertisements of Campaigns By Id from Advertisements Services
@@ -531,17 +431,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 56411
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 84
         }
       ],
-      "UpstreamPathTemplate": "/campaigns/{id=0}/advertisements/{advertisementsId=0}",
+      "UpstreamPathTemplate": "/api/campaigns/{id=0}/advertisements/{advertisementsId=0}",
       "Key": "AdvertisementsOfCampaignsFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Get Advertisements of active campaign of Campaigns By Id from Advertisements Services
@@ -550,17 +446,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 56411
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 84
         }
       ],
-      "UpstreamPathTemplate": "/campaigns/advertisementsqr",
+      "UpstreamPathTemplate": "/api/campaigns/advertisementsqr",
       "Key": "AdvertisementsOfActiveCampaignsFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Delete Campaigns from Advertisements Services
@@ -569,17 +461,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 56411
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 84
         }
       ],
-      "UpstreamPathTemplate": "/campaigns/{id}",
+      "UpstreamPathTemplate": "/api/campaigns/{id}",
       "Key": "DeleteCampaignsFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
     //************************* Campaign End **************************
 
@@ -590,17 +478,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 56411
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 84
         }
       ],
-      "UpstreamPathTemplate": "/advertisements",
+      "UpstreamPathTemplate": "/api/advertisements",
       "Key": "AdvertisementsFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
 
     // Get Advertisements By Id from Advertisements Services
@@ -609,17 +493,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 56411
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 84
         }
       ],
-      "UpstreamPathTemplate": "/advertisements/{id=0}",
+      "UpstreamPathTemplate": "/api/advertisements/{id=0}",
       "Key": "AdvertisementsByIdFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Get Advertisements By Institution Id from Advertisements Services
@@ -628,17 +508,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 56411
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 84
         }
       ],
-      "UpstreamPathTemplate": "/institutions/{institutionId}/advertisements/{advertisementsId=0}",
+      "UpstreamPathTemplate": "/api/institutions/{institutionId}/advertisements/{advertisementsId=0}",
       "Key": "AdvertisementsByInstitutionIdFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Delete Advertisements from Advertisements Services
@@ -647,17 +523,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 56411
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 84
         }
       ],
-      "UpstreamPathTemplate": "/advertisements/{id}",
+      "UpstreamPathTemplate": "/api/advertisements/{id}",
       "Key": "DeleteAdvertisementsFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
 
     //************************* Advertisements End **************************
@@ -679,17 +551,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 62574
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 81
         }
       ],
-      "UpstreamPathTemplate": "/institutions",
+      "UpstreamPathTemplate": "/api/institutions",
       "Key": "InstitutionsFromInstitutionsService",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
 
     // Get Institutions By Id from Institutions Service
@@ -698,17 +566,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 62574
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 81
         }
       ],
-      "UpstreamPathTemplate": "/institutions/{institutionId=0}",
+      "UpstreamPathTemplate": "/api/institutions/{institutionId=0}",
       "Key": "InstitutionsByIdFromInstitutionsService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Delete Institutions from Institutions Service
@@ -717,17 +581,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 62574
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 81
         }
       ],
-      "UpstreamPathTemplate": "/institutions/{id}",
+      "UpstreamPathTemplate": "/api/institutions/{id}",
       "Key": "DeleteInstitutionsFromInstitutionsService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
 
     //************************* Institutions End **************************
@@ -739,17 +599,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 62574
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 81
         }
       ],
-      "UpstreamPathTemplate": "/officers/{officerid=0}/invitations",
+      "UpstreamPathTemplate": "/api/officers/{officerid=0}/invitations",
       "Key": "InvitationFromInstitutionsService",
-      "UpstreamHttpMethod": [ "POST", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST", "GET" ]
     },
 
     // Delete Institutions from Institutions Service
@@ -758,17 +614,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 62574
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 81
         }
       ],
-      "UpstreamPathTemplate": "/officers/{officerid=0}/{invitations}/{id}",
+      "UpstreamPathTemplate": "/api/officers/{officerid=0}/{invitations}/{id}",
       "Key": "DeleteInvitationFromInstitutionsService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
 
     // Get Institutions By Id from Institutions Service
@@ -777,17 +629,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 62574
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 81
         }
       ],
-      "UpstreamPathTemplate": "/invitations/{invitationId=0}",
+      "UpstreamPathTemplate": "/api/invitations/{invitationId=0}",
       "Key": "InvitationByIdFromInstitutionsService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
     //************************* Invitation End **************************
 
@@ -798,17 +646,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 62574
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 81
         }
       ],
-      "UpstreamPathTemplate": "/officers",
+      "UpstreamPathTemplate": "/api/officers",
       "Key": "OfficersFromInstitutionsService",
-      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ]
     },
 
     // Officers By Id from Institutions Service
@@ -817,17 +661,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 62574
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 81
         }
       ],
-      "UpstreamPathTemplate": "/officers/{officersId=0}",
+      "UpstreamPathTemplate": "/api/officers/{officersId=0}",
       "Key": "OfficersByIdFromInstitutionsService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Delete Officers from Institutions Service
@@ -836,17 +676,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 62574
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 81
         }
       ],
-      "UpstreamPathTemplate": "/officers/{officersId}",
+      "UpstreamPathTemplate": "/api/officers/{officersId}",
       "Key": "DeleteOfficersFromInstitutionsService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
     //************************* Officers End **************************
 
@@ -857,17 +693,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 62574
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 81
         }
       ],
-      "UpstreamPathTemplate": "/services",
+      "UpstreamPathTemplate": "/api/services",
       "Key": "ServicesFromInstitutionsService",
-      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ]
     },
 
     // GetServices By Id from Institutions Service
@@ -876,17 +708,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 62574
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 81
         }
       ],
-      "UpstreamPathTemplate": "/services/{servicesId=0}",
+      "UpstreamPathTemplate": "/api/services/{servicesId=0}",
       "Key": "ServicesByIdFromInstitutionsService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Delete Services from Institutions Service
@@ -895,17 +723,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 62574
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 81
         }
       ],
-      "UpstreamPathTemplate": "/services/{id}",
+      "UpstreamPathTemplate": "/api/services/{id}",
       "Key": "DeleteServicesFromInstitutionsService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
     //************************* Services End **************************
 
@@ -916,17 +740,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 62574
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 81
         }
       ],
-      "UpstreamPathTemplate": "/institutions/{institutionsId=0}/services",
+      "UpstreamPathTemplate": "/api/institutions/{institutionsId=0}/services",
       "Key": "ServicesInstitutionsFromInstitutionsService",
-      "UpstreamHttpMethod": [ "POST", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST", "GET" ]
     },
 
     // Get ServicesInstitutions By Id from Institutions Service
@@ -935,17 +755,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 62574
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 81
         }
       ],
-      "UpstreamPathTemplate": "/institutions/{institutionsId=0}/services/{servicesId=0}",
+      "UpstreamPathTemplate": "/api/institutions/{institutionsId=0}/services/{servicesId=0}",
       "Key": "ServicesInstitutionsByIdFromInstitutionsService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Delete ServicesInstitutions By Id from Institutions Service
@@ -954,17 +770,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 62574
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 81
         }
       ],
-      "UpstreamPathTemplate": "/institutions/{institutionsId=0}/services/{servicesId}",
+      "UpstreamPathTemplate": "/api/institutions/{institutionsId=0}/services/{servicesId}",
       "Key": "DeleteServicesInstitutionsFromInstitutionsService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
 
     //************************* ServicesInstitutions End **************************
@@ -985,17 +797,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 51770
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/signin",
+      "UpstreamPathTemplate": "/api/signin",
       "Key": "SigninFromUserService",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST" ]
     },
 
     // Verify Signup from Users Service
@@ -1004,55 +812,28 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 51770
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/signup",
-      "Key": "VerifySigninV2FromUserService",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamPathTemplate": "/api/signup",
+      "Key": "signupFromUserService",
+      "UpstreamHttpMethod": [ "POST" ]
     },
 
     // Change password from Users Service
     {
-      "DownstreamPathTemplate": "/api/changepassword",
+      "DownstreamPathTemplate": "/api/account/password",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 51770
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/changepassword",
-      "Key": "SignupFromUserService",
-      "UpstreamHttpMethod": [ "PUT" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
-
-    // Forgot Password email from Users Service
-    {
-      "DownstreamPathTemplate": "/api/forgotpassword",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 51770
-        }
-      ],
-      "UpstreamPathTemplate": "/forgotpassword",
-      "Key": "ForgotPasswordFromUserService",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamPathTemplate": "/api/account/password",
+      "Key": "ChangepasswordFromUserService",
+      "UpstreamHttpMethod": [ "PUT", "POST" ]
     },
 
     //************************* Accounts End **************************
@@ -1064,17 +845,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 51770
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/users",
+      "UpstreamPathTemplate": "/api/users",
       "Key": "UsersFromUserService",
-      "UpstreamHttpMethod": [ "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "PUT", "GET" ]
     },
 
     // Get Users By Id from Users Service
@@ -1083,17 +860,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 51770
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/users/{id=0}",
+      "UpstreamPathTemplate": "/api/users/{id=0}",
       "Key": "UsersByIdFromUserService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Delete Users from Users Service
@@ -1102,17 +875,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 51770
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/users/{id}",
+      "UpstreamPathTemplate": "/api/users/{id}",
       "Key": "DeleteUsersFromUserService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
 
     //************************* Users End **************************
@@ -1124,17 +893,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 51770
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/roles",
+      "UpstreamPathTemplate": "/api/roles",
       "Key": "RolesFromUserService",
-      "UpstreamHttpMethod": [ "PUT", "GET", "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "PUT", "GET", "POST" ]
     },
 
     // Delete Roles from Users Service
@@ -1143,17 +908,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 51770
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/roles/{id}",
+      "UpstreamPathTemplate": "/api/roles/{id}",
       "Key": "DeleteRolesFromUserService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
 
     // Roles By Id from Users Service
@@ -1162,17 +923,13 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 51770
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 80
         }
       ],
-      "UpstreamPathTemplate": "/roles/{id=0}",
+      "UpstreamPathTemplate": "/api/roles/{id=0}",
       "Key": "RolesByIdFromUserService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     //************************* UserRoles End **************************
@@ -1185,8 +942,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 51770
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/api/otp",
@@ -1200,8 +957,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 51770
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/api/otp/verify",
@@ -1215,8 +972,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 51770
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/api/signin/otp/verify",
@@ -1230,8 +987,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 51770
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/api/email",
@@ -1245,8 +1002,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 51770
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/api/email/verify",
@@ -1260,8 +1017,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 51770
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/api/qr/signin",
@@ -1275,8 +1032,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 51770
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/api/qr/otp",
@@ -1290,8 +1047,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 51770
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/api/qr/otp/verify",
@@ -1305,8 +1062,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 51770
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/api/qr/signin/otp/verify",
@@ -1334,8 +1091,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 63746
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 86
         }
       ],
       "UpstreamPathTemplate": "/api/places",
@@ -1349,8 +1106,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 63746
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 86
         }
       ],
       "UpstreamPathTemplate": "/api/places/{id=0}",
@@ -1364,8 +1121,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 63746
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 86
         }
       ],
       "UpstreamPathTemplate": "/api/places/{id}",
@@ -1382,8 +1139,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 63746
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 86
         }
       ],
       "UpstreamPathTemplate": "/api/authorities",
@@ -1397,8 +1154,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 63746
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 86
         }
       ],
       "UpstreamPathTemplate": "/api/authorities/{id=0}",
@@ -1412,8 +1169,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 63746
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 86
         }
       ],
       "UpstreamPathTemplate": "/api/authorities/{id}",
@@ -1432,8 +1189,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 63746
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 86
         }
       ],
       "UpstreamPathTemplate": "/api/coupons",
@@ -1447,8 +1204,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 63746
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 86
         }
       ],
       "UpstreamPathTemplate": "/api/coupons/{id=0}",
@@ -1462,8 +1219,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 63746
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 86
         }
       ],
       "UpstreamPathTemplate": "/api/coupons/{id}",
@@ -1482,8 +1239,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 63746
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 86
         }
       ],
       "UpstreamPathTemplate": "/api/promotions",
@@ -1497,8 +1254,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 63746
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 86
         }
       ],
       "UpstreamPathTemplate": "/api/promotions/{id=0}",
@@ -1512,8 +1269,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 63746
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 86
         }
       ],
       "UpstreamPathTemplate": "/api/contents/{id=0}",
@@ -1527,8 +1284,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 63746
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 86
         }
       ],
       "UpstreamPathTemplate": "/api/promotions/{id}",
@@ -1547,8 +1304,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 63746
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 86
         }
       ],
       "UpstreamPathTemplate": "/api/coupons/redeem",
@@ -1562,8 +1319,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 63746
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 86
         }
       ],
       "UpstreamPathTemplate": "/api/coupons/redeem/{id=0}",
@@ -1577,8 +1334,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 63746
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 86
         }
       ],
       "UpstreamPathTemplate": "/api/coupons/redeem/{id}",
@@ -1593,12 +1350,8 @@
     //======================== Coupon End =========================
     //=============================================================
 
-    //=============================================================
-    //========================= Users End =========================
-    //=============================================================
-
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:56635/"
+    "BaseUrl": "http://vmtprojectstage.uaenorth.cloudapp.azure.com:5000/"
   }
 }

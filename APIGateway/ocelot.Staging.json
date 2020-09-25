@@ -551,11 +551,11 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Host": "localhost",
           "Port": 81
         }
       ],
-      "UpstreamPathTemplate": "/api/institutions",
+      "UpstreamPathTemplate": "/institutions",
       "Key": "InstitutionsFromInstitutionsService",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
@@ -570,7 +570,7 @@
           "Port": 81
         }
       ],
-      "UpstreamPathTemplate": "/api/institutions/{institutionId=0}",
+      "UpstreamPathTemplate": "/institutions/{institutionId=0}",
       "Key": "InstitutionsByIdFromInstitutionsService",
       "UpstreamHttpMethod": [ "GET" ]
     },

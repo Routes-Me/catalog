@@ -13,7 +13,7 @@ variables:
   dockerRegistryServiceConnection: '1ab1bd46-b000-4f54-863a-91df170b710e'
   imageRepository: 'catalog'
   containerRegistry: 'noruaebscontainerregistry.azurecr.io'
-  dockerfilePath: '**/Dockerfile'
+  dockerfilePath: '$(Build.SourcesDirectory)/APIGateway/Dockerfile'
   tag: '$(Build.BuildId)'
   
   # Agent VM image name

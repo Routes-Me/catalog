@@ -547,7 +547,7 @@
 
     // Institutions from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/institutions",
+      "DownstreamPathTemplate": "/institutions",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -555,14 +555,14 @@
           "Port": 81
         }
       ],
-      "UpstreamPathTemplate": "/institutions",
+      "UpstreamPathTemplate": "/api/institutions",
       "Key": "InstitutionsFromInstitutionsService",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
 
     // Get Institutions By Id from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/institutions/{institutionId=0}",
+      "DownstreamPathTemplate": "/institutions/{institutionId=0}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -570,7 +570,7 @@
           "Port": 81
         }
       ],
-      "UpstreamPathTemplate": "/institutions/{institutionId=0}",
+      "UpstreamPathTemplate": "/api/institutions/{institutionId=0}",
       "Key": "InstitutionsByIdFromInstitutionsService",
       "UpstreamHttpMethod": [ "GET" ]
     },

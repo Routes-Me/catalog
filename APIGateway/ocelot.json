@@ -8,10 +8,10 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 53302
+          "Port": 56708
         }
       ],
-      "UpstreamPathTemplate": "/feeds",
+      "UpstreamPathTemplate": "/api/feeds",
       "Key": "FeedFromArchiveTrackService",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
     },
@@ -31,13 +31,9 @@
           "Port": 54282
         }
       ],
-      "UpstreamPathTemplate": "/vehicles",
+      "UpstreamPathTemplate": "/api/vehicles",
       "Key": "VehiclesFromVehicleService",
-      "UpstreamHttpMethod": [ "DELETE", "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE", "PUT", "GET" ]
     },
 
     //Get Vehicle By Id from vehicle Service
@@ -50,13 +46,9 @@
           "Port": 54282
         }
       ],
-      "UpstreamPathTemplate": "/vehicles/{vehicleId=0}",
+      "UpstreamPathTemplate": "/api/vehicles/{vehicleId=0}",
       "Key": "VehiclesByIdFromVehicleService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     //Get Drivers By Vehicle Id from vehicle Service
@@ -69,13 +61,9 @@
           "Port": 54282
         }
       ],
-      "UpstreamPathTemplate": "/vehicles/{vehicleId=0}/drivers/{driverId=0}",
+      "UpstreamPathTemplate": "/api/vehicles/{vehicleId=0}/drivers/{driverId=0}",
       "Key": "GetDriversByVehiclesIdFromVehicleService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     //Get Vehicle By Id from vehicle Service
@@ -88,13 +76,9 @@
           "Port": 54282
         }
       ],
-      "UpstreamPathTemplate": "/vehicles/{id}",
+      "UpstreamPathTemplate": "/api/vehicles/{id}",
       "Key": "DeleteVehiclesFromVehicleService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
     //************************* Vehicle End **************************
 
@@ -109,13 +93,9 @@
           "Port": 54282
         }
       ],
-      "UpstreamPathTemplate": "/vehicles/search",
+      "UpstreamPathTemplate": "/api/vehicles/search",
       "Key": "SearchFromVehicleService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
     //************************* Search End **************************
 
@@ -130,13 +110,9 @@
           "Port": 54282
         }
       ],
-      "UpstreamPathTemplate": "/devices/{deviceId=0}",
+      "UpstreamPathTemplate": "/api/devices/{deviceId=0}",
       "Key": "SearchFromVehicleService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     //Delete Driver from vehicle Service
@@ -149,13 +125,9 @@
           "Port": 54282
         }
       ],
-      "UpstreamPathTemplate": "/devices/{id}",
+      "UpstreamPathTemplate": "/api/devices/{id}",
       "Key": "DeleteDeviceFromVehicleService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
 
     //Driver from vehicle Service
@@ -168,13 +140,9 @@
           "Port": 54282
         }
       ],
-      "UpstreamPathTemplate": "/devices",
+      "UpstreamPathTemplate": "/api/devices",
       "Key": "DeviceFromVehicleService",
-      "UpstreamHttpMethod": [ "DELETE", "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE", "PUT", "GET" ]
     },
 
     //************************* Device End **************************
@@ -190,13 +158,9 @@
           "Port": 54282
         }
       ],
-      "UpstreamPathTemplate": "/drivers",
+      "UpstreamPathTemplate": "/api/drivers",
       "Key": "DriverFromVehicleService",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
 
     //Delete Driver from vehicle Service
@@ -209,13 +173,9 @@
           "Port": 54282
         }
       ],
-      "UpstreamPathTemplate": "/drivers/{id}",
+      "UpstreamPathTemplate": "/api/drivers/{id}",
       "Key": "DeleteDriverFromVehicleService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
 
     //Get Driver with id from vehicle Service
@@ -228,13 +188,9 @@
           "Port": 54282
         }
       ],
-      "UpstreamPathTemplate": "/drivers/{driverId=0}",
+      "UpstreamPathTemplate": "/api/drivers/{driverId=0}",
       "Key": "DriverWithIdFromVehicleService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     //************************* Driver End **************************
@@ -250,13 +206,9 @@
           "Port": 54282
         }
       ],
-      "UpstreamPathTemplate": "/manufacturers",
+      "UpstreamPathTemplate": "/api/manufacturers",
       "Key": "ManufacturersFromVehicleService",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
 
     //Delete Manufacturers from vehicle Service
@@ -269,13 +221,9 @@
           "Port": 54282
         }
       ],
-      "UpstreamPathTemplate": "/manufacturers/{id}",
+      "UpstreamPathTemplate": "/api/manufacturers/{id}",
       "Key": "DeleteManufacturersFromVehicleService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
 
     //Get Manufacturers By Id from vehicle Service
@@ -288,13 +236,9 @@
           "Port": 54282
         }
       ],
-      "UpstreamPathTemplate": "/manufacturers/{manufacturerId=0}",
+      "UpstreamPathTemplate": "/api/manufacturers/{manufacturerId=0}",
       "Key": "GetManufacturersWithIdFromVehicleService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     //Get Model By Manufacturers Id from vehicle Service
@@ -307,13 +251,9 @@
           "Port": 54282
         }
       ],
-      "UpstreamPathTemplate": "/manufacturers/{manufacturerId=0}/model",
+      "UpstreamPathTemplate": "/api/manufacturers/{manufacturerId=0}/model",
       "Key": "ModelFromManufacturersFromVehicleService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     //************************* Manufacturers End **************************
@@ -329,13 +269,9 @@
           "Port": 54282
         }
       ],
-      "UpstreamPathTemplate": "/models",
+      "UpstreamPathTemplate": "/api/models",
       "Key": "ModelsFromVehicleService",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
 
     //Delete Models from vehicle Service
@@ -348,13 +284,9 @@
           "Port": 54282
         }
       ],
-      "UpstreamPathTemplate": "/models/{id}",
+      "UpstreamPathTemplate": "/api/models/{id}",
       "Key": "DeleeteModelsFromVehicleService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
     //************************* Car Models End **************************
 
@@ -378,13 +310,9 @@
           "Port": 56411
         }
       ],
-      "UpstreamPathTemplate": "/medias",
+      "UpstreamPathTemplate": "/api/medias",
       "Key": "MediasFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
 
     // Get Medias by id from Advertisements Services
@@ -397,13 +325,9 @@
           "Port": 56411
         }
       ],
-      "UpstreamPathTemplate": "/medias/{id=0}",
+      "UpstreamPathTemplate": "/api/medias/{id=0}",
       "Key": "MediasByIdFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Delete Medias from Advertisements Services
@@ -416,13 +340,9 @@
           "Port": 56411
         }
       ],
-      "UpstreamPathTemplate": "/medias/{id}",
+      "UpstreamPathTemplate": "/api/medias/{id}",
       "Key": "DeleteMediasFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
 
     //************************* Medias End ****************************
@@ -438,13 +358,9 @@
           "Port": 56411
         }
       ],
-      "UpstreamPathTemplate": "/intervals",
+      "UpstreamPathTemplate": "/api/intervals",
       "Key": "IntervalsFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
 
     // Get Intervals by id from Advertisements Services
@@ -457,13 +373,9 @@
           "Port": 56411
         }
       ],
-      "UpstreamPathTemplate": "/intervals/{id=0}",
+      "UpstreamPathTemplate": "/api/intervals/{id=0}",
       "Key": "IntervalsByIdFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Delete Interval from Advertisements Services
@@ -476,13 +388,9 @@
           "Port": 56411
         }
       ],
-      "UpstreamPathTemplate": "/intervals/{id}",
+      "UpstreamPathTemplate": "/api/intervals/{id}",
       "Key": "DeleteIntervalsFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
     //************************* Interval End **************************
 
@@ -497,13 +405,9 @@
           "Port": 56411
         }
       ],
-      "UpstreamPathTemplate": "/campaigns",
+      "UpstreamPathTemplate": "/api/campaigns",
       "Key": "CampaignsFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
 
     // Get Campaigns By Id from Advertisements Services
@@ -516,13 +420,9 @@
           "Port": 56411
         }
       ],
-      "UpstreamPathTemplate": "/campaigns/{id=0}",
+      "UpstreamPathTemplate": "/api/campaigns/{id=0}",
       "Key": "CampaignsByIdFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Get Advertisements of Campaigns By Id from Advertisements Services
@@ -535,13 +435,9 @@
           "Port": 56411
         }
       ],
-      "UpstreamPathTemplate": "/campaigns/{id=0}/advertisements/{advertisementsId=0}",
+      "UpstreamPathTemplate": "/api/campaigns/{id=0}/advertisements/{advertisementsId=0}",
       "Key": "AdvertisementsOfCampaignsFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Get Advertisements of active campaign of Campaigns By Id from Advertisements Services
@@ -554,13 +450,9 @@
           "Port": 56411
         }
       ],
-      "UpstreamPathTemplate": "/campaigns/advertisementsqr",
+      "UpstreamPathTemplate": "/api/campaigns/advertisementsqr",
       "Key": "AdvertisementsOfActiveCampaignsFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Delete Campaigns from Advertisements Services
@@ -573,13 +465,9 @@
           "Port": 56411
         }
       ],
-      "UpstreamPathTemplate": "/campaigns/{id}",
+      "UpstreamPathTemplate": "/api/campaigns/{id}",
       "Key": "DeleteCampaignsFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
     //************************* Campaign End **************************
 
@@ -594,13 +482,9 @@
           "Port": 56411
         }
       ],
-      "UpstreamPathTemplate": "/advertisements",
+      "UpstreamPathTemplate": "/api/advertisements",
       "Key": "AdvertisementsFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
 
     // Get Advertisements By Id from Advertisements Services
@@ -613,13 +497,9 @@
           "Port": 56411
         }
       ],
-      "UpstreamPathTemplate": "/advertisements/{id=0}",
+      "UpstreamPathTemplate": "/api/advertisements/{id=0}",
       "Key": "AdvertisementsByIdFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Get Advertisements By Institution Id from Advertisements Services
@@ -632,13 +512,9 @@
           "Port": 56411
         }
       ],
-      "UpstreamPathTemplate": "/institutions/{institutionId}/advertisements/{advertisementsId=0}",
+      "UpstreamPathTemplate": "/api/institutions/{institutionId}/advertisements/{advertisementsId=0}",
       "Key": "AdvertisementsByInstitutionIdFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Delete Advertisements from Advertisements Services
@@ -651,13 +527,9 @@
           "Port": 56411
         }
       ],
-      "UpstreamPathTemplate": "/advertisements/{id}",
+      "UpstreamPathTemplate": "/api/advertisements/{id}",
       "Key": "DeleteAdvertisementsFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
 
     //************************* Advertisements End **************************
@@ -683,13 +555,9 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/institutions",
+      "UpstreamPathTemplate": "/api/institutions",
       "Key": "InstitutionsFromInstitutionsService",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
     },
 
     // Get Institutions By Id from Institutions Service
@@ -702,13 +570,9 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/institutions/{institutionId=0}",
+      "UpstreamPathTemplate": "/api/institutions/{institutionId=0}",
       "Key": "InstitutionsByIdFromInstitutionsService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Delete Institutions from Institutions Service
@@ -721,13 +585,9 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/institutions/{id}",
+      "UpstreamPathTemplate": "/api/institutions/{id}",
       "Key": "DeleteInstitutionsFromInstitutionsService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
 
     //************************* Institutions End **************************
@@ -743,13 +603,9 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/officers/{officerid=0}/invitations",
+      "UpstreamPathTemplate": "/api/officers/{officerid=0}/invitations",
       "Key": "InvitationFromInstitutionsService",
-      "UpstreamHttpMethod": [ "POST", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST", "GET" ]
     },
 
     // Delete Institutions from Institutions Service
@@ -762,13 +618,9 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/officers/{officerid=0}/{invitations}/{id}",
+      "UpstreamPathTemplate": "/api/officers/{officerid=0}/{invitations}/{id}",
       "Key": "DeleteInvitationFromInstitutionsService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
 
     // Get Institutions By Id from Institutions Service
@@ -781,13 +633,9 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/invitations/{invitationId=0}",
+      "UpstreamPathTemplate": "/api/invitations/{invitationId=0}",
       "Key": "InvitationByIdFromInstitutionsService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
     //************************* Invitation End **************************
 
@@ -802,13 +650,9 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/officers",
+      "UpstreamPathTemplate": "/api/officers",
       "Key": "OfficersFromInstitutionsService",
-      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ]
     },
 
     // Officers By Id from Institutions Service
@@ -821,13 +665,9 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/officers/{officersId=0}",
+      "UpstreamPathTemplate": "/api/officers/{officersId=0}",
       "Key": "OfficersByIdFromInstitutionsService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Delete Officers from Institutions Service
@@ -840,13 +680,10 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/officers/{officersId}",
+      "UpstreamPathTemplate": "/api/officers/{officersId}",
       "Key": "DeleteOfficersFromInstitutionsService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
+
     },
     //************************* Officers End **************************
 
@@ -861,13 +698,9 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/services",
+      "UpstreamPathTemplate": "/api/services",
       "Key": "ServicesFromInstitutionsService",
-      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ]
     },
 
     // GetServices By Id from Institutions Service
@@ -880,13 +713,9 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/services/{servicesId=0}",
+      "UpstreamPathTemplate": "/api/services/{servicesId=0}",
       "Key": "ServicesByIdFromInstitutionsService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Delete Services from Institutions Service
@@ -899,13 +728,9 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/services/{id}",
+      "UpstreamPathTemplate": "/api/services/{id}",
       "Key": "DeleteServicesFromInstitutionsService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
     //************************* Services End **************************
 
@@ -920,13 +745,9 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/institutions/{institutionsId=0}/services",
+      "UpstreamPathTemplate": "/api/institutions/{institutionsId=0}/services",
       "Key": "ServicesInstitutionsFromInstitutionsService",
-      "UpstreamHttpMethod": [ "POST", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST", "GET" ]
     },
 
     // Get ServicesInstitutions By Id from Institutions Service
@@ -939,14 +760,11 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/institutions/{institutionsId=0}/services/{servicesId=0}",
+      "UpstreamPathTemplate": "/api/institutions/{institutionsId=0}/services/{servicesId=0}",
       "Key": "ServicesInstitutionsByIdFromInstitutionsService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
+    
 
     // Delete ServicesInstitutions By Id from Institutions Service
     {
@@ -958,13 +776,9 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/institutions/{institutionsId=0}/services/{servicesId}",
+      "UpstreamPathTemplate": "/api/institutions/{institutionsId=0}/services/{servicesId}",
       "Key": "DeleteServicesInstitutionsFromInstitutionsService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
 
     //************************* ServicesInstitutions End **************************
@@ -989,13 +803,9 @@
           "Port": 51770
         }
       ],
-      "UpstreamPathTemplate": "/signin",
+      "UpstreamPathTemplate": "/api/signin",
       "Key": "SigninFromUserService",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST" ]
     },
 
     // Verify Signup from Users Service
@@ -1008,13 +818,9 @@
           "Port": 51770
         }
       ],
-      "UpstreamPathTemplate": "/signup",
+      "UpstreamPathTemplate": "/api/signup",
       "Key": "VerifySigninV2FromUserService",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST" ]
     },
 
     // Change password from Users Service
@@ -1027,13 +833,9 @@
           "Port": 51770
         }
       ],
-      "UpstreamPathTemplate": "/changepassword",
+      "UpstreamPathTemplate": "/api/changepassword",
       "Key": "SignupFromUserService",
-      "UpstreamHttpMethod": [ "PUT" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "PUT" ]
     },
 
     // Forgot Password email from Users Service
@@ -1046,13 +848,9 @@
           "Port": 51770
         }
       ],
-      "UpstreamPathTemplate": "/forgotpassword",
+      "UpstreamPathTemplate": "/api/forgotpassword",
       "Key": "ForgotPasswordFromUserService",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST" ]
     },
 
     //************************* Accounts End **************************
@@ -1068,13 +866,9 @@
           "Port": 51770
         }
       ],
-      "UpstreamPathTemplate": "/users",
+      "UpstreamPathTemplate": "/api/users",
       "Key": "UsersFromUserService",
-      "UpstreamHttpMethod": [ "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "PUT", "GET" ]
     },
 
     // Get Users By Id from Users Service
@@ -1087,13 +881,9 @@
           "Port": 51770
         }
       ],
-      "UpstreamPathTemplate": "/users/{id=0}",
+      "UpstreamPathTemplate": "/api/users/{id=0}",
       "Key": "UsersByIdFromUserService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Delete Users from Users Service
@@ -1106,13 +896,9 @@
           "Port": 51770
         }
       ],
-      "UpstreamPathTemplate": "/users/{id}",
+      "UpstreamPathTemplate": "/api/users/{id}",
       "Key": "DeleteUsersFromUserService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
 
     //************************* Users End **************************
@@ -1128,13 +914,9 @@
           "Port": 51770
         }
       ],
-      "UpstreamPathTemplate": "/roles",
+      "UpstreamPathTemplate": "/api/roles",
       "Key": "RolesFromUserService",
-      "UpstreamHttpMethod": [ "PUT", "GET", "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "PUT", "GET", "POST" ]
     },
 
     // Delete Roles from Users Service
@@ -1147,13 +929,9 @@
           "Port": 51770
         }
       ],
-      "UpstreamPathTemplate": "/roles/{id}",
+      "UpstreamPathTemplate": "/api/roles/{id}",
       "Key": "DeleteRolesFromUserService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
 
     // Roles By Id from Users Service
@@ -1166,13 +944,9 @@
           "Port": 51770
         }
       ],
-      "UpstreamPathTemplate": "/roles/{id=0}",
+      "UpstreamPathTemplate": "/api/roles/{id=0}",
       "Key": "RolesByIdFromUserService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     //************************* UserRoles End **************************

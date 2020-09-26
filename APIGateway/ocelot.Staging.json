@@ -1,5 +1,5 @@
 {
-  "ReRoutes": [
+  "Routes": [
 
     //Archive track Service 
     {
@@ -547,11 +547,11 @@
 
     // Institutions from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/institutions",
+      "DownstreamPathTemplate": "/institutions",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Host": "localhost",
           "Port": 81
         }
       ],
@@ -562,7 +562,7 @@
 
     // Get Institutions By Id from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/institutions/{institutionId=0}",
+      "DownstreamPathTemplate": "/institutions/{institutionId=0}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {

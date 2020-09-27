@@ -949,7 +949,7 @@
         "AllowedScopes": []
       }
     },
-    
+
 
     // Delete ServicesInstitutions By Id from Institutions Service
     {
@@ -995,6 +995,7 @@
       "UpstreamPathTemplate": "/api/signin",
       "Key": "SigninFromUserService",
       "UpstreamHttpMethod": [ "POST" ]
+
     },
 
     // Verify Signup from Users Service
@@ -1008,13 +1009,13 @@
         }
       ],
       "UpstreamPathTemplate": "/api/signup",
-      "Key": "VerifySigninV2FromUserService",
+      "Key": "signupFromUserService",
       "UpstreamHttpMethod": [ "POST" ]
     },
 
     // Change password from Users Service
     {
-      "DownstreamPathTemplate": "/api/changepassword",
+      "DownstreamPathTemplate": "/api/account/password",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1022,28 +1023,9 @@
           "Port": 51770
         }
       ],
-      "UpstreamPathTemplate": "/api/changepassword",
-      "Key": "SignupFromUserService",
-      "UpstreamHttpMethod": [ "PUT" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
-
-    // Forgot Password email from Users Service
-    {
-      "DownstreamPathTemplate": "/api/forgotpassword",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 51770
-        }
-      ],
-      "UpstreamPathTemplate": "/api/forgotpassword",
-      "Key": "ForgotPasswordFromUserService",
-      "UpstreamHttpMethod": [ "POST" ],
+      "UpstreamPathTemplate": "/api/account/password",
+      "Key": "ChangepasswordFromUserService",
+      "UpstreamHttpMethod": [ "PUT", "POST" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []
@@ -1125,11 +1107,7 @@
       ],
       "UpstreamPathTemplate": "/api/roles",
       "Key": "RolesFromUserService",
-      "UpstreamHttpMethod": [ "PUT", "GET", "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "PUT", "GET", "POST" ]
     },
 
     // Delete Roles from Users Service
@@ -1144,11 +1122,7 @@
       ],
       "UpstreamPathTemplate": "/api/roles/{id}",
       "Key": "DeleteRolesFromUserService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "DELETE" ]
     },
 
     // Roles By Id from Users Service
@@ -1163,11 +1137,7 @@
       ],
       "UpstreamPathTemplate": "/api/roles/{id=0}",
       "Key": "RolesByIdFromUserService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     //************************* UserRoles End **************************
@@ -1186,11 +1156,7 @@
       ],
       "UpstreamPathTemplate": "/api/otp",
       "Key": "SendOTPFromUserService",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST" ]
     },
 
     // Verify OTP from Users Service
@@ -1205,12 +1171,10 @@
       ],
       "UpstreamPathTemplate": "/api/otp/verify",
       "Key": "VerifyOTPFromUserService",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST" ]
     },
+
+
 
     // Verify signin OTP from Users Service
     {
@@ -1239,11 +1203,7 @@
       ],
       "UpstreamPathTemplate": "/api/email",
       "Key": "SendEmailConfirmationFromUserService",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST" ]
     },
 
     // Verify Email Confirmation from Users Service
@@ -1258,11 +1218,7 @@
       ],
       "UpstreamPathTemplate": "/api/email/verify",
       "Key": "VerifyEmailConfirmationFromUserService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Signin from user app
@@ -1292,11 +1248,7 @@
       ],
       "UpstreamPathTemplate": "/api/qr/otp",
       "Key": "SendOtpForUserApp",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST" ]
     },
 
     // verify otp from user app
@@ -1311,11 +1263,7 @@
       ],
       "UpstreamPathTemplate": "/api/qr/otp/verify",
       "Key": "verifyOtpForUserApp",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST" ]
     },
 
     // verify otp for signin from user app

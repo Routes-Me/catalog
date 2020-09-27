@@ -300,6 +300,7 @@
 
     //************************* Medias Start **************************
 
+
     // Medias from Advertisements Service
     {
       "DownstreamPathTemplate": "/api/medias",
@@ -312,7 +313,11 @@
       ],
       "UpstreamPathTemplate": "/api/medias",
       "Key": "MediasFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Get Medias by id from Advertisements Services
@@ -327,7 +332,11 @@
       ],
       "UpstreamPathTemplate": "/api/medias/{id=0}",
       "Key": "MediasByIdFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Delete Medias from Advertisements Services
@@ -342,7 +351,11 @@
       ],
       "UpstreamPathTemplate": "/api/medias/{id}",
       "Key": "DeleteMediasFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     //************************* Medias End ****************************
@@ -360,7 +373,11 @@
       ],
       "UpstreamPathTemplate": "/api/intervals",
       "Key": "IntervalsFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Get Intervals by id from Advertisements Services
@@ -375,7 +392,11 @@
       ],
       "UpstreamPathTemplate": "/api/intervals/{id=0}",
       "Key": "IntervalsByIdFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Delete Interval from Advertisements Services
@@ -390,7 +411,11 @@
       ],
       "UpstreamPathTemplate": "/api/intervals/{id}",
       "Key": "DeleteIntervalsFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
     //************************* Interval End **************************
 
@@ -407,7 +432,11 @@
       ],
       "UpstreamPathTemplate": "/api/campaigns",
       "Key": "CampaignsFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Get Campaigns By Id from Advertisements Services
@@ -422,7 +451,11 @@
       ],
       "UpstreamPathTemplate": "/api/campaigns/{id=0}",
       "Key": "CampaignsByIdFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Get Advertisements of Campaigns By Id from Advertisements Services
@@ -437,7 +470,11 @@
       ],
       "UpstreamPathTemplate": "/api/campaigns/{id=0}/advertisements/{advertisementsId=0}",
       "Key": "AdvertisementsOfCampaignsFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Get Advertisements of active campaign of Campaigns By Id from Advertisements Services
@@ -452,7 +489,11 @@
       ],
       "UpstreamPathTemplate": "/api/campaigns/advertisementsqr",
       "Key": "AdvertisementsOfActiveCampaignsFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Delete Campaigns from Advertisements Services
@@ -467,7 +508,11 @@
       ],
       "UpstreamPathTemplate": "/api/campaigns/{id}",
       "Key": "DeleteCampaignsFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
     //************************* Campaign End **************************
 
@@ -484,7 +529,11 @@
       ],
       "UpstreamPathTemplate": "/api/advertisements",
       "Key": "AdvertisementsFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Get Advertisements By Id from Advertisements Services
@@ -499,7 +548,11 @@
       ],
       "UpstreamPathTemplate": "/api/advertisements/{id=0}",
       "Key": "AdvertisementsByIdFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Get Advertisements By Institution Id from Advertisements Services
@@ -514,7 +567,11 @@
       ],
       "UpstreamPathTemplate": "/api/institutions/{institutionId}/advertisements/{advertisementsId=0}",
       "Key": "AdvertisementsByInstitutionIdFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Delete Advertisements from Advertisements Services
@@ -529,7 +586,11 @@
       ],
       "UpstreamPathTemplate": "/api/advertisements/{id}",
       "Key": "DeleteAdvertisementsFromAdvertisementsService",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     //************************* Advertisements End **************************

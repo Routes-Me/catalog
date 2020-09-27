@@ -994,11 +994,7 @@
       ],
       "UpstreamPathTemplate": "/api/signin",
       "Key": "SigninFromUserService",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST" ]
     },
 
     // Verify Signup from Users Service
@@ -1013,11 +1009,7 @@
       ],
       "UpstreamPathTemplate": "/api/signup",
       "Key": "VerifySigninV2FromUserService",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST" ]
     },
 
     // Change password from Users Service
@@ -1232,11 +1224,7 @@
       ],
       "UpstreamPathTemplate": "/api/signin/otp/verify",
       "Key": "VerifySigninOTPFromUserService",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST" ]
     },
 
     // Send Email Confirmation from Users Service
@@ -1289,11 +1277,7 @@
       ],
       "UpstreamPathTemplate": "/api/qr/signin",
       "Key": "SigninForUserApp",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST" ]
     },
 
     // send otp from user app
@@ -1346,11 +1330,7 @@
       ],
       "UpstreamPathTemplate": "/api/qr/signin/otp/verify",
       "Key": "verifyOtpForSigninFromUserApp",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST" ]
     },
 
     //************************* Verification End **************************

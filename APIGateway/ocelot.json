@@ -33,7 +33,11 @@
       ],
       "UpstreamPathTemplate": "/api/vehicles",
       "Key": "VehiclesFromVehicleService",
-      "UpstreamHttpMethod": [ "DELETE", "PUT", "GET" ]
+      "UpstreamHttpMethod": [ "DELETE", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     //Get Vehicle By Id from vehicle Service
@@ -48,7 +52,11 @@
       ],
       "UpstreamPathTemplate": "/api/vehicles/{vehicleId=0}",
       "Key": "VehiclesByIdFromVehicleService",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     //Get Drivers By Vehicle Id from vehicle Service
@@ -63,7 +71,11 @@
       ],
       "UpstreamPathTemplate": "/api/vehicles/{vehicleId=0}/drivers/{driverId=0}",
       "Key": "GetDriversByVehiclesIdFromVehicleService",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     //Get Vehicle By Id from vehicle Service
@@ -78,7 +90,11 @@
       ],
       "UpstreamPathTemplate": "/api/vehicles/{id}",
       "Key": "DeleteVehiclesFromVehicleService",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
     //************************* Vehicle End **************************
 
@@ -95,7 +111,11 @@
       ],
       "UpstreamPathTemplate": "/api/vehicles/search",
       "Key": "SearchFromVehicleService",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
     //************************* Search End **************************
 
@@ -112,7 +132,11 @@
       ],
       "UpstreamPathTemplate": "/api/devices/{deviceId=0}",
       "Key": "SearchFromVehicleService",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     //Delete Driver from vehicle Service
@@ -127,7 +151,11 @@
       ],
       "UpstreamPathTemplate": "/api/devices/{id}",
       "Key": "DeleteDeviceFromVehicleService",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     //Driver from vehicle Service
@@ -142,7 +170,11 @@
       ],
       "UpstreamPathTemplate": "/api/devices",
       "Key": "DeviceFromVehicleService",
-      "UpstreamHttpMethod": [ "DELETE", "PUT", "GET" ]
+      "UpstreamHttpMethod": [ "DELETE", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     //************************* Device End **************************
@@ -160,7 +192,11 @@
       ],
       "UpstreamPathTemplate": "/api/drivers",
       "Key": "DriverFromVehicleService",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     //Delete Driver from vehicle Service
@@ -175,7 +211,11 @@
       ],
       "UpstreamPathTemplate": "/api/drivers/{id}",
       "Key": "DeleteDriverFromVehicleService",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     //Get Driver with id from vehicle Service
@@ -190,7 +230,11 @@
       ],
       "UpstreamPathTemplate": "/api/drivers/{driverId=0}",
       "Key": "DriverWithIdFromVehicleService",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     //************************* Driver End **************************
@@ -208,7 +252,11 @@
       ],
       "UpstreamPathTemplate": "/api/manufacturers",
       "Key": "ManufacturersFromVehicleService",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     //Delete Manufacturers from vehicle Service
@@ -223,7 +271,11 @@
       ],
       "UpstreamPathTemplate": "/api/manufacturers/{id}",
       "Key": "DeleteManufacturersFromVehicleService",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     //Get Manufacturers By Id from vehicle Service
@@ -238,7 +290,11 @@
       ],
       "UpstreamPathTemplate": "/api/manufacturers/{manufacturerId=0}",
       "Key": "GetManufacturersWithIdFromVehicleService",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     //Get Model By Manufacturers Id from vehicle Service
@@ -253,7 +309,11 @@
       ],
       "UpstreamPathTemplate": "/api/manufacturers/{manufacturerId=0}/model",
       "Key": "ModelFromManufacturersFromVehicleService",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     //************************* Manufacturers End **************************
@@ -271,7 +331,11 @@
       ],
       "UpstreamPathTemplate": "/api/models",
       "Key": "ModelsFromVehicleService",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     //Delete Models from vehicle Service
@@ -286,7 +350,11 @@
       ],
       "UpstreamPathTemplate": "/api/models/{id}",
       "Key": "DeleeteModelsFromVehicleService",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
     //************************* Car Models End **************************
 
@@ -618,7 +686,11 @@
       ],
       "UpstreamPathTemplate": "/api/institutions",
       "Key": "InstitutionsFromInstitutionsService",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Get Institutions By Id from Institutions Service
@@ -633,7 +705,11 @@
       ],
       "UpstreamPathTemplate": "/api/institutions/{institutionId=0}",
       "Key": "InstitutionsByIdFromInstitutionsService",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Delete Institutions from Institutions Service
@@ -648,7 +724,11 @@
       ],
       "UpstreamPathTemplate": "/api/institutions/{id}",
       "Key": "DeleteInstitutionsFromInstitutionsService",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     //************************* Institutions End **************************
@@ -666,7 +746,11 @@
       ],
       "UpstreamPathTemplate": "/api/officers/{officerid=0}/invitations",
       "Key": "InvitationFromInstitutionsService",
-      "UpstreamHttpMethod": [ "POST", "GET" ]
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Delete Institutions from Institutions Service
@@ -681,7 +765,11 @@
       ],
       "UpstreamPathTemplate": "/api/officers/{officerid=0}/{invitations}/{id}",
       "Key": "DeleteInvitationFromInstitutionsService",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Get Institutions By Id from Institutions Service
@@ -696,7 +784,11 @@
       ],
       "UpstreamPathTemplate": "/api/invitations/{invitationId=0}",
       "Key": "InvitationByIdFromInstitutionsService",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
     //************************* Invitation End **************************
 
@@ -713,7 +805,11 @@
       ],
       "UpstreamPathTemplate": "/api/officers",
       "Key": "OfficersFromInstitutionsService",
-      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ]
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Officers By Id from Institutions Service
@@ -728,7 +824,11 @@
       ],
       "UpstreamPathTemplate": "/api/officers/{officersId=0}",
       "Key": "OfficersByIdFromInstitutionsService",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Delete Officers from Institutions Service
@@ -743,7 +843,11 @@
       ],
       "UpstreamPathTemplate": "/api/officers/{officersId}",
       "Key": "DeleteOfficersFromInstitutionsService",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
 
     },
     //************************* Officers End **************************
@@ -761,7 +865,11 @@
       ],
       "UpstreamPathTemplate": "/api/services",
       "Key": "ServicesFromInstitutionsService",
-      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ]
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // GetServices By Id from Institutions Service
@@ -776,7 +884,11 @@
       ],
       "UpstreamPathTemplate": "/api/services/{servicesId=0}",
       "Key": "ServicesByIdFromInstitutionsService",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Delete Services from Institutions Service
@@ -791,7 +903,11 @@
       ],
       "UpstreamPathTemplate": "/api/services/{id}",
       "Key": "DeleteServicesFromInstitutionsService",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
     //************************* Services End **************************
 
@@ -808,7 +924,11 @@
       ],
       "UpstreamPathTemplate": "/api/institutions/{institutionsId=0}/services",
       "Key": "ServicesInstitutionsFromInstitutionsService",
-      "UpstreamHttpMethod": [ "POST", "GET" ]
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Get ServicesInstitutions By Id from Institutions Service
@@ -823,7 +943,11 @@
       ],
       "UpstreamPathTemplate": "/api/institutions/{institutionsId=0}/services/{servicesId=0}",
       "Key": "ServicesInstitutionsByIdFromInstitutionsService",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
     
 
@@ -839,7 +963,11 @@
       ],
       "UpstreamPathTemplate": "/api/institutions/{institutionsId=0}/services/{servicesId}",
       "Key": "DeleteServicesInstitutionsFromInstitutionsService",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     //************************* ServicesInstitutions End **************************
@@ -866,7 +994,11 @@
       ],
       "UpstreamPathTemplate": "/api/signin",
       "Key": "SigninFromUserService",
-      "UpstreamHttpMethod": [ "POST" ]
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Verify Signup from Users Service
@@ -881,7 +1013,11 @@
       ],
       "UpstreamPathTemplate": "/api/signup",
       "Key": "VerifySigninV2FromUserService",
-      "UpstreamHttpMethod": [ "POST" ]
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Change password from Users Service
@@ -896,7 +1032,11 @@
       ],
       "UpstreamPathTemplate": "/api/changepassword",
       "Key": "SignupFromUserService",
-      "UpstreamHttpMethod": [ "PUT" ]
+      "UpstreamHttpMethod": [ "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Forgot Password email from Users Service
@@ -911,7 +1051,11 @@
       ],
       "UpstreamPathTemplate": "/api/forgotpassword",
       "Key": "ForgotPasswordFromUserService",
-      "UpstreamHttpMethod": [ "POST" ]
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     //************************* Accounts End **************************
@@ -929,7 +1073,11 @@
       ],
       "UpstreamPathTemplate": "/api/users",
       "Key": "UsersFromUserService",
-      "UpstreamHttpMethod": [ "PUT", "GET" ]
+      "UpstreamHttpMethod": [ "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Get Users By Id from Users Service
@@ -944,7 +1092,11 @@
       ],
       "UpstreamPathTemplate": "/api/users/{id=0}",
       "Key": "UsersByIdFromUserService",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Delete Users from Users Service
@@ -959,7 +1111,11 @@
       ],
       "UpstreamPathTemplate": "/api/users/{id}",
       "Key": "DeleteUsersFromUserService",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     //************************* Users End **************************
@@ -977,7 +1133,11 @@
       ],
       "UpstreamPathTemplate": "/api/roles",
       "Key": "RolesFromUserService",
-      "UpstreamHttpMethod": [ "PUT", "GET", "POST" ]
+      "UpstreamHttpMethod": [ "PUT", "GET", "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Delete Roles from Users Service
@@ -992,7 +1152,11 @@
       ],
       "UpstreamPathTemplate": "/api/roles/{id}",
       "Key": "DeleteRolesFromUserService",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Roles By Id from Users Service
@@ -1007,7 +1171,11 @@
       ],
       "UpstreamPathTemplate": "/api/roles/{id=0}",
       "Key": "RolesByIdFromUserService",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     //************************* UserRoles End **************************
@@ -1026,7 +1194,11 @@
       ],
       "UpstreamPathTemplate": "/api/otp",
       "Key": "SendOTPFromUserService",
-      "UpstreamHttpMethod": [ "POST" ]
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Verify OTP from Users Service
@@ -1041,7 +1213,11 @@
       ],
       "UpstreamPathTemplate": "/api/otp/verify",
       "Key": "VerifyOTPFromUserService",
-      "UpstreamHttpMethod": [ "POST" ]
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Verify signin OTP from Users Service
@@ -1056,7 +1232,11 @@
       ],
       "UpstreamPathTemplate": "/api/signin/otp/verify",
       "Key": "VerifySigninOTPFromUserService",
-      "UpstreamHttpMethod": [ "POST" ]
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Send Email Confirmation from Users Service
@@ -1071,7 +1251,11 @@
       ],
       "UpstreamPathTemplate": "/api/email",
       "Key": "SendEmailConfirmationFromUserService",
-      "UpstreamHttpMethod": [ "POST" ]
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Verify Email Confirmation from Users Service
@@ -1086,7 +1270,11 @@
       ],
       "UpstreamPathTemplate": "/api/email/verify",
       "Key": "VerifyEmailConfirmationFromUserService",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Signin from user app
@@ -1101,7 +1289,11 @@
       ],
       "UpstreamPathTemplate": "/api/qr/signin",
       "Key": "SigninForUserApp",
-      "UpstreamHttpMethod": [ "POST" ]
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // send otp from user app
@@ -1116,7 +1308,11 @@
       ],
       "UpstreamPathTemplate": "/api/qr/otp",
       "Key": "SendOtpForUserApp",
-      "UpstreamHttpMethod": [ "POST" ]
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // verify otp from user app
@@ -1131,7 +1327,11 @@
       ],
       "UpstreamPathTemplate": "/api/qr/otp/verify",
       "Key": "verifyOtpForUserApp",
-      "UpstreamHttpMethod": [ "POST" ]
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // verify otp for signin from user app
@@ -1146,7 +1346,11 @@
       ],
       "UpstreamPathTemplate": "/api/qr/signin/otp/verify",
       "Key": "verifyOtpForSigninFromUserApp",
-      "UpstreamHttpMethod": [ "POST" ]
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     //************************* Verification End **************************

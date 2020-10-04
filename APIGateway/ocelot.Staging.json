@@ -33,7 +33,7 @@
       ],
       "UpstreamPathTemplate": "/api/vehicles",
       "Key": "VehiclesFromVehicleService",
-      "UpstreamHttpMethod": [ "DELETE", "PUT", "GET" ],
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []

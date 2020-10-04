@@ -170,7 +170,7 @@
       ],
       "UpstreamPathTemplate": "/api/devices",
       "Key": "DeviceFromVehicleService",
-      "UpstreamHttpMethod": [ "DELETE", "PUT", "GET" ],
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []
@@ -979,7 +979,7 @@
     //=============================================================
 
     //************************* Accounts Start **************************
-    // Signin v1 from Users Service
+    // Signin from Users Service
     {
       "DownstreamPathTemplate": "/api/signin",
       "DownstreamScheme": "http",
@@ -992,7 +992,6 @@
       "UpstreamPathTemplate": "/api/signin",
       "Key": "SigninFromUserService",
       "UpstreamHttpMethod": [ "POST" ]
-      
     },
 
     // Verify Signup from Users Service
@@ -1304,7 +1303,11 @@
       ],
       "UpstreamPathTemplate": "/api/places",
       "Key": "PlacesFromCoupon",
-      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ]
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Get with id for places from coupon
@@ -1319,7 +1322,11 @@
       ],
       "UpstreamPathTemplate": "/api/places/{id=0}",
       "Key": "GetPlacesFromCoupon",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Get with id for places from coupon
@@ -1334,7 +1341,11 @@
       ],
       "UpstreamPathTemplate": "/api/places/{id}",
       "Key": "DeletePlacesFromCoupon",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     //************************* places End **************************
@@ -1352,7 +1363,11 @@
       ],
       "UpstreamPathTemplate": "/api/authorities",
       "Key": "PlacesFromCoupon",
-      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ]
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Get with id for authorities from coupons
@@ -1366,8 +1381,12 @@
         }
       ],
       "UpstreamPathTemplate": "/api/authorities/{id=0}",
-      "Key": "GetPlacesFromCoupon",
-      "UpstreamHttpMethod": [ "GET" ]
+      "Key": "GetAuthoritiesFromCoupon",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Get with id for authorities from coupons
@@ -1382,7 +1401,11 @@
       ],
       "UpstreamPathTemplate": "/api/authorities/{id}",
       "Key": "DeletePlacesFromCoupon",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     //************************* authorities End **************************
@@ -1402,7 +1425,11 @@
       ],
       "UpstreamPathTemplate": "/api/coupons",
       "Key": "PlacesFromCoupon",
-      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ]
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Get with id for coupons from coupons
@@ -1416,8 +1443,12 @@
         }
       ],
       "UpstreamPathTemplate": "/api/coupons/{id=0}",
-      "Key": "GetPlacesFromCoupon",
-      "UpstreamHttpMethod": [ "GET" ]
+      "Key": "GetCouponsFromCoupon",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Get with id for coupons from coupons
@@ -1432,7 +1463,11 @@
       ],
       "UpstreamPathTemplate": "/api/coupons/{id}",
       "Key": "DeletePlacesFromCoupon",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
 
@@ -1452,7 +1487,11 @@
       ],
       "UpstreamPathTemplate": "/api/promotions",
       "Key": "PlacesFromCoupon",
-      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ]
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Get with id for promotions from coupons
@@ -1466,8 +1505,12 @@
         }
       ],
       "UpstreamPathTemplate": "/api/promotions/{id=0}",
-      "Key": "GetPlacesFromCoupon",
-      "UpstreamHttpMethod": [ "GET" ]
+      "Key": "GetPromotionsFromCoupon",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Get with id for contents from coupons
@@ -1481,8 +1524,31 @@
         }
       ],
       "UpstreamPathTemplate": "/api/contents/{id=0}",
-      "Key": "GetPlacesFromCoupon",
-      "UpstreamHttpMethod": [ "GET" ]
+      "Key": "GetContentsFromCoupon",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get with id for contents from coupons
+    {
+      "DownstreamPathTemplate": "/api/contents",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 86
+        }
+      ],
+      "UpstreamPathTemplate": "/api/contents",
+      "Key": "GetContentsFromCoupon",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Get with id for promotions from coupons
@@ -1497,7 +1563,11 @@
       ],
       "UpstreamPathTemplate": "/api/promotions/{id}",
       "Key": "DeletePlacesFromCoupon",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
 
@@ -1517,7 +1587,11 @@
       ],
       "UpstreamPathTemplate": "/api/coupons/redeem",
       "Key": "PlacesFromCoupon",
-      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ]
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Get with id for redeem from coupons
@@ -1531,8 +1605,12 @@
         }
       ],
       "UpstreamPathTemplate": "/api/coupons/redeem/{id=0}",
-      "Key": "GetPlacesFromCoupon",
-      "UpstreamHttpMethod": [ "GET" ]
+      "Key": "GetRedeemFromCoupon",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Get with id for redeem from coupons
@@ -1547,7 +1625,11 @@
       ],
       "UpstreamPathTemplate": "/api/coupons/redeem/{id}",
       "Key": "DeletePlacesFromCoupon",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     }
 
 

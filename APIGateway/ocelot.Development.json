@@ -170,7 +170,7 @@
       ],
       "UpstreamPathTemplate": "/api/devices",
       "Key": "DeviceFromVehicleService",
-      "UpstreamHttpMethod": [ "DELETE", "PUT", "GET" ],
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []
@@ -1369,7 +1369,7 @@
         }
       ],
       "UpstreamPathTemplate": "/api/authorities/{id=0}",
-      "Key": "GetPlacesFromCoupon",
+      "Key": "GetAuthoritiesFromCoupon",
       "UpstreamHttpMethod": [ "GET" ]
     },
 
@@ -1419,7 +1419,7 @@
         }
       ],
       "UpstreamPathTemplate": "/api/coupons/{id=0}",
-      "Key": "GetPlacesFromCoupon",
+      "Key": "GetCouponsFromCoupon",
       "UpstreamHttpMethod": [ "GET" ]
     },
 
@@ -1469,7 +1469,7 @@
         }
       ],
       "UpstreamPathTemplate": "/api/promotions/{id=0}",
-      "Key": "GetPlacesFromCoupon",
+      "Key": "GetPromotionsFromCoupon",
       "UpstreamHttpMethod": [ "GET" ]
     },
 
@@ -1484,9 +1484,25 @@
         }
       ],
       "UpstreamPathTemplate": "/api/contents/{id=0}",
-      "Key": "GetPlacesFromCoupon",
+      "Key": "GetContentsFromCouponById",
       "UpstreamHttpMethod": [ "GET" ]
     },
+
+    // Get with id for contents from coupons
+    {
+      "DownstreamPathTemplate": "/api/contents",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/api/contents",
+      "Key": "GetContentsFromCoupon",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
 
     // Get with id for promotions from coupons
     {
@@ -1534,7 +1550,7 @@
         }
       ],
       "UpstreamPathTemplate": "/api/coupons/redeem/{id=0}",
-      "Key": "GetPlacesFromCoupon",
+      "Key": "GetRedeemFromCoupon",
       "UpstreamHttpMethod": [ "GET" ]
     },
 
@@ -1552,7 +1568,6 @@
       "Key": "DeletePlacesFromCoupon",
       "UpstreamHttpMethod": [ "DELETE" ]
     }
-
 
     //************************* redeem end **************************
 

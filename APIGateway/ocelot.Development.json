@@ -661,6 +661,44 @@
       }
     },
 
+    //Get contents from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/api/contents",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56411
+        }
+      ],
+      "UpstreamPathTemplate": "/api/contents",
+      "Key": "GetContentsFromAdvertisementsService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get contents by id from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/api/contents/{id=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56411
+        }
+      ],
+      "UpstreamPathTemplate": "/api/contents/{id=0}",
+      "Key": "GetContentsByIdFromAdvertisementsService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
     //************************* Advertisements End **************************
 
 
@@ -1493,7 +1531,7 @@
 
     // Get with id for contents from coupons
     {
-      "DownstreamPathTemplate": "/api/contents/{id=0}",
+      "DownstreamPathTemplate": "/api/promotions/contents/{id=0}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1501,14 +1539,14 @@
           "Port": 63746
         }
       ],
-      "UpstreamPathTemplate": "/api/contents/{id=0}",
+      "UpstreamPathTemplate": "/api/promotions/contents/{id=0}",
       "Key": "GetContentsFromCouponById",
       "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Get with id for contents from coupons
     {
-      "DownstreamPathTemplate": "/api/contents",
+      "DownstreamPathTemplate": "/api/promotions/contents",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1516,7 +1554,7 @@
           "Port": 63746
         }
       ],
-      "UpstreamPathTemplate": "/api/contents",
+      "UpstreamPathTemplate": "/api/promotions/contents",
       "Key": "GetContentsFromCoupon",
       "UpstreamHttpMethod": [ "GET" ]
     },

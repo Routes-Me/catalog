@@ -746,7 +746,7 @@
       ],
       "UpstreamPathTemplate": "/api/officers/{officerid=0}/invitations",
       "Key": "InvitationFromInstitutionsService",
-      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "UpstreamHttpMethod": [ "POST" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []
@@ -774,7 +774,7 @@
 
     // Get Institutions By Id from Institutions Service
     {
-      "DownstreamPathTemplate": "/invitations/{invitationId=0}",
+      "DownstreamPathTemplate": "/api/invitations/{invitationId=0}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -784,6 +784,24 @@
       ],
       "UpstreamPathTemplate": "/api/invitations/{invitationId=0}",
       "Key": "InvitationByIdFromInstitutionsService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+    // Get Institutions By Id from Institutions Service
+    {
+      "DownstreamPathTemplate": "/api/invitations",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 62574
+        }
+      ],
+      "UpstreamPathTemplate": "/api/invitations",
+      "Key": "GetInvitationFromInstitutionsService",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",

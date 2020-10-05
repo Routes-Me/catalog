@@ -733,8 +733,6 @@
     //************************* Institutions End **************************
 
     //************************* Invitation Start **************************
-
-    //************************* Invitation Start **************************
     // Invitation from Institutions Service
     {
       "DownstreamPathTemplate": "/api/officers/{officerid=0}/invitations",
@@ -1545,13 +1543,14 @@
         }
       ],
       "UpstreamPathTemplate": "/api/contents/{id=0}",
-      "Key": "GetContentsFromCoupon",
+      "Key": "GetContentsFromCouponById",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []
       }
     },
+
 
     // Get with id for contents from coupons
     {
@@ -1571,6 +1570,7 @@
         "AllowedScopes": []
       }
     },
+
 
     // Get with id for promotions from coupons
     {

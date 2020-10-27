@@ -1078,11 +1078,7 @@
       ],
       "UpstreamPathTemplate": "/api/account/password",
       "Key": "ChangepasswordFromUserService",
-      "UpstreamHttpMethod": [ "PUT", "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "PUT", "POST" ]
     },
 
     //************************* Accounts End **************************
@@ -1335,128 +1331,6 @@
     },
 
     //************************* Verification End **************************
-
-    //************************* Applications Start **************************
-
-    // CRUD for applications from users
-    {
-      "DownstreamPathTemplate": "/api/applications",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
-        }
-      ],
-      "UpstreamPathTemplate": "/api/applications",
-      "Key": "ApplicationsFromUser",
-      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
-
-    // GET applications by Id from users
-    {
-      "DownstreamPathTemplate": "/api/applications/{id=0}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
-        }
-      ],
-      "UpstreamPathTemplate": "/api/applications/{id=0}",
-      "Key": "GetApplicationsFromUser",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
-
-    // Delete aplication from user
-    {
-      "DownstreamPathTemplate": "/api/applications/{id}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
-        }
-      ],
-      "UpstreamPathTemplate": "/api/applications/{id}",
-      "Key": "DeleteApplicationsFromUser",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
-
-    //************************* Applications End **************************
-
-    //************************* Privileges Start **************************
-
-    // CRUD for applications from users
-    {
-      "DownstreamPathTemplate": "/api/privileges",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
-        }
-      ],
-      "UpstreamPathTemplate": "/api/privileges",
-      "Key": "PrivilegesFromUser",
-      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
-
-    // GET applications by Id from users
-    {
-      "DownstreamPathTemplate": "/api/privileges/{id=0}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
-        }
-      ],
-      "UpstreamPathTemplate": "/api/privileges/{id=0}",
-      "Key": "GetPrivilegesFromUser",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
-
-    // Delete aplication from user
-    {
-      "DownstreamPathTemplate": "/api/privileges/{id}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
-        }
-      ],
-      "UpstreamPathTemplate": "/api/privileges/{id}",
-      "Key": "DeletePrivilegesFromUser",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
-
-    //************************* Privileges End **************************
 
     //=============================================================
     //==================== User End =======================

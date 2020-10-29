@@ -1026,6 +1026,26 @@
       }
     },
 
+
+    // Add Authorities
+    {
+      "DownstreamPathTemplate": "/api/institutions/authorities",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 62574
+        }
+      ],
+      "UpstreamPathTemplate": "/api/institutions/authorities",
+      "Key": "AddAuthorities",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
     //************************* ServicesInstitutions End **************************
 
     //=============================================================

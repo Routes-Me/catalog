@@ -1024,6 +1024,25 @@
       }
     },
 
+    // Add Authorities
+    {
+      "DownstreamPathTemplate": "/api/institutions/authorities",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 81
+        }
+      ],
+      "UpstreamPathTemplate": "/api/institutions/authorities",
+      "Key": "AddAuthorities",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
     //************************* ServicesInstitutions End **************************
 
     //=============================================================

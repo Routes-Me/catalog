@@ -8,7 +8,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 85
+          "Port": 95
         }
       ],
       "UpstreamPathTemplate": "/api/feeds",
@@ -28,7 +28,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 82
+          "Port": 92
         }
       ],
       "UpstreamPathTemplate": "/api/vehicles",
@@ -47,7 +47,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 82
+          "Port": 92
         }
       ],
       "UpstreamPathTemplate": "/api/vehicles/{vehicleId=0}",
@@ -66,7 +66,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 82
+          "Port": 92
         }
       ],
       "UpstreamPathTemplate": "/api/vehicles/{vehicleId=0}/drivers/{driverId=0}",
@@ -85,7 +85,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 82
+          "Port": 92
         }
       ],
       "UpstreamPathTemplate": "/api/vehicles/{id}",
@@ -106,7 +106,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 82
+          "Port": 92
         }
       ],
       "UpstreamPathTemplate": "/api/vehicles/search",
@@ -127,7 +127,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 82
+          "Port": 92
         }
       ],
       "UpstreamPathTemplate": "/api/devices/{deviceId=0}",
@@ -146,7 +146,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 82
+          "Port": 92
         }
       ],
       "UpstreamPathTemplate": "/api/devices/{id}",
@@ -165,7 +165,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 82
+          "Port": 92
         }
       ],
       "UpstreamPathTemplate": "/api/devices",
@@ -187,7 +187,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 82
+          "Port": 92
         }
       ],
       "UpstreamPathTemplate": "/api/drivers",
@@ -206,7 +206,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 82
+          "Port": 92
         }
       ],
       "UpstreamPathTemplate": "/api/drivers/{id}",
@@ -225,7 +225,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 82
+          "Port": 92
         }
       ],
       "UpstreamPathTemplate": "/api/drivers/{driverId=0}",
@@ -247,7 +247,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 82
+          "Port": 92
         }
       ],
       "UpstreamPathTemplate": "/api/manufacturers",
@@ -266,7 +266,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 82
+          "Port": 92
         }
       ],
       "UpstreamPathTemplate": "/api/manufacturers/{id}",
@@ -285,7 +285,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 82
+          "Port": 92
         }
       ],
       "UpstreamPathTemplate": "/api/manufacturers/{manufacturerId=0}",
@@ -304,7 +304,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 82
+          "Port": 92
         }
       ],
       "UpstreamPathTemplate": "/api/manufacturers/{manufacturerId=0}/model",
@@ -326,7 +326,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 82
+          "Port": 92
         }
       ],
       "UpstreamPathTemplate": "/api/models",
@@ -345,7 +345,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 82
+          "Port": 92
         }
       ],
       "UpstreamPathTemplate": "/api/models/{id}",
@@ -375,7 +375,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 84
+          "Port": 94
         }
       ],
       "UpstreamPathTemplate": "/api/medias",
@@ -394,7 +394,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 84
+          "Port": 94
         }
       ],
       "UpstreamPathTemplate": "/api/medias/{id=0}",
@@ -413,7 +413,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 84
+          "Port": 94
         }
       ],
       "UpstreamPathTemplate": "/api/medias/{id}",
@@ -435,7 +435,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 84
+          "Port": 94
         }
       ],
       "UpstreamPathTemplate": "/api/intervals",
@@ -454,7 +454,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 84
+          "Port": 94
         }
       ],
       "UpstreamPathTemplate": "/api/intervals/{id=0}",
@@ -473,7 +473,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 84
+          "Port": 94
         }
       ],
       "UpstreamPathTemplate": "/api/intervals/{id}",
@@ -494,7 +494,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 84
+          "Port": 94
         }
       ],
       "UpstreamPathTemplate": "/api/campaigns",
@@ -513,7 +513,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 84
+          "Port": 94
         }
       ],
       "UpstreamPathTemplate": "/api/campaigns/{id=0}",
@@ -532,7 +532,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 84
+          "Port": 94
         }
       ],
       "UpstreamPathTemplate": "/api/campaigns/{id=0}/advertisements/{advertisementsId=0}",
@@ -551,7 +551,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 84
+          "Port": 94
         }
       ],
       "UpstreamPathTemplate": "/api/campaigns/advertisementsqr",
@@ -570,7 +570,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 84
+          "Port": 94
         }
       ],
       "UpstreamPathTemplate": "/api/campaigns/{id}",
@@ -591,7 +591,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 84
+          "Port": 94
         }
       ],
       "UpstreamPathTemplate": "/api/advertisements",
@@ -610,7 +610,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 84
+          "Port": 94
         }
       ],
       "UpstreamPathTemplate": "/api/advertisements/{id=0}",
@@ -629,7 +629,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 84
+          "Port": 94
         }
       ],
       "UpstreamPathTemplate": "/api/institutions/{institutionId}/advertisements/{advertisementsId=0}",
@@ -648,7 +648,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 84
+          "Port": 94
         }
       ],
       "UpstreamPathTemplate": "/api/advertisements/{id}",
@@ -667,7 +667,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 84
+          "Port": 94
         }
       ],
       "UpstreamPathTemplate": "/api/contents",
@@ -686,7 +686,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 84
+          "Port": 94
         }
       ],
       "UpstreamPathTemplate": "/api/contents/{id=0}",
@@ -718,7 +718,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 81
+          "Port": 91
         }
       ],
       "UpstreamPathTemplate": "/api/institutions",
@@ -737,7 +737,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 81
+          "Port": 91
         }
       ],
       "UpstreamPathTemplate": "/api/institutions/{institutionId=0}",
@@ -756,7 +756,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 81
+          "Port": 91
         }
       ],
       "UpstreamPathTemplate": "/api/institutions/{id}",
@@ -778,7 +778,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 81
+          "Port": 91
         }
       ],
       "UpstreamPathTemplate": "/api/officers/{officerid=0}/invitations",
@@ -797,7 +797,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 81
+          "Port": 91
         }
       ],
       "UpstreamPathTemplate": "/api/officers/{officerid=0}/{invitations}/{id}",
@@ -816,7 +816,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 81
+          "Port": 91
         }
       ],
       "UpstreamPathTemplate": "/api/invitations/{invitationId=0}",
@@ -835,7 +835,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 81
+          "Port": 91
         }
       ],
       "UpstreamPathTemplate": "/api/invitations",
@@ -856,7 +856,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 81
+          "Port": 91
         }
       ],
       "UpstreamPathTemplate": "/api/officers",
@@ -875,7 +875,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 81
+          "Port": 91
         }
       ],
       "UpstreamPathTemplate": "/api/officers/{officersId=0}",
@@ -894,7 +894,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 81
+          "Port": 91
         }
       ],
       "UpstreamPathTemplate": "/api/officers/{officersId}",
@@ -915,7 +915,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 81
+          "Port": 91
         }
       ],
       "UpstreamPathTemplate": "/api/services",
@@ -934,7 +934,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 81
+          "Port": 91
         }
       ],
       "UpstreamPathTemplate": "/api/services/{servicesId=0}",
@@ -953,7 +953,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 81
+          "Port": 91
         }
       ],
       "UpstreamPathTemplate": "/api/services/{id}",
@@ -974,7 +974,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 81
+          "Port": 91
         }
       ],
       "UpstreamPathTemplate": "/api/institutions/{institutionsId=0}/services",
@@ -993,7 +993,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 81
+          "Port": 91
         }
       ],
       "UpstreamPathTemplate": "/api/institutions/{institutionsId=0}/services/{servicesId=0}",
@@ -1012,7 +1012,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 81
+          "Port": 91
         }
       ],
       "UpstreamPathTemplate": "/api/institutions/{institutionsId=0}/services/{servicesId}",
@@ -1031,7 +1031,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 81
+          "Port": 91
         }
       ],
       "UpstreamPathTemplate": "/api/institutions/authorities",
@@ -1062,7 +1062,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
+          "Port": 90
         }
       ],
       "UpstreamPathTemplate": "/api/signin",
@@ -1077,7 +1077,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
+          "Port": 90
         }
       ],
       "UpstreamPathTemplate": "/api/signup",
@@ -1092,7 +1092,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
+          "Port": 90
         }
       ],
       "UpstreamPathTemplate": "/api/account/password",
@@ -1110,7 +1110,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
+          "Port": 90
         }
       ],
       "UpstreamPathTemplate": "/api/users",
@@ -1129,7 +1129,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
+          "Port": 90
         }
       ],
       "UpstreamPathTemplate": "/api/users/{id=0}",
@@ -1148,7 +1148,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
+          "Port": 90
         }
       ],
       "UpstreamPathTemplate": "/api/users/{id}",
@@ -1170,7 +1170,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
+          "Port": 90
         }
       ],
       "UpstreamPathTemplate": "/api/roles",
@@ -1185,7 +1185,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
+          "Port": 90
         }
       ],
       "UpstreamPathTemplate": "/api/roles/{id}",
@@ -1200,7 +1200,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
+          "Port": 90
         }
       ],
       "UpstreamPathTemplate": "/api/roles/{id=0}",
@@ -1219,7 +1219,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
+          "Port": 90
         }
       ],
       "UpstreamPathTemplate": "/api/otp",
@@ -1234,7 +1234,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
+          "Port": 90
         }
       ],
       "UpstreamPathTemplate": "/api/otp/verify",
@@ -1251,7 +1251,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
+          "Port": 90
         }
       ],
       "UpstreamPathTemplate": "/api/signin/otp/verify",
@@ -1266,7 +1266,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
+          "Port": 90
         }
       ],
       "UpstreamPathTemplate": "/api/email",
@@ -1281,7 +1281,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
+          "Port": 90
         }
       ],
       "UpstreamPathTemplate": "/api/email/verify",
@@ -1296,7 +1296,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
+          "Port": 90
         }
       ],
       "UpstreamPathTemplate": "/api/qr/signin",
@@ -1311,7 +1311,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
+          "Port": 90
         }
       ],
       "UpstreamPathTemplate": "/api/qr/otp",
@@ -1326,7 +1326,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
+          "Port": 90
         }
       ],
       "UpstreamPathTemplate": "/api/qr/otp/verify",
@@ -1341,7 +1341,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
+          "Port": 90
         }
       ],
       "UpstreamPathTemplate": "/api/qr/signin/otp/verify",
@@ -1360,7 +1360,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
+          "Port": 90
         }
       ],
       "UpstreamPathTemplate": "/api/applications",
@@ -1379,7 +1379,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
+          "Port": 90
         }
       ],
       "UpstreamPathTemplate": "/api/applications/{id=0}",
@@ -1398,7 +1398,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
+          "Port": 90
         }
       ],
       "UpstreamPathTemplate": "/api/applications/{id}",
@@ -1421,7 +1421,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
+          "Port": 90
         }
       ],
       "UpstreamPathTemplate": "/api/privileges",
@@ -1440,7 +1440,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
+          "Port": 90
         }
       ],
       "UpstreamPathTemplate": "/api/privileges/{id=0}",
@@ -1459,7 +1459,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 80
+          "Port": 90
         }
       ],
       "UpstreamPathTemplate": "/api/privileges/{id}",
@@ -1492,7 +1492,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 86
+          "Port": 96
         }
       ],
       "UpstreamPathTemplate": "/api/places",
@@ -1511,7 +1511,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 86
+          "Port": 96
         }
       ],
       "UpstreamPathTemplate": "/api/places/{id=0}",
@@ -1530,7 +1530,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 86
+          "Port": 96
         }
       ],
       "UpstreamPathTemplate": "/api/places/{id}",
@@ -1552,7 +1552,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 86
+          "Port": 96
         }
       ],
       "UpstreamPathTemplate": "/api/authorities",
@@ -1571,7 +1571,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 86
+          "Port": 96
         }
       ],
       "UpstreamPathTemplate": "/api/authorities/{id=0}",
@@ -1590,7 +1590,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 86
+          "Port": 96
         }
       ],
       "UpstreamPathTemplate": "/api/authorities/{id}",
@@ -1614,7 +1614,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 86
+          "Port": 96
         }
       ],
       "UpstreamPathTemplate": "/api/coupons",
@@ -1633,7 +1633,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 86
+          "Port": 96
         }
       ],
       "UpstreamPathTemplate": "/api/coupons/{id=0}",
@@ -1652,7 +1652,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 86
+          "Port": 96
         }
       ],
       "UpstreamPathTemplate": "/api/coupons/{id}",
@@ -1676,7 +1676,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 86
+          "Port": 96
         }
       ],
       "UpstreamPathTemplate": "/api/promotions",
@@ -1695,7 +1695,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 86
+          "Port": 96
         }
       ],
       "UpstreamPathTemplate": "/api/promotions/{id=0}",
@@ -1714,7 +1714,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 86
+          "Port": 96
         }
       ],
       "UpstreamPathTemplate": "/api/promotions/contents/{id=0}",
@@ -1734,7 +1734,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 86
+          "Port": 96
         }
       ],
       "UpstreamPathTemplate": "/api/promotions/contents",
@@ -1754,7 +1754,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 86
+          "Port": 96
         }
       ],
       "UpstreamPathTemplate": "/api/promotions/{id}",
@@ -1778,7 +1778,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 86
+          "Port": 96
         }
       ],
       "UpstreamPathTemplate": "/api/coupons/redeem",
@@ -1797,7 +1797,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 86
+          "Port": 96
         }
       ],
       "UpstreamPathTemplate": "/api/coupons/redeem/{id=0}",
@@ -1816,7 +1816,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 86
+          "Port": 96
         }
       ],
       "UpstreamPathTemplate": "/api/coupons/redeem/{id}",

@@ -1737,7 +1737,24 @@
       "UpstreamPathTemplate": "/api/coupons/redeem/{id}",
       "Key": "DeletePlacesFromCoupon",
       "UpstreamHttpMethod": [ "DELETE" ]
+    },
+
+    // Search redeem
+    {
+      "DownstreamPathTemplate": "/api/coupons/redeem/search",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/api/coupons/redeem/search",
+      "Key": "SearchRedeem",
+      "UpstreamHttpMethod": [ "GET" ]
     }
+
+    
 
     //************************* redeem end **************************
 

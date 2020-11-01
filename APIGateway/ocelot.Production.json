@@ -1826,6 +1826,20 @@
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []
       }
+    },
+    // Search redeem
+    {
+      "DownstreamPathTemplate": "/api/coupons/redeem/search",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 96
+        }
+      ],
+      "UpstreamPathTemplate": "/api/coupons/redeem/search",
+      "Key": "SearchRedeem",
+      "UpstreamHttpMethod": [ "GET" ]
     }
 
 

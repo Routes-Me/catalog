@@ -1752,11 +1752,59 @@
       "UpstreamPathTemplate": "/api/coupons/redeem/search",
       "Key": "SearchRedeem",
       "UpstreamHttpMethod": [ "GET" ]
-    }
+    },
 
-    
+
 
     //************************* redeem end **************************
+
+    //************************* Links start **************************
+
+    {
+      "DownstreamPathTemplate": "/api/links",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/api/links",
+      "Key": "SearchRedeem",
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/links/{id=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/api/links/{id=0}",
+      "Key": "SearchRedeem",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+
+    {
+      "DownstreamPathTemplate": "/api/links/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/api/links/{id}",
+      "Key": "SearchRedeem",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    }
+
+
+    //************************* Links end **************************
 
     //=============================================================
     //======================== Coupon End =========================

@@ -1840,7 +1840,11 @@
       ],
       "UpstreamPathTemplate": "/api/coupons/redeem/search",
       "Key": "SearchRedeem",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
 
@@ -1860,7 +1864,11 @@
       ],
       "UpstreamPathTemplate": "/api/links",
       "Key": "SearchRedeem",
-      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ]
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     {
@@ -1874,7 +1882,11 @@
       ],
       "UpstreamPathTemplate": "/api/links/{id=0}",
       "Key": "SearchRedeem",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
 
@@ -1889,7 +1901,11 @@
       ],
       "UpstreamPathTemplate": "/api/links/{id}",
       "Key": "SearchRedeem",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     }
 
 

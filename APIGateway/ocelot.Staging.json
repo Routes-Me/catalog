@@ -1864,11 +1864,25 @@
       ],
       "UpstreamPathTemplate": "/api/links",
       "Key": "SearchRedeem",
-      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "UpstreamHttpMethod": [ "POST", "PUT" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []
       }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/links",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 96
+        }
+      ],
+      "UpstreamPathTemplate": "/api/links",
+      "Key": "SearchRedeem",
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     {
@@ -1882,13 +1896,8 @@
       ],
       "UpstreamPathTemplate": "/api/links/{id=0}",
       "Key": "SearchRedeem",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
-
 
     {
       "DownstreamPathTemplate": "/api/links/{id}",

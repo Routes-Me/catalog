@@ -1843,11 +1843,24 @@
       ],
       "UpstreamPathTemplate": "/api/links",
       "Key": "SearchRedeem",
-      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "UpstreamHttpMethod": [ "POST", "PUT" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []
       }
+    },
+    {
+      "DownstreamPathTemplate": "/api/links",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/api/links",
+      "Key": "SearchRedeem",
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     {
@@ -1861,11 +1874,7 @@
       ],
       "UpstreamPathTemplate": "/api/links/{id=0}",
       "Key": "SearchRedeem",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     {

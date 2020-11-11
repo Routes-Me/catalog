@@ -699,6 +699,44 @@
       }
     },
 
+    // Update Campaign Advertisement by Id
+    {
+      "DownstreamPathTemplate": "/api/campaigns/{campaignsId}/advertisements/{advertisementsId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56411
+        }
+      ],
+      "UpstreamPathTemplate": "/api/campaigns/{campaignsId}/advertisements/{advertisementsId}",
+      "Key": "UpdateCampaignAdvertisement",
+      "UpstreamHttpMethod": [ "PATCH" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Update Campaign Advertisement by List
+    {
+      "DownstreamPathTemplate": "/api/campaigns/{campaignsId}/advertisements",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56411
+        }
+      ],
+      "UpstreamPathTemplate": "/api/campaigns/{campaignsId}/advertisements",
+      "Key": "UpdateCampaignAdvertisementList",
+      "UpstreamHttpMethod": [ "PATCH" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
     //************************* Advertisements End **************************
 
 

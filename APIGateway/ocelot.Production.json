@@ -1981,6 +1981,6 @@
 
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://vmtproject.uaenorth.cloudapp.azure.com:5000"
+    "BaseUrl": "http://vmtproject.uaenorth.cloudapp.azure.com:5000"
   }
 }

@@ -103,18 +103,18 @@ namespace APIGateway
             });
 
             services.AddOcelot(_configuration);
-            services.AddHttpsRedirection(options =>
-            {
-                options.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect;
-                options.HttpsPort = 443;
-            });
+            //services.AddHttpsRedirection(options =>
+            //{
+            //    options.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect;
+            //    options.HttpsPort = 443;
+            //});
 
-            services.AddHsts(options =>
-            {
-                options.Preload = false;
-                options.IncludeSubDomains = false;
-                options.MaxAge = TimeSpan.FromDays(30);
-            });
+            //services.AddHsts(options =>
+            //{
+            //    options.Preload = false;
+            //    options.IncludeSubDomains = false;
+            //    options.MaxAge = TimeSpan.FromDays(30);
+            //});
 
         }
 
@@ -125,10 +125,10 @@ namespace APIGateway
             {
                 app.UseDeveloperExceptionPage();
             }
-            else
-            {
-                app.UseHsts();
-            }
+            //else
+            //{
+            //    app.UseHsts();
+            //}
 
             app.UseHttpsRedirection();
             app.UseRouting();

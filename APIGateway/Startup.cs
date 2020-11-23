@@ -103,6 +103,19 @@ namespace APIGateway
             });
 
             services.AddOcelot(_configuration);
+            services.AddHttpsRedirection(options =>
+            {
+                options.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect;
+                options.HttpsPort = 443;
+            });
+
+            services.AddHsts(options =>
+            {
+                options.Preload = false;
+                options.IncludeSubDomains = false;
+                options.MaxAge = TimeSpan.FromDays(30);
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -111,6 +124,10 @@ namespace APIGateway
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                app.UseHsts();
             }
 
             app.UseHttpsRedirection();

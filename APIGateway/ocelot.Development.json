@@ -177,6 +177,26 @@
       }
     },
 
+    //Device Applications
+    {
+      "DownstreamPathTemplate": "/api/devices/{deviceId=0}/applications",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/api/devices/{deviceId=0}/applications",
+      "Key": "DeviceApplications",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+
     //************************* Device End **************************
 
     //************************* Driver Start **************************

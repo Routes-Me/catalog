@@ -1966,6 +1966,6 @@
 
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:44340/"
+    "BaseUrl": "http://localhost:56635"
   }
 }

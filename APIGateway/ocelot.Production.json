@@ -4,7 +4,7 @@
     //Archive track Service 
     {
       "DownstreamPathTemplate": "/api/feeds",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -24,7 +24,7 @@
     //Vehicle from vehicle Service
     {
       "DownstreamPathTemplate": "/api/vehicles",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -43,7 +43,7 @@
     //Get Vehicle By Id from vehicle Service
     {
       "DownstreamPathTemplate": "/api/vehicles/{vehicleId=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -62,7 +62,7 @@
     //Get Drivers By Vehicle Id from vehicle Service
     {
       "DownstreamPathTemplate": "/api/vehicles/{vehicleId=0}/drivers/{driverId=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -81,7 +81,7 @@
     //Get Vehicle By Id from vehicle Service
     {
       "DownstreamPathTemplate": "/api/vehicles/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -102,7 +102,7 @@
     //Driver from vehicle Service
     {
       "DownstreamPathTemplate": "/api/vehicles/search",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -123,7 +123,7 @@
     //Driver from vehicle Service
     {
       "DownstreamPathTemplate": "/api/devices/{deviceId=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -142,7 +142,7 @@
     //Delete Driver from vehicle Service
     {
       "DownstreamPathTemplate": "/api/devices/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -161,7 +161,7 @@
     //Driver from vehicle Service
     {
       "DownstreamPathTemplate": "/api/devices",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -180,7 +180,7 @@
     //Device Applications
     {
       "DownstreamPathTemplate": "/api/devices/{deviceId=0}/applications",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -202,7 +202,7 @@
     //Driver from vehicle Service
     {
       "DownstreamPathTemplate": "/api/drivers",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -221,7 +221,7 @@
     //Delete Driver from vehicle Service
     {
       "DownstreamPathTemplate": "/api/drivers/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -240,7 +240,7 @@
     //Get Driver with id from vehicle Service
     {
       "DownstreamPathTemplate": "/api/drivers/{driverId=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -262,7 +262,7 @@
     //Manufacturers from vehicle Service
     {
       "DownstreamPathTemplate": "/api/manufacturers",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -281,7 +281,7 @@
     //Delete Manufacturers from vehicle Service
     {
       "DownstreamPathTemplate": "/api/manufacturers/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -300,7 +300,7 @@
     //Get Manufacturers By Id from vehicle Service
     {
       "DownstreamPathTemplate": "/api/manufacturers/{manufacturerId=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -319,7 +319,7 @@
     //Get Model By Manufacturers Id from vehicle Service
     {
       "DownstreamPathTemplate": "/api/manufacturers/{manufacturerId=0}/model",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -341,7 +341,7 @@
     //Models from vehicle Service
     {
       "DownstreamPathTemplate": "/api/models",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -360,7 +360,7 @@
     //Delete Models from vehicle Service
     {
       "DownstreamPathTemplate": "/api/models/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -390,7 +390,7 @@
     // Medias from Advertisements Service
     {
       "DownstreamPathTemplate": "/api/medias",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -409,7 +409,7 @@
     // Get Medias by id from Advertisements Services
     {
       "DownstreamPathTemplate": "/api/medias/{id=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -428,7 +428,7 @@
     // Delete Medias from Advertisements Services
     {
       "DownstreamPathTemplate": "/api/medias/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -450,7 +450,7 @@
     // Intervals from Advertisements Service
     {
       "DownstreamPathTemplate": "/api/intervals",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -469,7 +469,7 @@
     // Get Intervals by id from Advertisements Services
     {
       "DownstreamPathTemplate": "/api/intervals/{id=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -488,7 +488,7 @@
     // Delete Interval from Advertisements Services
     {
       "DownstreamPathTemplate": "/api/intervals/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -509,7 +509,7 @@
     // Campaigns Medias from Advertisements Services
     {
       "DownstreamPathTemplate": "/api/campaigns",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -528,7 +528,7 @@
     // Get Campaigns By Id from Advertisements Services
     {
       "DownstreamPathTemplate": "/api/campaigns/{id=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -547,7 +547,7 @@
     // Get Advertisements of Campaigns By Id from Advertisements Services
     {
       "DownstreamPathTemplate": "/api/campaigns/{id=0}/advertisements/{advertisementsId=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -566,7 +566,7 @@
     // Get Advertisements of active campaign of Campaigns By Id from Advertisements Services
     {
       "DownstreamPathTemplate": "/api/campaigns/advertisementsqr",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -585,7 +585,7 @@
     // Delete Campaigns from Advertisements Services
     {
       "DownstreamPathTemplate": "/api/campaigns/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -606,7 +606,7 @@
     // Advertisements from Advertisements Services
     {
       "DownstreamPathTemplate": "/api/advertisements",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -625,7 +625,7 @@
     // Get Advertisements By Id from Advertisements Services
     {
       "DownstreamPathTemplate": "/api/advertisements/{id=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -644,7 +644,7 @@
     // Get Advertisements By Institution Id from Advertisements Services
     {
       "DownstreamPathTemplate": "/api/institutions/{institutionId}/advertisements/{advertisementsId=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -663,7 +663,7 @@
     // Delete Advertisements from Advertisements Services
     {
       "DownstreamPathTemplate": "/api/advertisements/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -682,7 +682,7 @@
     //Get contents from Advertisements Services
     {
       "DownstreamPathTemplate": "/api/contents",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -701,7 +701,7 @@
     // Get contents by id from Advertisements Services
     {
       "DownstreamPathTemplate": "/api/contents/{id=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -720,7 +720,7 @@
     // Update Campaign Advertisement by Id
     {
       "DownstreamPathTemplate": "/api/campaigns/{campaignsId}/advertisements/{advertisementsId}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -739,7 +739,7 @@
     // Update Campaign Advertisement by List
     {
       "DownstreamPathTemplate": "/api/campaigns/{campaignsId}/advertisements",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -771,7 +771,7 @@
     // Institutions from Institutions Service
     {
       "DownstreamPathTemplate": "/api/institutions",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -790,7 +790,7 @@
     // Get Institutions By Id from Institutions Service
     {
       "DownstreamPathTemplate": "/api/institutions/{institutionId=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -809,7 +809,7 @@
     // Delete Institutions from Institutions Service
     {
       "DownstreamPathTemplate": "/api/institutions/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -831,7 +831,7 @@
     // Invitation from Institutions Service
     {
       "DownstreamPathTemplate": "/api/officers/{officerid=0}/invitations",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -850,7 +850,7 @@
     // Delete Institutions from Institutions Service
     {
       "DownstreamPathTemplate": "/api/officers/{officerid=0}/{invitations}/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -869,7 +869,7 @@
     // Get Institutions By Id from Institutions Service
     {
       "DownstreamPathTemplate": "/api/invitations/{invitationId=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -888,7 +888,7 @@
     // Get Institutions By Id from Institutions Service
     {
       "DownstreamPathTemplate": "/api/invitations",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -909,7 +909,7 @@
     // Officers from Institutions Service
     {
       "DownstreamPathTemplate": "/api/officers",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -928,7 +928,7 @@
     // Officers By Id from Institutions Service
     {
       "DownstreamPathTemplate": "/api/officers/{officersId=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -947,7 +947,7 @@
     // Delete Officers from Institutions Service
     {
       "DownstreamPathTemplate": "/api/officers/{officersId}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -968,7 +968,7 @@
     // Services from Institutions Service
     {
       "DownstreamPathTemplate": "/api/services",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -987,7 +987,7 @@
     // GetServices By Id from Institutions Service
     {
       "DownstreamPathTemplate": "/api/services/{servicesId=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1006,7 +1006,7 @@
     // Delete Services from Institutions Service
     {
       "DownstreamPathTemplate": "/api/services/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1027,7 +1027,7 @@
     // ServicesInstitutions from Institutions Service
     {
       "DownstreamPathTemplate": "/api/institutions/{institutionsId=0}/services",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1046,7 +1046,7 @@
     // Get ServicesInstitutions By Id from Institutions Service
     {
       "DownstreamPathTemplate": "/api/institutions/{institutionsId=0}/services/{servicesId=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1065,7 +1065,7 @@
     // Delete ServicesInstitutions By Id from Institutions Service
     {
       "DownstreamPathTemplate": "/api/institutions/{institutionsId=0}/services/{servicesId}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1084,7 +1084,7 @@
     // Add Authorities
     {
       "DownstreamPathTemplate": "/api/institutions/authorities",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1115,7 +1115,7 @@
     // Signin from Users Service
     {
       "DownstreamPathTemplate": "/api/signin",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1130,7 +1130,7 @@
     // Verify Signup from Users Service
     {
       "DownstreamPathTemplate": "/api/signup",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1145,7 +1145,7 @@
     // Change password from Users Service
     {
       "DownstreamPathTemplate": "/api/account/password",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1163,7 +1163,7 @@
     // Users from Users Service
     {
       "DownstreamPathTemplate": "/api/users",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1182,7 +1182,7 @@
     // Get Users By Id from Users Service
     {
       "DownstreamPathTemplate": "/api/users/{id=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1201,7 +1201,7 @@
     // Delete Users from Users Service
     {
       "DownstreamPathTemplate": "/api/users/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1223,7 +1223,7 @@
     // Roles from Users Service
     {
       "DownstreamPathTemplate": "/api/roles",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1238,7 +1238,7 @@
     // Delete Roles from Users Service
     {
       "DownstreamPathTemplate": "/api/roles/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1253,7 +1253,7 @@
     // Roles By Id from Users Service
     {
       "DownstreamPathTemplate": "/api/roles/{id=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1272,7 +1272,7 @@
     // Send OTP from Users Service
     {
       "DownstreamPathTemplate": "/api/otp",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1287,7 +1287,7 @@
     // Verify OTP from Users Service
     {
       "DownstreamPathTemplate": "/api/otp/verify",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1304,7 +1304,7 @@
     // Verify signin OTP from Users Service
     {
       "DownstreamPathTemplate": "/api/signin/otp/verify",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1319,7 +1319,7 @@
     // Send Email Confirmation from Users Service
     {
       "DownstreamPathTemplate": "/api/email",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1334,7 +1334,7 @@
     // Verify Email Confirmation from Users Service
     {
       "DownstreamPathTemplate": "/api/email/verify",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1349,7 +1349,7 @@
     // Signin from user app
     {
       "DownstreamPathTemplate": "/api/qr/signin",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1364,7 +1364,7 @@
     // send otp from user app
     {
       "DownstreamPathTemplate": "/api/qr/otp",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1379,7 +1379,7 @@
     // verify otp from user app
     {
       "DownstreamPathTemplate": "/api/qr/otp/verify",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1394,7 +1394,7 @@
     // verify otp for signin from user app
     {
       "DownstreamPathTemplate": "/api/qr/signin/otp/verify",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1413,7 +1413,7 @@
     // CRUD for applications from users
     {
       "DownstreamPathTemplate": "/api/applications",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1432,7 +1432,7 @@
     // GET applications by Id from users
     {
       "DownstreamPathTemplate": "/api/applications/{id=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1451,7 +1451,7 @@
     // Delete aplication from user
     {
       "DownstreamPathTemplate": "/api/applications/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1474,7 +1474,7 @@
     // CRUD for applications from users
     {
       "DownstreamPathTemplate": "/api/privileges",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1493,7 +1493,7 @@
     // GET applications by Id from users
     {
       "DownstreamPathTemplate": "/api/privileges/{id=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1512,7 +1512,7 @@
     // Delete aplication from user
     {
       "DownstreamPathTemplate": "/api/privileges/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1545,7 +1545,7 @@
     // CRUD for places from coupon
     {
       "DownstreamPathTemplate": "/api/places",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1564,7 +1564,7 @@
     // Get with id for places from coupon
     {
       "DownstreamPathTemplate": "/api/places/{id=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1583,7 +1583,7 @@
     // Get with id for places from coupon
     {
       "DownstreamPathTemplate": "/api/places/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1605,7 +1605,7 @@
     // CRUD for authorities from coupons
     {
       "DownstreamPathTemplate": "/api/authorities",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1624,7 +1624,7 @@
     // Get with id for authorities from coupons
     {
       "DownstreamPathTemplate": "/api/authorities/{id=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1643,7 +1643,7 @@
     // Get with id for authorities from coupons
     {
       "DownstreamPathTemplate": "/api/authorities/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1667,7 +1667,7 @@
     // CRUD for coupons from authorities
     {
       "DownstreamPathTemplate": "/api/coupons",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1686,7 +1686,7 @@
     // Get with id for coupons from coupons
     {
       "DownstreamPathTemplate": "/api/coupons/{id=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1705,7 +1705,7 @@
     // Get with id for coupons from coupons
     {
       "DownstreamPathTemplate": "/api/coupons/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1729,7 +1729,7 @@
     // CRUD for promotions from coupons
     {
       "DownstreamPathTemplate": "/api/promotions",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1748,7 +1748,7 @@
     // Get with id for promotions from coupons
     {
       "DownstreamPathTemplate": "/api/promotions/{id=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1767,7 +1767,7 @@
     // Get with id for contents from coupons
     {
       "DownstreamPathTemplate": "/api/promotions/contents/{id=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1787,7 +1787,7 @@
     // Get with id for contents from coupons
     {
       "DownstreamPathTemplate": "/api/promotions/contents",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1807,7 +1807,7 @@
     // Get with id for promotions from coupons
     {
       "DownstreamPathTemplate": "/api/promotions/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1831,7 +1831,7 @@
     // CRUD for redeem from coupons
     {
       "DownstreamPathTemplate": "/api/coupons/redeem",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1850,7 +1850,7 @@
     // Get with id for redeem from coupons
     {
       "DownstreamPathTemplate": "/api/coupons/redeem/{id=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1869,7 +1869,7 @@
     // Get with id for redeem from coupons
     {
       "DownstreamPathTemplate": "/api/coupons/redeem/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1887,7 +1887,7 @@
     // Search redeem
     {
       "DownstreamPathTemplate": "/api/coupons/redeem/search",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1911,7 +1911,7 @@
 
     {
       "DownstreamPathTemplate": "/api/links",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1929,7 +1929,7 @@
 
     {
       "DownstreamPathTemplate": "/api/links",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1943,7 +1943,7 @@
 
     {
       "DownstreamPathTemplate": "/api/links/{id=0}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1957,7 +1957,7 @@
 
     {
       "DownstreamPathTemplate": "/api/links/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtproject.uaenorth.cloudapp.azure.com",
@@ -1981,6 +1981,6 @@
 
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://vmtproject.uaenorth.cloudapp.azure.com:5000"
+    "BaseUrl": "https://vmtproject.uaenorth.cloudapp.azure.com:5000"
   }
 }

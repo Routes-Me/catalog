@@ -196,6 +196,26 @@
       }
     },
 
+
+    //Device from vehicles
+    {
+      "DownstreamPathTemplate": "/api/vehicles/{vehicleId=0}/devices",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 92
+        }
+      ],
+      "UpstreamPathTemplate": "/api/vehicles/{vehicleId=0}/devices",
+      "Key": "VehicleDevices",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
     //************************* Device End **************************
 
     //************************* Driver Start **************************

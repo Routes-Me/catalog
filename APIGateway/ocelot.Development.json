@@ -1971,7 +1971,7 @@
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []
       }
-    }
+    },
 
 
     //************************* Links end **************************
@@ -1981,7 +1981,47 @@
     //=============================================================
 
     //=============================================================
-    //========================= Users End =========================
+    //======================== Analytics Start =========================
+    //=============================================================
+
+    {
+      "DownstreamPathTemplate": "/api/analytics/promotions",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56180
+        }
+      ],
+      "UpstreamPathTemplate": "/api/analytics/promotions",
+      "Key": "GetAnalytics",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/analytics/promotions/{id=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56180
+        }
+      ],
+      "UpstreamPathTemplate": "/api/analytics/promotions/{id=0}",
+      "Key": "GetAnalyticsById",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    }
+
+    //=============================================================
+    //======================== Analytics End =========================
     //=============================================================
 
   ],

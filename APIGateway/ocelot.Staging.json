@@ -1993,13 +1993,59 @@
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []
       }
-    }
+    },
 
 
     //************************* Links end **************************
 
     //=============================================================
     //======================== Coupon End =========================
+    //=============================================================
+
+
+
+    //=============================================================
+    //======================== Analytics Start =========================
+    //=============================================================
+
+    {
+      "DownstreamPathTemplate": "/api/analytics/promotions",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 97
+        }
+      ],
+      "UpstreamPathTemplate": "/api/analytics/promotions",
+      "Key": "GetAnalytics",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/analytics/promotions/{id=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 97
+        }
+      ],
+      "UpstreamPathTemplate": "/api/analytics/promotions/{id=0}",
+      "Key": "GetAnalyticsById",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    }
+
+    //=============================================================
+    //======================== Analytics End =========================
     //=============================================================
 
   ],

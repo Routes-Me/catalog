@@ -2098,7 +2098,7 @@
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []
       }
-    }
+    },
 
     {
       "DownstreamPathTemplate": "/api/analytics/devices/{deviceId=0}",

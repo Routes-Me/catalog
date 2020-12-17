@@ -1559,6 +1559,44 @@
       }
     },
 
+    // GET Filtered Users
+    {
+      "DownstreamPathTemplate": "/api/institutions/{institutionsId=0}/users/{id=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/institutions/{institutionsId=0}/users/{id=0}",
+      "Key": "GETFilteredUsers",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // GET Filtered Vehicles
+    {
+      "DownstreamPathTemplate": "/api/institutions/{institutionsId=0}/vehicles/{id=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 92
+        }
+      ],
+      "UpstreamPathTemplate": "/api/institutions/{institutionsId=0}/vehicles/{id=0}",
+      "Key": "GETFilteredvehicles",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
     //************************* Privileges End **************************
 
     //=============================================================
@@ -2037,6 +2075,24 @@
     },
 
     {
+      "DownstreamPathTemplate": "/api/analytics/playbacks",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 97
+        }
+      ],
+      "UpstreamPathTemplate": "/api/analytics/playbacks",
+      "Key": "GetAnalytics",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    {
       "DownstreamPathTemplate": "/api/analytics/promotions/{id=0}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -2046,6 +2102,24 @@
         }
       ],
       "UpstreamPathTemplate": "/api/analytics/promotions/{id=0}",
+      "Key": "GetAnalyticsById",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/analytics/devices/{deviceId=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 97
+        }
+      ],
+      "UpstreamPathTemplate": "/api/analytics/devices/{deviceId=0}",
       "Key": "GetAnalyticsById",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {

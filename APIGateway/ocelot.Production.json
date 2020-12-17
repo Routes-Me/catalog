@@ -1551,7 +1551,7 @@
 
     // GET Filtered Users
     {
-      "DownstreamPathTemplate": "/api/institutions/{institutionsId}/users/{id=0}",
+      "DownstreamPathTemplate": "/api/institutions/{institutionsId=0}/users/{id=0}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1559,7 +1559,7 @@
           "Port": 90
         }
       ],
-      "UpstreamPathTemplate": "/api/institutions/{institutionsId}/users/{id=0}",
+      "UpstreamPathTemplate": "/api/institutions/{institutionsId=0}/users/{id=0}",
       "Key": "GETFilteredUsers",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1570,7 +1570,7 @@
 
     // GET Filtered Vehicles
     {
-      "DownstreamPathTemplate": "/api/institutions/{institutionsId}/vehicles/{id=0}",
+      "DownstreamPathTemplate": "/api/institutions/{institutionsId=0}/vehicles/{id=0}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1578,7 +1578,7 @@
           "Port": 92
         }
       ],
-      "UpstreamPathTemplate": "/api/institutions/{institutionsId}/vehicles/{id=0}",
+      "UpstreamPathTemplate": "/api/institutions/{institutionsId=0}/vehicles/{id=0}",
       "Key": "GETFilteredvehicles",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {

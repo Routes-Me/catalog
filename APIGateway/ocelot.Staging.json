@@ -1551,7 +1551,7 @@
 
     // GET Filtered Users
     {
-      "DownstreamPathTemplate": "/api/institutions/{institutionsId=0}/users/{id=0}",
+      "DownstreamPathTemplate": "/api/institutions/{institutionsId=0}/users",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1559,7 +1559,7 @@
           "Port": 90
         }
       ],
-      "UpstreamPathTemplate": "/api/institutions/{institutionsId=0}/users/{id=0}",
+      "UpstreamPathTemplate": "/api/institutions/{institutionsId=0}/users",
       "Key": "GETFilteredUsers",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1570,6 +1570,44 @@
 
     // GET Filtered Vehicles
     {
+      "DownstreamPathTemplate": "/api/institutions/{institutionsId=0}/vehicles",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 92
+        }
+      ],
+      "UpstreamPathTemplate": "/api/institutions/{institutionsId=0}/vehicles",
+      "Key": "GETFilteredvehicles",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // GET Filtered Users by Id
+    {
+      "DownstreamPathTemplate": "/api/institutions/{institutionsId=0}/users/{id=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/institutions/{institutionsId=0}/users/{id=0}",
+      "Key": "GETFilteredUsersById",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // GET Filtered Vehicles by Id
+    {
       "DownstreamPathTemplate": "/api/institutions/{institutionsId=0}/vehicles/{id=0}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -1579,7 +1617,7 @@
         }
       ],
       "UpstreamPathTemplate": "/api/institutions/{institutionsId=0}/vehicles/{id=0}",
-      "Key": "GETFilteredvehicles",
+      "Key": "GETFilteredvehiclesById",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",

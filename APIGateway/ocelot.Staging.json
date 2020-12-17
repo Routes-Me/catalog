@@ -42,6 +42,16 @@
 
     //Get Vehicle By Id from vehicle Service
     {
+      "DownstreamPathTemplate": "/api/institutions/{institutionId=0}/vehicles",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host" : "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 92
+        }
+      ]
+    },
+    {
       "DownstreamPathTemplate": "/api/vehicles/{vehicleId=0}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [

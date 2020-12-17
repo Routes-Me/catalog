@@ -23,6 +23,16 @@
     //************************* Vehicle Start **************************
     //Vehicle from vehicle Service
     {
+      "DownstreamPathTemplate": "/api/institutions/{institutionId=0}/vehicles",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host" : "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 92
+        }
+      ]
+    },
+    {
       "DownstreamPathTemplate": "/api/vehicles",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [

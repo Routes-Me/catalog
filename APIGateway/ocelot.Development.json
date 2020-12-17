@@ -1481,45 +1481,6 @@
     },
 
 
-    // GET Filtered Users
-    {
-      "DownstreamPathTemplate": "/api/institutions/{institutionsId}/users/{id=0}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 51770
-        }
-      ],
-      "UpstreamPathTemplate": "/api/institutions/{institutionsId}/users/{id=0}",
-      "Key": "GETFilteredUsers",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
-
-    // GET Filtered Vehicles
-    {
-      "DownstreamPathTemplate": "/api/institutions/{institutionsId}/vehicles/{id=0}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 51770
-        }
-      ],
-      "UpstreamPathTemplate": "/api/institutions/{institutionsId}/vehicles/{id=0}",
-      "Key": "GETFilteredvehicles",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
-
-
     //************************* Privileges End **************************
 
     //************************* Applications Start **************************

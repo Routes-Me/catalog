@@ -846,6 +846,25 @@
       }
     },
 
+    // Get all officers By Institution Id from Institution Services
+    {
+      "DownstreamPathTemplate": "/api/institutions/{institutionId=0}/officers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 91
+        }
+      ],
+      "UpstreamPathTemplate": "/api/institutions/{institutionId=0}/officers",
+      "Key": "OfficersByInstitutionIdFromInstitutionsService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
     // Delete Institutions from Institutions Service
     {
       "DownstreamPathTemplate": "/api/institutions/{id}",
@@ -2046,6 +2065,7 @@
       }
     },
 
+    // POST bulk playbacks from Analytics Services
     {
       "DownstreamPathTemplate": "/api/analytics/playbacks",
       "DownstreamScheme": "http",
@@ -2082,6 +2102,7 @@
       }
     },
 
+    // Get device running time By Device Id from Analytics Services
     {
       "DownstreamPathTemplate": "/api/analytics/devices/{deviceId=0}",
       "DownstreamScheme": "http",

@@ -1,25 +1,6 @@
 {
   "ReRoutes": [
 
-    // GET Filtered Users
-    {
-      "DownstreamPathTemplate": "/api/institutions/{institutionId=0}/users",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-          "Port": 90
-        }
-      ],
-      "UpstreamPathTemplate": "/api/institutions/{institutionId=0}/users",
-      "Key": "GETFilteredUsers",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
-
     // GET Filtered Vehicles
     {
       "DownstreamPathTemplate": "/api/institutions/{institutionId=0}/vehicles",
@@ -2075,7 +2056,7 @@
         }
       ],
       "UpstreamPathTemplate": "/api/analytics/playbacks",
-      "Key": "GetAnalytics",
+      "Key": "PostPlaybacks",
       "UpstreamHttpMethod": [ "POST" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",
@@ -2111,7 +2092,7 @@
         }
       ],
       "UpstreamPathTemplate": "/api/analytics/devices/{deviceId=0}",
-      "Key": "GetAnalyticsById",
+      "Key": "GetDevicesById",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",

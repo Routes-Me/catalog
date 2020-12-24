@@ -2019,10 +2019,39 @@
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []
       }
-    }
+    },
 
     //=============================================================
     //======================== Analytics End =========================
+    //=============================================================
+
+
+    //=============================================================
+    //======================== Live Tracking Start =========================
+    //=============================================================
+
+
+    {
+      "DownstreamPathTemplate": "/api/vehicles/ideals",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/vehicles/ideals",
+      "Key": "Getvehiclesidles",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    }
+
+
+    //=============================================================
+    //======================== Live Tracking End =========================
     //=============================================================
 
   ],

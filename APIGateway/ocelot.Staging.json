@@ -39,6 +39,7 @@
       }
     },
 
+
     //Archive track Service 
     {
       "DownstreamPathTemplate": "/api/feeds",
@@ -234,6 +235,7 @@
       }
     },
 
+
     //Device from vehicles
     {
       "DownstreamPathTemplate": "/api/vehicles/{vehicleId=0}/devices",
@@ -252,7 +254,6 @@
         "AllowedScopes": []
       }
     },
-
 
     //************************* Device End **************************
 
@@ -774,7 +775,6 @@
         "AllowedScopes": []
       }
     },
-
 
     // Update Campaign Advertisement by Id
     {
@@ -1588,6 +1588,7 @@
     },
 
 
+
     //************************* Privileges End **************************
 
     //=============================================================
@@ -1944,7 +1945,6 @@
         "AllowedScopes": []
       }
     },
-
     // Search redeem
     {
       "DownstreamPathTemplate": "/api/coupons/redeem/search",
@@ -1962,11 +1962,11 @@
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []
       }
+
     },
 
 
     //************************* redeem end **************************
-
 
     //************************* Links start **************************
 
@@ -2034,14 +2034,11 @@
       }
     },
 
-
     //************************* Links end **************************
 
     //=============================================================
     //======================== Coupon End =========================
     //=============================================================
-
-
 
     //=============================================================
     //======================== Analytics Start =========================
@@ -2059,24 +2056,6 @@
       "UpstreamPathTemplate": "/api/analytics/promotions",
       "Key": "GetAnalytics",
       "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
-
-    {
-      "DownstreamPathTemplate": "/api/analytics/playbacks",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-          "Port": 97
-        }
-      ],
-      "UpstreamPathTemplate": "/api/analytics/playbacks",
-      "Key": "GetAnalytics",
-      "UpstreamHttpMethod": [ "POST" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []
@@ -2102,6 +2081,25 @@
     },
 
     {
+      "DownstreamPathTemplate": "/api/analytics/playbacks",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 97
+        }
+      ],
+      "UpstreamPathTemplate": "/api/analytics/playbacks",
+      "Key": "GetAnalytics",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+
+    {
       "DownstreamPathTemplate": "/api/analytics/devices/{deviceId=0}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -2117,13 +2115,12 @@
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []
       }
-    }
-
-
+    },
 
     //=============================================================
     //======================== Analytics End =========================
     //=============================================================
+
 
     //=============================================================
     //======================== Live Tracking Start =========================
@@ -2146,13 +2143,30 @@
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []
       }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/vehicles/remove",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/vehicles/remove",
+      "Key": "RemoveAllVehicles",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     }
 
 
     //=============================================================
     //======================== Live Tracking End =========================
     //=============================================================
-
 
   ],
   "GlobalConfiguration": {

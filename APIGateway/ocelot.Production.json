@@ -1,25 +1,6 @@
 {
   "ReRoutes": [
 
-    // GET Filtered Users
-    {
-      "DownstreamPathTemplate": "/api/institutions/{institutionId=0}/users",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 90
-        }
-      ],
-      "UpstreamPathTemplate": "/api/institutions/{institutionId=0}/users",
-      "Key": "GETFilteredUsers",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
-
     // GET Filtered Vehicles
     {
       "DownstreamPathTemplate": "/api/institutions/{institutionId=0}/vehicles",
@@ -842,6 +823,25 @@
       ],
       "UpstreamPathTemplate": "/api/institutions/{institutionId=0}",
       "Key": "InstitutionsByIdFromInstitutionsService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get all officers By Institution Id from Institution Services
+    {
+      "DownstreamPathTemplate": "/api/institutions/{institutionId=0}/officers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 91
+        }
+      ],
+      "UpstreamPathTemplate": "/api/institutions/{institutionId=0}/officers",
+      "Key": "OfficersByInstitutionIdFromInstitutionsService",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",
@@ -2046,6 +2046,25 @@
       }
     },
 
+    // POST bulk playbacks from Analytics Services
+    {
+      "DownstreamPathTemplate": "/api/analytics/playbacks",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 97
+        }
+      ],
+      "UpstreamPathTemplate": "/api/analytics/playbacks",
+      "Key": "PostPlaybacks",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
     {
       "DownstreamPathTemplate": "/api/analytics/promotions/{id=0}",
       "DownstreamScheme": "http",
@@ -2064,6 +2083,7 @@
       }
     },
 
+    // Get device running time By Device Id from Analytics Services
     {
       "DownstreamPathTemplate": "/api/analytics/devices/{deviceId=0}",
       "DownstreamScheme": "http",
@@ -2074,14 +2094,13 @@
         }
       ],
       "UpstreamPathTemplate": "/api/analytics/devices/{deviceId=0}",
-      "Key": "GetAnalyticsById",
+      "Key": "GetDevicesById",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []
       }
-    },
-
+    }
 
     //=============================================================
     //======================== Analytics End =========================

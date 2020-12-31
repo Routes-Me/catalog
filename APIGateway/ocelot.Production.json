@@ -2065,25 +2065,6 @@
     },
 
     {
-      "DownstreamPathTemplate": "/api/analytics/playbacks",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 97
-        }
-      ],
-      "UpstreamPathTemplate": "/api/analytics/playbacks",
-      "Key": "GetAnalytics",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
-
-
-    {
       "DownstreamPathTemplate": "/api/analytics/devices/{deviceId=0}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [

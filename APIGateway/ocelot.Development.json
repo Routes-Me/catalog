@@ -2022,25 +2022,6 @@
     },
 
     {
-      "DownstreamPathTemplate": "/api/analytics/playbacks",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 56180
-        }
-      ],
-      "UpstreamPathTemplate": "/api/analytics/playbacks",
-      "Key": "AnalyticsPlaybacks",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
-
-
-    {
       "DownstreamPathTemplate": "/api/analytics/devices/{deviceId=0}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [

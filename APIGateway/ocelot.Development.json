@@ -2019,75 +2019,10 @@
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []
       }
-    },
-
-    {
-      "DownstreamPathTemplate": "/api/analytics/devices/{deviceId=0}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 56180
-        }
-      ],
-      "UpstreamPathTemplate": "/api/analytics/devices/{deviceId=0}",
-      "Key": "GetAnalyticsById",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
+    }
 
     //=============================================================
     //======================== Analytics End =========================
-    //=============================================================
-
-
-    //=============================================================
-    //======================== Live Tracking Start =========================
-    //=============================================================
-
-
-    {
-      "DownstreamPathTemplate": "/api/vehicles/ideals",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-          "Port": 5002
-        }
-      ],
-      "UpstreamPathTemplate": "/api/vehicles/ideals",
-      "Key": "Getvehiclesidles",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
-
-    {
-      "DownstreamPathTemplate": "/api/vehicles/remove",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-          "Port": 5002
-        }
-      ],
-      "UpstreamPathTemplate": "/api/vehicles/remove",
-      "Key": "RemoveAllVehicles",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    }
-
-
-    //=============================================================
-    //======================== Live Tracking End =========================
     //=============================================================
 
   ],

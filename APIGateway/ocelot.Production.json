@@ -20,22 +20,6 @@
       }
     },
 
-
-    //Archive track Service 
-    {
-      "DownstreamPathTemplate": "/api/feeds",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 95
-        }
-      ],
-      "UpstreamPathTemplate": "/api/feeds",
-      "Key": "FeedFromArchiveTrackService",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
-    },
-
     //=============================================================
     //==================== VehiclesService Start ====================
     //=============================================================
@@ -2120,6 +2104,117 @@
 
     //=============================================================
     //======================== Analytics End =========================
+    //=============================================================
+
+
+    //=============================================================
+    //======================== Live Tracking Start =========================
+    //=============================================================
+
+
+    {
+      "DownstreamPathTemplate": "/api/tracking/vehicles/{vehicleId?}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/tracking/vehicles/{vehicleId?}",
+      "Key": "Getvehiclesidles",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/tracking/vehicles/{vehicleId?}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/tracking/vehicles/{vehicleId?}",
+      "Key": "RemoveAllVehicles",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+
+
+    //=============================================================
+    //======================== Live Tracking End =========================
+    //=============================================================
+
+    //=============================================================
+    //======================== Archive track Service Start=========================
+    //=============================================================
+
+
+    {
+      "DownstreamPathTemplate": "/api/feeds",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 95
+        }
+      ],
+      "UpstreamPathTemplate": "/api/feeds",
+      "Key": "PostFeedFromArchiveTrackService",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/feeds/{coordinateId?}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 95
+        }
+      ],
+      "UpstreamPathTemplate": "/api/feeds/{coordinateId?}",
+      "Key": "GetFeedFromArchiveTrackService",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/feeds/{coordinateId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 95
+        }
+      ],
+      "UpstreamPathTemplate": "/api/feeds/{coordinateId}",
+      "Key": "DeleteFeedFromArchiveTrackService",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    }
+
+    //=============================================================
+    //======================== Archive track Service End =========================
     //=============================================================
 
   ],

@@ -2033,23 +2033,7 @@
       }
     },
 
-    {
-      "DownstreamPathTemplate": "/api/tracking/vehicles/{vehicleId?}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 5002
-        }
-      ],
-      "UpstreamPathTemplate": "/api/tracking/vehicles/{vehicleId?}",
-      "Key": "RemoveAllVehicles",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
+
 
 
 

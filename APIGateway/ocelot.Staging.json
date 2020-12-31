@@ -2065,9 +2065,9 @@
       }
     },
 
-    // POST bulk playbacks from Analytics Services
+    // POST playbacks from Analytics Services
     {
-      "DownstreamPathTemplate": "/api/analytics/playbacks",
+      "DownstreamPathTemplate": "/api/analytics/devices/{deviceId}/playbacks",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -2075,7 +2075,7 @@
           "Port": 97
         }
       ],
-      "UpstreamPathTemplate": "/api/analytics/playbacks",
+      "UpstreamPathTemplate": "/api/analytics/devices/{deviceId}/playbacks",
       "Key": "PostPlaybacks",
       "UpstreamHttpMethod": [ "POST" ],
       "AuthenticationOptions": {

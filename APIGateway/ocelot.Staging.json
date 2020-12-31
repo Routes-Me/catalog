@@ -2118,41 +2118,24 @@
     //=============================================================
 
 
-    {
-      "DownstreamPathTemplate": "/api/tracking/vehicles/{vehicleId?}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-          "Port": 5002
-        }
-      ],
-      "UpstreamPathTemplate": "/api/tracking/vehicles/{vehicleId?}",
-      "Key": "Getvehiclesidles",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
+    //{
+    //  "DownstreamPathTemplate": "/api/tracking/vehicles/{vehicleId?}",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+    //      "Port": 5002
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/api/tracking/vehicles/{vehicleId?}",
+    //  "Key": "Getvehiclesidles",
+    //  "UpstreamHttpMethod": [ "GET", "DELETE" ],
+    //  "AuthenticationOptions": {
+    //    "AuthenticationProviderKey": "clientSecretKey",
+    //    "AllowedScopes": []
+    //  }
+    //},
 
-    {
-      "DownstreamPathTemplate": "/api/tracking/vehicles/{vehicleId?}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-          "Port": 5002
-        }
-      ],
-      "UpstreamPathTemplate": "/api/tracking/vehicles/{vehicleId?}",
-      "Key": "RemoveAllVehicles",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
 
 
 
@@ -2160,64 +2143,64 @@
     //======================== Live Tracking End =========================
     //=============================================================
 
-    //=============================================================
-    //======================== Archive track Service Start=========================
-    //=============================================================
+    ////=============================================================
+    ////======================== Archive track Service Start=========================
+    ////=============================================================
 
 
-    {
-      "DownstreamPathTemplate": "/api/feeds",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-          "Port": 95
-        }
-      ],
-      "UpstreamPathTemplate": "/api/feeds",
-      "Key": "PostFeedFromArchiveTrackService",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
+    //{
+    //  "DownstreamPathTemplate": "/api/feeds",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+    //      "Port": 95
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/api/feeds",
+    //  "Key": "PostFeedFromArchiveTrackService",
+    //  "UpstreamHttpMethod": [ "POST" ],
+    //  "AuthenticationOptions": {
+    //    "AuthenticationProviderKey": "clientSecretKey",
+    //    "AllowedScopes": []
+    //  }
+    //},
 
-    {
-      "DownstreamPathTemplate": "/api/feeds/{coordinateId?}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-          "Port": 95
-        }
-      ],
-      "UpstreamPathTemplate": "/api/feeds/{coordinateId?}",
-      "Key": "GetFeedFromArchiveTrackService",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
+    //{
+    //  "DownstreamPathTemplate": "/api/feeds/{coordinateId?}",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+    //      "Port": 95
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/api/feeds/{coordinateId?}",
+    //  "Key": "GetFeedFromArchiveTrackService",
+    //  "UpstreamHttpMethod": [ "GET","DELETE" ],
+    //  "AuthenticationOptions": {
+    //    "AuthenticationProviderKey": "clientSecretKey",
+    //    "AllowedScopes": []
+    //  }
+    //},
 
-    {
-      "DownstreamPathTemplate": "/api/feeds/{coordinateId}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-          "Port": 95
-        }
-      ],
-      "UpstreamPathTemplate": "/api/feeds/{coordinateId}",
-      "Key": "DeleteFeedFromArchiveTrackService",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
+    //{
+    //  "DownstreamPathTemplate": "/api/feeds/{coordinateId}",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+    //      "Port": 95
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/api/feeds/{coordinateId}",
+    //  "Key": "DeleteFeedFromArchiveTrackService",
+    //  "UpstreamHttpMethod": [ "DELETE" ],
+    //  "AuthenticationOptions": {
+    //    "AuthenticationProviderKey": "clientSecretKey",
+    //    "AllowedScopes": []
+    //  }
+    //},
 
     //=============================================================
     //======================== Archive track Service End =========================

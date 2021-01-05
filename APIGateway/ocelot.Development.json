@@ -1476,7 +1476,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Host": "localhost",
           "Port": 51770
         }
       ],
@@ -1491,7 +1491,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Host": "localhost",
           "Port": 51770
         }
       ],
@@ -1506,7 +1506,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Host": "localhost",
           "Port": 51770
         }
       ],
@@ -2011,22 +2011,207 @@
     //=============================================================
 
     //=============================================================
-    //======================== Live Tracking Start =========================
+    //======================== Prize Service Start =========================
     //=============================================================
 
+    //Post,Get,Put candidates
 
     {
-      "DownstreamPathTemplate": "/api/tracking/vehicles/{vehicleId?}",
+      "DownstreamPathTemplate": "/api/draws/{drawsId}/candidates",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 5002
+          "Host": "localhost",
+          "Port": 93
         }
       ],
-      "UpstreamPathTemplate": "/api/tracking/vehicles/{vehicleId?}",
-      "Key": "Getvehiclesidles",
+      "UpstreamPathTemplate": "/api/draws/{drawsId}/candidates",
+      "Key": "PostCandidates",
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+
+    //Get candidates
+    {
+      "DownstreamPathTemplate": "/api/draws/{drawsId}/candidates/{candidatesId=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 93
+        }
+      ],
+      "UpstreamPathTemplate": "/api/draws/{drawsId}/candidates/{candidatesId=0}",
+      "Key": "GetCandidates",
       "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //Delete candidates
+    {
+      "DownstreamPathTemplate": "/api/draws/{drawsId}/candidates/{candidatesId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 93
+        }
+      ],
+      "UpstreamPathTemplate": "/api/draws/{drawsId}/candidates/{candidatesId}",
+      "Key": "DeleteCandidates",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+
+    //Post,Get,Put draws
+    {
+      "DownstreamPathTemplate": "/api/draws",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 93
+        }
+      ],
+      "UpstreamPathTemplate": "/api/draws",
+      "Key": "PostDraws",
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //Get draws
+    {
+      "DownstreamPathTemplate": "/api/draws/{drawsId=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 93
+        }
+      ],
+      "UpstreamPathTemplate": "/api/draws/{drawsId=0}",
+      "Key": "GetDraws",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //Delete draws
+    {
+      "DownstreamPathTemplate": "/api/draws/{drawsId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 93
+        }
+      ],
+      "UpstreamPathTemplate": "/api/draws/{drawsId}",
+      "Key": "DeleteDraws",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+
+    //Post,Get,Put nationalities
+    {
+      "DownstreamPathTemplate": "/api/nationalities",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 93
+        }
+      ],
+      "UpstreamPathTemplate": "/api/nationalities",
+      "Key": "PostNationalities",
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //Get nationalities
+    {
+      "DownstreamPathTemplate": "/api/nationalities/{nationalitiesId=0}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 93
+        }
+      ],
+      "UpstreamPathTemplate": "/api/nationalities/{nationalitiesId=0}",
+      "Key": "GetNationalities",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //Delete nationalities
+    {
+      "DownstreamPathTemplate": "/api/nationalities/{nationalitiesId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 93
+        }
+      ],
+      "UpstreamPathTemplate": "/api/nationalities/{nationalitiesId}",
+      "Key": "DeleteNationalities",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+
+    //=============================================================
+    //======================== Prize Service End =========================
+    //=============================================================
+
+
+    ////=============================================================
+    ////======================== Live Tracking Start =========================
+    ////=============================================================
+
+
+    {
+      "DownstreamPathTemplate": "/api/tracking/vehicles/{vehicleId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 93
+        }
+      ],
+      "UpstreamPathTemplate": "/api/tracking/vehicles/{vehicleId}",
+      "Key": "LiveTrackingEndpoints",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []
@@ -2035,23 +2220,20 @@
 
 
 
+    ////=============================================================
+    ////======================== Live Tracking End =========================
+    ////=============================================================
 
-
-    //=============================================================
-    //======================== Live Tracking End =========================
-    //=============================================================
-
-    //=============================================================
-    //======================== Archive track Service Start=========================
-    //=============================================================
-
+    ////=============================================================
+    ////======================== Archive track Service Start=========================
+    ////=============================================================
 
     {
       "DownstreamPathTemplate": "/api/feeds",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Host": "localhost",
           "Port": 95
         }
       ],
@@ -2065,15 +2247,15 @@
     },
 
     {
-      "DownstreamPathTemplate": "/api/feeds/{coordinateId?}",
+      "DownstreamPathTemplate": "/api/feeds/{coordinateId=0}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Host": "localhost",
           "Port": 95
         }
       ],
-      "UpstreamPathTemplate": "/api/feeds/{coordinateId?}",
+      "UpstreamPathTemplate": "/api/feeds/{coordinateId=0}",
       "Key": "GetFeedFromArchiveTrackService",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -2087,7 +2269,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Host": "localhost",
           "Port": 95
         }
       ],
@@ -2100,9 +2282,11 @@
       }
     }
 
-    //=============================================================
-    //======================== Archive track Service End =========================
-    //=============================================================
+
+    ////=============================================================
+    ////======================== Archive track Service End =========================
+    ////=============================================================
+
 
   ],
   "GlobalConfiguration": {

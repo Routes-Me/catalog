@@ -27,7 +27,7 @@
 
     //Get Vehicle By Id from vehicle Service
     {
-      "DownstreamPathTemplate": "/api/vehicles/{vehicleId?}",
+      "DownstreamPathTemplate": "/api/vehicles/{vehicleId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -35,7 +35,7 @@
           "Port": 54282
         }
       ],
-      "UpstreamPathTemplate": "/api/vehicles/{vehicleId?}",
+      "UpstreamPathTemplate": "/api/vehicles/{vehicleId}",
       "Key": "VehiclesByIdFromVehicleService",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -305,7 +305,7 @@
 
     //Get Manufacturers By Id from vehicle Service
     {
-      "DownstreamPathTemplate": "/api/manufacturers/{manufacturerId?}",
+      "DownstreamPathTemplate": "/api/manufacturers/{manufacturerId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -313,7 +313,7 @@
           "Port": 54282
         }
       ],
-      "UpstreamPathTemplate": "/api/manufacturers/{manufacturerId?}",
+      "UpstreamPathTemplate": "/api/manufacturers/{manufacturerId}",
       "Key": "GetManufacturersWithIdFromVehicleService",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -2050,7 +2050,7 @@
 
 
     {
-      "DownstreamPathTemplate": "/api/tracking/vehicles/{vehicleId?}",
+      "DownstreamPathTemplate": "/api/tracking/vehicles/{vehicleId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -2058,7 +2058,7 @@
           "Port": 5002
         }
       ],
-      "UpstreamPathTemplate": "/api/tracking/vehicles/{vehicleId?}",
+      "UpstreamPathTemplate": "/api/tracking/vehicles/{vehicleId}",
       "Key": "Getvehiclesidles",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -2099,7 +2099,7 @@
     },
 
     {
-      "DownstreamPathTemplate": "/api/feeds/{coordinateId?}",
+      "DownstreamPathTemplate": "/api/feeds/{coordinateId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -2107,7 +2107,7 @@
           "Port": 95
         }
       ],
-      "UpstreamPathTemplate": "/api/feeds/{coordinateId?}",
+      "UpstreamPathTemplate": "/api/feeds/{coordinateId}",
       "Key": "GetFeedFromArchiveTrackService",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {

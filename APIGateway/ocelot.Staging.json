@@ -183,7 +183,7 @@
 
     //Device Applications
     {
-      "DownstreamPathTemplate": "/api/devices/{deviceId=0}/applications",
+      "DownstreamPathTemplate": "/api/devices/{deviceId}/applications",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -191,7 +191,7 @@
           "Port": 92
         }
       ],
-      "UpstreamPathTemplate": "/api/devices/{deviceId=0}/applications",
+      "UpstreamPathTemplate": "/api/devices/{deviceId}/applications",
       "Key": "DeviceApplications",
       "UpstreamHttpMethod": [ "PUT" ],
       "AuthenticationOptions": {

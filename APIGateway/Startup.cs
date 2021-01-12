@@ -47,6 +47,38 @@ namespace APIGateway
             services.Configure<AppSettings>(appSettingsSection);
             var appSettings = appSettingsSection.Get<AppSettings>();
 
+            JwtBearerEvents jwtBearerEvents = new JwtBearerEvents
+            {
+                OnAuthenticationFailed = context =>
+                {
+                    var logger = context.HttpContext.RequestServices.GetRequiredService<ILoggerFactory>().CreateLogger(nameof(JwtBearerEvents));
+                    logger.LogError("Authentication failed.", context.Exception);
+                    context.Response.StatusCode = 401;
+                    if (context.Exception.GetType() == typeof(SecurityTokenExpiredException))
+                    {
+                        context.Response.Headers.Add("Token-Expired", "true");
+                    }
+                    context.Response.OnStarting(async () =>
+                    {
+                        context.Response.ContentType = "application/json";
+                        ErrorMessage errorMessage = new ErrorMessage();
+                        errorMessage.Message = "Authentication failed.";
+                        await context.Response.WriteAsync(JsonConvert.SerializeObject(errorMessage));
+                    });
+                    return Task.CompletedTask;
+                },
+                OnMessageReceived = context =>
+                {
+                    return Task.CompletedTask;
+                },
+                OnChallenge = context =>
+                {
+                    var logger = context.HttpContext.RequestServices.GetRequiredService<ILoggerFactory>().CreateLogger(nameof(JwtBearerEvents));
+                    logger.LogError("OnChallenge error", context.Error, context.ErrorDescription);
+                    return Task.CompletedTask;
+                }
+            };
+
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -69,37 +101,30 @@ namespace APIGateway
                     RequireExpirationTime = true,
                     ClockSkew = TimeSpan.FromMinutes(5) // tolerance for the expiration date
                 };
-                x.Events = new JwtBearerEvents
+                x.Events = jwtBearerEvents;
+            }).AddJwtBearer("sessionToken", x =>
+            {
+                x.RequireHttpsMetadata = false;
+                x.SaveToken = true;
+                x.TokenValidationParameters = new TokenValidationParameters
                 {
-                    OnAuthenticationFailed = context =>
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidAudiences = new List<string>
                     {
-                        var logger = context.HttpContext.RequestServices.GetRequiredService<ILoggerFactory>().CreateLogger(nameof(JwtBearerEvents));
-                        logger.LogError("Authentication failed.", context.Exception);
-                        context.Response.StatusCode = 401;
-                        if (context.Exception.GetType() == typeof(SecurityTokenExpiredException))
-                        {
-                            context.Response.Headers.Add("Token-Expired", "true");
-                        }
-                        context.Response.OnStarting(async () =>
-                        {
-                            context.Response.ContentType = "application/json";
-                            ErrorMessage errorMessage = new ErrorMessage();
-                            errorMessage.Message = "Authentication failed.";
-                            await context.Response.WriteAsync(JsonConvert.SerializeObject(errorMessage));
-                        });
-                        return Task.CompletedTask;
+                        "https://dashboard.routesme.com",
+                        "https://screen.routesme.com",
+                        "https://app.routesme.com"
                     },
-                    OnMessageReceived = context =>
-                    {
-                        return Task.CompletedTask;
-                    },
-                    OnChallenge = context =>
-                    {
-                        var logger = context.HttpContext.RequestServices.GetRequiredService<ILoggerFactory>().CreateLogger(nameof(JwtBearerEvents));
-                        logger.LogError("OnChallenge error", context.Error, context.ErrorDescription);
-                        return Task.CompletedTask;
-                    }
+                    ValidIssuer = appSettings.SessionTokenIssuer,
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(appSettings.Secret)),
+                    // verify signature to avoid tampering
+                    ValidateLifetime = true, // validate the expiration
+                    RequireExpirationTime = true,
+                    ClockSkew = TimeSpan.FromMinutes(5) // tolerance for the expiration date
                 };
+                x.Events = jwtBearerEvents;
             });
 
             services.AddOcelot(_configuration);

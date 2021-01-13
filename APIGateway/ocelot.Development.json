@@ -27,7 +27,7 @@
 
     //Get Vehicle By Id from vehicle Service
     {
-      "DownstreamPathTemplate": "/api/vehicles/{vehicleId=0}",
+      "DownstreamPathTemplate": "/api/vehicles/{vehicleId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -35,7 +35,7 @@
           "Port": 54282
         }
       ],
-      "UpstreamPathTemplate": "/api/vehicles/{vehicleId=0}",
+      "UpstreamPathTemplate": "/api/vehicles/{vehicleId}",
       "Key": "VehiclesByIdFromVehicleService",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -305,7 +305,7 @@
 
     //Get Manufacturers By Id from vehicle Service
     {
-      "DownstreamPathTemplate": "/api/manufacturers/{manufacturerId=0}",
+      "DownstreamPathTemplate": "/api/manufacturers/{manufacturerId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -313,7 +313,7 @@
           "Port": 54282
         }
       ],
-      "UpstreamPathTemplate": "/api/manufacturers/{manufacturerId=0}",
+      "UpstreamPathTemplate": "/api/manufacturers/{manufacturerId}",
       "Key": "GetManufacturersWithIdFromVehicleService",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -324,7 +324,7 @@
 
     //Get Model By Manufacturers Id from vehicle Service
     {
-      "DownstreamPathTemplate": "/api/manufacturers/{manufacturerId=0}/model",
+      "DownstreamPathTemplate": "/api/manufacturers/{manufacturerId}/models",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -332,7 +332,7 @@
           "Port": 54282
         }
       ],
-      "UpstreamPathTemplate": "/api/manufacturers/{manufacturerId=0}/model",
+      "UpstreamPathTemplate": "/api/manufacturers/{manufacturerId}/models",
       "Key": "ModelFromManufacturersFromVehicleService",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -365,7 +365,7 @@
 
     //Delete Models from vehicle Service
     {
-      "DownstreamPathTemplate": "/api/models/{id}",
+      "DownstreamPathTemplate": "/api/models/{modelId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -373,7 +373,7 @@
           "Port": 54282
         }
       ],
-      "UpstreamPathTemplate": "/api/models/{id}",
+      "UpstreamPathTemplate": "/api/models/{modelId}",
       "Key": "DeleeteModelsFromVehicleService",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -1135,6 +1135,21 @@
       "Key": "SigninFromUserService",
       "UpstreamHttpMethod": [ "POST" ]
 
+    },
+
+    // Generate Session Token. A new, alternative Signin API
+    {
+      "DownstreamPathTemplate": "/api/session",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51770
+        }
+      ],
+      "UpstreamPathTemplate": "/api/session",
+      "Key": "SigninSessionToken",
+      "UpstreamHttpMethod": [ "POST" ]
     },
 
     // Verify Signup from Users Service
@@ -1988,6 +2003,25 @@
       }
     },
 
+    // POST playbacks from Analytics Services
+    {
+      "DownstreamPathTemplate": "/api/analytics/devices/{deviceId}/playbacks",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/api/analytics/devices/{deviceId}/playbacks",
+      "Key": "PostPlaybacks",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
     {
       "DownstreamPathTemplate": "/api/analytics/promotions/{id=0}",
       "DownstreamScheme": "http",
@@ -2017,7 +2051,7 @@
     //Post,Get,Put candidates
 
     {
-      "DownstreamPathTemplate": "/api/draws/{drawsId}/candidates",
+      "DownstreamPathTemplate": "/api/tracking/vehicles/{vehicleId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -2025,86 +2059,8 @@
           "Port": 93
         }
       ],
-      "UpstreamPathTemplate": "/api/draws/{drawsId}/candidates",
-      "Key": "PostCandidates",
-      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
-
-
-    //Get candidates
-    {
-      "DownstreamPathTemplate": "/api/draws/{drawsId}/candidates/{candidatesId=0}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 93
-        }
-      ],
-      "UpstreamPathTemplate": "/api/draws/{drawsId}/candidates/{candidatesId=0}",
-      "Key": "GetCandidates",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
-
-    //Delete candidates
-    {
-      "DownstreamPathTemplate": "/api/draws/{drawsId}/candidates/{candidatesId}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 93
-        }
-      ],
-      "UpstreamPathTemplate": "/api/draws/{drawsId}/candidates/{candidatesId}",
-      "Key": "DeleteCandidates",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
-
-
-    //Post,Get,Put draws
-    {
-      "DownstreamPathTemplate": "/api/draws",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 93
-        }
-      ],
-      "UpstreamPathTemplate": "/api/draws",
-      "Key": "PostDraws",
-      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
-        "AllowedScopes": []
-      }
-    },
-
-    //Get draws
-    {
-      "DownstreamPathTemplate": "/api/draws/{drawsId=0}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 93
-        }
-      ],
-      "UpstreamPathTemplate": "/api/draws/{drawsId=0}",
-      "Key": "GetDraws",
+      "UpstreamPathTemplate": "/api/tracking/vehicles/{vehicleId}",
+      "Key": "Getvehiclesidles",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",
@@ -2247,7 +2203,7 @@
     },
 
     {
-      "DownstreamPathTemplate": "/api/feeds/{coordinateId=0}",
+      "DownstreamPathTemplate": "/api/feeds/{coordinateId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -2255,7 +2211,7 @@
           "Port": 95
         }
       ],
-      "UpstreamPathTemplate": "/api/feeds/{coordinateId=0}",
+      "UpstreamPathTemplate": "/api/feeds/{coordinateId}",
       "Key": "GetFeedFromArchiveTrackService",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {

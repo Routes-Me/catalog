@@ -2353,7 +2353,7 @@
       ],
       "UpstreamPathTemplate": "/api/feeds",
       "Key": "PostFeedFromArchiveTrackService",
-      "UpstreamHttpMethod": [ "POST" ],
+      "UpstreamHttpMethod": [ "POST", "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []

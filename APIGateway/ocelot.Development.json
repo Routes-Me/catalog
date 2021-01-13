@@ -1139,7 +1139,7 @@
 
     // Generate Session Token. A new, alternative Signin API
     {
-      "DownstreamPathTemplate": "/api/session",
+      "DownstreamPathTemplate": "/api/sessions",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1147,7 +1147,7 @@
           "Port": 51770
         }
       ],
-      "UpstreamPathTemplate": "/api/session",
+      "UpstreamPathTemplate": "/api/sessions",
       "Key": "SigninSessionToken",
       "UpstreamHttpMethod": [ "POST" ]
     },

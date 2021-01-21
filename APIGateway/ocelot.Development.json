@@ -164,7 +164,7 @@
 
     //Device Applications
     {
-      "DownstreamPathTemplate": "/api/devices/{deviceId=0}/applications",
+      "DownstreamPathTemplate": "/api/devices/{deviceId}/applications",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -172,7 +172,7 @@
           "Port": 44374
         }
       ],
-      "UpstreamPathTemplate": "/api/devices/{deviceId=0}/applications",
+      "UpstreamPathTemplate": "/api/devices/{deviceId}/applications",
       "Key": "DeviceApplications",
       "UpstreamHttpMethod": [ "PUT" ],
       "AuthenticationOptions": {
@@ -1139,7 +1139,7 @@
 
     // Generate Session Token. A new, alternative Signin API
     {
-      "DownstreamPathTemplate": "/api/session",
+      "DownstreamPathTemplate": "/api/sessions",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1147,7 +1147,7 @@
           "Port": 51770
         }
       ],
-      "UpstreamPathTemplate": "/api/session",
+      "UpstreamPathTemplate": "/api/sessions",
       "Key": "SigninSessionToken",
       "UpstreamHttpMethod": [ "POST" ]
     },

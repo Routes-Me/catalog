@@ -245,7 +245,7 @@
 
     //Get Driver with id from vehicle Service
     {
-      "DownstreamPathTemplate": "/api/drivers/{driverId=0}",
+      "DownstreamPathTemplate": "/api/drivers/{driverId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -253,7 +253,7 @@
           "Port": 54282
         }
       ],
-      "UpstreamPathTemplate": "/api/drivers/{driverId=0}",
+      "UpstreamPathTemplate": "/api/drivers/{driverId}",
       "Key": "DriverWithIdFromVehicleService",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -415,7 +415,7 @@
 
     // Get Medias by id from Advertisements Services
     {
-      "DownstreamPathTemplate": "/api/medias/{id=0}",
+      "DownstreamPathTemplate": "/api/medias/{mediaId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -423,7 +423,7 @@
           "Port": 56411
         }
       ],
-      "UpstreamPathTemplate": "/api/medias/{id=0}",
+      "UpstreamPathTemplate": "/api/medias/{mediaId}",
       "Key": "MediasByIdFromAdvertisementsService",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -475,7 +475,7 @@
 
     // Get Intervals by id from Advertisements Services
     {
-      "DownstreamPathTemplate": "/api/intervals/{id=0}",
+      "DownstreamPathTemplate": "/api/intervals/{intervalId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -483,7 +483,7 @@
           "Port": 56411
         }
       ],
-      "UpstreamPathTemplate": "/api/intervals/{id=0}",
+      "UpstreamPathTemplate": "/api/intervals/{intervalId}",
       "Key": "IntervalsByIdFromAdvertisementsService",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -534,7 +534,7 @@
 
     // Get Campaigns By Id from Advertisements Services
     {
-      "DownstreamPathTemplate": "/api/campaigns/{id=0}",
+      "DownstreamPathTemplate": "/api/campaigns/{campaignId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -542,7 +542,7 @@
           "Port": 56411
         }
       ],
-      "UpstreamPathTemplate": "/api/campaigns/{id=0}",
+      "UpstreamPathTemplate": "/api/campaigns/{campaignId}",
       "Key": "CampaignsByIdFromAdvertisementsService",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -553,7 +553,7 @@
 
     // Get Advertisements of Campaigns By Id from Advertisements Services
     {
-      "DownstreamPathTemplate": "/api/campaigns/{id=0}/advertisements/{advertisementsId=0}",
+      "DownstreamPathTemplate": "/api/campaigns/{campaignId}/advertisements/{advertisementId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -561,7 +561,7 @@
           "Port": 56411
         }
       ],
-      "UpstreamPathTemplate": "/api/campaigns/{id=0}/advertisements/{advertisementsId=0}",
+      "UpstreamPathTemplate": "/api/campaigns/{campaignId}/advertisements/{advertisementId}",
       "Key": "AdvertisementsOfCampaignsFromAdvertisementsService",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -631,7 +631,7 @@
 
     // Get Advertisements By Id from Advertisements Services
     {
-      "DownstreamPathTemplate": "/api/advertisements/{id=0}",
+      "DownstreamPathTemplate": "/api/advertisements/{advertisementId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -639,7 +639,7 @@
           "Port": 56411
         }
       ],
-      "UpstreamPathTemplate": "/api/advertisements/{id=0}",
+      "UpstreamPathTemplate": "/api/advertisements/{advertisementId}",
       "Key": "AdvertisementsByIdFromAdvertisementsService",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -707,7 +707,7 @@
 
     // Get contents by id from Advertisements Services
     {
-      "DownstreamPathTemplate": "/api/contents/{id=0}",
+      "DownstreamPathTemplate": "/api/contents/{advertisementId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -715,7 +715,7 @@
           "Port": 56411
         }
       ],
-      "UpstreamPathTemplate": "/api/contents/{id=0}",
+      "UpstreamPathTemplate": "/api/contents/{advertisementId}",
       "Key": "GetContentsByIdFromAdvertisementsService",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1452,7 +1452,7 @@
 
     // Get with id for privileges from user
     {
-      "DownstreamPathTemplate": "/api/privileges/{id=0}",
+      "DownstreamPathTemplate": "/api/privileges/{privilegeId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1460,7 +1460,7 @@
           "Port": 51770
         }
       ],
-      "UpstreamPathTemplate": "/api/privileges/{id=0}",
+      "UpstreamPathTemplate": "/api/privileges/{privilegeId}",
       "Key": "GetPrivilegesFromUser",
       "UpstreamHttpMethod": [ "GET" ]
     },
@@ -1502,7 +1502,7 @@
 
     // GET applications by Id from users
     {
-      "DownstreamPathTemplate": "/api/applications/{id=0}",
+      "DownstreamPathTemplate": "/api/applications/{applicationId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1510,7 +1510,7 @@
           "Port": 51770
         }
       ],
-      "UpstreamPathTemplate": "/api/applications/{id=0}",
+      "UpstreamPathTemplate": "/api/applications/{applicationId}",
       "Key": "GetApplicationsFromUser",
       "UpstreamHttpMethod": [ "GET" ]
     },

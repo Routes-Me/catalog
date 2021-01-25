@@ -2241,7 +2241,7 @@
     //Post,Get,Put candidates
 
     {
-      "DownstreamPathTemplate": "/api/draws/{drawsId}/candidates",
+      "DownstreamPathTemplate": "/api/draws/{drawId}/candidates",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -2249,7 +2249,7 @@
           "Port": 93
         }
       ],
-      "UpstreamPathTemplate": "/api/draws/{drawsId}/candidates",
+      "UpstreamPathTemplate": "/api/draws/{drawId}/candidates",
       "Key": "PostCandidates",
       "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
       "AuthenticationOptions": {
@@ -2261,7 +2261,7 @@
 
     //Get candidates
     {
-      "DownstreamPathTemplate": "/api/draws/{drawsId}/candidates/{candidatesId=0}",
+      "DownstreamPathTemplate": "/api/draws/{drawId}/candidates/{candidateId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -2269,7 +2269,7 @@
           "Port": 93
         }
       ],
-      "UpstreamPathTemplate": "/api/draws/{drawsId}/candidates/{candidatesId=0}",
+      "UpstreamPathTemplate": "/api/draws/{drawId}/candidates/{candidateId}",
       "Key": "GetCandidates",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -2319,7 +2319,7 @@
 
     //Get draws
     {
-      "DownstreamPathTemplate": "/api/draws/{drawsId=0}",
+      "DownstreamPathTemplate": "/api/draws/{drawId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -2327,7 +2327,7 @@
           "Port": 93
         }
       ],
-      "UpstreamPathTemplate": "/api/draws/{drawsId=0}",
+      "UpstreamPathTemplate": "/api/draws/{drawId}",
       "Key": "GetDraws",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -2377,7 +2377,7 @@
 
     //Get nationalities
     {
-      "DownstreamPathTemplate": "/api/nationalities/{nationalitiesId=0}",
+      "DownstreamPathTemplate": "/api/nationalities/{nationalityId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -2385,7 +2385,7 @@
           "Port": 93
         }
       ],
-      "UpstreamPathTemplate": "/api/nationalities/{nationalitiesId=0}",
+      "UpstreamPathTemplate": "/api/nationalities/{nationalityId}",
       "Key": "GetNationalities",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {

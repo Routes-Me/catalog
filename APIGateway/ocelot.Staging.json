@@ -814,7 +814,7 @@
 
     // Get Institutions By Id from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/institutions/{institutionId=0}",
+      "DownstreamPathTemplate": "/api/institutions/{institutionId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -822,7 +822,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/api/institutions/{institutionId=0}",
+      "UpstreamPathTemplate": "/api/institutions/{institutionId}",
       "Key": "InstitutionsByIdFromInstitutionsService",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -833,7 +833,7 @@
 
     // Get all officers By Institution Id from Institution Services
     {
-      "DownstreamPathTemplate": "/api/institutions/{institutionId=0}/officers",
+      "DownstreamPathTemplate": "/api/institutions/{institutionId}/officers",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -841,7 +841,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/api/institutions/{institutionId=0}/officers",
+      "UpstreamPathTemplate": "/api/institutions/{institutionId}/officers",
       "Key": "OfficersByInstitutionIdFromInstitutionsService",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -912,7 +912,7 @@
 
     // Get Institutions By Id from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/invitations/{invitationId=0}",
+      "DownstreamPathTemplate": "/api/invitations/{invitationId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -920,7 +920,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/api/invitations/{invitationId=0}",
+      "UpstreamPathTemplate": "/api/invitations/{invitationId}",
       "Key": "InvitationByIdFromInstitutionsService",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -971,7 +971,7 @@
 
     // Officers By Id from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/officers/{officersId=0}",
+      "DownstreamPathTemplate": "/api/officers/{officerId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -979,7 +979,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/api/officers/{officersId=0}",
+      "UpstreamPathTemplate": "/api/officers/{officerId}",
       "Key": "OfficersByIdFromInstitutionsService",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1030,7 +1030,7 @@
 
     // GetServices By Id from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/services/{servicesId=0}",
+      "DownstreamPathTemplate": "/api/services/{serviceId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1038,7 +1038,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/api/services/{servicesId=0}",
+      "UpstreamPathTemplate": "/api/services/{serviceId}",
       "Key": "ServicesByIdFromInstitutionsService",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1070,7 +1070,7 @@
     //************************* ServicesInstitutions Start **************************
     // ServicesInstitutions from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/institutions/{institutionsId=0}/services",
+      "DownstreamPathTemplate": "/api/institutions/{institutionId}/services",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1078,7 +1078,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/api/institutions/{institutionsId=0}/services",
+      "UpstreamPathTemplate": "/api/institutions/{institutionId}/services",
       "Key": "ServicesInstitutionsFromInstitutionsService",
       "UpstreamHttpMethod": [ "POST", "GET" ],
       "AuthenticationOptions": {
@@ -1089,7 +1089,7 @@
 
     // Get ServicesInstitutions By Id from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/institutions/{institutionsId=0}/services/{servicesId=0}",
+      "DownstreamPathTemplate": "/api/institutions/{institutionId}/services/{serviceId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1097,7 +1097,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/api/institutions/{institutionsId=0}/services/{servicesId=0}",
+      "UpstreamPathTemplate": "/api/institutions/{institutionId}/services/{serviceId}",
       "Key": "ServicesInstitutionsByIdFromInstitutionsService",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1108,7 +1108,7 @@
 
     // Delete ServicesInstitutions By Id from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/institutions/{institutionsId=0}/services/{servicesId}",
+      "DownstreamPathTemplate": "/api/institutions/{institutionId}/services/{serviceId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1116,7 +1116,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/api/institutions/{institutionsId=0}/services/{servicesId}",
+      "UpstreamPathTemplate": "/api/institutions/{institutionId}/services/{serviceId}",
       "Key": "DeleteServicesInstitutionsFromInstitutionsService",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -1138,6 +1138,25 @@
       "UpstreamPathTemplate": "/api/institutions/authorities",
       "Key": "AddAuthorities",
       "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Authorities By Id from Institutions Service
+    {
+      "DownstreamPathTemplate": "/api/institutions/authorities/{authorityId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 91
+        }
+      ],
+      "UpstreamPathTemplate": "/api/institutions/authorities/{authorityId}",
+      "Key": "AuthoritiesByIdFromInstitutionsService",
+      "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []

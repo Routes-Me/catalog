@@ -1642,7 +1642,7 @@
 
     // Get with id for places from coupon
     {
-      "DownstreamPathTemplate": "/api/places/{id=0}",
+      "DownstreamPathTemplate": "/api/places/{placeId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1650,7 +1650,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/places/{id=0}",
+      "UpstreamPathTemplate": "/api/places/{placeId}",
       "Key": "GetPlacesFromCoupon",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1764,7 +1764,7 @@
 
     // Get with id for coupons from coupons
     {
-      "DownstreamPathTemplate": "/api/coupons/{id=0}",
+      "DownstreamPathTemplate": "/api/coupons/{couponId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1772,7 +1772,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/coupons/{id=0}",
+      "UpstreamPathTemplate": "/api/coupons/{couponId}",
       "Key": "GetCouponsFromCoupon",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1826,7 +1826,7 @@
 
     // Get with id for promotions from coupons
     {
-      "DownstreamPathTemplate": "/api/promotions/{id=0}",
+      "DownstreamPathTemplate": "/api/promotions/{promotionId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1834,7 +1834,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/promotions/{id=0}",
+      "UpstreamPathTemplate": "/api/promotions/{promotionId}",
       "Key": "GetPromotionsFromCoupon",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1845,7 +1845,7 @@
 
     // Get with id for contents from coupons
     {
-      "DownstreamPathTemplate": "/api/promotions/contents/{id=0}",
+      "DownstreamPathTemplate": "/api/promotions/contents/{advertisementId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1853,7 +1853,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/promotions/contents/{id=0}",
+      "UpstreamPathTemplate": "/api/promotions/contents/{advertisementId}",
       "Key": "GetContentsFromCouponById",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1928,7 +1928,7 @@
 
     // Get with id for redeem from coupons
     {
-      "DownstreamPathTemplate": "/api/coupons/redeem/{id=0}",
+      "DownstreamPathTemplate": "/api/coupons/redeem/{redemptionId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1936,7 +1936,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/coupons/redeem/{id=0}",
+      "UpstreamPathTemplate": "/api/coupons/redeem/{redemptionId}",
       "Key": "GetRedeemFromCoupon",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -2021,7 +2021,7 @@
     },
 
     {
-      "DownstreamPathTemplate": "/api/links/{id=0}",
+      "DownstreamPathTemplate": "/api/links/{linkId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -2029,7 +2029,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/links/{id=0}",
+      "UpstreamPathTemplate": "/api/links/{linkId}",
       "Key": "SearchRedeem",
       "UpstreamHttpMethod": [ "GET" ]
     },

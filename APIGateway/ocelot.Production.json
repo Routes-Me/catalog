@@ -1170,9 +1170,9 @@
       "UpstreamHttpMethod": [ "POST" ]
     },
 
-    // Generate Session Token. A new, alternative Signin API
+    // Authenticate user
     {
-      "DownstreamPathTemplate": "/api/sessions",
+      "DownstreamPathTemplate": "/api/authentications",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1180,8 +1180,8 @@
           "Port": 90
         }
       ],
-      "UpstreamPathTemplate": "/api/sessions",
-      "Key": "SigninSessionToken",
+      "UpstreamPathTemplate": "/api/authentications",
+      "Key": "AuthenticateUser",
       "UpstreamHttpMethod": [ "POST" ]
     },
 

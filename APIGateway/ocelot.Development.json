@@ -1152,6 +1152,21 @@
       "UpstreamHttpMethod": [ "POST" ]
     },
 
+    // Renew Tokens
+    {
+      "DownstreamPathTemplate": "/api/authentications/renewals",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51770
+        }
+      ],
+      "UpstreamPathTemplate": "/api/authentications/renewals",
+      "Key": "RenewTokens",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
     // Verify Signup from Users Service
     {
       "DownstreamPathTemplate": "/api/signup",

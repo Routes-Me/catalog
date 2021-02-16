@@ -1186,6 +1186,21 @@
       "UpstreamHttpMethod": [ "POST" ]
     },
 
+    // Renew Tokens
+    {
+      "DownstreamPathTemplate": "/api/authentications/renewals",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/authentications/renewals",
+      "Key": "RenewTokens",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
     // Verify Signup from Users Service
     {
       "DownstreamPathTemplate": "/api/signup",

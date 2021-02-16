@@ -102,7 +102,7 @@ namespace APIGateway
                     ClockSkew = TimeSpan.FromMinutes(5) // tolerance for the expiration date
                 };
                 x.Events = jwtBearerEvents;
-            }).AddJwtBearer("sessionToken", x =>
+            }).AddJwtBearer("accessToken", x =>
             {
                 x.RequireHttpsMetadata = false;
                 x.SaveToken = true;
@@ -118,7 +118,7 @@ namespace APIGateway
                     },
                     ValidIssuer = appSettings.SessionTokenIssuer,
                     ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(appSettings.Secret)),
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(appSettings.AccessSecretKey)),
                     // verify signature to avoid tampering
                     ValidateLifetime = true, // validate the expiration
                     RequireExpirationTime = true,

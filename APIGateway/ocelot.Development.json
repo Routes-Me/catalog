@@ -607,6 +607,25 @@
         "AllowedScopes": []
       }
     },
+
+    // Post Broadcasts
+    {
+      "DownstreamPathTemplate": "/api/campaigns/{campaignId}/broadcasts",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/campaigns/{campaignId}/broadcasts",
+      "Key": "PostBroadcasts",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
     //************************* Campaign End **************************
 
     //************************* Advertisements End **************************

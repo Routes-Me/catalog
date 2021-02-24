@@ -626,6 +626,25 @@
         "AllowedScopes": []
       }
     },
+
+    // Delete Broadcasts
+    {
+      "DownstreamPathTemplate": "/api/campaigns/{campaignId}/broadcasts/{broadcastId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/campaigns/{campaignId}/broadcasts/{broadcastId}",
+      "Key": "DeleteBroadcasts",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
     //************************* Campaign End **************************
 
     //************************* Advertisements End **************************

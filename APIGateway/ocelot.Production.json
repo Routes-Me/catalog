@@ -643,6 +643,25 @@
         "AllowedScopes": []
       }
     },
+
+    // Delete Broadcasts
+    {
+      "DownstreamPathTemplate": "/api/campaigns/{campaignId}/broadcasts/{broadcastId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/api/campaigns/{campaignId}/broadcasts/{broadcastId}",
+      "Key": "DeleteBroadcasts",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
     //************************* Campaign End **************************
 
     //************************* Advertisements End **************************

@@ -1208,9 +1208,9 @@
       "UpstreamHttpMethod": [ "POST" ]
     },
 
-    // Generate Session Token. A new, alternative Signin API
+    // Generate a pair of Tokens
     {
-      "DownstreamPathTemplate": "/api/sessions",
+      "DownstreamPathTemplate": "/api/authentications",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1218,8 +1218,23 @@
           "Port": 90
         }
       ],
-      "UpstreamPathTemplate": "/api/sessions",
-      "Key": "SigninSessionToken",
+      "UpstreamPathTemplate": "/api/authentications",
+      "Key": "AuthenticationsTokens",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    // Renew Tokens
+    {
+      "DownstreamPathTemplate": "/api/authentications/renewals",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/api/authentications/renewals",
+      "Key": "RenewTokens",
       "UpstreamHttpMethod": [ "POST" ]
     },
 
@@ -2251,6 +2266,61 @@
     ////=============================================================
     ////======================== Archive track Service End =========================
     ////=============================================================
+
+
+
+    //=============================================================
+    //============ Vehicle-analytics Service start ================
+    //=============================================================
+
+    // Post operation logs
+    {
+      "DownstreamPathTemplate": "/api/operations/devices/logs",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 98
+        }
+      ],
+      "UpstreamPathTemplate": "/api/operations/devices/logs",
+      "Key": "PostOperationLogs",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //=============================================================
+    //============= Vehicle-analytics Service end =================
+    //=============================================================
+
+
+
+    //=============================================================
+    //============ Identities Service start ================
+    //=============================================================
+
+    // Revoke Refresh token
+    {
+      "DownstreamPathTemplate": "/api/identities/tokens/revoke-refresh",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identities/tokens/revoke-refresh",
+      "Key": "RevokeRefreshToken",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    //=============================================================
+    //============= Identities Service end =================
+    //=============================================================
+
 
 
     //=============================================================

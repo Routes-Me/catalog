@@ -1175,9 +1175,9 @@
 
     },
 
-    // Generate Session Token. A new, alternative Signin API
+    // Generate a pair of Tokens
     {
-      "DownstreamPathTemplate": "/api/sessions",
+      "DownstreamPathTemplate": "/api/authentications",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1185,8 +1185,23 @@
           "Port": 51770
         }
       ],
-      "UpstreamPathTemplate": "/api/sessions",
-      "Key": "SigninSessionToken",
+      "UpstreamPathTemplate": "/api/authentications",
+      "Key": "AuthenticationsTokens",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    // Renew Tokens
+    {
+      "DownstreamPathTemplate": "/api/authentications/renewals",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5500
+        }
+      ],
+      "UpstreamPathTemplate": "/api/authentications/renewals",
+      "Key": "RenewTokens",
       "UpstreamHttpMethod": [ "POST" ]
     },
 
@@ -2106,12 +2121,65 @@
     },
 
 
-
-
-
     //=============================================================
     //======================== Live Tracking End =========================
     //=============================================================
+
+
+
+    //=============================================================
+    //============ Vehicle-analytics Service start ================
+    //=============================================================
+
+    // Post operation logs
+    {
+      "DownstreamPathTemplate": "/api/operations/devices/logs",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5500
+        }
+      ],
+      "UpstreamPathTemplate": "/api/operations/devices/logs",
+      "Key": "PostOperationLogs",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //=============================================================
+    //============= Vehicle-analytics Service end =================
+    //=============================================================
+
+
+
+    //=============================================================
+    //============ Identities Service start ================
+    //=============================================================
+
+    // Revoke Refresh token
+    {
+      "DownstreamPathTemplate": "/api/identities/tokens/revoke-refresh",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5500
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identities/tokens/revoke-refresh",
+      "Key": "RevokeRefreshToken",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    //=============================================================
+    //============= Identities Service end =================
+    //=============================================================
+
+
 
     //=============================================================
     //======================== Archive track Service Start=========================

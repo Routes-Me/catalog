@@ -2324,6 +2324,31 @@
 
 
     //=============================================================
+    //================== Identifiers Service start ================
+    //=============================================================
+
+    // Generate new Identifiers
+    {
+      "DownstreamPathTemplate": "/api/identifiers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 100
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identifiers",
+      "Key": "GenerateIdentifiers",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+    //=============================================================
+    //=================== Identifiers Service end =================
+    //=============================================================
+
+
+
+    //=============================================================
     //======================== Prize Service Start =========================
     //=============================================================
 

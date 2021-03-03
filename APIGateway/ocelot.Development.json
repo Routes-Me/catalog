@@ -2182,6 +2182,31 @@
 
 
     //=============================================================
+    //================== Identifiers Service start ================
+    //=============================================================
+
+    // Generate new Identifiers
+    {
+      "DownstreamPathTemplate": "/api/identifiers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5500
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identifiers",
+      "Key": "GenerateIdentifiers",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+    //=============================================================
+    //=================== Identifiers Service end =================
+    //=============================================================
+
+
+
+    //=============================================================
     //======================== Archive track Service Start=========================
     //=============================================================
 

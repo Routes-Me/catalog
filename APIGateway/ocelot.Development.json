@@ -2175,6 +2175,78 @@
       "UpstreamHttpMethod": [ "POST" ]
     },
 
+    // Revoke access token
+    {
+      "DownstreamPathTemplate": "/api/identities/tokens/revoke-access",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5500
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identities/tokens/revoke-access",
+      "Key": "RevokeAccessToken",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    // Put and Get all identities
+    {
+      "DownstreamPathTemplate": "/api/identities",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5500
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identities",
+      "Key": "IdentitiesPutAndGetAll",
+      "UpstreamHttpMethod": [ "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get identities By Id
+    {
+      "DownstreamPathTemplate": "/api/identities/{identityId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5500
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identities/{identityId}",
+      "Key": "IdentitiesById",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete identities
+    {
+      "DownstreamPathTemplate": "/api/identities/{identityId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5500
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identities/{identityId}",
+      "Key": "DeleteIdentities",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
     //=============================================================
     //============= Identities Service end =================
     //=============================================================

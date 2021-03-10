@@ -1208,36 +1208,6 @@
       "UpstreamHttpMethod": [ "POST" ]
     },
 
-    // Generate a pair of Tokens
-    {
-      "DownstreamPathTemplate": "/api/authentications",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 90
-        }
-      ],
-      "UpstreamPathTemplate": "/api/authentications",
-      "Key": "AuthenticationsTokens",
-      "UpstreamHttpMethod": [ "POST" ]
-    },
-
-    // Renew Tokens
-    {
-      "DownstreamPathTemplate": "/api/authentications/renewals",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 90
-        }
-      ],
-      "UpstreamPathTemplate": "/api/authentications/renewals",
-      "Key": "RenewTokens",
-      "UpstreamHttpMethod": [ "POST" ]
-    },
-
     // Verify Signup from Users Service
     {
       "DownstreamPathTemplate": "/api/signup",
@@ -2302,6 +2272,36 @@
     //============ Identities Service start ================
     //=============================================================
 
+    // Generate a pair of Tokens
+    {
+      "DownstreamPathTemplate": "/api/authentications",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/api/authentications",
+      "Key": "AuthenticationsTokens",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    // Renew Tokens
+    {
+      "DownstreamPathTemplate": "/api/authentications/renewals",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/api/authentications/renewals",
+      "Key": "RenewTokens",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
     // Revoke Refresh token
     {
       "DownstreamPathTemplate": "/api/identities/tokens/revoke-refresh",
@@ -2391,73 +2391,6 @@
 
     //=============================================================
     //============= Identities Service end ========================
-    //=============================================================
-
-
-
-    //=============================================================
-    //============= New Users Service start =======================
-    //=============================================================
-
-    // // Delete user
-    // {
-    //   "DownstreamPathTemplate": "/api/users/{userId}",
-    //   "DownstreamScheme": "http",
-    //   "DownstreamHostAndPorts": [
-    //     {
-    //       "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-    //       "Port": 101
-    //     }
-    //   ],
-    //   "UpstreamPathTemplate": "/api/users/{userId}",
-    //   "Key": "DeleteUser",
-    //   "UpstreamHttpMethod": [ "DELETE" ],
-    //   "AuthenticationOptions": {
-    //     "AuthenticationProviderKey": "clientSecretKey",
-    //     "AllowedScopes": []
-    //   }
-    // },
-
-    // // Post, Put and Get all user
-    // {
-    //   "DownstreamPathTemplate": "/api/users",
-    //   "DownstreamScheme": "http",
-    //   "DownstreamHostAndPorts": [
-    //     {
-    //       "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-    //       "Port": 101
-    //     }
-    //   ],
-    //   "UpstreamPathTemplate": "/api/users",
-    //   "Key": "PostPutAndGetallUsers",
-    //   "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
-    //   "AuthenticationOptions": {
-    //     "AuthenticationProviderKey": "clientSecretKey",
-    //     "AllowedScopes": []
-    //   }
-    // },
-
-    // // Get specific user
-    // {
-    //   "DownstreamPathTemplate": "/api/users/{userId}",
-    //   "DownstreamScheme": "http",
-    //   "DownstreamHostAndPorts": [
-    //     {
-    //       "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-    //       "Port": 101
-    //     }
-    //   ],
-    //   "UpstreamPathTemplate": "/api/users/{userId}",
-    //   "Key": "GetSpecificUser",
-    //   "UpstreamHttpMethod": [ "GET" ],
-    //   "AuthenticationOptions": {
-    //     "AuthenticationProviderKey": "clientSecretKey",
-    //     "AllowedScopes": []
-    //   }
-    // },
-
-    //=============================================================
-    //============= New Users Service end =========================
     //=============================================================
 
 

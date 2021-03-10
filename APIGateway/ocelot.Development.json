@@ -2248,7 +2248,74 @@
     },
 
     //=============================================================
-    //============= Identities Service end =================
+    //============= Identities Service end ========================
+    //=============================================================
+
+
+
+    //=============================================================
+    //============= New Users Service start =======================
+    //=============================================================
+
+    // // Delete user
+    // {
+    //   "DownstreamPathTemplate": "/api/users/{userId}",
+    //   "DownstreamScheme": "http",
+    //   "DownstreamHostAndPorts": [
+    //     {
+    //       "Host": "localhost",
+    //       "Port": 5008
+    //     }
+    //   ],
+    //   "UpstreamPathTemplate": "/api/users/{userId}",
+    //   "Key": "DeleteUser",
+    //   "UpstreamHttpMethod": [ "DELETE" ],
+    //   "AuthenticationOptions": {
+    //     "AuthenticationProviderKey": "clientSecretKey",
+    //     "AllowedScopes": []
+    //   }
+    // },
+
+    // // Post, Put and Get all user
+    // {
+    //   "DownstreamPathTemplate": "/api/users",
+    //   "DownstreamScheme": "http",
+    //   "DownstreamHostAndPorts": [
+    //     {
+    //       "Host": "localhost",
+    //       "Port": 5008
+    //     }
+    //   ],
+    //   "UpstreamPathTemplate": "/api/users",
+    //   "Key": "PostPutAndGetallUsers",
+    //   "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+    //   "AuthenticationOptions": {
+    //     "AuthenticationProviderKey": "clientSecretKey",
+    //     "AllowedScopes": []
+    //   }
+    // },
+
+    // // Get specific user
+    // {
+    //   "DownstreamPathTemplate": "/api/users/{userId}",
+    //   "DownstreamScheme": "http",
+    //   "DownstreamHostAndPorts": [
+    //     {
+    //       "Host": "localhost",
+    //       "Port": 5008
+    //     }
+    //   ],
+    //   "UpstreamPathTemplate": "/api/users/{userId}",
+    //   "Key": "GetSpecificUser",
+    //   "UpstreamHttpMethod": [ "GET" ],
+    //   "AuthenticationOptions": {
+    //     "AuthenticationProviderKey": "clientSecretKey",
+    //     "AllowedScopes": []
+    //   }
+    // },
+
+    //=============================================================
+    //============= New Users Service end =========================
     //=============================================================
 
 

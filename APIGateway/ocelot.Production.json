@@ -624,6 +624,44 @@
         "AllowedScopes": []
       }
     },
+
+    // Post Broadcasts
+    {
+      "DownstreamPathTemplate": "/api/campaigns/{campaignId}/broadcasts",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/api/campaigns/{campaignId}/broadcasts",
+      "Key": "PostBroadcasts",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Broadcasts
+    {
+      "DownstreamPathTemplate": "/api/campaigns/{campaignId}/broadcasts/{broadcastId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/api/campaigns/{campaignId}/broadcasts/{broadcastId}",
+      "Key": "DeleteBroadcasts",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
     //************************* Campaign End **************************
 
     //************************* Advertisements End **************************
@@ -1167,21 +1205,6 @@
       ],
       "UpstreamPathTemplate": "/api/signin",
       "Key": "SigninFromUserService",
-      "UpstreamHttpMethod": [ "POST" ]
-    },
-
-    // Generate Session Token. A new, alternative Signin API
-    {
-      "DownstreamPathTemplate": "/api/sessions",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 90
-        }
-      ],
-      "UpstreamPathTemplate": "/api/sessions",
-      "Key": "SigninSessionToken",
       "UpstreamHttpMethod": [ "POST" ]
     },
 
@@ -2213,6 +2236,188 @@
     ////=============================================================
     ////======================== Archive track Service End =========================
     ////=============================================================
+
+
+
+    //=============================================================
+    //============ Vehicle-analytics Service start ================
+    //=============================================================
+
+    // Post operation logs
+    {
+      "DownstreamPathTemplate": "/api/operations/devices/logs",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 98
+        }
+      ],
+      "UpstreamPathTemplate": "/api/operations/devices/logs",
+      "Key": "PostOperationLogs",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //=============================================================
+    //============= Vehicle-analytics Service end =================
+    //=============================================================
+
+
+
+    //=============================================================
+    //============ Identities Service start ================
+    //=============================================================
+
+    // Generate a pair of Tokens
+    {
+      "DownstreamPathTemplate": "/api/authentications",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/api/authentications",
+      "Key": "AuthenticationsTokens",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    // Renew Tokens
+    {
+      "DownstreamPathTemplate": "/api/authentications/renewals",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/api/authentications/renewals",
+      "Key": "RenewTokens",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    // Revoke Refresh token
+    {
+      "DownstreamPathTemplate": "/api/identities/tokens/revoke-refresh",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identities/tokens/revoke-refresh",
+      "Key": "RevokeRefreshToken",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    // Revoke access token
+    {
+      "DownstreamPathTemplate": "/api/identities/tokens/revoke-access",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identities/tokens/revoke-access",
+      "Key": "RevokeAccessToken",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    // Put and Get all identities
+    {
+      "DownstreamPathTemplate": "/api/identities",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identities",
+      "Key": "IdentitiesPutAndGetAll",
+      "UpstreamHttpMethod": [ "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get identities By Id
+    {
+      "DownstreamPathTemplate": "/api/identities/{identityId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identities/{identityId}",
+      "Key": "IdentitiesById",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete identities
+    {
+      "DownstreamPathTemplate": "/api/identities/{identityId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identities/{identityId}",
+      "Key": "DeleteIdentities",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    //=============================================================
+    //============= Identities Service end ========================
+    //=============================================================
+
+
+
+    //=============================================================
+    //================== Identifiers Service start ================
+    //=============================================================
+
+    // Generate new Identifiers
+    {
+      "DownstreamPathTemplate": "/api/identifiers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 100
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identifiers",
+      "Key": "GenerateIdentifiers",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+    //=============================================================
+    //=================== Identifiers Service end =================
+    //=============================================================
+
 
 
     //=============================================================

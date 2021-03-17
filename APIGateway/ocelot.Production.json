@@ -2332,7 +2332,7 @@
       "UpstreamHttpMethod": [ "POST" ]
     },
 
-    // Put and Get all identities
+    // Put, Post and Get all identities
     {
       "DownstreamPathTemplate": "/api/identities",
       "DownstreamScheme": "http",
@@ -2343,8 +2343,8 @@
         }
       ],
       "UpstreamPathTemplate": "/api/identities",
-      "Key": "IdentitiesPutAndGetAll",
-      "UpstreamHttpMethod": [ "PUT", "GET" ],
+      "Key": "IdentitiesPutPostAndGetAll",
+      "UpstreamHttpMethod": [ "PUT", "GET", "POST" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []

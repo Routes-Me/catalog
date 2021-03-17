@@ -2190,19 +2190,19 @@
       "UpstreamHttpMethod": [ "POST" ]
     },
 
-    // Put and Get all identities
+    // Put, Post and Get all identities
     {
       "DownstreamPathTemplate": "/api/identities",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5500
+          "Port": 5007
         }
       ],
       "UpstreamPathTemplate": "/api/identities",
-      "Key": "IdentitiesPutAndGetAll",
-      "UpstreamHttpMethod": [ "PUT", "GET" ],
+      "Key": "IdentitiesPutPostAndGetAll",
+      "UpstreamHttpMethod": [ "PUT", "GET", "POST" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []
@@ -2264,7 +2264,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5500
+          "Port": 5013
         }
       ],
       "UpstreamPathTemplate": "/api/identifiers",

@@ -869,9 +869,9 @@
       }
     },
 
-    // Get Institutions By Id from Institutions Service Version 1
+    // Get Institutions from Institutions Service Version 1
     {
-      "DownstreamPathTemplate": "/api/v1/institutions/{institutionId}",
+      "DownstreamPathTemplate": "/api/v1/institutions",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -879,8 +879,8 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/api/v1/institutions/{institutionId}",
-      "Key": "InstitutionsByIdFromInstitutionsServiceV1",
+      "UpstreamPathTemplate": "/api/v1/institutions",
+      "Key": "InstitutionsFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",

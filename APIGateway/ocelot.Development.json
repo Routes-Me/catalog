@@ -820,7 +820,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 62574
+          "Port": 5015
         }
       ],
       "UpstreamPathTemplate": "/api/institutions",
@@ -834,19 +834,38 @@
 
     // Get Institutions By Id from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/institutions/{institutionId=0}",
+      "DownstreamPathTemplate": "/api/institutions/{institutionId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 62574
+          "Port": 5015
         }
       ],
-      "UpstreamPathTemplate": "/api/institutions/{institutionId=0}",
+      "UpstreamPathTemplate": "/api/institutions/{institutionId}",
       "Key": "InstitutionsByIdFromInstitutionsService",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Institutions from Institutions Service Version 1
+    {
+      "DownstreamPathTemplate": "/api/v1/institutions",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5015
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/institutions",
+      "Key": "InstitutionsFromInstitutionsServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
       }
     },
@@ -2190,7 +2209,7 @@
       "UpstreamHttpMethod": [ "POST" ]
     },
 
-    // Put and Get all identities
+    // Put, Post and Get all identities
     {
       "DownstreamPathTemplate": "/api/identities",
       "DownstreamScheme": "http",
@@ -2201,8 +2220,8 @@
         }
       ],
       "UpstreamPathTemplate": "/api/identities",
-      "Key": "IdentitiesPutAndGetAll",
-      "UpstreamHttpMethod": [ "PUT", "GET" ],
+      "Key": "IdentitiesPutPostAndGetAll",
+      "UpstreamHttpMethod": [ "PUT", "GET", "POST" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []
@@ -2264,7 +2283,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5500
+          "Port": 5013
         }
       ],
       "UpstreamPathTemplate": "/api/identifiers",

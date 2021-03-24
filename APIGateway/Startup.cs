@@ -118,7 +118,7 @@ namespace APIGateway
                     },
                     ValidIssuer = appSettings.SessionTokenIssuer,
                     ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(appSettings.Secret)),
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(appSettings.AccessSecretKey)),
                     // verify signature to avoid tampering
                     ValidateLifetime = true, // validate the expiration
                     RequireExpirationTime = true,

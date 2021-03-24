@@ -869,6 +869,25 @@
       }
     },
 
+    // Get Institutions from Institutions Service Version 1
+    {
+      "DownstreamPathTemplate": "/api/v1/institutions",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 91
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/institutions",
+      "Key": "InstitutionsFromInstitutionsServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
     // Get all officers By Institution Id from Institution Services
     {
       "DownstreamPathTemplate": "/api/institutions/{institutionId=0}/officers",
@@ -2339,7 +2358,7 @@
       "UpstreamHttpMethod": [ "POST" ]
     },
 
-    // Put and Get all identities
+    // Put, Post and Get all identities
     {
       "DownstreamPathTemplate": "/api/identities",
       "DownstreamScheme": "http",
@@ -2350,8 +2369,8 @@
         }
       ],
       "UpstreamPathTemplate": "/api/identities",
-      "Key": "IdentitiesPutAndGetAll",
-      "UpstreamHttpMethod": [ "PUT", "GET" ],
+      "Key": "IdentitiesPutPostAndGetAll",
+      "UpstreamHttpMethod": [ "PUT", "GET", "POST" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []

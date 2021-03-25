@@ -1597,7 +1597,7 @@
 
     // Delete Users from Users Service
     {
-      "DownstreamPathTemplate": "/api/users/{id}",
+      "DownstreamPathTemplate": "/api/users/{userId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1605,7 +1605,7 @@
           "Port": 51770
         }
       ],
-      "UpstreamPathTemplate": "/api/users/{id}",
+      "UpstreamPathTemplate": "/api/users/{userId}",
       "Key": "DeleteUsersFromUserService",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {

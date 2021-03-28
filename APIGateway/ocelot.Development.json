@@ -2628,6 +2628,31 @@
 
 
     //=============================================================
+    //================== Registrations Service start ==============
+    //=============================================================
+
+    // Register screen
+    {
+      "DownstreamPathTemplate": "/v1/registrations/screen-app",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5014
+        }
+      ],
+      "UpstreamPathTemplate": "/v1/registrations/screen-app",
+      "Key": "RegisterScreenApp",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    //=============================================================
+    //=================== Registrations Service end ===============
+    //=============================================================
+
+
+
+    //=============================================================
     //======================== Archive track Service Start=========================
     //=============================================================
 

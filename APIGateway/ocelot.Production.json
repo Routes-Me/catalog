@@ -2789,6 +2789,31 @@
 
 
     //=============================================================
+    //================== Registrations Service start ==============
+    //=============================================================
+
+    // Register screen
+    {
+      "DownstreamPathTemplate": "/v1/registrations/screen-app",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 102
+        }
+      ],
+      "UpstreamPathTemplate": "/v1/registrations/screen-app",
+      "Key": "RegisterScreenApp",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    //=============================================================
+    //=================== Registrations Service end ===============
+    //=============================================================
+
+
+
+    //=============================================================
     //======================== Prize Service Start =========================
     //=============================================================
 

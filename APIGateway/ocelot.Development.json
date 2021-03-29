@@ -387,6 +387,396 @@
     //==================== VehiclesService End ====================
     //=============================================================
 
+
+
+    //=============================================================
+    //========== Vehicles Service (Versioned) Start ===============
+    //=============================================================
+
+    //************************* Vehicle Start **************************
+    //Vehicle from vehicle Service
+    {
+      "DownstreamPathTemplate": "/v1.0/vehicles",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/vehicles",
+      "Key": "VehiclesFromVehicleServiceV1",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Get Vehicle By Id from vehicle Service
+    {
+      "DownstreamPathTemplate": "/v1.0/vehicles/{vehicleId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/vehicles/{vehicleId}",
+      "Key": "VehiclesByIdFromVehicleServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Get Drivers By Vehicle Id from vehicle Service
+    {
+      "DownstreamPathTemplate": "/v1.0/vehicles/{vehicleId}/drivers/{driverId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/vehicles/{vehicleId}/drivers/{driverId}",
+      "Key": "GetDriversByVehiclesIdFromVehicleServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Get Vehicle By Id from vehicle Service
+    {
+      "DownstreamPathTemplate": "/v1.0/vehicles/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/vehicles/{id}",
+      "Key": "DeleteVehiclesFromVehicleServiceV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+    //************************* Vehicle End **************************
+
+    //************************* Search Start **************************
+    //Driver from vehicle Service
+    {
+      "DownstreamPathTemplate": "/v1.0/vehicles/search",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/vehicles/search",
+      "Key": "SearchFromVehicleServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+    //************************* Search End **************************
+
+    //************************* Device Start **************************
+    //Driver from vehicle Service
+    {
+      "DownstreamPathTemplate": "/v1.0/devices/{deviceId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44374
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/devices/{deviceId}",
+      "Key": "SearchFromVehicleServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Delete Driver from vehicle Service
+    {
+      "DownstreamPathTemplate": "/v1.0/devices/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44374
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/devices/{id}",
+      "Key": "DeleteDeviceFromVehicleServiceV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Driver from vehicle Service
+    {
+      "DownstreamPathTemplate": "/v1.0/devices",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44374
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/devices",
+      "Key": "DeviceFromVehicleServiceV1",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Device Applications
+    {
+      "DownstreamPathTemplate": "/v1.0/devices/{deviceId}/applications",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44374
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/devices/{deviceId}/applications",
+      "Key": "DeviceApplicationsV1",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+
+    //Device from vehicles
+    {
+      "DownstreamPathTemplate": "/v1.0/vehicles/{vehicleId}/devices",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44374
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/vehicles/{vehicleId}/devices",
+      "Key": "VehicleDevicesV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+
+    //************************* Device End **************************
+
+    //************************* Driver Start **************************
+    //Driver from vehicle Service
+    {
+      "DownstreamPathTemplate": "/v1.0/drivers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/drivers",
+      "Key": "DriverFromVehicleServiceV1",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Delete Driver from vehicle Service
+    {
+      "DownstreamPathTemplate": "/v1.0/drivers/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/drivers/{id}",
+      "Key": "DeleteDriverFromVehicleServiceV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Get Driver with id from vehicle Service
+    {
+      "DownstreamPathTemplate": "/v1.0/drivers/{driverId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/drivers/{driverId}",
+      "Key": "DriverWithIdFromVehicleServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* Driver End **************************
+
+    //************************* Manufacturers Start **************************
+    //Manufacturers from vehicle Service
+    {
+      "DownstreamPathTemplate": "/v1.0/manufacturers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/manufacturers",
+      "Key": "ManufacturersFromVehicleServiceV1",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Delete Manufacturers from vehicle Service
+    {
+      "DownstreamPathTemplate": "/v1.0/manufacturers/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/manufacturers/{id}",
+      "Key": "DeleteManufacturersFromVehicleServiceV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Get Manufacturers By Id from vehicle Service
+    {
+      "DownstreamPathTemplate": "/v1.0/manufacturers/{manufacturerId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/manufacturers/{manufacturerId}",
+      "Key": "GetManufacturersWithIdFromVehicleServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Get Model By Manufacturers Id from vehicle Service
+    {
+      "DownstreamPathTemplate": "/v1.0/manufacturers/{manufacturerId}/models",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/manufacturers/{manufacturerId}/models",
+      "Key": "ModelFromManufacturersFromVehicleServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* Manufacturers End **************************
+
+    //************************* Car Models Start **************************
+    //Models from vehicle Service
+    {
+      "DownstreamPathTemplate": "/v1.0/models",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/models",
+      "Key": "ModelsFromVehicleServiceV1",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Delete Models from vehicle Service
+    {
+      "DownstreamPathTemplate": "/v1.0/models/{modelId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54282
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/models/{modelId}",
+      "Key": "DeleeteModelsFromVehicleServiceV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+    //************************* Car Models End **************************
+
+    //=============================================================
+    //========= Vehicles Service (Versioned) End ==================
+    //=============================================================
+
+
+
     //=============================================================
     //================ AdvertisementsService Start ================
     //=============================================================
@@ -1163,7 +1553,7 @@
 
     // Institutions from Institutions Service
     {
-      "DownstreamPathTemplate": "/v1/institutions",
+      "DownstreamPathTemplate": "/v1.0/institutions",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1171,7 +1561,7 @@
           "Port": 5015
         }
       ],
-      "UpstreamPathTemplate": "/v1/institutions",
+      "UpstreamPathTemplate": "/v1.0/institutions",
       "Key": "InstitutionsFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
       "AuthenticationOptions": {
@@ -1182,7 +1572,7 @@
 
     // Get Institutions By Id from Institutions Service
     {
-      "DownstreamPathTemplate": "/v1/institutions/{institutionId}",
+      "DownstreamPathTemplate": "/v1.0/institutions/{institutionId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1190,7 +1580,7 @@
           "Port": 5015
         }
       ],
-      "UpstreamPathTemplate": "/v1/institutions/{institutionId}",
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionId}",
       "Key": "InstitutionsByIdFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1201,7 +1591,7 @@
 
     // Delete Institutions from Institutions Service
     {
-      "DownstreamPathTemplate": "/v1/institutions/{id}",
+      "DownstreamPathTemplate": "/v1.0/institutions/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1209,7 +1599,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/v1/institutions/{id}",
+      "UpstreamPathTemplate": "/v1.0/institutions/{id}",
       "Key": "DeleteInstitutionsFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -1223,7 +1613,7 @@
     //************************* Invitation Start **************************
     // Invitation from Institutions Service
     {
-      "DownstreamPathTemplate": "/v1/officers/{officerid}/invitations",
+      "DownstreamPathTemplate": "/v1.0/officers/{officerid}/invitations",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1231,7 +1621,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/v1/officers/{officerid}/invitations",
+      "UpstreamPathTemplate": "/v1.0/officers/{officerid}/invitations",
       "Key": "InvitationFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "POST" ],
       "AuthenticationOptions": {
@@ -1242,7 +1632,7 @@
 
     // Delete Institutions from Institutions Service
     {
-      "DownstreamPathTemplate": "/v1/officers/{officerid}/{invitations}/{id}",
+      "DownstreamPathTemplate": "/v1.0/officers/{officerid}/{invitations}/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1250,7 +1640,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/v1/officers/{officerid}/{invitations}/{id}",
+      "UpstreamPathTemplate": "/v1.0/officers/{officerid}/{invitations}/{id}",
       "Key": "DeleteInvitationFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -1261,7 +1651,7 @@
 
     // Get Institutions By Id from Institutions Service
     {
-      "DownstreamPathTemplate": "/v1/invitations/{invitationId}",
+      "DownstreamPathTemplate": "/v1.0/invitations/{invitationId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1269,7 +1659,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/v1/invitations/{invitationId}",
+      "UpstreamPathTemplate": "/v1.0/invitations/{invitationId}",
       "Key": "InvitationByIdFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1279,7 +1669,7 @@
     },
     // Get Institutions By Id from Institutions Service
     {
-      "DownstreamPathTemplate": "/v1/invitations",
+      "DownstreamPathTemplate": "/v1.0/invitations",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1287,7 +1677,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/v1/invitations",
+      "UpstreamPathTemplate": "/v1.0/invitations",
       "Key": "GetInvitationFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1300,7 +1690,7 @@
     //************************* Officers Start **************************
     // Officers from Institutions Service
     {
-      "DownstreamPathTemplate": "/v1/officers",
+      "DownstreamPathTemplate": "/v1.0/officers",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1308,7 +1698,7 @@
           "Port": 5015
         }
       ],
-      "UpstreamPathTemplate": "/v1/officers",
+      "UpstreamPathTemplate": "/v1.0/officers",
       "Key": "OfficersFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
       "AuthenticationOptions": {
@@ -1319,7 +1709,7 @@
 
     // Officers By Id from Institutions Service
     {
-      "DownstreamPathTemplate": "/v1/officers/{officersId}",
+      "DownstreamPathTemplate": "/v1.0/officers/{officersId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1327,7 +1717,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/v1/officers/{officersId}",
+      "UpstreamPathTemplate": "/v1.0/officers/{officersId}",
       "Key": "OfficersByIdFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1338,7 +1728,7 @@
 
     // Delete Officers from Institutions Service
     {
-      "DownstreamPathTemplate": "/v1/officers/{officersId}",
+      "DownstreamPathTemplate": "/v1.0/officers/{officersId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1346,7 +1736,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/v1/officers/{officersId}",
+      "UpstreamPathTemplate": "/v1.0/officers/{officersId}",
       "Key": "DeleteOfficersFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -1360,7 +1750,7 @@
     //************************* Services Start **************************
     // Services from Institutions Service
     {
-      "DownstreamPathTemplate": "/v1/services",
+      "DownstreamPathTemplate": "/v1.0/services",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1368,7 +1758,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/v1/services",
+      "UpstreamPathTemplate": "/v1.0/services",
       "Key": "ServicesFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
       "AuthenticationOptions": {
@@ -1379,7 +1769,7 @@
 
     // GetServices By Id from Institutions Service
     {
-      "DownstreamPathTemplate": "/v1/services/{servicesId}",
+      "DownstreamPathTemplate": "/v1.0/services/{servicesId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1387,7 +1777,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/v1/services/{servicesId}",
+      "UpstreamPathTemplate": "/v1.0/services/{servicesId}",
       "Key": "ServicesByIdFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1398,7 +1788,7 @@
 
     // Delete Services from Institutions Service
     {
-      "DownstreamPathTemplate": "/v1/services/{id}",
+      "DownstreamPathTemplate": "/v1.0/services/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1406,7 +1796,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/v1/services/{id}",
+      "UpstreamPathTemplate": "/v1.0/services/{id}",
       "Key": "DeleteServicesFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -1419,7 +1809,7 @@
     //************************* ServicesInstitutions Start **************************
     // ServicesInstitutions from Institutions Service
     {
-      "DownstreamPathTemplate": "/v1/institutions/{institutionsId}/services",
+      "DownstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1427,7 +1817,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/v1/institutions/{institutionsId}/services",
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services",
       "Key": "ServicesInstitutionsFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "POST", "GET" ],
       "AuthenticationOptions": {
@@ -1438,7 +1828,7 @@
 
     // Get ServicesInstitutions By Id from Institutions Service
     {
-      "DownstreamPathTemplate": "/v1/institutions/{institutionsId}/services/{servicesId}",
+      "DownstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services/{servicesId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1446,7 +1836,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/v1/institutions/{institutionsId}/services/{servicesId}",
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services/{servicesId}",
       "Key": "ServicesInstitutionsByIdFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1458,7 +1848,7 @@
 
     // Delete ServicesInstitutions By Id from Institutions Service
     {
-      "DownstreamPathTemplate": "/v1/institutions/{institutionsId}/services/{servicesId}",
+      "DownstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services/{servicesId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1466,7 +1856,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/v1/institutions/{institutionsId}/services/{servicesId}",
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services/{servicesId}",
       "Key": "DeleteServicesInstitutionsFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -1478,7 +1868,7 @@
 
     // Add Authorities
     {
-      "DownstreamPathTemplate": "/v1/institutions/authorities",
+      "DownstreamPathTemplate": "/v1.0/institutions/authorities",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1486,7 +1876,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/v1/institutions/authorities",
+      "UpstreamPathTemplate": "/v1.0/institutions/authorities",
       "Key": "AddAuthoritiesV1",
       "UpstreamHttpMethod": [ "POST" ],
       "AuthenticationOptions": {
@@ -2633,7 +3023,7 @@
 
     // Register screen
     {
-      "DownstreamPathTemplate": "/v1/registrations/screen-app",
+      "DownstreamPathTemplate": "/v1.0/registrations/screen-app",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -2641,7 +3031,7 @@
           "Port": 5014
         }
       ],
-      "UpstreamPathTemplate": "/v1/registrations/screen-app",
+      "UpstreamPathTemplate": "/v1.0/registrations/screen-app",
       "Key": "RegisterScreenApp",
       "UpstreamHttpMethod": [ "POST" ]
     },

@@ -1163,7 +1163,7 @@
 
     // Institutions from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/v1.0/institutions",
+      "DownstreamPathTemplate": "/v1.0/institutions",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1171,7 +1171,7 @@
           "Port": 5015
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/institutions",
+      "UpstreamPathTemplate": "/v1.0/institutions",
       "Key": "InstitutionsFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
       "AuthenticationOptions": {
@@ -1182,7 +1182,7 @@
 
     // Get Institutions By Id from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/v1.0/institutions/{institutionId}",
+      "DownstreamPathTemplate": "/v1.0/institutions/{institutionId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1190,7 +1190,7 @@
           "Port": 5015
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/institutions/{institutionId}",
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionId}",
       "Key": "InstitutionsByIdFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1201,7 +1201,7 @@
 
     // Delete Institutions from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/v1.0/institutions/{id}",
+      "DownstreamPathTemplate": "/v1.0/institutions/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1209,7 +1209,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/institutions/{id}",
+      "UpstreamPathTemplate": "/v1.0/institutions/{id}",
       "Key": "DeleteInstitutionsFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -1223,7 +1223,7 @@
     //************************* Invitation Start **************************
     // Invitation from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/v1.0/officers/{officerid}/invitations",
+      "DownstreamPathTemplate": "/v1.0/officers/{officerid}/invitations",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1231,7 +1231,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/officers/{officerid}/invitations",
+      "UpstreamPathTemplate": "/v1.0/officers/{officerid}/invitations",
       "Key": "InvitationFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "POST" ],
       "AuthenticationOptions": {
@@ -1242,7 +1242,7 @@
 
     // Delete Institutions from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/v1.0/officers/{officerid}/{invitations}/{id}",
+      "DownstreamPathTemplate": "/v1.0/officers/{officerid}/{invitations}/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1250,7 +1250,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/officers/{officerid}/{invitations}/{id}",
+      "UpstreamPathTemplate": "/v1.0/officers/{officerid}/{invitations}/{id}",
       "Key": "DeleteInvitationFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -1261,7 +1261,7 @@
 
     // Get Institutions By Id from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/v1.0/invitations/{invitationId}",
+      "DownstreamPathTemplate": "/v1.0/invitations/{invitationId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1269,7 +1269,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/invitations/{invitationId}",
+      "UpstreamPathTemplate": "/v1.0/invitations/{invitationId}",
       "Key": "InvitationByIdFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1279,7 +1279,7 @@
     },
     // Get Institutions By Id from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/v1.0/invitations",
+      "DownstreamPathTemplate": "/v1.0/invitations",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1287,7 +1287,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/invitations",
+      "UpstreamPathTemplate": "/v1.0/invitations",
       "Key": "GetInvitationFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1300,7 +1300,7 @@
     //************************* Officers Start **************************
     // Officers from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/v1.0/officers",
+      "DownstreamPathTemplate": "/v1.0/officers",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1308,7 +1308,7 @@
           "Port": 5015
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/officers",
+      "UpstreamPathTemplate": "/v1.0/officers",
       "Key": "OfficersFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
       "AuthenticationOptions": {
@@ -1319,7 +1319,7 @@
 
     // Officers By Id from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/v1.0/officers/{officersId}",
+      "DownstreamPathTemplate": "/v1.0/officers/{officersId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1327,7 +1327,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/officers/{officersId}",
+      "UpstreamPathTemplate": "/v1.0/officers/{officersId}",
       "Key": "OfficersByIdFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1338,7 +1338,7 @@
 
     // Delete Officers from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/v1.0/officers/{officersId}",
+      "DownstreamPathTemplate": "/v1.0/officers/{officersId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1346,7 +1346,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/officers/{officersId}",
+      "UpstreamPathTemplate": "/v1.0/officers/{officersId}",
       "Key": "DeleteOfficersFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -1360,7 +1360,7 @@
     //************************* Services Start **************************
     // Services from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/v1.0/services",
+      "DownstreamPathTemplate": "/v1.0/services",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1368,7 +1368,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/services",
+      "UpstreamPathTemplate": "/v1.0/services",
       "Key": "ServicesFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
       "AuthenticationOptions": {
@@ -1379,7 +1379,7 @@
 
     // GetServices By Id from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/v1.0/services/{servicesId}",
+      "DownstreamPathTemplate": "/v1.0/services/{servicesId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1387,7 +1387,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/services/{servicesId}",
+      "UpstreamPathTemplate": "/v1.0/services/{servicesId}",
       "Key": "ServicesByIdFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1398,7 +1398,7 @@
 
     // Delete Services from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/v1.0/services/{id}",
+      "DownstreamPathTemplate": "/v1.0/services/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1406,7 +1406,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/services/{id}",
+      "UpstreamPathTemplate": "/v1.0/services/{id}",
       "Key": "DeleteServicesFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -1419,7 +1419,7 @@
     //************************* ServicesInstitutions Start **************************
     // ServicesInstitutions from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/v1.0/institutions/{institutionsId}/services",
+      "DownstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1427,7 +1427,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/institutions/{institutionsId}/services",
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services",
       "Key": "ServicesInstitutionsFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "POST", "GET" ],
       "AuthenticationOptions": {
@@ -1438,7 +1438,7 @@
 
     // Get ServicesInstitutions By Id from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/v1.0/institutions/{institutionsId}/services/{servicesId}",
+      "DownstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services/{servicesId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1446,7 +1446,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/institutions/{institutionsId}/services/{servicesId}",
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services/{servicesId}",
       "Key": "ServicesInstitutionsByIdFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1458,7 +1458,7 @@
 
     // Delete ServicesInstitutions By Id from Institutions Service
     {
-      "DownstreamPathTemplate": "/api/v1.0/institutions/{institutionsId}/services/{servicesId}",
+      "DownstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services/{servicesId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1466,7 +1466,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/institutions/{institutionsId}/services/{servicesId}",
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services/{servicesId}",
       "Key": "DeleteServicesInstitutionsFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -1478,7 +1478,7 @@
 
     // Add Authorities
     {
-      "DownstreamPathTemplate": "/api/v1.0/institutions/authorities",
+      "DownstreamPathTemplate": "/v1.0/institutions/authorities",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1486,7 +1486,7 @@
           "Port": 62574
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/institutions/authorities",
+      "UpstreamPathTemplate": "/v1.0/institutions/authorities",
       "Key": "AddAuthoritiesV1",
       "UpstreamHttpMethod": [ "POST" ],
       "AuthenticationOptions": {
@@ -2633,7 +2633,7 @@
 
     // Register screen
     {
-      "DownstreamPathTemplate": "/api/v1.0/registrations/screen-app",
+      "DownstreamPathTemplate": "/v1.0/registrations/screen-app",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -2641,7 +2641,7 @@
           "Port": 5014
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/registrations/screen-app",
+      "UpstreamPathTemplate": "/v1.0/registrations/screen-app",
       "Key": "RegisterScreenApp",
       "UpstreamHttpMethod": [ "POST" ]
     },

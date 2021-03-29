@@ -1209,10 +1209,430 @@
 
     //************************* Advertisements End **************************
 
-
     //=============================================================
     //================ AdvertisementsService End ==================
     //=============================================================
+
+
+
+    //==========================================================================
+    //================ Advertisements Service (Versioned) Start ================
+    //==========================================================================
+
+    //************************* Medias Start **************************
+
+    // Medias from Advertisements Service
+    {
+      "DownstreamPathTemplate": "/v1.0/medias",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/medias",
+      "Key": "MediasFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Medias by id from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/medias/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/medias/{id}",
+      "Key": "MediasByIdFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Medias from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/medias/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/medias/{id}",
+      "Key": "DeleteMediasFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* Medias End ****************************
+
+    //************************* Interval Start **************************
+    // Intervals from Advertisements Service
+    {
+      "DownstreamPathTemplate": "/v1.0/intervals",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/intervals",
+      "Key": "IntervalsFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Intervals by id from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/intervals/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/intervals/{id}",
+      "Key": "IntervalsByIdFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Interval from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/intervals/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/intervals/{id}",
+      "Key": "DeleteIntervalsFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+    //************************* Interval End **************************
+
+    //************************* Campaign Start **************************
+    // Campaigns Medias from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/campaigns",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/campaigns",
+      "Key": "CampaignsFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Campaigns By Id from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/campaigns/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/campaigns/{id}",
+      "Key": "CampaignsByIdFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Advertisements of Campaigns By Id from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/campaigns/{id}/advertisements/{advertisementsId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/campaigns/{id}/advertisements/{advertisementsId}",
+      "Key": "AdvertisementsOfCampaignsFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Advertisements of active campaign of Campaigns By Id from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/campaigns/advertisementsqr",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/campaigns/advertisementsqr",
+      "Key": "AdvertisementsOfActiveCampaignsFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Campaigns from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/campaigns/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/campaigns/{id}",
+      "Key": "DeleteCampaignsFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Post Broadcasts
+    {
+      "DownstreamPathTemplate": "/v1.0/campaigns/{campaignId}/broadcasts",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/campaigns/{campaignId}/broadcasts",
+      "Key": "PostBroadcastsV1",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Broadcasts
+    {
+      "DownstreamPathTemplate": "/v1.0/campaigns/{campaignId}/broadcasts/{broadcastId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/campaigns/{campaignId}/broadcasts/{broadcastId}",
+      "Key": "DeleteBroadcastsV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+    //************************* Campaign End **************************
+
+    //************************* Advertisements End **************************
+    // Advertisements from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/advertisements",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/advertisements",
+      "Key": "AdvertisementsFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Advertisements By Id from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/advertisements/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/advertisements/{id}",
+      "Key": "AdvertisementsByIdFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Advertisements By Institution Id from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/institutions/{institutionId}/advertisements/{advertisementsId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionId}/advertisements/{advertisementsId}",
+      "Key": "AdvertisementsByInstitutionIdFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Advertisements from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/advertisements/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/advertisements/{id}",
+      "Key": "DeleteAdvertisementsFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Get contents from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/contents",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/contents",
+      "Key": "GetContentsFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get contents by id from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/contents/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/contents/{id}",
+      "Key": "GetContentsByIdFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+
+    // Update Campaign Advertisement by Id
+    {
+      "DownstreamPathTemplate": "/v1.0/campaigns/{campaignsId}/advertisements/{advertisementsId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/campaigns/{campaignsId}/advertisements/{advertisementsId}",
+      "Key": "UpdateCampaignAdvertisementV1",
+      "UpstreamHttpMethod": [ "PATCH" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Update Campaign Advertisement by List
+    {
+      "DownstreamPathTemplate": "/v1.0/campaigns/{campaignsId}/advertisements",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/campaigns/{campaignsId}/advertisements",
+      "Key": "UpdateCampaignAdvertisementListV1",
+      "UpstreamHttpMethod": [ "PATCH" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* Advertisements End **************************
+
+    //==========================================================================
+    //================ Advertisements Service (Versioned) End ==================
+    //==========================================================================
 
 
 

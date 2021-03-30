@@ -3166,6 +3166,8 @@
     //======================== Coupon End =========================
     //=============================================================
 
+
+
     //=============================================================
     //======================== Analytics Start =========================
     //=============================================================
@@ -3228,6 +3230,73 @@
     //=============================================================
     //======================== Analytics End =========================
     //=============================================================
+
+
+
+    //=============================================================
+    //============ Analytics (Versioned) Start ====================
+    //=============================================================
+
+    {
+      "DownstreamPathTemplate": "/v1.0/analytics/promotions",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56180
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/analytics/promotions",
+      "Key": "GetAnalyticsV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // POST playbacks from Analytics Services
+    {
+      "DownstreamPathTemplate": "/v1.0/analytics/devices/{deviceId}/playbacks",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/analytics/devices/{deviceId}/playbacks",
+      "Key": "PostPlaybacksV1",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/v1.0/analytics/promotions/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 56180
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/analytics/promotions/{id}",
+      "Key": "GetAnalyticsByIdV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //=============================================================
+    //============== Analytics (Versioned) End ====================
+    //=============================================================
+
+
 
     //=============================================================
     //======================== Live Tracking Start =========================

@@ -3235,6 +3235,449 @@
 
 
     //=============================================================
+    //=============== Coupon (Versioned) Start ===================
+    //=============================================================
+
+    //************************* places Start **************************
+    // CRUD for places from coupon
+    {
+      "DownstreamPathTemplate": "/v1.0/places",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/places",
+      "Key": "PlacesFromCouponV1",
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get with id for places from coupon
+    {
+      "DownstreamPathTemplate": "/v1.0/places/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/places/{id}",
+      "Key": "GetPlacesFromCouponV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get with id for places from coupon
+    {
+      "DownstreamPathTemplate": "/v1.0/places/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/places/{id}",
+      "Key": "DeletePlacesFromCouponV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* places End **************************
+
+    //************************* authorities Start **************************
+    // CRUD for authorities from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/authorities",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/authorities",
+      "Key": "PlacesFromCouponV1",
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get with id for authorities from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/authorities/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/authorities/{id}",
+      "Key": "GetAuthoritiesFromCouponV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get with id for authorities from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/authorities/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/authorities/{id}",
+      "Key": "DeletePlacesFromCouponV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* authorities End **************************
+
+
+    //************************* coupons Start **************************
+
+    // CRUD for coupons from authorities
+    {
+      "DownstreamPathTemplate": "/v1.0/coupons",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/coupons",
+      "Key": "PlacesFromCouponV1",
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get with id for coupons from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/coupons/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/coupons/{id}",
+      "Key": "GetCouponsFromCouponV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get with id for coupons from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/coupons/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/coupons/{id}",
+      "Key": "DeletePlacesFromCouponV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+
+    //************************* coupons End **************************
+
+    //************************* promotions start **************************
+
+    // CRUD for promotions from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/promotions",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/promotions",
+      "Key": "PlacesFromCouponV1",
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get with id for promotions from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/promotions/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/promotions/{id}",
+      "Key": "GetPromotionsFromCouponV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get with id for contents from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/promotions/contents/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/promotions/contents/{id}",
+      "Key": "GetContentsFromCouponByIdV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get with id for contents from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/promotions/contents",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/promotions/contents",
+      "Key": "GetContentsFromCouponV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+
+    // Get with id for promotions from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/promotions/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/promotions/{id}",
+      "Key": "DeletePlacesFromCouponV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+
+    //************************* promotions end **************************
+
+    //************************* redeem start **************************
+
+    // CRUD for redeem from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/coupons/redeem",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/coupons/redeem",
+      "Key": "PlacesFromCouponV1",
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get with id for redeem from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/coupons/redeem/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/coupons/redeem/{id}",
+      "Key": "GetRedeemFromCouponV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get with id for redeem from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/coupons/redeem/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/coupons/redeem/{id}",
+      "Key": "DeletePlacesFromCouponV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Search redeem
+    {
+      "DownstreamPathTemplate": "/v1.0/coupons/redeem/search",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/coupons/redeem/search",
+      "Key": "SearchRedeemV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+
+
+    //************************* redeem end **************************
+
+    //************************* Links start **************************
+
+    {
+      "DownstreamPathTemplate": "/v1.0/links",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/links",
+      "Key": "SearchRedeemV1",
+      "UpstreamHttpMethod": [ "POST", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/v1.0/links",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/links",
+      "Key": "SearchRedeemV1",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/v1.0/links/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/links/{id}",
+      "Key": "SearchRedeemV1",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/v1.0/links/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 63746
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/links/{id}",
+      "Key": "SearchRedeemV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* Links end **************************
+
+    //=============================================================
+    //================ Coupon (Versioned) End =====================
+    //=============================================================
+
+
+
+    //=============================================================
     //======================== Analytics Start =========================
     //=============================================================
 

@@ -3581,7 +3581,11 @@
       ],
       "UpstreamPathTemplate": "/api/identities/tokens/revoke-refresh",
       "Key": "RevokeRefreshToken",
-      "UpstreamHttpMethod": [ "POST" ]
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Revoke access token
@@ -3596,7 +3600,11 @@
       ],
       "UpstreamPathTemplate": "/api/identities/tokens/revoke-access",
       "Key": "RevokeAccessToken",
-      "UpstreamHttpMethod": [ "POST" ]
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "clientSecretKey",
+        "AllowedScopes": []
+      }
     },
 
     // Put, Post and Get all identities
@@ -3658,6 +3666,141 @@
 
     //=============================================================
     //============= Identities Service end =================
+    //=============================================================
+
+
+
+    //=============================================================
+    //============ Identities Service (Versioned) start ===========
+    //=============================================================
+
+    // Generate a pair of Tokens
+    {
+      "DownstreamPathTemplate": "/v1.0/authentications",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/authentications",
+      "Key": "AuthenticationsTokensV1",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    // Renew Tokens
+    {
+      "DownstreamPathTemplate": "/v1.0/authentications/renewals",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/authentications/renewals",
+      "Key": "RenewTokensV1",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    // Revoke Refresh token
+    {
+      "DownstreamPathTemplate": "/v1.0/identities/tokens/revoke-refresh",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/identities/tokens/revoke-refresh",
+      "Key": "RevokeRefreshTokenV1",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Revoke access token
+    {
+      "DownstreamPathTemplate": "/v1.0/identities/tokens/revoke-access",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/identities/tokens/revoke-access",
+      "Key": "RevokeAccessTokenV1",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Put, Post and Get all identities
+    {
+      "DownstreamPathTemplate": "/v1.0/identities",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/identities",
+      "Key": "IdentitiesPutPostAndGetAllV1",
+      "UpstreamHttpMethod": [ "PUT", "GET", "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get identities By Id
+    {
+      "DownstreamPathTemplate": "/v1.0/identities/{identityId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/identities/{identityId}",
+      "Key": "IdentitiesByIdV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete identities
+    {
+      "DownstreamPathTemplate": "/v1.0/identities/{identityId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/identities/{identityId}",
+      "Key": "DeleteIdentitiesV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //=============================================================
+    //============= Identities Service (Versioned) end ============
     //=============================================================
 
 

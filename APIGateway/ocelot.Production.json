@@ -4556,8 +4556,23 @@
           "Port": 102
         }
       ],
-      "UpstreamPathTemplate": "/v1.0/registrations/screen-app",
+      "UpstreamPathTemplate": "/api/v1.0/registrations/screen-app",
       "Key": "RegisterScreenApp",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    // Register dashboard
+    {
+      "DownstreamPathTemplate": "/v1.0/registrations/dashboard-app",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 102
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/registrations/dashboard-app",
+      "Key": "RegisterDashboardApp",
       "UpstreamHttpMethod": [ "POST" ]
     },
 

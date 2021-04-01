@@ -4576,6 +4576,21 @@
       "UpstreamHttpMethod": [ "POST" ]
     },
 
+    // Register routes pay app
+    {
+      "DownstreamPathTemplate": "/v1.0/registrations/routes-pay-app",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 102
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/registrations/routes-pay-app",
+      "Key": "RegisterRoutesPayApp",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
     //=============================================================
     //=================== Registrations Service end ===============
     //=============================================================

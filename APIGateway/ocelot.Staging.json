@@ -2017,7 +2017,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/v1.0/institutions",
+      "UpstreamPathTemplate": "/api/v1.0/institutions",
       "Key": "InstitutionsFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
       "AuthenticationOptions": {
@@ -2036,7 +2036,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/v1.0/institutions/{institutionId}",
+      "UpstreamPathTemplate": "/api/v1.0/institutions/{institutionId}",
       "Key": "InstitutionsByIdFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -2055,7 +2055,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/v1.0/institutions/{institutionId}/officers",
+      "UpstreamPathTemplate": "/api/v1.0/institutions/{institutionId}/officers",
       "Key": "OfficersByInstitutionIdFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -2074,7 +2074,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/v1.0/institutions/{id}",
+      "UpstreamPathTemplate": "/api/v1.0/institutions/{id}",
       "Key": "DeleteInstitutionsFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -2096,7 +2096,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/v1.0/officers/{officerid}/invitations",
+      "UpstreamPathTemplate": "/api/v1.0/officers/{officerid}/invitations",
       "Key": "InvitationFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "POST" ],
       "AuthenticationOptions": {
@@ -2115,7 +2115,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/v1.0/officers/{officerid}/{invitations}/{id}",
+      "UpstreamPathTemplate": "/api/v1.0/officers/{officerid}/{invitations}/{id}",
       "Key": "DeleteInvitationFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -2134,7 +2134,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/v1.0/invitations/{invitationId}",
+      "UpstreamPathTemplate": "/api/v1.0/invitations/{invitationId}",
       "Key": "InvitationByIdFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -2153,7 +2153,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/v1.0/invitations",
+      "UpstreamPathTemplate": "/api/v1.0/invitations",
       "Key": "GetInvitationFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -2174,7 +2174,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/v1.0/officers",
+      "UpstreamPathTemplate": "/api/v1.0/officers",
       "Key": "OfficersFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
       "AuthenticationOptions": {
@@ -2193,7 +2193,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/v1.0/officers/{officersId}",
+      "UpstreamPathTemplate": "/api/v1.0/officers/{officersId}",
       "Key": "OfficersByIdFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -2212,7 +2212,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/v1.0/officers/{officersId}",
+      "UpstreamPathTemplate": "/api/v1.0/officers/{officersId}",
       "Key": "DeleteOfficersFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -2233,7 +2233,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/v1.0/services",
+      "UpstreamPathTemplate": "/api/v1.0/services",
       "Key": "ServicesFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
       "AuthenticationOptions": {
@@ -2252,7 +2252,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/v1.0/services/{servicesId}",
+      "UpstreamPathTemplate": "/api/v1.0/services/{servicesId}",
       "Key": "ServicesByIdFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -2271,7 +2271,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/v1.0/services/{id}",
+      "UpstreamPathTemplate": "/api/v1.0/services/{id}",
       "Key": "DeleteServicesFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -2292,7 +2292,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services",
+      "UpstreamPathTemplate": "/api/v1.0/institutions/{institutionsId}/services",
       "Key": "ServicesInstitutionsFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "POST", "GET" ],
       "AuthenticationOptions": {
@@ -2311,7 +2311,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services/{servicesId}",
+      "UpstreamPathTemplate": "/api/v1.0/institutions/{institutionsId}/services/{servicesId}",
       "Key": "ServicesInstitutionsByIdFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -2330,7 +2330,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services/{servicesId}",
+      "UpstreamPathTemplate": "/api/v1.0/institutions/{institutionsId}/services/{servicesId}",
       "Key": "DeleteServicesInstitutionsFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -2349,7 +2349,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/v1.0/institutions/authorities",
+      "UpstreamPathTemplate": "/api/v1.0/institutions/authorities",
       "Key": "AddAuthoritiesV1",
       "UpstreamHttpMethod": [ "POST" ],
       "AuthenticationOptions": {

@@ -4423,6 +4423,21 @@
       "UpstreamHttpMethod": [ "POST" ]
     },
 
+    // Register enterprise promotion app
+    {
+      "DownstreamPathTemplate": "/v1.0/registrations/enterprise-promotion-app",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5014
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/registrations/enterprise-promotion-app",
+      "Key": "RegisterEnterprisePromotionApp",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
     //=============================================================
     //=================== Registrations Service end ===============
     //=============================================================

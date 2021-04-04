@@ -4591,6 +4591,21 @@
       "UpstreamHttpMethod": [ "POST" ]
     },
 
+    // Register driver app
+    {
+      "DownstreamPathTemplate": "/v1.0/registrations/driver-app",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 102
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/registrations/driver-app",
+      "Key": "RegisterDriverApp",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
     //=============================================================
     //=================== Registrations Service end ===============
     //=============================================================

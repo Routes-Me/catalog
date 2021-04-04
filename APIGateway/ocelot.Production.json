@@ -4606,6 +4606,21 @@
       "UpstreamHttpMethod": [ "POST" ]
     },
 
+    // Register bus validator
+    {
+      "DownstreamPathTemplate": "/v1.0/registrations/bus-validators",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 102
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/registrations/bus-validators",
+      "Key": "RegisterBusValidator",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
     //=============================================================
     //=================== Registrations Service end ===============
     //=============================================================

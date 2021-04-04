@@ -4408,6 +4408,21 @@
       "UpstreamHttpMethod": [ "POST" ]
     },
 
+    // Register bus validator
+    {
+      "DownstreamPathTemplate": "/v1.0/registrations/bus-validators",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5014
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/registrations/bus-validators",
+      "Key": "RegisterBusValidator",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
     //=============================================================
     //=================== Registrations Service end ===============
     //=============================================================

@@ -2429,7 +2429,7 @@
       ],
       "UpstreamPathTemplate": "/api/users",
       "Key": "UsersFromUserService",
-      "UpstreamHttpMethod": [ "PUT", "GET", "POST" ],
+      "UpstreamHttpMethod": [ "PUT", "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []
@@ -2637,7 +2637,7 @@
       ],
       "UpstreamPathTemplate": "/api/v1.0/users",
       "Key": "UsersFromUserServiceV1",
-      "UpstreamHttpMethod": [ "PUT", "GET", "POST" ],
+      "UpstreamHttpMethod": [ "PUT", "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
@@ -3957,7 +3957,7 @@
       ],
       "UpstreamPathTemplate": "/api/identities",
       "Key": "IdentitiesPutPostAndGetAll",
-      "UpstreamHttpMethod": [ "PUT", "GET", "POST" ],
+      "UpstreamHttpMethod": [ "PUT", "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []
@@ -4282,7 +4282,7 @@
       ],
       "UpstreamPathTemplate": "/api/v1.0/identities",
       "Key": "IdentitiesPutPostAndGetAllV1",
-      "UpstreamHttpMethod": [ "PUT", "GET", "POST" ],
+      "UpstreamHttpMethod": [ "PUT", "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []

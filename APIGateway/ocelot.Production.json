@@ -2429,7 +2429,7 @@
       ],
       "UpstreamPathTemplate": "/api/users",
       "Key": "UsersFromUserService",
-      "UpstreamHttpMethod": [ "PUT", "GET", "POST" ],
+      "UpstreamHttpMethod": [ "PUT", "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []
@@ -2637,7 +2637,7 @@
       ],
       "UpstreamPathTemplate": "/api/v1.0/users",
       "Key": "UsersFromUserServiceV1",
-      "UpstreamHttpMethod": [ "PUT", "GET", "POST" ],
+      "UpstreamHttpMethod": [ "PUT", "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
@@ -3957,7 +3957,7 @@
       ],
       "UpstreamPathTemplate": "/api/identities",
       "Key": "IdentitiesPutPostAndGetAll",
-      "UpstreamHttpMethod": [ "PUT", "GET", "POST" ],
+      "UpstreamHttpMethod": [ "PUT", "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "clientSecretKey",
         "AllowedScopes": []
@@ -4282,7 +4282,7 @@
       ],
       "UpstreamPathTemplate": "/api/v1.0/identities",
       "Key": "IdentitiesPutPostAndGetAllV1",
-      "UpstreamHttpMethod": [ "PUT", "GET", "POST" ],
+      "UpstreamHttpMethod": [ "PUT", "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
@@ -4588,6 +4588,51 @@
       ],
       "UpstreamPathTemplate": "/api/v1.0/registrations/routes-pay-app",
       "Key": "RegisterRoutesPayApp",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    // Register driver app
+    {
+      "DownstreamPathTemplate": "/v1.0/registrations/driver-app",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 102
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/registrations/driver-app",
+      "Key": "RegisterDriverApp",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    // Register bus validator
+    {
+      "DownstreamPathTemplate": "/v1.0/registrations/bus-validators",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 102
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/registrations/bus-validators",
+      "Key": "RegisterBusValidator",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    // Register enterprise promotion app
+    {
+      "DownstreamPathTemplate": "/v1.0/registrations/enterprise-promotion-app",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 102
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/registrations/enterprise-promotion-app",
+      "Key": "RegisterEnterprisePromotionApp",
       "UpstreamHttpMethod": [ "POST" ]
     },
 

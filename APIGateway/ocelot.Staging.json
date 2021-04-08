@@ -1795,9 +1795,8 @@
     //======================== Live Tracking Start =========================
     //=============================================================
 
-
     //{
-    //  "DownstreamPathTemplate": "/api/tracking/vehicles/{vehicleId?}",
+    //  "DownstreamPathTemplate": "/v1.0/tracking/vehicles/{vehicleId?}",
     //  "DownstreamScheme": "http",
     //  "DownstreamHostAndPorts": [
     //    {
@@ -1805,29 +1804,27 @@
     //      "Port": 5002
     //    }
     //  ],
-    //  "UpstreamPathTemplate": "/api/tracking/vehicles/{vehicleId?}",
+    //  "UpstreamPathTemplate": "/api/v1.0/tracking/vehicles/{vehicleId?}",
     //  "Key": "Getvehiclesidles",
     //  "UpstreamHttpMethod": [ "GET", "DELETE" ],
     //  "AuthenticationOptions": {
-    //    "AuthenticationProviderKey": "clientSecretKey",
+    //    "AuthenticationProviderKey": "sessionToken",
     //    "AllowedScopes": []
     //  }
     //},
 
-
-
-
     //=============================================================
-    //======================== Live Tracking End =========================
+    //==================== Live Tracking End ======================
     //=============================================================
 
-    ////=============================================================
-    ////======================== Archive track Service Start=========================
-    ////=============================================================
 
+
+    ////=============================================================
+    ////============ Archive track Service Start=====================
+    ////=============================================================
 
     //{
-    //  "DownstreamPathTemplate": "/api/feeds",
+    //  "DownstreamPathTemplate": "/v1.0/feeds",
     //  "DownstreamScheme": "http",
     //  "DownstreamHostAndPorts": [
     //    {
@@ -1835,17 +1832,17 @@
     //      "Port": 95
     //    }
     //  ],
-    //  "UpstreamPathTemplate": "/api/feeds",
+    //  "UpstreamPathTemplate": "/api/v1.0/feeds",
     //  "Key": "PostFeedFromArchiveTrackService",
     //  "UpstreamHttpMethod": [ "POST" ],
     //  "AuthenticationOptions": {
-    //    "AuthenticationProviderKey": "clientSecretKey",
+    //    "AuthenticationProviderKey": "sessionToken",
     //    "AllowedScopes": []
     //  }
     //},
 
     //{
-    //  "DownstreamPathTemplate": "/api/feeds/{coordinateId?}",
+    //  "DownstreamPathTemplate": "/v1.0/feeds/{coordinateId?}",
     //  "DownstreamScheme": "http",
     //  "DownstreamHostAndPorts": [
     //    {
@@ -1853,17 +1850,17 @@
     //      "Port": 95
     //    }
     //  ],
-    //  "UpstreamPathTemplate": "/api/feeds/{coordinateId?}",
+    //  "UpstreamPathTemplate": "/api/v1.0/feeds/{coordinateId?}",
     //  "Key": "GetFeedFromArchiveTrackService",
     //  "UpstreamHttpMethod": [ "GET","DELETE" ],
     //  "AuthenticationOptions": {
-    //    "AuthenticationProviderKey": "clientSecretKey",
+    //    "AuthenticationProviderKey": "sessionToken",
     //    "AllowedScopes": []
     //  }
     //},
 
     //{
-    //  "DownstreamPathTemplate": "/api/feeds/{coordinateId}",
+    //  "DownstreamPathTemplate": "/v1.0/feeds/{coordinateId}",
     //  "DownstreamScheme": "http",
     //  "DownstreamHostAndPorts": [
     //    {
@@ -1871,17 +1868,17 @@
     //      "Port": 95
     //    }
     //  ],
-    //  "UpstreamPathTemplate": "/api/feeds/{coordinateId}",
+    //  "UpstreamPathTemplate": "/api/v1.0/feeds/{coordinateId}",
     //  "Key": "DeleteFeedFromArchiveTrackService",
     //  "UpstreamHttpMethod": [ "DELETE" ],
     //  "AuthenticationOptions": {
-    //    "AuthenticationProviderKey": "clientSecretKey",
+    //    "AuthenticationProviderKey": "sessionToken",
     //    "AllowedScopes": []
     //  }
     //},
 
     //=============================================================
-    //======================== Archive track Service End =========================
+    //============== Archive track Service End ====================
     //=============================================================
 
 
@@ -2365,13 +2362,13 @@
 
 
     //=============================================================
-    //======================== Prize Service Start =========================
+    //================= Prize Service Start =======================
     //=============================================================
 
     //Post,Get,Put candidates
 
     {
-      "DownstreamPathTemplate": "/api/draws/{drawsId}/candidates",
+      "DownstreamPathTemplate": "/v1.0/draws/{drawsId}/candidates",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -2379,19 +2376,18 @@
           "Port": 93
         }
       ],
-      "UpstreamPathTemplate": "/api/draws/{drawsId}/candidates",
+      "UpstreamPathTemplate": "/api/v1.0/draws/{drawsId}/candidates",
       "Key": "PostCandidates",
       "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
       "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
+        "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
       }
     },
 
-
     //Get candidates
     {
-      "DownstreamPathTemplate": "/api/draws/{drawsId}/candidates/{candidatesId=0}",
+      "DownstreamPathTemplate": "/v1.0/draws/{drawsId}/candidates/{candidatesId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -2399,18 +2395,18 @@
           "Port": 93
         }
       ],
-      "UpstreamPathTemplate": "/api/draws/{drawsId}/candidates/{candidatesId=0}",
+      "UpstreamPathTemplate": "/api/v1.0/draws/{drawsId}/candidates/{candidatesId}",
       "Key": "GetCandidates",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
+        "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
       }
     },
 
     //Delete candidates
     {
-      "DownstreamPathTemplate": "/api/draws/{drawsId}/candidates/{candidatesId}",
+      "DownstreamPathTemplate": "/v1.0/draws/{drawsId}/candidates/{candidatesId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -2418,19 +2414,18 @@
           "Port": 93
         }
       ],
-      "UpstreamPathTemplate": "/api/draws/{drawsId}/candidates/{candidatesId}",
+      "UpstreamPathTemplate": "/api/v1.0/draws/{drawsId}/candidates/{candidatesId}",
       "Key": "DeleteCandidates",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
+        "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
       }
     },
 
-
     //Post,Get,Put draws
     {
-      "DownstreamPathTemplate": "/api/draws",
+      "DownstreamPathTemplate": "/v1.0/draws",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -2438,18 +2433,18 @@
           "Port": 93
         }
       ],
-      "UpstreamPathTemplate": "/api/draws",
+      "UpstreamPathTemplate": "/api/v1.0/draws",
       "Key": "PostDraws",
       "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
       "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
+        "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
       }
     },
 
     //Get draws
     {
-      "DownstreamPathTemplate": "/api/draws/{drawsId=0}",
+      "DownstreamPathTemplate": "/v1.0/draws/{drawsId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -2457,18 +2452,18 @@
           "Port": 93
         }
       ],
-      "UpstreamPathTemplate": "/api/draws/{drawsId=0}",
+      "UpstreamPathTemplate": "/api/v1.0/draws/{drawsId}",
       "Key": "GetDraws",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
+        "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
       }
     },
 
     //Delete draws
     {
-      "DownstreamPathTemplate": "/api/draws/{drawsId}",
+      "DownstreamPathTemplate": "/v1.0/draws/{drawsId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -2476,19 +2471,18 @@
           "Port": 93
         }
       ],
-      "UpstreamPathTemplate": "/api/draws/{drawsId}",
+      "UpstreamPathTemplate": "/api/v1.0/draws/{drawsId}",
       "Key": "DeleteDraws",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
+        "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
       }
     },
 
-
     //Post,Get,Put nationalities
     {
-      "DownstreamPathTemplate": "/api/nationalities",
+      "DownstreamPathTemplate": "/v1.0/nationalities",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -2496,18 +2490,18 @@
           "Port": 93
         }
       ],
-      "UpstreamPathTemplate": "/api/nationalities",
+      "UpstreamPathTemplate": "/api/v1.0/nationalities",
       "Key": "PostNationalities",
       "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
       "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
+        "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
       }
     },
 
     //Get nationalities
     {
-      "DownstreamPathTemplate": "/api/nationalities/{nationalitiesId=0}",
+      "DownstreamPathTemplate": "/v1.0/nationalities/{nationalitiesId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -2515,18 +2509,18 @@
           "Port": 93
         }
       ],
-      "UpstreamPathTemplate": "/api/nationalities/{nationalitiesId=0}",
+      "UpstreamPathTemplate": "/api/v1.0/nationalities/{nationalitiesId}",
       "Key": "GetNationalities",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
+        "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
       }
     },
 
     //Delete nationalities
     {
-      "DownstreamPathTemplate": "/api/nationalities/{nationalitiesId}",
+      "DownstreamPathTemplate": "/v1.0/nationalities/{nationalitiesId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -2534,18 +2528,17 @@
           "Port": 93
         }
       ],
-      "UpstreamPathTemplate": "/api/nationalities/{nationalitiesId}",
+      "UpstreamPathTemplate": "/api/v1.0/nationalities/{nationalitiesId}",
       "Key": "DeleteNationalities",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
+        "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
       }
     }
 
-
     //=============================================================
-    //======================== Prize Service End =========================
+    //==================== Prize Service End ======================
     //=============================================================
 
   ],

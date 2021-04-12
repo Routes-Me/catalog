@@ -3,7 +3,7 @@
 
     // GET Filtered Vehicles
     {
-      "DownstreamPathTemplate": "/api/institutions/{institutionId=0}/vehicles",
+      "DownstreamPathTemplate": "/v1.0/institutions/{institutionId=0}/vehicles",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -11,11 +11,11 @@
           "Port": 92
         }
       ],
-      "UpstreamPathTemplate": "/api/institutions/{institutionId=0}/vehicles",
+      "UpstreamPathTemplate": "/api/v1.0/institutions/{institutionId=0}/vehicles",
       "Key": "GETFilteredvehicles",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
+        "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
       }
     },
@@ -1885,7 +1885,7 @@
 
     // Post operation logs
     {
-      "DownstreamPathTemplate": "/api/operations/devices/logs",
+      "DownstreamPathTemplate": "/v1.0/operations/devices/logs",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1893,11 +1893,11 @@
           "Port": 98
         }
       ],
-      "UpstreamPathTemplate": "/api/operations/devices/logs",
+      "UpstreamPathTemplate": "/api/v1.0/operations/devices/logs",
       "Key": "PostOperationLogs",
       "UpstreamHttpMethod": [ "POST" ],
       "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
+        "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
       }
     },

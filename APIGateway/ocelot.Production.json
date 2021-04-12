@@ -1884,23 +1884,23 @@
     //=============================================================
 
     // Post operation logs
-    {
-      "DownstreamPathTemplate": "/v1.0/operations/devices/logs",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 98
-        }
-      ],
-      "UpstreamPathTemplate": "/api/v1.0/operations/devices/logs",
-      "Key": "PostOperationLogs",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
-    },
+    // {
+    //   "DownstreamPathTemplate": "/v1.0/operations/devices/logs",
+    //   "DownstreamScheme": "http",
+    //   "DownstreamHostAndPorts": [
+    //     {
+    //       "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+    //       "Port": 98
+    //     }
+    //   ],
+    //   "UpstreamPathTemplate": "/api/v1.0/operations/devices/logs",
+    //   "Key": "PostOperationLogs",
+    //   "UpstreamHttpMethod": [ "POST" ],
+    //   "AuthenticationOptions": {
+    //     "AuthenticationProviderKey": "sessionToken",
+    //     "AllowedScopes": []
+    //   }
+    // },
 
     //=============================================================
     //============= Vehicle-analytics Service end =================

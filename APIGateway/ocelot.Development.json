@@ -1359,7 +1359,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 63746
+          "Port": 5012
         }
       ],
       "UpstreamPathTemplate": "/api/v1.0/coupons",
@@ -1739,19 +1739,19 @@
 
 
     {
-      "DownstreamPathTemplate": "/api/tracking/vehicles/{vehicleId}",
+      "DownstreamPathTemplate": "/v1.0/tracking/vehicles/{vehicleId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Host": "localhost",
           "Port": 5002
         }
       ],
-      "UpstreamPathTemplate": "/api/tracking/vehicles/{vehicleId}",
+      "UpstreamPathTemplate": "/api/v1.0/tracking/vehicles/{vehicleId}",
       "Key": "Getvehiclesidles",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
+        "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
       }
     },
@@ -1769,7 +1769,7 @@
 
     // Post operation logs
     {
-      "DownstreamPathTemplate": "/api/operations/devices/logs",
+      "DownstreamPathTemplate": "/v1.0/operations/devices/logs",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -1777,11 +1777,11 @@
           "Port": 5500
         }
       ],
-      "UpstreamPathTemplate": "/api/operations/devices/logs",
+      "UpstreamPathTemplate": "/api/v1.0/operations/devices/logs",
       "Key": "PostOperationLogs",
       "UpstreamHttpMethod": [ "POST" ],
       "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
+        "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
       }
     },
@@ -1877,7 +1877,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5500
+          "Port": 5007
         }
       ],
       "UpstreamPathTemplate": "/api/v1.0/identities",
@@ -2124,7 +2124,7 @@
 
     // Generate new Identifiers
     {
-      "DownstreamPathTemplate": "/api/identifiers",
+      "DownstreamPathTemplate": "/v1.0/identifiers",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -2132,7 +2132,7 @@
           "Port": 5013
         }
       ],
-      "UpstreamPathTemplate": "/api/identifiers",
+      "UpstreamPathTemplate": "/api/v1.0/identifiers",
       "Key": "GenerateIdentifiers",
       "UpstreamHttpMethod": [ "GET" ]
     },
@@ -2244,67 +2244,248 @@
 
 
     //=============================================================
-    //======================== Archive track Service Start=========================
+    //============== Archive track Service Start===================
     //=============================================================
 
-
     {
-      "DownstreamPathTemplate": "/api/feeds",
+      "DownstreamPathTemplate": "/v1.0/feeds",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 95
+          "Host": "localhost",
+          "Port": 5100
         }
       ],
-      "UpstreamPathTemplate": "/api/feeds",
+      "UpstreamPathTemplate": "/api/v1.0/feeds",
       "Key": "PostFeedFromArchiveTrackService",
-      "UpstreamHttpMethod": [ "POST" ],
+      "UpstreamHttpMethod": [ "POST", "GET" ],
       "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
+        "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
       }
     },
 
     {
-      "DownstreamPathTemplate": "/api/feeds/{coordinateId}",
+      "DownstreamPathTemplate": "/v1.0/feeds/{coordinateId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Host": "localhost",
           "Port": 95
         }
       ],
-      "UpstreamPathTemplate": "/api/feeds/{coordinateId}",
+      "UpstreamPathTemplate": "/api/v1.0/feeds/{coordinateId}",
       "Key": "GetFeedFromArchiveTrackService",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
+        "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
       }
     },
 
     {
-      "DownstreamPathTemplate": "/api/feeds/{coordinateId}",
+      "DownstreamPathTemplate": "/v1.0/feeds/{coordinateId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Host": "localhost",
           "Port": 95
         }
       ],
-      "UpstreamPathTemplate": "/api/feeds/{coordinateId}",
+      "UpstreamPathTemplate": "/api/v1.0/feeds/{coordinateId}",
       "Key": "DeleteFeedFromArchiveTrackService",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
-        "AuthenticationProviderKey": "clientSecretKey",
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //=============================================================
+    //=============== Archive track Service End ===================
+    //=============================================================
+
+
+
+    //=============================================================
+    //================= Prize Service Start =======================
+    //=============================================================
+
+    //Post, Get, Put candidates
+    {
+      "DownstreamPathTemplate": "/v1.0/draws/{drawsId}/candidates",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 93
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/draws/{drawsId}/candidates",
+      "Key": "PostCandidates",
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Get candidates
+    {
+      "DownstreamPathTemplate": "/v1.0/draws/{drawsId}/candidates/{candidatesId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5017
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/draws/{drawsId}/candidates/{candidatesId}",
+      "Key": "GetCandidates",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Delete candidates
+    {
+      "DownstreamPathTemplate": "/v1.0/draws/{drawsId}/candidates/{candidatesId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 93
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/draws/{drawsId}/candidates/{candidatesId}",
+      "Key": "DeleteCandidates",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Post, Get, Put draws
+    {
+      "DownstreamPathTemplate": "/v1.0/draws",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5017
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/draws",
+      "Key": "PostDraws",
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Get draws
+    {
+      "DownstreamPathTemplate": "/v1.0/draws/{drawsId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 93
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/draws/{drawsId}",
+      "Key": "GetDraws",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Delete draws
+    {
+      "DownstreamPathTemplate": "/v1.0/draws/{drawsId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 93
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/draws/{drawsId}",
+      "Key": "DeleteDraws",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Post,Get,Put nationalities
+    {
+      "DownstreamPathTemplate": "/v1.0/nationalities",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 93
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/nationalities",
+      "Key": "PostNationalities",
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Get nationalities
+    {
+      "DownstreamPathTemplate": "/v1.0/nationalities/{nationalitiesId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 93
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/nationalities/{nationalitiesId}",
+      "Key": "GetNationalities",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Delete nationalities
+    {
+      "DownstreamPathTemplate": "/v1.0/nationalities/{nationalitiesId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 93
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/nationalities/{nationalitiesId}",
+      "Key": "DeleteNationalities",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
       }
     }
 
     //=============================================================
-    //======================== Archive track Service End =========================
+    //==================== Prize Service End ======================
     //=============================================================
+
 
   ],
   "GlobalConfiguration": {

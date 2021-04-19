@@ -2247,7 +2247,7 @@
           "Port": 100
         }
       ],
-      "UpstreamPathTemplate": "/api/identifiers",
+      "UpstreamPathTemplate": "/api/v1.0/identifiers",
       "Key": "GenerateIdentifiers",
       "UpstreamHttpMethod": [ "GET" ]
     },

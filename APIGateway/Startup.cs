@@ -112,9 +112,10 @@ namespace APIGateway
                     ValidateAudience = true,
                     ValidAudiences = new List<string>
                     {
-                        "https://dashboard.routesme.com",
-                        "https://screen.routesme.com",
-                        "https://app.routesme.com"
+                        appSettings.DashboardAudience,
+                        appSettings.ScreenAudience,
+                        appSettings.RoutesAppAudience,
+                        appSettings.BusValidatorAudience
                     },
                     ValidIssuer = appSettings.SessionTokenIssuer,
                     ValidateIssuerSigningKey = true,

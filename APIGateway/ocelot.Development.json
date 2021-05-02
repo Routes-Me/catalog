@@ -2244,6 +2244,136 @@
 
 
     //=============================================================
+    //================== Routes Service start =====================
+    //=============================================================
+
+    // Routes post, update and get all
+    {
+      "DownstreamPathTemplate": "/v1.0/routes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5019
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/routes",
+      "Key": "RoutesPostUpdateAndGetAll",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+    },
+
+    // Routes delete and get by Id
+    {
+      "DownstreamPathTemplate": "/v1.0/routes/{routeId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5019
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/routes/{routeId}",
+      "Key": "RoutesDeleteAndGetById",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+    },
+
+    // Tariffs post and get all
+    {
+      "DownstreamPathTemplate": "/v1.0/tariffs",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5019
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/tariffs",
+      "Key": "TariffsPostAndGetAll",
+      "UpstreamHttpMethod": [ "POST", "GET" ]
+    },
+
+    // Tariffs get by routeId
+    {
+      "DownstreamPathTemplate": "/v1.0/tariffs/{routeId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5019
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/tariffs/{routeId}",
+      "Key": "TariffsGetById",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+    // Tariffs delete
+    {
+      "DownstreamPathTemplate": "/v1.0/tariffs/{ticketId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5019
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/tariffs/{ticketId}",
+      "Key": "TariffsDelete",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+
+    // Carriages post and get all
+    {
+      "DownstreamPathTemplate": "/v1.0/carriages",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5019
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/carriages",
+      "Key": "CarriagesPostAndGetAll",
+      "UpstreamHttpMethod": [ "POST", "GET" ]
+    },
+
+    // Carriages get by routeId
+    {
+      "DownstreamPathTemplate": "/v1.0/carriages/{routeId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5019
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/carriages/{routeId}",
+      "Key": "CarriagesGetById",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+    // Carriages delete
+    {
+      "DownstreamPathTemplate": "/v1.0/carriages/{vehicleId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5019
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/carriages/{vehicleId}",
+      "Key": "CarriagesDelete",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+
+    //=============================================================
+    //=================== Routes Service end ======================
+    //=============================================================
+
+
+
+    //=============================================================
     //============== Archive track Service Start===================
     //=============================================================
 

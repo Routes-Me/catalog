@@ -2039,6 +2039,46 @@
 
 
     //=============================================================
+    //================= Tickets Service start =====================
+    //=============================================================
+
+    // Tickets post, update and get all
+    {
+      "DownstreamPathTemplate": "/v1.0/tickets",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 104
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/tickets",
+      "Key": "TicketsPostUpdateAndGetAll",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+    },
+
+    // Tickets delete and get by Id
+    {
+      "DownstreamPathTemplate": "/v1.0/tickets/{ticketId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 104
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/tickets/{ticketId}",
+      "Key": "TicketsDeleteAndGetById",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+    },
+
+    //=============================================================
+    //================== Tickets Service end ======================
+    //=============================================================
+
+
+
+    //=============================================================
     //=============== Identities Service start ====================
     //=============================================================
 

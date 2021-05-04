@@ -1912,7 +1912,7 @@
     //================== Routes Service start =====================
     //=============================================================
 
-    // Routes post, update and get all
+    // Routes post and get all
     {
       "DownstreamPathTemplate": "/v1.0/routes",
       "DownstreamScheme": "http",
@@ -1923,11 +1923,15 @@
         }
       ],
       "UpstreamPathTemplate": "/api/v1.0/routes",
-      "Key": "RoutesPostUpdateAndGetAll",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+      "Key": "RoutesPostAndGetAll",
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
     },
 
-    // Routes delete and get by Id
+    // Routes delete, update and get by Id
     {
       "DownstreamPathTemplate": "/v1.0/routes/{routeId}",
       "DownstreamScheme": "http",
@@ -1938,8 +1942,12 @@
         }
       ],
       "UpstreamPathTemplate": "/api/v1.0/routes/{routeId}",
-      "Key": "RoutesDeleteAndGetById",
-      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+      "Key": "RoutesDeleteUpdateAndGetById",
+      "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
     },
 
     // Tariffs post and get all
@@ -1954,7 +1962,11 @@
       ],
       "UpstreamPathTemplate": "/api/v1.0/tariffs",
       "Key": "TariffsPostAndGetAll",
-      "UpstreamHttpMethod": [ "POST", "GET" ]
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
     },
 
     // Tariffs get by routeId
@@ -1969,7 +1981,11 @@
       ],
       "UpstreamPathTemplate": "/api/v1.0/tariffs/{routeId}",
       "Key": "TariffsGetById",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
     },
 
     // Tariffs delete
@@ -1984,7 +2000,11 @@
       ],
       "UpstreamPathTemplate": "/api/v1.0/tariffs/{ticketId}",
       "Key": "TariffsDelete",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
     },
 
     // Carriages post and get all
@@ -1999,7 +2019,11 @@
       ],
       "UpstreamPathTemplate": "/api/v1.0/carriages",
       "Key": "CarriagesPostAndGetAll",
-      "UpstreamHttpMethod": [ "POST", "GET" ]
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
     },
 
     // Carriages get by routeId
@@ -2014,7 +2038,11 @@
       ],
       "UpstreamPathTemplate": "/api/v1.0/carriages/{routeId}",
       "Key": "CarriagesGetById",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
     },
 
     // Carriages delete
@@ -2029,7 +2057,11 @@
       ],
       "UpstreamPathTemplate": "/api/v1.0/carriages/{vehicleId}",
       "Key": "CarriagesDelete",
-      "UpstreamHttpMethod": [ "DELETE" ]
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
     },
 
     //=============================================================
@@ -2054,7 +2086,11 @@
       ],
       "UpstreamPathTemplate": "/api/v1.0/tickets",
       "Key": "TicketsPostUpdateAndGetAll",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
     },
 
     // Tickets delete and get by Id
@@ -2069,11 +2105,139 @@
       ],
       "UpstreamPathTemplate": "/api/v1.0/tickets/{ticketId}",
       "Key": "TicketsDeleteAndGetById",
-      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+      "UpstreamHttpMethod": [ "GET", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
     },
 
     //=============================================================
     //================== Tickets Service end ======================
+    //=============================================================
+
+
+
+    //=============================================================
+    //============= Internationalization Service start ============
+    //=============================================================
+
+    // Countries post, update and get all
+    {
+      "DownstreamPathTemplate": "/v1.0/countries",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 105
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/countries",
+      "Key": "CountriesPostUpdateAndGetAll",
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Countries delete and get by Id
+    {
+      "DownstreamPathTemplate": "/v1.0/countries/{countryId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 105
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/countries/{countryId}",
+      "Key": "CountriesDeleteAndGetById",
+      "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Currencies post and get all
+    {
+      "DownstreamPathTemplate": "/v1.0/currencies",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 105
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/currencies",
+      "Key": "CurrenciesPostAndGetAll",
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Currencies delete and get by Id
+    {
+      "DownstreamPathTemplate": "/v1.0/currencies/{currencyId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 105
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/currencies/{currencyId}",
+      "Key": "CurrenciesDeleteAndGetById",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Nationalities post and get all
+    {
+      "DownstreamPathTemplate": "/v1.0/nationalities",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 105
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/nationalities",
+      "Key": "NationalitiesPostAndGetAll",
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Nationalities delete and get by Id
+    {
+      "DownstreamPathTemplate": "/v1.0/nationalities/{nationalityId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 105
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/nationalities/{nationalityId}",
+      "Key": "NationalitiesDeleteAndGetById",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //=============================================================
+    //============= Internationalization Service end ==============
     //=============================================================
 
 
@@ -2639,64 +2803,6 @@
       ],
       "UpstreamPathTemplate": "/api/v1.0/draws/{drawsId}",
       "Key": "DeleteDraws",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
-    },
-
-
-    //Post, Get, Put nationalities
-    {
-      "DownstreamPathTemplate": "/v1.0/nationalities",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 93
-        }
-      ],
-      "UpstreamPathTemplate": "/api/v1.0/nationalities",
-      "Key": "PostNationalities",
-      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
-    },
-
-    //Get nationalities
-    {
-      "DownstreamPathTemplate": "/v1.0/nationalities/{nationalitiesId}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 93
-        }
-      ],
-      "UpstreamPathTemplate": "/api/v1.0/nationalities/{nationalitiesId}",
-      "Key": "GetNationalities",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
-    },
-
-    //Delete nationalities
-    {
-      "DownstreamPathTemplate": "/v1.0/nationalities/{nationalitiesId}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 93
-        }
-      ],
-      "UpstreamPathTemplate": "/api/v1.0/nationalities/{nationalitiesId}",
-      "Key": "DeleteNationalities",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",

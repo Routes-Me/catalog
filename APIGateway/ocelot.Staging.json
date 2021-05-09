@@ -2068,6 +2068,25 @@
       }
     },
 
+    // Get Carriers
+    {
+      "DownstreamPathTemplate": "/v1.0/carriers/{vehicleId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 103
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/carriers/{vehicleId}",
+      "Key": "GetCarriers",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
     //=============================================================
     //=================== Routes Service end ======================
     //=============================================================

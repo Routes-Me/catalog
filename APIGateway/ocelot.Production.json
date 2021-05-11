@@ -2093,7 +2093,7 @@
     //================= Tickets Service start =====================
     //=============================================================
 
-    // Tickets post, update and get all
+    // Tickets post and get all
     {
       "DownstreamPathTemplate": "/v1.0/tickets",
       "DownstreamScheme": "http",
@@ -2104,15 +2104,15 @@
         }
       ],
       "UpstreamPathTemplate": "/api/v1.0/tickets",
-      "Key": "TicketsPostUpdateAndGetAll",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "Key": "TicketsPostAndGetAll",
+      "UpstreamHttpMethod": [ "POST", "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
       }
     },
 
-    // Tickets delete and get by Id
+    // Tickets delete, update and get by Id
     {
       "DownstreamPathTemplate": "/v1.0/tickets/{ticketId}",
       "DownstreamScheme": "http",
@@ -2123,8 +2123,8 @@
         }
       ],
       "UpstreamPathTemplate": "/api/v1.0/tickets/{ticketId}",
-      "Key": "TicketsDeleteAndGetById",
-      "UpstreamHttpMethod": [ "GET", "DELETE" ],
+      "Key": "TicketsDeleteUpdateAndGetById",
+      "UpstreamHttpMethod": [ "GET", "DELETE", "PUT"],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []

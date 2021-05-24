@@ -913,84 +913,6 @@
 
     //************************* Institutions End **************************
 
-    //************************* Invitation Start **************************
-    // Invitation from Institutions Service
-    {
-      "DownstreamPathTemplate": "/v1.0/officers/{officerid}/invitations",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-          "Port": 91
-        }
-      ],
-      "UpstreamPathTemplate": "/api/v1.0/officers/{officerid}/invitations",
-      "Key": "InvitationFromInstitutionsServiceV1",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
-    },
-
-    // Delete Institutions from Institutions Service
-    {
-      "DownstreamPathTemplate": "/v1.0/officers/{officerid}/{invitations}/{id}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-          "Port": 91
-        }
-      ],
-      "UpstreamPathTemplate": "/api/v1.0/officers/{officerid}/{invitations}/{id}",
-      "Key": "DeleteInvitationFromInstitutionsServiceV1",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
-    },
-
-    // Get Institutions By Id from Institutions Service
-    {
-      "DownstreamPathTemplate": "/v1.0/invitations/{invitationId}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-          "Port": 91
-        }
-      ],
-      "UpstreamPathTemplate": "/api/v1.0/invitations/{invitationId}",
-      "Key": "InvitationByIdFromInstitutionsServiceV1",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
-    },
-
-    // Get Institutions By Id from Institutions Service
-    {
-      "DownstreamPathTemplate": "/v1.0/invitations",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-          "Port": 91
-        }
-      ],
-      "UpstreamPathTemplate": "/api/v1.0/invitations",
-      "Key": "GetInvitationFromInstitutionsServiceV1",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
-    },
-    //************************* Invitation End **************************
-
     //************************* Officers Start **************************
     // Officers from Institutions Service
     {
@@ -2266,6 +2188,54 @@
 
 
     //=============================================================
+    //================ Invitation Service Start====================
+    //=============================================================
+
+    // Post and get ALL Invitations
+    {
+      "DownstreamPathTemplate": "/v1.0/invitations",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 106
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/invitations",
+      "Key": "PostAndGetAllInvitations",
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete and get Invitations by Id
+    {
+      "DownstreamPathTemplate": "/v1.0/invitations/{invitationId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 106
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/invitations/{invitationId}",
+      "Key": "DeleteAndGetInvitationsById",
+      "UpstreamHttpMethod": [ "DELETE", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //=============================================================
+    //================ Invitation Service end =====================
+    //=============================================================
+
+
+
+    //=============================================================
     //=============== Identities Service start ====================
     //=============================================================
 
@@ -2718,7 +2688,7 @@
     //================= Prize Service Start =======================
     //=============================================================
 
-    //Post,Get,Put candidates
+    // Post,Get,Put candidates
 
     {
       "DownstreamPathTemplate": "/v1.0/draws/{drawsId}/candidates",

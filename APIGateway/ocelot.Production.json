@@ -11,7 +11,7 @@
           "Port": 92
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/institutions/{institutionId=0}/vehicles",
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionId=0}/vehicles",
       "Key": "GETFilteredvehicles",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -36,7 +36,7 @@
           "Port": 92
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/vehicles",
+      "UpstreamPathTemplate": "/v1.0/vehicles",
       "Key": "VehiclesFromVehicleServiceV1",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
       "AuthenticationOptions": {
@@ -55,7 +55,7 @@
           "Port": 92
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/vehicles/{vehicleId}",
+      "UpstreamPathTemplate": "/v1.0/vehicles/{vehicleId}",
       "Key": "VehiclesByIdFromVehicleServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -74,7 +74,7 @@
           "Port": 92
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/vehicles/{vehicleId}/drivers/{driverId}",
+      "UpstreamPathTemplate": "/v1.0/vehicles/{vehicleId}/drivers/{driverId}",
       "Key": "GetDriversByVehiclesIdFromVehicleServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -93,7 +93,7 @@
           "Port": 92
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/vehicles/{id}",
+      "UpstreamPathTemplate": "/v1.0/vehicles/{id}",
       "Key": "DeleteVehiclesFromVehicleServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -114,7 +114,7 @@
           "Port": 92
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/vehicles/search",
+      "UpstreamPathTemplate": "/v1.0/vehicles/search",
       "Key": "SearchFromVehicleServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -135,7 +135,7 @@
           "Port": 92
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/devices/{deviceId}",
+      "UpstreamPathTemplate": "/v1.0/devices/{deviceId}",
       "Key": "SearchFromVehicleServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -154,7 +154,7 @@
           "Port": 92
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/devices/{id}",
+      "UpstreamPathTemplate": "/v1.0/devices/{id}",
       "Key": "DeleteDeviceFromVehicleServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -173,7 +173,7 @@
           "Port": 92
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/devices",
+      "UpstreamPathTemplate": "/v1.0/devices",
       "Key": "DeviceFromVehicleServiceV1",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
       "AuthenticationOptions": {
@@ -192,7 +192,7 @@
           "Port": 92
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/devices/{deviceId}/applications",
+      "UpstreamPathTemplate": "/v1.0/devices/{deviceId}/applications",
       "Key": "DeviceApplicationsV1",
       "UpstreamHttpMethod": [ "PUT" ],
       "AuthenticationOptions": {
@@ -212,7 +212,7 @@
           "Port": 92
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/vehicles/{vehicleId}/devices",
+      "UpstreamPathTemplate": "/v1.0/vehicles/{vehicleId}/devices",
       "Key": "VehicleDevicesV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -234,7 +234,7 @@
           "Port": 92
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/drivers",
+      "UpstreamPathTemplate": "/v1.0/drivers",
       "Key": "DriverFromVehicleServiceV1",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
       "AuthenticationOptions": {
@@ -253,7 +253,7 @@
           "Port": 92
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/drivers/{id}",
+      "UpstreamPathTemplate": "/v1.0/drivers/{id}",
       "Key": "DeleteDriverFromVehicleServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -272,7 +272,7 @@
           "Port": 92
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/drivers/{driverId}",
+      "UpstreamPathTemplate": "/v1.0/drivers/{driverId}",
       "Key": "DriverWithIdFromVehicleServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -294,7 +294,7 @@
           "Port": 92
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/manufacturers",
+      "UpstreamPathTemplate": "/v1.0/manufacturers",
       "Key": "ManufacturersFromVehicleServiceV1",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
       "AuthenticationOptions": {
@@ -313,7 +313,7 @@
           "Port": 92
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/manufacturers/{id}",
+      "UpstreamPathTemplate": "/v1.0/manufacturers/{id}",
       "Key": "DeleteManufacturersFromVehicleServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -332,7 +332,7 @@
           "Port": 92
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/manufacturers/{manufacturerId}",
+      "UpstreamPathTemplate": "/v1.0/manufacturers/{manufacturerId}",
       "Key": "GetManufacturersWithIdFromVehicleServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -351,7 +351,7 @@
           "Port": 92
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/manufacturers/{manufacturerId}/models",
+      "UpstreamPathTemplate": "/v1.0/manufacturers/{manufacturerId}/models",
       "Key": "ModelFromManufacturersFromVehicleServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -373,7 +373,7 @@
           "Port": 92
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/models",
+      "UpstreamPathTemplate": "/v1.0/models",
       "Key": "ModelsFromVehicleServiceV1",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
       "AuthenticationOptions": {
@@ -392,7 +392,7 @@
           "Port": 92
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/models/{modelId}",
+      "UpstreamPathTemplate": "/v1.0/models/{modelId}",
       "Key": "DeleeteModelsFromVehicleServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -424,7 +424,7 @@
           "Port": 94
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/medias",
+      "UpstreamPathTemplate": "/v1.0/medias",
       "Key": "MediasFromAdvertisementsServiceV1",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
       "AuthenticationOptions": {
@@ -443,7 +443,7 @@
           "Port": 94
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/medias/{id}",
+      "UpstreamPathTemplate": "/v1.0/medias/{id}",
       "Key": "MediasByIdFromAdvertisementsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -462,7 +462,7 @@
           "Port": 94
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/medias/{id}",
+      "UpstreamPathTemplate": "/v1.0/medias/{id}",
       "Key": "DeleteMediasFromAdvertisementsServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -484,7 +484,7 @@
           "Port": 94
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/intervals",
+      "UpstreamPathTemplate": "/v1.0/intervals",
       "Key": "IntervalsFromAdvertisementsServiceV1",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
       "AuthenticationOptions": {
@@ -503,7 +503,7 @@
           "Port": 94
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/intervals/{id}",
+      "UpstreamPathTemplate": "/v1.0/intervals/{id}",
       "Key": "IntervalsByIdFromAdvertisementsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -522,7 +522,7 @@
           "Port": 94
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/intervals/{id}",
+      "UpstreamPathTemplate": "/v1.0/intervals/{id}",
       "Key": "DeleteIntervalsFromAdvertisementsServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -543,7 +543,7 @@
           "Port": 94
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/campaigns",
+      "UpstreamPathTemplate": "/v1.0/campaigns",
       "Key": "CampaignsFromAdvertisementsServiceV1",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
       "AuthenticationOptions": {
@@ -562,7 +562,7 @@
           "Port": 94
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/campaigns/{id}",
+      "UpstreamPathTemplate": "/v1.0/campaigns/{id}",
       "Key": "CampaignsByIdFromAdvertisementsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -581,7 +581,7 @@
           "Port": 94
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/campaigns/{id}/advertisements/{advertisementsId}",
+      "UpstreamPathTemplate": "/v1.0/campaigns/{id}/advertisements/{advertisementsId}",
       "Key": "AdvertisementsOfCampaignsFromAdvertisementsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -600,7 +600,7 @@
           "Port": 94
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/campaigns/advertisementsqr",
+      "UpstreamPathTemplate": "/v1.0/campaigns/advertisementsqr",
       "Key": "AdvertisementsOfActiveCampaignsFromAdvertisementsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -619,7 +619,7 @@
           "Port": 94
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/campaigns/{id}",
+      "UpstreamPathTemplate": "/v1.0/campaigns/{id}",
       "Key": "DeleteCampaignsFromAdvertisementsServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -638,7 +638,7 @@
           "Port": 94
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/campaigns/{campaignId}/broadcasts",
+      "UpstreamPathTemplate": "/v1.0/campaigns/{campaignId}/broadcasts",
       "Key": "PostBroadcastsV1",
       "UpstreamHttpMethod": [ "POST" ],
       "AuthenticationOptions": {
@@ -657,7 +657,7 @@
           "Port": 94
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/campaigns/{campaignId}/broadcasts/{broadcastId}",
+      "UpstreamPathTemplate": "/v1.0/campaigns/{campaignId}/broadcasts/{broadcastId}",
       "Key": "DeleteBroadcastsV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -678,7 +678,7 @@
           "Port": 94
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/advertisements",
+      "UpstreamPathTemplate": "/v1.0/advertisements",
       "Key": "AdvertisementsFromAdvertisementsServiceV1",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
       "AuthenticationOptions": {
@@ -697,7 +697,7 @@
           "Port": 94
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/advertisements/{id}",
+      "UpstreamPathTemplate": "/v1.0/advertisements/{id}",
       "Key": "AdvertisementsByIdFromAdvertisementsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -716,7 +716,7 @@
           "Port": 94
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/institutions/{institutionId}/advertisements/{advertisementsId}",
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionId}/advertisements/{advertisementsId}",
       "Key": "AdvertisementsByInstitutionIdFromAdvertisementsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -735,7 +735,7 @@
           "Port": 94
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/advertisements/{id}",
+      "UpstreamPathTemplate": "/v1.0/advertisements/{id}",
       "Key": "DeleteAdvertisementsFromAdvertisementsServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -754,7 +754,7 @@
           "Port": 94
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/contents",
+      "UpstreamPathTemplate": "/v1.0/contents",
       "Key": "GetContentsFromAdvertisementsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -773,7 +773,7 @@
           "Port": 94
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/contents/{id}",
+      "UpstreamPathTemplate": "/v1.0/contents/{id}",
       "Key": "GetContentsByIdFromAdvertisementsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -792,7 +792,7 @@
           "Port": 94
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/campaigns/{campaignsId}/advertisements/{advertisementsId}",
+      "UpstreamPathTemplate": "/v1.0/campaigns/{campaignsId}/advertisements/{advertisementsId}",
       "Key": "UpdateCampaignAdvertisementV1",
       "UpstreamHttpMethod": [ "PATCH" ],
       "AuthenticationOptions": {
@@ -811,7 +811,7 @@
           "Port": 94
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/campaigns/{campaignsId}/advertisements",
+      "UpstreamPathTemplate": "/v1.0/campaigns/{campaignsId}/advertisements",
       "Key": "UpdateCampaignAdvertisementListV1",
       "UpstreamHttpMethod": [ "PATCH" ],
       "AuthenticationOptions": {
@@ -843,7 +843,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/institutions",
+      "UpstreamPathTemplate": "/v1.0/institutions",
       "Key": "InstitutionsFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
       "AuthenticationOptions": {
@@ -862,7 +862,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/institutions/{institutionId}",
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionId}",
       "Key": "InstitutionsByIdFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -881,7 +881,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/institutions/{institutionId}/officers",
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionId}/officers",
       "Key": "OfficersByInstitutionIdFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -900,7 +900,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/institutions/{id}",
+      "UpstreamPathTemplate": "/v1.0/institutions/{id}",
       "Key": "DeleteInstitutionsFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -922,7 +922,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/officers",
+      "UpstreamPathTemplate": "/v1.0/officers",
       "Key": "OfficersFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
       "AuthenticationOptions": {
@@ -941,7 +941,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/officers/{officersId}",
+      "UpstreamPathTemplate": "/v1.0/officers/{officersId}",
       "Key": "OfficersByIdFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -960,7 +960,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/officers/{officersId}",
+      "UpstreamPathTemplate": "/v1.0/officers/{officersId}",
       "Key": "DeleteOfficersFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -981,7 +981,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/services",
+      "UpstreamPathTemplate": "/v1.0/services",
       "Key": "ServicesFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
       "AuthenticationOptions": {
@@ -1000,7 +1000,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/services/{servicesId}",
+      "UpstreamPathTemplate": "/v1.0/services/{servicesId}",
       "Key": "ServicesByIdFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1019,7 +1019,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/services/{id}",
+      "UpstreamPathTemplate": "/v1.0/services/{id}",
       "Key": "DeleteServicesFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -1040,7 +1040,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/institutions/{institutionsId}/services",
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services",
       "Key": "ServicesInstitutionsFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "POST", "GET" ],
       "AuthenticationOptions": {
@@ -1059,7 +1059,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/institutions/{institutionsId}/services/{servicesId}",
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services/{servicesId}",
       "Key": "ServicesInstitutionsByIdFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1078,7 +1078,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/institutions/{institutionsId}/services/{servicesId}",
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services/{servicesId}",
       "Key": "DeleteServicesInstitutionsFromInstitutionsServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -1097,7 +1097,7 @@
           "Port": 91
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/institutions/authorities",
+      "UpstreamPathTemplate": "/v1.0/institutions/authorities",
       "Key": "AddAuthoritiesV1",
       "UpstreamHttpMethod": [ "POST" ],
       "AuthenticationOptions": {
@@ -1128,7 +1128,7 @@
           "Port": 90
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/users",
+      "UpstreamPathTemplate": "/v1.0/users",
       "Key": "UsersFromUserServiceV1",
       "UpstreamHttpMethod": [ "PUT", "GET" ],
       "AuthenticationOptions": {
@@ -1147,7 +1147,7 @@
           "Port": 90
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/users/{id}",
+      "UpstreamPathTemplate": "/v1.0/users/{id}",
       "Key": "UsersByIdFromUserServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1166,7 +1166,7 @@
           "Port": 90
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/users/{userId}",
+      "UpstreamPathTemplate": "/v1.0/users/{userId}",
       "Key": "DeleteUsersFromUserServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -1196,7 +1196,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/places",
+      "UpstreamPathTemplate": "/v1.0/places",
       "Key": "PlacesFromCouponV1",
       "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
       "AuthenticationOptions": {
@@ -1215,7 +1215,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/places/{id}",
+      "UpstreamPathTemplate": "/v1.0/places/{id}",
       "Key": "GetPlacesFromCouponV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1234,7 +1234,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/places/{id}",
+      "UpstreamPathTemplate": "/v1.0/places/{id}",
       "Key": "DeletePlacesFromCouponV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -1256,7 +1256,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/authorities",
+      "UpstreamPathTemplate": "/v1.0/authorities",
       "Key": "PlacesFromCouponV1",
       "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
       "AuthenticationOptions": {
@@ -1275,7 +1275,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/authorities/{id}",
+      "UpstreamPathTemplate": "/v1.0/authorities/{id}",
       "Key": "GetAuthoritiesFromCouponV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1294,7 +1294,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/authorities/{id}",
+      "UpstreamPathTemplate": "/v1.0/authorities/{id}",
       "Key": "DeletePlacesFromCouponV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -1318,7 +1318,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/coupons",
+      "UpstreamPathTemplate": "/v1.0/coupons",
       "Key": "PlacesFromCouponV1",
       "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
       "AuthenticationOptions": {
@@ -1337,7 +1337,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/coupons/{id}",
+      "UpstreamPathTemplate": "/v1.0/coupons/{id}",
       "Key": "GetCouponsFromCouponV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1356,7 +1356,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/coupons/{id}",
+      "UpstreamPathTemplate": "/v1.0/coupons/{id}",
       "Key": "DeletePlacesFromCouponV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -1380,7 +1380,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/promotions",
+      "UpstreamPathTemplate": "/v1.0/promotions",
       "Key": "PlacesFromCouponV1",
       "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
       "AuthenticationOptions": {
@@ -1399,7 +1399,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/promotions/{id}",
+      "UpstreamPathTemplate": "/v1.0/promotions/{id}",
       "Key": "GetPromotionsFromCouponV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1418,7 +1418,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/promotions/contents/{id}",
+      "UpstreamPathTemplate": "/v1.0/promotions/contents/{id}",
       "Key": "GetContentsFromCouponByIdV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1438,7 +1438,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/promotions/contents",
+      "UpstreamPathTemplate": "/v1.0/promotions/contents",
       "Key": "GetContentsFromCouponV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1458,7 +1458,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/promotions/{id}",
+      "UpstreamPathTemplate": "/v1.0/promotions/{id}",
       "Key": "DeletePlacesFromCouponV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -1482,7 +1482,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/coupons/redeem",
+      "UpstreamPathTemplate": "/v1.0/coupons/redeem",
       "Key": "PlacesFromCouponV1",
       "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
       "AuthenticationOptions": {
@@ -1501,7 +1501,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/coupons/redeem/{id}",
+      "UpstreamPathTemplate": "/v1.0/coupons/redeem/{id}",
       "Key": "GetRedeemFromCouponV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1520,7 +1520,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/coupons/redeem/{id}",
+      "UpstreamPathTemplate": "/v1.0/coupons/redeem/{id}",
       "Key": "DeletePlacesFromCouponV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -1538,7 +1538,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/coupons/redeem/search",
+      "UpstreamPathTemplate": "/v1.0/coupons/redeem/search",
       "Key": "SearchRedeemV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1562,7 +1562,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/links",
+      "UpstreamPathTemplate": "/v1.0/links",
       "Key": "SearchRedeemV1",
       "UpstreamHttpMethod": [ "POST", "PUT" ],
       "AuthenticationOptions": {
@@ -1580,7 +1580,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/links",
+      "UpstreamPathTemplate": "/v1.0/links",
       "Key": "SearchRedeemV1",
       "UpstreamHttpMethod": [ "GET" ]
     },
@@ -1594,7 +1594,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/links/{id}",
+      "UpstreamPathTemplate": "/v1.0/links/{id}",
       "Key": "SearchRedeemV1",
       "UpstreamHttpMethod": [ "GET" ]
     },
@@ -1608,7 +1608,7 @@
           "Port": 96
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/links/{id}",
+      "UpstreamPathTemplate": "/v1.0/links/{id}",
       "Key": "SearchRedeemV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -1638,7 +1638,7 @@
           "Port": 97
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/analytics/promotions",
+      "UpstreamPathTemplate": "/v1.0/analytics/promotions",
       "Key": "GetAnalyticsV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1657,7 +1657,7 @@
           "Port": 97
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/analytics/devices/{deviceId}/playbacks",
+      "UpstreamPathTemplate": "/v1.0/analytics/devices/{deviceId}/playbacks",
       "Key": "PostPlaybacksV1",
       "UpstreamHttpMethod": [ "POST" ],
       "AuthenticationOptions": {
@@ -1675,7 +1675,7 @@
           "Port": 97
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/analytics/promotions/{id}",
+      "UpstreamPathTemplate": "/v1.0/analytics/promotions/{id}",
       "Key": "GetAnalyticsByIdV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1694,7 +1694,7 @@
           "Port": 97
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/analytics/devices/{deviceId}",
+      "UpstreamPathTemplate": "/v1.0/analytics/devices/{deviceId}",
       "Key": "GetDevicesByIdV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1722,7 +1722,7 @@
     //      "Port": 5002
     //    }
     //  ],
-    //  "UpstreamPathTemplate": "/api/v1.0/tracking/vehicles/{vehicleId?}",
+    //  "UpstreamPathTemplate": "/v1.0/tracking/vehicles/{vehicleId?}",
     //  "Key": "Getvehiclesidles",
     //  "UpstreamHttpMethod": [ "GET" ],
     //  "AuthenticationOptions": {
@@ -1750,7 +1750,7 @@
     //      "Port": 95
     //    }
     //  ],
-    //  "UpstreamPathTemplate": "/api/v1.0/feeds",
+    //  "UpstreamPathTemplate": "/v1.0/feeds",
     //  "Key": "PostFeedFromArchiveTrackService",
     //  "UpstreamHttpMethod": [ "POST" ],
     //  "AuthenticationOptions": {
@@ -1768,7 +1768,7 @@
     //      "Port": 95
     //    }
     //  ],
-    //  "UpstreamPathTemplate": "/api/v1.0/feeds/{coordinateId?}",
+    //  "UpstreamPathTemplate": "/v1.0/feeds/{coordinateId?}",
     //  "Key": "GetFeedFromArchiveTrackService",
     //  "UpstreamHttpMethod": [ "GET" ],
     //  "AuthenticationOptions": {
@@ -1786,7 +1786,7 @@
     //      "Port": 95
     //    }
     //  ],
-    //  "UpstreamPathTemplate": "/api/v1.0/feeds/{coordinateId}",
+    //  "UpstreamPathTemplate": "/v1.0/feeds/{coordinateId}",
     //  "Key": "DeleteFeedFromArchiveTrackService",
     //  "UpstreamHttpMethod": [ "DELETE" ],
     //  "AuthenticationOptions": {
@@ -1815,7 +1815,7 @@
     //       "Port": 98
     //     }
     //   ],
-    //   "UpstreamPathTemplate": "/api/v1.0/operations/devices/logs",
+    //   "UpstreamPathTemplate": "/v1.0/operations/devices/logs",
     //   "Key": "PostOperationLogs",
     //   "UpstreamHttpMethod": [ "POST" ],
     //   "AuthenticationOptions": {
@@ -1844,7 +1844,7 @@
           "Port": 103
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/routes",
+      "UpstreamPathTemplate": "/v1.0/routes",
       "Key": "RoutesPostAndGetAll",
       "UpstreamHttpMethod": [ "POST", "GET" ],
       "AuthenticationOptions": {
@@ -1863,7 +1863,7 @@
           "Port": 103
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/routes/{routeId}",
+      "UpstreamPathTemplate": "/v1.0/routes/{routeId}",
       "Key": "RoutesDeleteUpdateAndGetById",
       "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ],
       "AuthenticationOptions": {
@@ -1882,7 +1882,7 @@
           "Port": 103
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/tariffs",
+      "UpstreamPathTemplate": "/v1.0/tariffs",
       "Key": "TariffsPostAndGetAll",
       "UpstreamHttpMethod": [ "POST", "GET" ],
       "AuthenticationOptions": {
@@ -1901,7 +1901,7 @@
           "Port": 103
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/tariffs/{routeId}",
+      "UpstreamPathTemplate": "/v1.0/tariffs/{routeId}",
       "Key": "TariffsGetById",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1920,7 +1920,7 @@
           "Port": 103
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/tariffs/{ticketId}",
+      "UpstreamPathTemplate": "/v1.0/tariffs/{ticketId}",
       "Key": "TariffsDelete",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -1939,7 +1939,7 @@
           "Port": 103
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/carriages",
+      "UpstreamPathTemplate": "/v1.0/carriages",
       "Key": "CarriagesPostAndGetAll",
       "UpstreamHttpMethod": [ "POST", "GET" ],
       "AuthenticationOptions": {
@@ -1958,7 +1958,7 @@
           "Port": 103
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/carriages/{routeId}",
+      "UpstreamPathTemplate": "/v1.0/carriages/{routeId}",
       "Key": "CarriagesGetById",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -1977,7 +1977,7 @@
           "Port": 103
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/carriages/{vehicleId}",
+      "UpstreamPathTemplate": "/v1.0/carriages/{vehicleId}",
       "Key": "CarriagesDelete",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -1996,7 +1996,7 @@
           "Port": 103
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/carriers/{vehicleId}",
+      "UpstreamPathTemplate": "/v1.0/carriers/{vehicleId}",
       "Key": "GetCarriers",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -2025,7 +2025,7 @@
           "Port": 104
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/tickets",
+      "UpstreamPathTemplate": "/v1.0/tickets",
       "Key": "TicketsPostAndGetAll",
       "UpstreamHttpMethod": [ "POST", "GET" ],
       "AuthenticationOptions": {
@@ -2044,7 +2044,7 @@
           "Port": 104
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/tickets/{ticketId}",
+      "UpstreamPathTemplate": "/v1.0/tickets/{ticketId}",
       "Key": "TicketsDeleteUpdateAndGetById",
       "UpstreamHttpMethod": [ "GET", "DELETE", "PUT"],
       "AuthenticationOptions": {
@@ -2073,7 +2073,7 @@
           "Port": 105
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/countries",
+      "UpstreamPathTemplate": "/v1.0/countries",
       "Key": "CountriesPostUpdateAndGetAll",
       "UpstreamHttpMethod": [ "POST", "GET" ],
       "AuthenticationOptions": {
@@ -2092,7 +2092,7 @@
           "Port": 105
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/countries/{countryId}",
+      "UpstreamPathTemplate": "/v1.0/countries/{countryId}",
       "Key": "CountriesDeleteAndGetById",
       "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ],
       "AuthenticationOptions": {
@@ -2111,7 +2111,7 @@
           "Port": 105
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/currencies",
+      "UpstreamPathTemplate": "/v1.0/currencies",
       "Key": "CurrenciesPostAndGetAll",
       "UpstreamHttpMethod": [ "POST", "GET" ],
       "AuthenticationOptions": {
@@ -2130,7 +2130,7 @@
           "Port": 105
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/currencies/{currencyId}",
+      "UpstreamPathTemplate": "/v1.0/currencies/{currencyId}",
       "Key": "CurrenciesDeleteAndGetById",
       "UpstreamHttpMethod": [ "GET", "DELETE" ],
       "AuthenticationOptions": {
@@ -2149,7 +2149,7 @@
           "Port": 105
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/nationalities",
+      "UpstreamPathTemplate": "/v1.0/nationalities",
       "Key": "NationalitiesPostAndGetAll",
       "UpstreamHttpMethod": [ "POST", "GET" ],
       "AuthenticationOptions": {
@@ -2168,7 +2168,7 @@
           "Port": 105
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/nationalities/{nationalityId}",
+      "UpstreamPathTemplate": "/v1.0/nationalities/{nationalityId}",
       "Key": "NationalitiesDeleteAndGetById",
       "UpstreamHttpMethod": [ "GET", "DELETE" ],
       "AuthenticationOptions": {
@@ -2197,7 +2197,7 @@
           "Port": 106
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/invitations",
+      "UpstreamPathTemplate": "/v1.0/invitations",
       "Key": "PostAndGetAllInvitations",
       "UpstreamHttpMethod": [ "POST", "GET" ],
       "AuthenticationOptions": {
@@ -2216,7 +2216,7 @@
           "Port": 106
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/invitations/{invitationId}",
+      "UpstreamPathTemplate": "/v1.0/invitations/{invitationId}",
       "Key": "DeleteAndGetInvitationsById",
       "UpstreamHttpMethod": [ "DELETE", "GET" ],
       "AuthenticationOptions": {
@@ -2247,7 +2247,7 @@
           "Port": 99
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/authentications",
+      "UpstreamPathTemplate": "/v1.0/authentications",
       "Key": "AuthenticationsTokensV1",
       "UpstreamHttpMethod": [ "POST" ]
     },
@@ -2262,7 +2262,7 @@
           "Port": 99
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/authentications/renewals",
+      "UpstreamPathTemplate": "/v1.0/authentications/renewals",
       "Key": "RenewTokensV1",
       "UpstreamHttpMethod": [ "POST" ]
     },
@@ -2277,7 +2277,7 @@
           "Port": 99
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/identities/tokens/revoke-refresh",
+      "UpstreamPathTemplate": "/v1.0/identities/tokens/revoke-refresh",
       "Key": "RevokeRefreshTokenV1",
       "UpstreamHttpMethod": [ "POST" ],
       "AuthenticationOptions": {
@@ -2296,7 +2296,7 @@
           "Port": 99
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/identities/tokens/revoke-access",
+      "UpstreamPathTemplate": "/v1.0/identities/tokens/revoke-access",
       "Key": "RevokeAccessTokenV1",
       "UpstreamHttpMethod": [ "POST" ],
       "AuthenticationOptions": {
@@ -2319,7 +2319,7 @@
           "Port": 99
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/identities",
+      "UpstreamPathTemplate": "/v1.0/identities",
       "Key": "IdentitiesPutPostAndGetAllV1",
       "UpstreamHttpMethod": [ "PUT", "GET" ],
       "AuthenticationOptions": {
@@ -2338,7 +2338,7 @@
           "Port": 99
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/identities/{identityId}",
+      "UpstreamPathTemplate": "/v1.0/identities/{identityId}",
       "Key": "IdentitiesByIdV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -2357,7 +2357,7 @@
           "Port": 99
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/identities/{identityId}",
+      "UpstreamPathTemplate": "/v1.0/identities/{identityId}",
       "Key": "DeleteIdentitiesV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -2379,7 +2379,7 @@
           "Port": 99
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/roles",
+      "UpstreamPathTemplate": "/v1.0/roles",
       "Key": "RolesFromIdentitiesServiceV1",
       "UpstreamHttpMethod": [ "PUT", "GET", "POST" ],
       "AuthenticationOptions": {
@@ -2398,7 +2398,7 @@
           "Port": 99
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/roles/{id}",
+      "UpstreamPathTemplate": "/v1.0/roles/{id}",
       "Key": "DeleteRolesFromIdentitiesServiceV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -2417,7 +2417,7 @@
           "Port": 99
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/roles/{id}",
+      "UpstreamPathTemplate": "/v1.0/roles/{id}",
       "Key": "RolesByIdFromIdentitiesServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -2440,7 +2440,7 @@
           "Port": 99
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/applications",
+      "UpstreamPathTemplate": "/v1.0/applications",
       "Key": "ApplicationsFromIdentitiesV1",
       "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
       "AuthenticationOptions": {
@@ -2459,7 +2459,7 @@
           "Port": 99
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/applications/{id}",
+      "UpstreamPathTemplate": "/v1.0/applications/{id}",
       "Key": "GetApplicationsFromIdentitiesV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -2478,7 +2478,7 @@
           "Port": 99
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/applications/{id}",
+      "UpstreamPathTemplate": "/v1.0/applications/{id}",
       "Key": "DeleteApplicationsFromIdentitiesV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -2501,7 +2501,7 @@
           "Port": 99
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/privileges",
+      "UpstreamPathTemplate": "/v1.0/privileges",
       "Key": "PrivilegesFromIdentitiesV1",
       "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
       "AuthenticationOptions": {
@@ -2520,7 +2520,7 @@
           "Port": 99
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/privileges/{id}",
+      "UpstreamPathTemplate": "/v1.0/privileges/{id}",
       "Key": "GetPrivilegesFromIdentitiesV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -2539,7 +2539,7 @@
           "Port": 99
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/privileges/{id}",
+      "UpstreamPathTemplate": "/v1.0/privileges/{id}",
       "Key": "DeletePrivilegesFromIdentitiesV1",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -2562,7 +2562,7 @@
 
     // Generate new Identifiers
     {
-      "DownstreamPathTemplate": "/api/identifiers",
+      "DownstreamPathTemplate": "/identifiers",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -2570,7 +2570,7 @@
           "Port": 100
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/identifiers",
+      "UpstreamPathTemplate": "/v1.0/identifiers",
       "Key": "GenerateIdentifiers",
       "UpstreamHttpMethod": [ "GET" ]
     },
@@ -2595,7 +2595,7 @@
           "Port": 102
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/registrations/screen-app",
+      "UpstreamPathTemplate": "/v1.0/registrations/screen-app",
       "Key": "RegisterScreenApp",
       "UpstreamHttpMethod": [ "POST" ]
     },
@@ -2610,7 +2610,7 @@
           "Port": 102
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/registrations/dashboard-app",
+      "UpstreamPathTemplate": "/v1.0/registrations/dashboard-app",
       "Key": "RegisterDashboardApp",
       "UpstreamHttpMethod": [ "POST" ]
     },
@@ -2625,7 +2625,7 @@
           "Port": 102
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/registrations/routes-pay-app",
+      "UpstreamPathTemplate": "/v1.0/registrations/routes-pay-app",
       "Key": "RegisterRoutesPayApp",
       "UpstreamHttpMethod": [ "POST" ]
     },
@@ -2640,7 +2640,7 @@
           "Port": 102
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/registrations/driver-app",
+      "UpstreamPathTemplate": "/v1.0/registrations/driver-app",
       "Key": "RegisterDriverApp",
       "UpstreamHttpMethod": [ "POST" ]
     },
@@ -2655,7 +2655,7 @@
           "Port": 102
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/registrations/bus-validators",
+      "UpstreamPathTemplate": "/v1.0/registrations/bus-validators",
       "Key": "RegisterBusValidator",
       "UpstreamHttpMethod": [ "POST" ]
     },
@@ -2670,7 +2670,7 @@
           "Port": 102
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/registrations/enterprise-promotion-app",
+      "UpstreamPathTemplate": "/v1.0/registrations/enterprise-promotion-app",
       "Key": "RegisterEnterprisePromotionApp",
       "UpstreamHttpMethod": [ "POST" ]
     },
@@ -2695,7 +2695,7 @@
           "Port": 93
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/draws/{drawsId}/candidates",
+      "UpstreamPathTemplate": "/v1.0/draws/{drawsId}/candidates",
       "Key": "PostCandidates",
       "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
       "AuthenticationOptions": {
@@ -2714,7 +2714,7 @@
           "Port": 93
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/draws/{drawsId}/candidates/{candidatesId}",
+      "UpstreamPathTemplate": "/v1.0/draws/{drawsId}/candidates/{candidatesId}",
       "Key": "GetCandidates",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -2733,7 +2733,7 @@
           "Port": 93
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/draws/{drawsId}/candidates/{candidatesId}",
+      "UpstreamPathTemplate": "/v1.0/draws/{drawsId}/candidates/{candidatesId}",
       "Key": "DeleteCandidates",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
@@ -2752,7 +2752,7 @@
           "Port": 93
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/draws",
+      "UpstreamPathTemplate": "/v1.0/draws",
       "Key": "PostDraws",
       "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
       "AuthenticationOptions": {
@@ -2771,7 +2771,7 @@
           "Port": 93
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/draws/{drawsId}",
+      "UpstreamPathTemplate": "/v1.0/draws/{drawsId}",
       "Key": "GetDraws",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
@@ -2790,7 +2790,7 @@
           "Port": 93
         }
       ],
-      "UpstreamPathTemplate": "/api/v1.0/draws/{drawsId}",
+      "UpstreamPathTemplate": "/v1.0/draws/{drawsId}",
       "Key": "DeleteDraws",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {

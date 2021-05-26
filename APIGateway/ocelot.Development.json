@@ -2626,6 +2626,24 @@
       }
     },
 
+    {
+      "DownstreamPathTemplate": "/v1.0/vehicles/{vehicleId}/coordinates",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5100
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/vehicles/{vehicleId}/coordinates",
+      "Key": "PostCoordinatesOfVehicle",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
     //=============================================================
     //=============== Archive track Service End ===================
     //=============================================================

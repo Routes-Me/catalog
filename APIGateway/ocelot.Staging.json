@@ -1799,6 +1799,24 @@
     //  }
     //},
 
+    {
+      "DownstreamPathTemplate": "/v1.0/vehicles/{vehicleId}/coordinates",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 95
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/vehicles/{vehicleId}/coordinates",
+      "Key": "PostCoordinatesOfVehicle",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
     //=============================================================
     //============== Archive track Service End ====================
     //=============================================================

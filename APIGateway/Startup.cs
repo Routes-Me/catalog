@@ -126,6 +126,24 @@ namespace APIGateway
                     ClockSkew = TimeSpan.FromMinutes(5) // tolerance for the expiration date
                 };
                 x.Events = jwtBearerEvents;
+            }).AddJwtBearer("invitationToken", x =>
+            {
+                x.RequireHttpsMetadata = false;
+                x.SaveToken = true;
+                x.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidAudience = appSettings.InvitationTokenAudience,
+                    ValidIssuer = appSettings.SessionTokenIssuer,
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(appSettings.InvitationSecretKey)),
+                    // verify signature to avoid tampering
+                    ValidateLifetime = true, // validate the expiration
+                    RequireExpirationTime = true,
+                    ClockSkew = TimeSpan.FromMinutes(5) // tolerance for the expiration date
+                };
+                x.Events = jwtBearerEvents;
             });
 
             services.AddOcelot(_configuration);

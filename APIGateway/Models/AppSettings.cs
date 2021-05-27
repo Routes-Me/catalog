@@ -9,6 +9,7 @@ namespace APIGateway.Models
     {
         public string Secret { get; set; }
         public string AccessSecretKey { get; set; }
+        public string InvitationSecretKey { get; set; }
         public string ValidAudience { get; set; }
         public string SessionTokenIssuer { get; set; }
         public string ValidIssuer { get; set; }
@@ -16,5 +17,6 @@ namespace APIGateway.Models
         public string RoutesAppAudience { get; set; }
         public string ScreenAudience { get; set; }
         public string BusValidatorAudience { get; set; }
+        public string InvitationTokenAudience { get; set; }
     }
 }

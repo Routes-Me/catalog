@@ -2098,7 +2098,11 @@
       ],
       "UpstreamPathTemplate": "/v1.0/registrations/dashboard-app",
       "Key": "RegisterDashboardApp",
-      "UpstreamHttpMethod": [ "POST" ]
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "invitationToken",
+        "AllowedScopes": []
+      }
     },
 
     // Register routes pay app

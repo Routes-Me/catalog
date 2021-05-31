@@ -2539,10 +2539,48 @@
         }
       ],
       "UpstreamPathTemplate": "/v1.0/invitations",
-      "Key": "PostAndGetAllInvitations",
-      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "Key": "PostInvitations",
+      "UpstreamHttpMethod": [ "POST" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get ALL Invitations
+    {
+      "DownstreamPathTemplate": "/v1.0/invitations",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5024
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/invitations",
+      "Key": "GetAllInvitations",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "invitationToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Invitations by Id
+    {
+      "DownstreamPathTemplate": "/v1.0/invitations/{invitationId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5024
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/invitations/{invitationId}",
+      "Key": "GetInvitationsById",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "invitationToken",
         "AllowedScopes": []
       }
     },
@@ -2558,8 +2596,8 @@
         }
       ],
       "UpstreamPathTemplate": "/v1.0/invitations/{invitationId}",
-      "Key": "DeleteAndGetInvitationsById",
-      "UpstreamHttpMethod": [ "DELETE", "GET" ],
+      "Key": "DeleteInvitations",
+      "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []

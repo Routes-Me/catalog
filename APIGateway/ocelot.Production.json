@@ -2205,7 +2205,7 @@
     //================ Invitation Service Start====================
     //=============================================================
 
-    // Post and get ALL Invitations
+    // Post Invitations
     {
       "DownstreamPathTemplate": "/v1.0/invitations",
       "DownstreamScheme": "http",
@@ -2216,15 +2216,34 @@
         }
       ],
       "UpstreamPathTemplate": "/v1.0/invitations",
-      "Key": "PostAndGetAllInvitations",
-      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "Key": "PostInvitations",
+      "UpstreamHttpMethod": [ "POST" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
       }
     },
 
-    // Delete and get Invitations by Id
+    // Get ALL Invitations
+    {
+      "DownstreamPathTemplate": "/v1.0/invitations",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 106
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/invitations",
+      "Key": "GetAllInvitations",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "invitationToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Invitations by Id
     {
       "DownstreamPathTemplate": "/v1.0/invitations/{invitationId}",
       "DownstreamScheme": "http",
@@ -2235,8 +2254,27 @@
         }
       ],
       "UpstreamPathTemplate": "/v1.0/invitations/{invitationId}",
-      "Key": "DeleteAndGetInvitationsById",
-      "UpstreamHttpMethod": [ "DELETE", "GET" ],
+      "Key": "GetInvitationsById",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "invitationToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Invitations
+    {
+      "DownstreamPathTemplate": "/v1.0/invitations/{invitationId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 106
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/invitations/{invitationId}",
+      "Key": "DeleteInvitations",
+      "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []

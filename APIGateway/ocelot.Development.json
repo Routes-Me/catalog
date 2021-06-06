@@ -2528,7 +2528,7 @@
     //================ Invitation Service Start====================
     //=============================================================
 
-    // Post and get ALL Invitations
+    // Post Invitations
     {
       "DownstreamPathTemplate": "/v1.0/invitations",
       "DownstreamScheme": "http",
@@ -2606,6 +2606,46 @@
 
     //=============================================================
     //================ Invitation Service end =====================
+    //=============================================================
+
+
+
+    //=============================================================
+    //================ Terminals Service Start ====================
+    //=============================================================
+
+    // Post and get ALL Terminals
+    {
+      "DownstreamPathTemplate": "/v1.0/terminals",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5025
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/terminals",
+      "Key": "PostAndGetAllTerminals",
+      "UpstreamHttpMethod": [ "POST", "GET" ]
+    },
+
+    // Delete, put and get Invitations by Id
+    {
+      "DownstreamPathTemplate": "/v1.0/terminals/{terminalId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5025
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/terminals/{terminalId}",
+      "Key": "DeletePutAndGetTerminalsById",
+      "UpstreamHttpMethod": [ "DELETE" , "GET" , "PUT" ]
+    },
+
+    //=============================================================
+    //================= Terminals Service end =====================
     //=============================================================
 
 

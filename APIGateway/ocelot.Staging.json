@@ -2292,6 +2292,46 @@
 
 
     //=============================================================
+    //================ Terminals Service Start ====================
+    //=============================================================
+
+    // Post and get ALL Terminals
+    {
+      "DownstreamPathTemplate": "/v1.0/terminals",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 107
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/terminals",
+      "Key": "PostAndGetAllTerminals",
+      "UpstreamHttpMethod": [ "POST", "GET" ]
+    },
+
+    // Delete, put and get Invitations by Id
+    {
+      "DownstreamPathTemplate": "/v1.0/terminals/{terminalId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 107
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/terminals/{terminalId}",
+      "Key": "DeletePutAndGetTerminalsById",
+      "UpstreamHttpMethod": [ "DELETE" , "GET" , "PUT" ]
+    },
+
+    //=============================================================
+    //================= Terminals Service end =====================
+    //=============================================================
+
+
+
+    //=============================================================
     //=============== Identities Service start ====================
     //=============================================================
 

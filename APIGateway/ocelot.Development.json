@@ -81,6 +81,26 @@
         "AllowedScopes": []
       }
     },
+
+    // GET Institution Vehicles
+    {
+      "DownstreamPathTemplate": "/v1.0/institutions/{institutionId}/vehicles",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionId}/vehicles",
+      "Key": "GetInstitutionVehicles",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
     //************************* Vehicle End **************************
 
     //************************* Search Start **************************
@@ -1068,6 +1088,25 @@
       "UpstreamPathTemplate": "/v1.0/institutions/authorities",
       "Key": "AddAuthoritiesV1",
       "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Devices By InstitutionId
+    {
+      "DownstreamPathTemplate": "/v1.0/institutions/{institutionId}/devices",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5015
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionId}/devices",
+      "Key": "GetDevicesByInstitutionId",
+      "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []

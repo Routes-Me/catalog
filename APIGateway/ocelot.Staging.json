@@ -220,6 +220,24 @@
       }
     },
 
+    // Get Devices By InstitutionId
+    {
+      "DownstreamPathTemplate": "/v1.0/institutions/{institutionId}/devices",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 92
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionId}/devices",
+      "Key": "GetDevicesByInstitutionId",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
 
     //************************* Device End **************************
 
@@ -885,25 +903,6 @@
       ],
       "UpstreamPathTemplate": "/v1.0/institutions/{institutionId}/officers",
       "Key": "OfficersByInstitutionIdFromInstitutionsServiceV1",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
-    },
-
-    // Get Devices By InstitutionId
-    {
-      "DownstreamPathTemplate": "/v1.0/institutions/{institutionId}/devices",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-          "Port": 91
-        }
-      ],
-      "UpstreamPathTemplate": "/v1.0/institutions/{institutionId}/devices",
-      "Key": "GetDevicesByInstitutionId",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",

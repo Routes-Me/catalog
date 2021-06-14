@@ -1,26 +1,6 @@
 {
   "ReRoutes": [
 
-    // GET Filtered Vehicles
-    {
-      "DownstreamPathTemplate": "/v1.0/institutions/{institutionId=0}/vehicles",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
-          "Port": 92
-        }
-      ],
-      "UpstreamPathTemplate": "/v1.0/institutions/{institutionId=0}/vehicles",
-      "Key": "GETFilteredvehicles",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
-    },
-
-
     //=============================================================
     //================== Vehicles Service Start ===================
     //=============================================================
@@ -101,6 +81,26 @@
         "AllowedScopes": []
       }
     },
+
+    // GET Institution Vehicles
+    {
+      "DownstreamPathTemplate": "/v1.0/institutions/{institutionId}/vehicles",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 92
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionId}/vehicles",
+      "Key": "GETFilteredvehicles",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
     //************************* Vehicle End **************************
 
     //************************* Search Start **************************
@@ -214,6 +214,25 @@
       ],
       "UpstreamPathTemplate": "/v1.0/vehicles/{vehicleId}/devices",
       "Key": "VehicleDevicesV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Devices By InstitutionId
+    {
+      "DownstreamPathTemplate": "/v1.0/institutions/{institutionId}/devices",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 92
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionId}/devices",
+      "Key": "GetDevicesByInstitutionId",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",

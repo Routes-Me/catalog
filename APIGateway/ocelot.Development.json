@@ -18,26 +18,7 @@
       ],
       "UpstreamPathTemplate": "/v1.0/vehicles",
       "Key": "VehiclesFromVehicleServiceV1",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
-    },
-
-    //Get Vehicle By Id from vehicle Service
-    {
-      "DownstreamPathTemplate": "/v1.0/vehicles/{vehicleId}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 54282
-        }
-      ],
-      "UpstreamPathTemplate": "/v1.0/vehicles/{vehicleId}",
-      "Key": "VehiclesByIdFromVehicleServiceV1",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamHttpMethod": [ "POST", "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
@@ -63,19 +44,19 @@
       }
     },
 
-    //Get Vehicle By Id from vehicle Service
+    // Delete, PUT and get vehicle by Id
     {
-      "DownstreamPathTemplate": "/v1.0/vehicles/{id}",
+      "DownstreamPathTemplate": "/v1.0/vehicles/{vehicleId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 54282
+          "Port": 5001
         }
       ],
-      "UpstreamPathTemplate": "/v1.0/vehicles/{id}",
-      "Key": "DeleteVehiclesFromVehicleServiceV1",
-      "UpstreamHttpMethod": [ "DELETE" ],
+      "UpstreamPathTemplate": "/v1.0/vehicles/{vehicleId}",
+      "Key": "DeletePutAndGetVehiclesById",
+      "UpstreamHttpMethod": [ "DELETE", "PUT", "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []

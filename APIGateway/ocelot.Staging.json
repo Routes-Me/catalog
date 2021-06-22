@@ -18,7 +18,7 @@
       ],
       "UpstreamPathTemplate": "/v1.0/vehicles",
       "Key": "VehiclesFromVehicleServiceV1",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "UpstreamHttpMethod": [ "POST", "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
@@ -44,9 +44,9 @@
       }
     },
 
-    //Get Drivers By Vehicle Id from vehicle Service
+    // Delete, PUT and get vehicle by Id
     {
-      "DownstreamPathTemplate": "/v1.0/vehicles/{vehicleId}/drivers/{driverId}",
+      "DownstreamPathTemplate": "/v1.0/vehicles/{vehicleId}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -54,28 +54,9 @@
           "Port": 92
         }
       ],
-      "UpstreamPathTemplate": "/v1.0/vehicles/{vehicleId}/drivers/{driverId}",
-      "Key": "GetDriversByVehiclesIdFromVehicleServiceV1",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
-    },
-
-    //Get Vehicle By Id from vehicle Service
-    {
-      "DownstreamPathTemplate": "/v1.0/vehicles/{id}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-          "Port": 92
-        }
-      ],
-      "UpstreamPathTemplate": "/v1.0/vehicles/{id}",
-      "Key": "DeleteVehiclesFromVehicleServiceV1",
-      "UpstreamHttpMethod": [ "DELETE" ],
+      "UpstreamPathTemplate": "/v1.0/vehicles/{vehicleId}",
+      "Key": "DeletePutAndGetVehiclesById",
+      "UpstreamHttpMethod": [ "DELETE", "PUT", "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []

@@ -25,25 +25,6 @@
       }
     },
 
-    //Get Vehicle By Id from vehicle Service
-    {
-      "DownstreamPathTemplate": "/v1.0/vehicles/{vehicleId}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-          "Port": 92
-        }
-      ],
-      "UpstreamPathTemplate": "/v1.0/vehicles/{vehicleId}",
-      "Key": "VehiclesByIdFromVehicleServiceV1",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
-    },
-
     // Delete, PUT and get vehicle by Id
     {
       "DownstreamPathTemplate": "/v1.0/vehicles/{vehicleId}",

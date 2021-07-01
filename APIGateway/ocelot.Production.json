@@ -1666,6 +1666,25 @@
       }
     },
 
+    // get playbacks
+    {
+      "DownstreamPathTemplate": "/v1.0/analytics/playbacks",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 97
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/analytics/playbacks",
+      "Key": "GETPlaybacks",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
     {
       "DownstreamPathTemplate": "/v1.0/analytics/promotions/{id}",
       "DownstreamScheme": "http",

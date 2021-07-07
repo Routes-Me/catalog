@@ -1666,6 +1666,44 @@
       }
     },
 
+    // get playbacks
+    {
+      "DownstreamPathTemplate": "/v1.0/analytics/playbacks",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 97
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/analytics/playbacks",
+      "Key": "GETPlaybacks",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // get Linklogs
+    {
+      "DownstreamPathTemplate": "/v1.0/analytics/linklogs",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtproject.uaenorth.cloudapp.azure.com",
+          "Port": 97
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/analytics/linklogs",
+      "Key": "GETLinklogs",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
     {
       "DownstreamPathTemplate": "/v1.0/analytics/promotions/{id}",
       "DownstreamScheme": "http",

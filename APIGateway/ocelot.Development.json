@@ -2708,6 +2708,35 @@
 
 
     //=============================================================
+    //============== Vehicle Checkin Service start ================
+    //=============================================================
+
+    // Checkins post and get all
+    {
+      "DownstreamPathTemplate": "/v1.0/checkins",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5026
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/checkins",
+      "Key": "CheckinsPostAndGetAll",
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //=============================================================
+    //============== Vehicle Checkin Service end ==================
+    //=============================================================
+
+
+
+    //=============================================================
     //============== Archive track Service Start===================
     //=============================================================
 

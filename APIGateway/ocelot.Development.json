@@ -2730,6 +2730,25 @@
       }
     },
 
+    // Get offline vehicles
+    {
+      "DownstreamPathTemplate": "/v1.0/checkins/offline-vehicles",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5026
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/checkins/offline-vehicles",
+      "Key": "GetOfflineVehicles",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
     //=============================================================
     //============== Vehicle Checkin Service end ==================
     //=============================================================

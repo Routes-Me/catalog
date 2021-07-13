@@ -2711,7 +2711,7 @@
     //============== Vehicle Checkin Service start ================
     //=============================================================
 
-    // Checkins post and get all
+    // Checkins get all
     {
       "DownstreamPathTemplate": "/v1.0/checkins",
       "DownstreamScheme": "http",
@@ -2722,8 +2722,27 @@
         }
       ],
       "UpstreamPathTemplate": "/v1.0/checkins",
-      "Key": "CheckinsPostAndGetAll",
-      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "Key": "CheckinsGetAll",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get offline vehicles
+    {
+      "DownstreamPathTemplate": "/v1.0/checkins/offline-vehicles",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5026
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/checkins/offline-vehicles",
+      "Key": "GetOfflineVehicles",
+      "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []

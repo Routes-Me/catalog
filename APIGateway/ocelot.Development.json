@@ -2749,6 +2749,25 @@
       }
     },
 
+    // Get vehicles total running time
+    {
+      "DownstreamPathTemplate": "/v1.0/analytics/vehicles/running",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5026
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/analytics/vehicles/running",
+      "Key": "GetVehiclesTotalRunningTime",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
     //=============================================================
     //============== Vehicle Checkin Service end ==================
     //=============================================================

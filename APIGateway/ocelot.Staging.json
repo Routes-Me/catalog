@@ -736,11 +736,7 @@
       ],
       "UpstreamPathTemplate": "/v1.0/contents",
       "Key": "GetContentsFromAdvertisementsServiceV1",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "GET" ]
     },
 
     // Get contents by id from Advertisements Services
@@ -1828,11 +1824,7 @@
       ],
       "UpstreamPathTemplate": "/v1.0/vehicles/{vehicleId}/coordinates",
       "Key": "PostCoordinatesOfVehicle",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST" ]
     },
 
     //=============================================================

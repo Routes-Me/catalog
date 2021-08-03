@@ -1659,11 +1659,7 @@
       ],
       "UpstreamPathTemplate": "/v1.0/analytics/devices/{deviceId}/playbacks",
       "Key": "PostPlaybacksV1",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST" ]
     },
 
     // get playbacks
@@ -1844,11 +1840,7 @@
       ],
       "UpstreamPathTemplate": "/v1.0/vehicles/{vehicleId}/coordinates",
       "Key": "PostCoordinatesOfVehicle",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST" ]
     },
 
     ////=============================================================

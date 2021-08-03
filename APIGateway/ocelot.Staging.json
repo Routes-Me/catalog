@@ -736,7 +736,11 @@
       ],
       "UpstreamPathTemplate": "/v1.0/contents",
       "Key": "GetContentsFromAdvertisementsServiceV1",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
     },
 
     // Get contents by id from Advertisements Services
@@ -1639,11 +1643,7 @@
       ],
       "UpstreamPathTemplate": "/v1.0/analytics/devices/{deviceId}/playbacks",
       "Key": "PostPlaybacksV1",
-      "UpstreamHttpMethod": [ "POST" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
+      "UpstreamHttpMethod": [ "POST" ]
     },
 
     // get playbacks

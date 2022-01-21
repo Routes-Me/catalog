@@ -225,55 +225,73 @@
 
     //************************* Driver Start **************************
     //Driver from vehicle Service
+    //{
+    //  "DownstreamPathTemplate": "/v1.0/drivers",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 54282
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/v1.0/drivers",
+    //  "Key": "DriverFromVehicleServiceV1",
+    //  "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+    //  "AuthenticationOptions": {
+    //    "AuthenticationProviderKey": "sessionToken",
+    //    "AllowedScopes": []
+    //  }
+    //},
+
+    //Delete Driver from vehicle Service
+    //{
+    //  "DownstreamPathTemplate": "/v1.0/drivers/{id}",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 54282
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/v1.0/drivers/{id}",
+    //  "Key": "DeleteDriverFromVehicleServiceV1",
+    //  "UpstreamHttpMethod": [ "DELETE" ],
+    //  "AuthenticationOptions": {
+    //    "AuthenticationProviderKey": "sessionToken",
+    //    "AllowedScopes": []
+    //  }
+    //},
+
+    //Get Driver with id from vehicle Service
+    //{
+    //  "DownstreamPathTemplate": "/v1.0/drivers/{driverId}",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 54282
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/v1.0/drivers/{driverId}",
+    //  "Key": "DriverWithIdFromVehicleServiceV1",
+    //  "UpstreamHttpMethod": [ "GET" ],
+    //  "AuthenticationOptions": {
+    //    "AuthenticationProviderKey": "sessionToken",
+    //    "AllowedScopes": []
+    //  }
+    //},
+    //Get Driver
     {
       "DownstreamPathTemplate": "/v1.0/drivers",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 54282
+          "Port": 5069
         }
       ],
       "UpstreamPathTemplate": "/v1.0/drivers",
-      "Key": "DriverFromVehicleServiceV1",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
-    },
-
-    //Delete Driver from vehicle Service
-    {
-      "DownstreamPathTemplate": "/v1.0/drivers/{id}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 54282
-        }
-      ],
-      "UpstreamPathTemplate": "/v1.0/drivers/{id}",
-      "Key": "DeleteDriverFromVehicleServiceV1",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
-    },
-
-    //Get Driver with id from vehicle Service
-    {
-      "DownstreamPathTemplate": "/v1.0/drivers/{driverId}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 54282
-        }
-      ],
-      "UpstreamPathTemplate": "/v1.0/drivers/{driverId}",
-      "Key": "DriverWithIdFromVehicleServiceV1",
+      "Key": "DriverServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",
@@ -281,6 +299,118 @@
       }
     },
 
+    //Get Driver By Id
+    {
+      "DownstreamPathTemplate": "/v1.0/drivers/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5069
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/drivers/{id}",
+      "Key": "DriverWithIdServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Delete Driver
+    {
+      "DownstreamPathTemplate": "/v1.0/drivers/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5069
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/drivers/{id}",
+      "Key": "DeleteDriverServiceV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+    //Post Device From Driver
+    {
+      "DownstreamPathTemplate": "/v1.0/drivers/devices",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5069
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/drivers/devices",
+      "Key": "PostDeviceFromDriver",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Delete Device From Driver
+    {
+      "DownstreamPathTemplate": "/v1.0/drivers/devices/{DeviceId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5069
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/drivers/devices/{DeviceId}",
+      "Key": "RemoveDeviceFromDriver",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Put-Post FcmToken From Driver
+    {
+      "DownstreamPathTemplate": "/v1.0/drivers/UpdateToken/{deviceId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5069
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/drivers/UpdateToken/{deviceId}",
+      "Key": "PutPostFcmTokenFromDriver",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Verify Phone from Driver
+    {
+      "DownstreamPathTemplate": "/v1.0/drivers/{number}/{IdentifierId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5069
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/drivers/{number}/{IdentifierId}",
+      "Key": "VerifyPhoneFromDriver",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
     //************************* Driver End **************************
 
     //************************* Manufacturers Start **************************
@@ -2698,7 +2828,7 @@
       ],
       "UpstreamPathTemplate": "/v1.0/terminals/{terminalId}",
       "Key": "DeletePutAndGetTerminalsById",
-      "UpstreamHttpMethod": [ "DELETE" , "GET" , "PUT" ]
+      "UpstreamHttpMethod": [ "DELETE", "GET", "PUT" ]
     },
 
     //=============================================================

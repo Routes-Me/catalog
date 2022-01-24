@@ -279,7 +279,7 @@
       }
     },
 
-    //Get Driver By Id
+    //Get and Delete Driver By Id
     {
       "DownstreamPathTemplate": "/v1.0/drivers/{id}",
       "DownstreamScheme": "http",
@@ -291,16 +291,15 @@
       ],
       "UpstreamPathTemplate": "/v1.0/drivers/{id}",
       "Key": "DriverWithIdServiceV1",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamHttpMethod": [ "GET", "DELETE" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
       }
     },
-
-    //Delete Driver
+    //Post Device From Driver
     {
-      "DownstreamPathTemplate": "/v1.0/drivers/{id}",
+      "DownstreamPathTemplate": "/v1.0/drivers/devices",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -308,2792 +307,2775 @@
           "Port": 109
         }
       ],
-      "UpstreamPathTemplate": "/v1.0/drivers/{id}",
-      "Key": "DeleteDriverServiceV1",
+      "UpstreamPathTemplate": "/v1.0/drivers/devices",
+      "Key": "PostDeviceFromDriver",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Delete Device From Driver
+    {
+      "DownstreamPathTemplate": "/v1.0/drivers/devices/{DeviceId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 109
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/drivers/devices/{DeviceId}",
+      "Key": "RemoveDeviceFromDriver",
       "UpstreamHttpMethod": [ "DELETE" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
-      },
-      //Post Device From Driver
-      {
-        "DownstreamPathTemplate": "/v1.0/drivers/devices",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 109
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/drivers/devices",
-        "Key": "PostDeviceFromDriver",
-        "UpstreamHttpMethod": [ "POST" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //Delete Device From Driver
-      {
-        "DownstreamPathTemplate": "/v1.0/drivers/devices/{DeviceId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 109
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/drivers/devices/{DeviceId}",
-        "Key": "RemoveDeviceFromDriver",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //Put-Post FcmToken From Driver
-      {
-        "DownstreamPathTemplate": "/v1.0/drivers/UpdateToken/{deviceId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 109
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/drivers/UpdateToken/{deviceId}",
-        "Key": "PutPostFcmTokenFromDriver",
-        "UpstreamHttpMethod": [ "PUT" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Verify Phone from Driver
-      {
-        "DownstreamPathTemplate": "/v1.0/drivers/{number}/{IdentifierId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 109
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/drivers/{number}/{IdentifierId}",
-        "Key": "VerifyPhoneFromDriver",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //************************* Driver End **************************
-
-      //************************* Manufacturers Start **************************
-      //Manufacturers from vehicle Service
-      {
-        "DownstreamPathTemplate": "/v1.0/manufacturers",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 92
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/manufacturers",
-        "Key": "ManufacturersFromVehicleServiceV1",
-        "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //Delete Manufacturers from vehicle Service
-      {
-        "DownstreamPathTemplate": "/v1.0/manufacturers/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 92
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/manufacturers/{id}",
-        "Key": "DeleteManufacturersFromVehicleServiceV1",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //Get Manufacturers By Id from vehicle Service
-      {
-        "DownstreamPathTemplate": "/v1.0/manufacturers/{manufacturerId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 92
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/manufacturers/{manufacturerId}",
-        "Key": "GetManufacturersWithIdFromVehicleServiceV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //Get Model By Manufacturers Id from vehicle Service
-      {
-        "DownstreamPathTemplate": "/v1.0/manufacturers/{manufacturerId}/models",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 92
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/manufacturers/{manufacturerId}/models",
-        "Key": "ModelFromManufacturersFromVehicleServiceV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //************************* Manufacturers End **************************
-
-      //************************* Car Models Start **************************
-      //Models from vehicle Service
-      {
-        "DownstreamPathTemplate": "/v1.0/models",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 92
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/models",
-        "Key": "ModelsFromVehicleServiceV1",
-        "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //Delete Models from vehicle Service
-      {
-        "DownstreamPathTemplate": "/v1.0/models/{modelId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 92
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/models/{modelId}",
-        "Key": "DeleeteModelsFromVehicleServiceV1",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-      //************************* Car Models End **************************
-
-      //=============================================================
-      //==================== Vehicles Service End ===================
-      //=============================================================
-
-
-
-      //==============================================================
-      //================ Advertisements Service Start ================
-      //==============================================================
-
-      //************************* Medias Start **************************
-
-      // Medias from Advertisements Service
-      {
-        "DownstreamPathTemplate": "/v1.0/medias",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 94
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/medias",
-        "Key": "MediasFromAdvertisementsServiceV1",
-        "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get Medias by id from Advertisements Services
-      {
-        "DownstreamPathTemplate": "/v1.0/medias/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 94
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/medias/{id}",
-        "Key": "MediasByIdFromAdvertisementsServiceV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Delete Medias from Advertisements Services
-      {
-        "DownstreamPathTemplate": "/v1.0/medias/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 94
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/medias/{id}",
-        "Key": "DeleteMediasFromAdvertisementsServiceV1",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //************************* Medias End ****************************
-
-      //************************* Interval Start **************************
-      // Intervals from Advertisements Service
-      {
-        "DownstreamPathTemplate": "/v1.0/intervals",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 94
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/intervals",
-        "Key": "IntervalsFromAdvertisementsServiceV1",
-        "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get Intervals by id from Advertisements Services
-      {
-        "DownstreamPathTemplate": "/v1.0/intervals/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 94
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/intervals/{id}",
-        "Key": "IntervalsByIdFromAdvertisementsServiceV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Delete Interval from Advertisements Services
-      {
-        "DownstreamPathTemplate": "/v1.0/intervals/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 94
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/intervals/{id}",
-        "Key": "DeleteIntervalsFromAdvertisementsServiceV1",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-      //************************* Interval End **************************
-
-      //************************* Campaign Start **************************
-      // Campaigns Medias from Advertisements Services
-      {
-        "DownstreamPathTemplate": "/v1.0/campaigns",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 94
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/campaigns",
-        "Key": "CampaignsFromAdvertisementsServiceV1",
-        "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get Campaigns By Id from Advertisements Services
-      {
-        "DownstreamPathTemplate": "/v1.0/campaigns/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 94
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/campaigns/{id}",
-        "Key": "CampaignsByIdFromAdvertisementsServiceV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get Advertisements of Campaigns By Id from Advertisements Services
-      {
-        "DownstreamPathTemplate": "/v1.0/campaigns/{id}/advertisements/{advertisementsId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 94
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/campaigns/{id}/advertisements/{advertisementsId}",
-        "Key": "AdvertisementsOfCampaignsFromAdvertisementsServiceV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get Advertisements of active campaign of Campaigns By Id from Advertisements Services
-      {
-        "DownstreamPathTemplate": "/v1.0/campaigns/advertisementsqr",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 94
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/campaigns/advertisementsqr",
-        "Key": "AdvertisementsOfActiveCampaignsFromAdvertisementsServiceV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Delete Campaigns from Advertisements Services
-      {
-        "DownstreamPathTemplate": "/v1.0/campaigns/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 94
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/campaigns/{id}",
-        "Key": "DeleteCampaignsFromAdvertisementsServiceV1",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Post Broadcasts
-      {
-        "DownstreamPathTemplate": "/v1.0/campaigns/{campaignId}/broadcasts",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 94
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/campaigns/{campaignId}/broadcasts",
-        "Key": "PostBroadcastsV1",
-        "UpstreamHttpMethod": [ "POST" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Delete Broadcasts
-      {
-        "DownstreamPathTemplate": "/v1.0/campaigns/{campaignId}/broadcasts/{broadcastId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 94
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/campaigns/{campaignId}/broadcasts/{broadcastId}",
-        "Key": "DeleteBroadcastsV1",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-      //************************* Campaign End **************************
-
-      //************************* Advertisements End **************************
-      // Advertisements from Advertisements Services
-      {
-        "DownstreamPathTemplate": "/v1.0/advertisements",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 94
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/advertisements",
-        "Key": "AdvertisementsFromAdvertisementsServiceV1",
-        "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get Advertisements By Id from Advertisements Services
-      {
-        "DownstreamPathTemplate": "/v1.0/advertisements/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 94
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/advertisements/{id}",
-        "Key": "AdvertisementsByIdFromAdvertisementsServiceV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get Advertisements By Institution Id from Advertisements Services
-      {
-        "DownstreamPathTemplate": "/v1.0/institutions/{institutionId}/advertisements/{advertisementsId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 94
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/institutions/{institutionId}/advertisements/{advertisementsId}",
-        "Key": "AdvertisementsByInstitutionIdFromAdvertisementsServiceV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Delete Advertisements from Advertisements Services
-      {
-        "DownstreamPathTemplate": "/v1.0/advertisements/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 94
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/advertisements/{id}",
-        "Key": "DeleteAdvertisementsFromAdvertisementsServiceV1",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //Get contents from Advertisements Services
-      {
-        "DownstreamPathTemplate": "/v1.0/contents",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 94
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/contents",
-        "Key": "GetContentsFromAdvertisementsServiceV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get contents by id from Advertisements Services
-      {
-        "DownstreamPathTemplate": "/v1.0/contents/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 94
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/contents/{id}",
-        "Key": "GetContentsByIdFromAdvertisementsServiceV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-
-      // Update Campaign Advertisement by Id
-      {
-        "DownstreamPathTemplate": "/v1.0/campaigns/{campaignsId}/advertisements/{advertisementsId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 94
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/campaigns/{campaignsId}/advertisements/{advertisementsId}",
-        "Key": "UpdateCampaignAdvertisementV1",
-        "UpstreamHttpMethod": [ "PATCH" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Update Campaign Advertisement by List
-      {
-        "DownstreamPathTemplate": "/v1.0/campaigns/{campaignsId}/advertisements",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 94
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/campaigns/{campaignsId}/advertisements",
-        "Key": "UpdateCampaignAdvertisementListV1",
-        "UpstreamHttpMethod": [ "PATCH" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //************************* Advertisements End **************************
-
-      //==============================================================
-      //================ Advertisements Service End ==================
-      //==============================================================
-
-
-
-      //=============================================================
-      //===================== Institutions Start ====================
-      //=============================================================
-
-      //************************* Institutions Start **************************
-
-      // Institutions from Institutions Service
-      {
-        "DownstreamPathTemplate": "/v1.0/institutions",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 91
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/institutions",
-        "Key": "InstitutionsFromInstitutionsServiceV1",
-        "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get Institutions By Id from Institutions Service
-      {
-        "DownstreamPathTemplate": "/v1.0/institutions/{institutionId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 91
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/institutions/{institutionId}",
-        "Key": "InstitutionsByIdFromInstitutionsServiceV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get all officers By Institution Id from Institution Services
-      {
-        "DownstreamPathTemplate": "/v1.0/institutions/{institutionId}/officers",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 91
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/institutions/{institutionId}/officers",
-        "Key": "OfficersByInstitutionIdFromInstitutionsServiceV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Delete Institutions from Institutions Service
-      {
-        "DownstreamPathTemplate": "/v1.0/institutions/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 91
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/institutions/{id}",
-        "Key": "DeleteInstitutionsFromInstitutionsServiceV1",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //************************* Institutions End **************************
-
-      //************************* Officers Start **************************
-      // Officers from Institutions Service
-      {
-        "DownstreamPathTemplate": "/v1.0/officers",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 91
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/officers",
-        "Key": "OfficersFromInstitutionsServiceV1",
-        "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Officers By Id from Institutions Service
-      {
-        "DownstreamPathTemplate": "/v1.0/officers/{officersId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 91
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/officers/{officersId}",
-        "Key": "OfficersByIdFromInstitutionsServiceV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Delete Officers from Institutions Service
-      {
-        "DownstreamPathTemplate": "/v1.0/officers/{officersId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 91
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/officers/{officersId}",
-        "Key": "DeleteOfficersFromInstitutionsServiceV1",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-      //************************* Officers End **************************
-
-      //************************* Services Start **************************
-      // Services from Institutions Service
-      {
-        "DownstreamPathTemplate": "/v1.0/services",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 91
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/services",
-        "Key": "ServicesFromInstitutionsServiceV1",
-        "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // GetServices By Id from Institutions Service
-      {
-        "DownstreamPathTemplate": "/v1.0/services/{servicesId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 91
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/services/{servicesId}",
-        "Key": "ServicesByIdFromInstitutionsServiceV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Delete Services from Institutions Service
-      {
-        "DownstreamPathTemplate": "/v1.0/services/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 91
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/services/{id}",
-        "Key": "DeleteServicesFromInstitutionsServiceV1",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-      //************************* Services End **************************
-
-      //************************* ServicesInstitutions Start **************************
-      // ServicesInstitutions from Institutions Service
-      {
-        "DownstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 91
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services",
-        "Key": "ServicesInstitutionsFromInstitutionsServiceV1",
-        "UpstreamHttpMethod": [ "POST", "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get ServicesInstitutions By Id from Institutions Service
-      {
-        "DownstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services/{servicesId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 91
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services/{servicesId}",
-        "Key": "ServicesInstitutionsByIdFromInstitutionsServiceV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Delete ServicesInstitutions By Id from Institutions Service
-      {
-        "DownstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services/{servicesId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 91
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services/{servicesId}",
-        "Key": "DeleteServicesInstitutionsFromInstitutionsServiceV1",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Add Authorities
-      {
-        "DownstreamPathTemplate": "/v1.0/institutions/authorities",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 91
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/institutions/authorities",
-        "Key": "AddAuthoritiesV1",
-        "UpstreamHttpMethod": [ "POST" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //************************* ServicesInstitutions End **************************
-
-      //=============================================================
-      //==================== Institutions End =======================
-      //=============================================================
-
-
-
-      //=============================================================
-      //====================== Users Start ==========================
-      //=============================================================
-
-      // Users from Users Service
-      {
-        "DownstreamPathTemplate": "/v1.0/users",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 90
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/users",
-        "Key": "UsersFromUserServiceV1",
-        "UpstreamHttpMethod": [ "PUT", "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get Users By Id from Users Service
-      {
-        "DownstreamPathTemplate": "/v1.0/users/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 90
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/users/{id}",
-        "Key": "UsersByIdFromUserServiceV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Delete Users from Users Service
-      {
-        "DownstreamPathTemplate": "/v1.0/users/{userId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 90
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/users/{userId}",
-        "Key": "DeleteUsersFromUserServiceV1",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //=============================================================
-      //======================== Users End ==========================
-      //=============================================================
-
-
-
-      //=============================================================
-      //===================== Coupon Start ==========================
-      //=============================================================
-
-
-      //************************* places Start **************************
-      // CRUD for places from coupon
-      {
-        "DownstreamPathTemplate": "/v1.0/places",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 96
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/places",
-        "Key": "PlacesFromCouponV1",
-        "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get with id for places from coupon
-      {
-        "DownstreamPathTemplate": "/v1.0/places/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 96
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/places/{id}",
-        "Key": "GetPlacesFromCouponV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get with id for places from coupon
-      {
-        "DownstreamPathTemplate": "/v1.0/places/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 96
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/places/{id}",
-        "Key": "DeletePlacesFromCouponV1",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //************************* places End **************************
-
-      //************************* authorities Start **************************
-      // CRUD for authorities from coupons
-      {
-        "DownstreamPathTemplate": "/v1.0/authorities",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 96
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/authorities",
-        "Key": "PlacesFromCouponV1",
-        "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get with id for authorities from coupons
-      {
-        "DownstreamPathTemplate": "/v1.0/authorities/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 96
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/authorities/{id}",
-        "Key": "GetAuthoritiesFromCouponV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get with id for authorities from coupons
-      {
-        "DownstreamPathTemplate": "/v1.0/authorities/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 96
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/authorities/{id}",
-        "Key": "DeletePlacesFromCouponV1",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //************************* authorities End **************************
-
-
-      //************************* coupons Start **************************
-
-      // CRUD for coupons from authorities
-      {
-        "DownstreamPathTemplate": "/v1.0/coupons",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 96
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/coupons",
-        "Key": "PlacesFromCouponV1",
-        "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get with id for coupons from coupons
-      {
-        "DownstreamPathTemplate": "/v1.0/coupons/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 96
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/coupons/{id}",
-        "Key": "GetCouponsFromCouponV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get with id for coupons from coupons
-      {
-        "DownstreamPathTemplate": "/v1.0/coupons/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 96
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/coupons/{id}",
-        "Key": "DeletePlacesFromCouponV1",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-
-      //************************* coupons End **************************
-
-      //************************* promotions start **************************
-
-      // CRUD for promotions from coupons
-      {
-        "DownstreamPathTemplate": "/v1.0/promotions",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 96
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/promotions",
-        "Key": "PlacesFromCouponV1",
-        "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get with id for promotions from coupons
-      {
-        "DownstreamPathTemplate": "/v1.0/promotions/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 96
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/promotions/{id}",
-        "Key": "GetPromotionsFromCouponV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get with id for contents from coupons
-      {
-        "DownstreamPathTemplate": "/v1.0/promotions/contents/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 96
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/promotions/contents/{id}",
-        "Key": "GetContentsFromCouponByIdV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-
-      // Get with id for contents from coupons
-      {
-        "DownstreamPathTemplate": "/v1.0/promotions/contents",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 96
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/promotions/contents",
-        "Key": "GetContentsFromCouponV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-
-      // Get with id for promotions from coupons
-      {
-        "DownstreamPathTemplate": "/v1.0/promotions/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 96
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/promotions/{id}",
-        "Key": "DeletePlacesFromCouponV1",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-
-      //************************* promotions end **************************
-
-      //************************* redeem start **************************
-
-      // CRUD for redeem from coupons
-      {
-        "DownstreamPathTemplate": "/v1.0/coupons/redeem",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 96
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/coupons/redeem",
-        "Key": "PlacesFromCouponV1",
-        "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get with id for redeem from coupons
-      {
-        "DownstreamPathTemplate": "/v1.0/coupons/redeem/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 96
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/coupons/redeem/{id}",
-        "Key": "GetRedeemFromCouponV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get with id for redeem from coupons
-      {
-        "DownstreamPathTemplate": "/v1.0/coupons/redeem/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 96
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/coupons/redeem/{id}",
-        "Key": "DeletePlacesFromCouponV1",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Search redeem
-      {
-        "DownstreamPathTemplate": "/v1.0/coupons/redeem/search",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 96
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/coupons/redeem/search",
-        "Key": "SearchRedeemV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-
-      //************************* redeem end **************************
-
-
-      //************************* Links start **************************
-
-      {
-        "DownstreamPathTemplate": "/v1.0/links",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 96
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/links",
-        "Key": "SearchRedeemV1",
-        "UpstreamHttpMethod": [ "POST", "PUT" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      {
-        "DownstreamPathTemplate": "/v1.0/links",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 96
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/links",
-        "Key": "SearchRedeemV1",
-        "UpstreamHttpMethod": [ "GET" ]
-      },
-
-      {
-        "DownstreamPathTemplate": "/v1.0/links/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 96
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/links/{id}",
-        "Key": "SearchRedeemV1",
-        "UpstreamHttpMethod": [ "GET" ]
-      },
-
-      {
-        "DownstreamPathTemplate": "/v1.0/links/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 96
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/links/{id}",
-        "Key": "SearchRedeemV1",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //************************* Links end **************************
-
-      //=============================================================
-      //======================= Coupon End ==========================
-      //=============================================================
-
-
-
-      //=============================================================
-      //=================== Analytics Start =========================
-      //=============================================================
-
-      {
-        "DownstreamPathTemplate": "/v1.0/analytics/promotions",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 97
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/analytics/promotions",
-        "Key": "GetAnalyticsV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // POST playbacks from Analytics Services
-      {
-        "DownstreamPathTemplate": "/v1.0/analytics/devices/{deviceId}/playbacks",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 97
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/analytics/devices/{deviceId}/playbacks",
-        "Key": "PostPlaybacksV1",
-        "UpstreamHttpMethod": [ "POST" ]
-      },
-
-      // get playbacks
-      {
-        "DownstreamPathTemplate": "/v1.0/analytics/playbacks",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 97
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/analytics/playbacks",
-        "Key": "GetPlaybacks",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // get Linklogs
-      {
-        "DownstreamPathTemplate": "/v1.0/analytics/linklogs",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 97
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/analytics/linklogs",
-        "Key": "GETLinklogs",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      {
-        "DownstreamPathTemplate": "/v1.0/analytics/promotions/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 97
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/analytics/promotions/{id}",
-        "Key": "GetAnalyticsByIdV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get device running time By Device Id from Analytics Services
-      {
-        "DownstreamPathTemplate": "/v1.0/analytics/devices/{deviceId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 97
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/analytics/devices/{deviceId}",
-        "Key": "GetDevicesByIdV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //=============================================================
-      //==================== Analytics End ==========================
-      //=============================================================
-
-
-
-      //=============================================================
-      //======================== Live Tracking Start =========================
-      //=============================================================
-
-      //{
-      //  "DownstreamPathTemplate": "/v1.0/tracking/vehicles/{vehicleId?}",
-      //  "DownstreamScheme": "http",
-      //  "DownstreamHostAndPorts": [
-      //    {
-      //      "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-      //      "Port": 5002
-      //    }
-      //  ],
-      //  "UpstreamPathTemplate": "/v1.0/tracking/vehicles/{vehicleId?}",
-      //  "Key": "Getvehiclesidles",
-      //  "UpstreamHttpMethod": [ "GET", "DELETE" ],
-      //  "AuthenticationOptions": {
-      //    "AuthenticationProviderKey": "sessionToken",
-      //    "AllowedScopes": []
-      //  }
-      //},
-
-      //=============================================================
-      //==================== Live Tracking End ======================
-      //=============================================================
-
-
-
-      ////=============================================================
-      ////============ Archive track Service Start=====================
-      ////=============================================================
-
-      //{
-      //  "DownstreamPathTemplate": "/v1.0/feeds",
-      //  "DownstreamScheme": "http",
-      //  "DownstreamHostAndPorts": [
-      //    {
-      //      "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-      //      "Port": 95
-      //    }
-      //  ],
-      //  "UpstreamPathTemplate": "/v1.0/feeds",
-      //  "Key": "PostFeedFromArchiveTrackService",
-      //  "UpstreamHttpMethod": [ "POST" ],
-      //  "AuthenticationOptions": {
-      //    "AuthenticationProviderKey": "sessionToken",
-      //    "AllowedScopes": []
-      //  }
-      //},
-
-      //{
-      //  "DownstreamPathTemplate": "/v1.0/feeds/{coordinateId?}",
-      //  "DownstreamScheme": "http",
-      //  "DownstreamHostAndPorts": [
-      //    {
-      //      "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-      //      "Port": 95
-      //    }
-      //  ],
-      //  "UpstreamPathTemplate": "/v1.0/feeds/{coordinateId?}",
-      //  "Key": "GetFeedFromArchiveTrackService",
-      //  "UpstreamHttpMethod": [ "GET","DELETE" ],
-      //  "AuthenticationOptions": {
-      //    "AuthenticationProviderKey": "sessionToken",
-      //    "AllowedScopes": []
-      //  }
-      //},
-
-      //{
-      //  "DownstreamPathTemplate": "/v1.0/feeds/{coordinateId}",
-      //  "DownstreamScheme": "http",
-      //  "DownstreamHostAndPorts": [
-      //    {
-      //      "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-      //      "Port": 95
-      //    }
-      //  ],
-      //  "UpstreamPathTemplate": "/v1.0/feeds/{coordinateId}",
-      //  "Key": "DeleteFeedFromArchiveTrackService",
-      //  "UpstreamHttpMethod": [ "DELETE" ],
-      //  "AuthenticationOptions": {
-      //    "AuthenticationProviderKey": "sessionToken",
-      //    "AllowedScopes": []
-      //  }
-      //},
-
-      {
-        "DownstreamPathTemplate": "/v1.0/vehicles/{vehicleId}/coordinates",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 95
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/vehicles/{vehicleId}/coordinates",
-        "Key": "PostCoordinatesOfVehicle",
-        "UpstreamHttpMethod": [ "POST" ]
-      },
-
-      //=============================================================
-      //============== Archive track Service End ====================
-      //=============================================================
-
-
-
-      //=============================================================
-      //============ Vehicle-analytics Service start ================
-      //=============================================================
-
-      // Post operation logs
-      // {
-      //   "DownstreamPathTemplate": "/v1.0/operations/devices/logs",
-      //   "DownstreamScheme": "http",
-      //   "DownstreamHostAndPorts": [
-      //     {
-      //       "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-      //       "Port": 98
-      //     }
-      //   ],
-      //   "UpstreamPathTemplate": "/v1.0/operations/devices/logs",
-      //   "Key": "PostOperationLogs",
-      //   "UpstreamHttpMethod": [ "POST" ],
-      //   "AuthenticationOptions": {
-      //     "AuthenticationProviderKey": "sessionToken",
-      //     "AllowedScopes": []
-      //   }
-      // },
-
-      //=============================================================
-      //============= Vehicle-analytics Service end =================
-      //=============================================================
-
-
-
-      //=============================================================
-      //================== Routes Service start =====================
-      //=============================================================
-
-      // Routes post and get all
-      {
-        "DownstreamPathTemplate": "/v1.0/routes",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 103
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/routes",
-        "Key": "RoutesPostAndGetAll",
-        "UpstreamHttpMethod": [ "POST", "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Routes delete, update and get by Id
-      {
-        "DownstreamPathTemplate": "/v1.0/routes/{routeId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 103
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/routes/{routeId}",
-        "Key": "RoutesDeleteUpdateAndGetById",
-        "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Tariffs post and get all
-      {
-        "DownstreamPathTemplate": "/v1.0/tariffs",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 103
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/tariffs",
-        "Key": "TariffsPostAndGetAll",
-        "UpstreamHttpMethod": [ "POST", "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Tariffs get by routeId
-      {
-        "DownstreamPathTemplate": "/v1.0/tariffs/{routeId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 103
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/tariffs/{routeId}",
-        "Key": "TariffsGetById",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Tariffs delete
-      {
-        "DownstreamPathTemplate": "/v1.0/tariffs/{ticketId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 103
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/tariffs/{ticketId}",
-        "Key": "TariffsDelete",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Carriages post and get all
-      {
-        "DownstreamPathTemplate": "/v1.0/carriages",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 103
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/carriages",
-        "Key": "CarriagesPostAndGetAll",
-        "UpstreamHttpMethod": [ "POST", "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Carriages get by routeId
-      {
-        "DownstreamPathTemplate": "/v1.0/carriages/{routeId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 103
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/carriages/{routeId}",
-        "Key": "CarriagesGetById",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Carriages delete
-      {
-        "DownstreamPathTemplate": "/v1.0/carriages/{vehicleId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 103
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/carriages/{vehicleId}",
-        "Key": "CarriagesDelete",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get Carriers
-      {
-        "DownstreamPathTemplate": "/v1.0/carriers/{vehicleId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 103
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/carriers/{vehicleId}",
-        "Key": "GetCarriers",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //=============================================================
-      //=================== Routes Service end ======================
-      //=============================================================
-
-
-
-      //=============================================================
-      //================= Tickets Service start =====================
-      //=============================================================
-
-      // Tickets post and get all
-      {
-        "DownstreamPathTemplate": "/v1.0/tickets",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 104
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/tickets",
-        "Key": "TicketsPostAndGetAll",
-        "UpstreamHttpMethod": [ "POST", "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Tickets delete, update and get by Id
-      {
-        "DownstreamPathTemplate": "/v1.0/tickets/{ticketId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 104
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/tickets/{ticketId}",
-        "Key": "TicketsDeleteUpdateAndGetById",
-        "UpstreamHttpMethod": [ "GET", "DELETE", "PUT" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //=============================================================
-      //================== Tickets Service end ======================
-      //=============================================================
-
-
-
-      //=============================================================
-      //============= Internationalization Service start ============
-      //=============================================================
-
-      // Countries post, update and get all
-      {
-        "DownstreamPathTemplate": "/v1.0/countries",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 105
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/countries",
-        "Key": "CountriesPostUpdateAndGetAll",
-        "UpstreamHttpMethod": [ "POST", "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Countries delete and get by Id
-      {
-        "DownstreamPathTemplate": "/v1.0/countries/{countryId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 105
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/countries/{countryId}",
-        "Key": "CountriesDeleteAndGetById",
-        "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Currencies post and get all
-      {
-        "DownstreamPathTemplate": "/v1.0/currencies",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 105
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/currencies",
-        "Key": "CurrenciesPostAndGetAll",
-        "UpstreamHttpMethod": [ "POST", "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Currencies delete and get by Id
-      {
-        "DownstreamPathTemplate": "/v1.0/currencies/{currencyId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 105
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/currencies/{currencyId}",
-        "Key": "CurrenciesDeleteAndGetById",
-        "UpstreamHttpMethod": [ "GET", "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Nationalities post and get all
-      {
-        "DownstreamPathTemplate": "/v1.0/nationalities",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 105
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/nationalities",
-        "Key": "NationalitiesPostAndGetAll",
-        "UpstreamHttpMethod": [ "POST", "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Nationalities delete and get by Id
-      {
-        "DownstreamPathTemplate": "/v1.0/nationalities/{nationalityId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 105
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/nationalities/{nationalityId}",
-        "Key": "NationalitiesDeleteAndGetById",
-        "UpstreamHttpMethod": [ "GET", "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //=============================================================
-      //============= Internationalization Service end ==============
-      //=============================================================
-
-
-
-      //=============================================================
-      //================ Invitation Service Start====================
-      //=============================================================
-
-      // Post Invitations
-      {
-        "DownstreamPathTemplate": "/v1.0/invitations",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 106
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/invitations",
-        "Key": "PostInvitations",
-        "UpstreamHttpMethod": [ "POST" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get ALL Invitations
-      {
-        "DownstreamPathTemplate": "/v1.0/invitations",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 106
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/invitations",
-        "Key": "GetAllInvitations",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "invitationToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get Invitations by Id
-      {
-        "DownstreamPathTemplate": "/v1.0/invitations/{invitationId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 106
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/invitations/{invitationId}",
-        "Key": "GetInvitationsById",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "invitationToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Delete Invitations
-      {
-        "DownstreamPathTemplate": "/v1.0/invitations/{invitationId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 106
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/invitations/{invitationId}",
-        "Key": "DeleteInvitations",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //=============================================================
-      //================ Invitation Service end =====================
-      //=============================================================
-
-
-
-      //=============================================================
-      //================ Terminals Service Start ====================
-      //=============================================================
-
-      // Post and get ALL Terminals
-      {
-        "DownstreamPathTemplate": "/v1.0/terminals",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 107
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/terminals",
-        "Key": "PostAndGetAllTerminals",
-        "UpstreamHttpMethod": [ "POST", "GET" ]
-      },
-
-      // Delete, put and get Invitations by Id
-      {
-        "DownstreamPathTemplate": "/v1.0/terminals/{terminalId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 107
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/terminals/{terminalId}",
-        "Key": "DeletePutAndGetTerminalsById",
-        "UpstreamHttpMethod": [ "DELETE", "GET", "PUT" ]
-      },
-
-      //=============================================================
-      //================= Terminals Service end =====================
-      //=============================================================
-
-
-
-      //=============================================================
-      //============== Vehicle Checkin Service start ================
-      //=============================================================
-
-      // Checkins get all
-      {
-        "DownstreamPathTemplate": "/v1.0/checkins",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 108
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/checkins",
-        "Key": "CheckinsGetAll",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get offline vehicles
-      {
-        "DownstreamPathTemplate": "/v1.0/checkins/offline-vehicles",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 108
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/checkins/offline-vehicles",
-        "Key": "GetOfflineVehicles",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //=============================================================
-      //============== Vehicle Checkin Service end ==================
-      //=============================================================
-
-
-
-      //=============================================================
-      //=============== Identities Service start ====================
-      //=============================================================
-
-      //************************* Accounts Start **********************
-      // Generate a pair of Tokens
-      {
-        "DownstreamPathTemplate": "/v1.0/authentications",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 99
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/authentications",
-        "Key": "AuthenticationsTokensV1",
-        "UpstreamHttpMethod": [ "POST" ]
-      },
-
-      // Renew Tokens
-      {
-        "DownstreamPathTemplate": "/v1.0/authentications/renewals",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 99
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/authentications/renewals",
-        "Key": "RenewTokensV1",
-        "UpstreamHttpMethod": [ "POST" ]
-      },
-
-      // Revoke Refresh token
-      {
-        "DownstreamPathTemplate": "/v1.0/identities/tokens/revoke-refresh",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 99
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/identities/tokens/revoke-refresh",
-        "Key": "RevokeRefreshTokenV1",
-        "UpstreamHttpMethod": [ "POST" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Revoke access token
-      {
-        "DownstreamPathTemplate": "/v1.0/identities/tokens/revoke-access",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 99
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/identities/tokens/revoke-access",
-        "Key": "RevokeAccessTokenV1",
-        "UpstreamHttpMethod": [ "POST" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //************************* Accounts End **********************
-
-      //************************* Identities Start **********************
-
-      // Put, Post and Get all identities
-      {
-        "DownstreamPathTemplate": "/v1.0/identities",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 99
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/identities",
-        "Key": "IdentitiesPutPostAndGetAllV1",
-        "UpstreamHttpMethod": [ "PUT", "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get identities By Id
-      {
-        "DownstreamPathTemplate": "/v1.0/identities/{identityId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 99
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/identities/{identityId}",
-        "Key": "IdentitiesByIdV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Delete identities
-      {
-        "DownstreamPathTemplate": "/v1.0/identities/{identityId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 99
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/identities/{identityId}",
-        "Key": "DeleteIdentitiesV1",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //************************* Identities End **********************
-
-      //************************* Roles Start **************************
-      // Roles from Identities Service
-      {
-        "DownstreamPathTemplate": "/v1.0/roles",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 99
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/roles",
-        "Key": "RolesFromIdentitiesServiceV1",
-        "UpstreamHttpMethod": [ "PUT", "GET", "POST" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Delete Roles from Identities Service
-      {
-        "DownstreamPathTemplate": "/v1.0/roles/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 99
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/roles/{id}",
-        "Key": "DeleteRolesFromIdentitiesServiceV1",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Roles By Id from Identities Service
-      {
-        "DownstreamPathTemplate": "/v1.0/roles/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 99
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/roles/{id}",
-        "Key": "RolesByIdFromIdentitiesServiceV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //************************* Roles End **************************
-
-      //************************* Applications Start **************************
-
-      // CRUD for applications from Identities
-      {
-        "DownstreamPathTemplate": "/v1.0/applications",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 99
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/applications",
-        "Key": "ApplicationsFromIdentitiesV1",
-        "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // GET applications by Id from Identities
-      {
-        "DownstreamPathTemplate": "/v1.0/applications/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 99
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/applications/{id}",
-        "Key": "GetApplicationsFromIdentitiesV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Delete aplication from Identities
-      {
-        "DownstreamPathTemplate": "/v1.0/applications/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 99
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/applications/{id}",
-        "Key": "DeleteApplicationsFromIdentitiesV1",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //************************* Applications End **************************
-
-      //************************* Privileges Start **************************
-
-      // CRUD for applications from Identities
-      {
-        "DownstreamPathTemplate": "/v1.0/privileges",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 99
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/privileges",
-        "Key": "PrivilegesFromIdentitiesV1",
-        "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // GET applications by Id from Identities
-      {
-        "DownstreamPathTemplate": "/v1.0/privileges/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 99
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/privileges/{id}",
-        "Key": "GetPrivilegesFromIdentitiesV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Delete aplication from Identities
-      {
-        "DownstreamPathTemplate": "/v1.0/privileges/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 99
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/privileges/{id}",
-        "Key": "DeletePrivilegesFromIdentitiesV1",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //************************* Privileges End **************************
-
-      //=============================================================
-      //================== Identities Service end ===================
-      //=============================================================
-
-
-
-      //=============================================================
-      //================== Identifiers Service start ================
-      //=============================================================
-
-      // Generate new Identifiers
-      {
-        "DownstreamPathTemplate": "/identifiers",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 100
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/identifiers",
-        "Key": "GenerateIdentifiers",
-        "UpstreamHttpMethod": [ "GET" ]
-      },
-
-      //=============================================================
-      //=================== Identifiers Service end =================
-      //=============================================================
-
-
-
-      //=============================================================
-      //================== Registrations Service start ==============
-      //=============================================================
-
-      // Register screen
-      {
-        "DownstreamPathTemplate": "/v1.0/registrations/screen-app",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 102
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/registrations/screen-app",
-        "Key": "RegisterScreenApp",
-        "UpstreamHttpMethod": [ "POST" ]
-      },
-
-      // Register dashboard
-      {
-        "DownstreamPathTemplate": "/v1.0/registrations/dashboard-app",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 102
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/registrations/dashboard-app",
-        "Key": "RegisterDashboardApp",
-        "UpstreamHttpMethod": [ "POST" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "invitationToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Register routes pay app
-      {
-        "DownstreamPathTemplate": "/v1.0/registrations/routes-pay-app",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 102
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/registrations/routes-pay-app",
-        "Key": "RegisterRoutesPayApp",
-        "UpstreamHttpMethod": [ "POST" ]
-      },
-
-      // Register driver app
-      {
-        "DownstreamPathTemplate": "/v1.0/registrations/driver-app",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 102
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/registrations/driver-app",
-        "Key": "RegisterDriverApp",
-        "UpstreamHttpMethod": [ "POST" ]
-      },
-
-      // Register bus validator
-      {
-        "DownstreamPathTemplate": "/v1.0/registrations/bus-validators",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 102
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/registrations/bus-validators",
-        "Key": "RegisterBusValidator",
-        "UpstreamHttpMethod": [ "POST" ]
-      },
-
-      // Register enterprise promotion app
-      {
-        "DownstreamPathTemplate": "/v1.0/registrations/enterprise-promotion-app",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 102
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/registrations/enterprise-promotion-app",
-        "Key": "RegisterEnterprisePromotionApp",
-        "UpstreamHttpMethod": [ "POST" ]
-      },
-
-      //=============================================================
-      //=================== Registrations Service end ===============
-      //=============================================================
-
-
-
-      //=============================================================
-      //================= Prize Service Start =======================
-      //=============================================================
-
-      // Post,Get,Put candidates
-
-      {
-        "DownstreamPathTemplate": "/v1.0/draws/{drawsId}/candidates",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 93
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/draws/{drawsId}/candidates",
-        "Key": "PostCandidates",
-        "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //Get candidates
-      {
-        "DownstreamPathTemplate": "/v1.0/draws/{drawsId}/candidates/{candidatesId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 93
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/draws/{drawsId}/candidates/{candidatesId}",
-        "Key": "GetCandidates",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //Delete candidates
-      {
-        "DownstreamPathTemplate": "/v1.0/draws/{drawsId}/candidates/{candidatesId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 93
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/draws/{drawsId}/candidates/{candidatesId}",
-        "Key": "DeleteCandidates",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //Post,Get,Put draws
-      {
-        "DownstreamPathTemplate": "/v1.0/draws",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 93
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/draws",
-        "Key": "PostDraws",
-        "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //Get draws
-      {
-        "DownstreamPathTemplate": "/v1.0/draws/{drawsId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 93
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/draws/{drawsId}",
-        "Key": "GetDraws",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //Delete draws
-      {
-        "DownstreamPathTemplate": "/v1.0/draws/{drawsId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 93
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/draws/{drawsId}",
-        "Key": "DeleteDraws",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
       }
+    },
 
-      //=============================================================
-      //==================== Prize Service End ======================
-      //=============================================================
+    //Put-Post FcmToken From Driver
+    {
+      "DownstreamPathTemplate": "/v1.0/drivers/UpdateToken/{deviceId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 109
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/drivers/UpdateToken/{deviceId}",
+      "Key": "PutPostFcmTokenFromDriver",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Verify Phone from Driver
+    {
+      "DownstreamPathTemplate": "/v1.0/drivers/{number}/{IdentifierId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 109
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/drivers/{number}/{IdentifierId}",
+      "Key": "VerifyPhoneFromDriver",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* Driver End **************************
+
+    //************************* Manufacturers Start **************************
+    //Manufacturers from vehicle Service
+    {
+      "DownstreamPathTemplate": "/v1.0/manufacturers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 92
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/manufacturers",
+      "Key": "ManufacturersFromVehicleServiceV1",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Delete Manufacturers from vehicle Service
+    {
+      "DownstreamPathTemplate": "/v1.0/manufacturers/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 92
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/manufacturers/{id}",
+      "Key": "DeleteManufacturersFromVehicleServiceV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Get Manufacturers By Id from vehicle Service
+    {
+      "DownstreamPathTemplate": "/v1.0/manufacturers/{manufacturerId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 92
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/manufacturers/{manufacturerId}",
+      "Key": "GetManufacturersWithIdFromVehicleServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Get Model By Manufacturers Id from vehicle Service
+    {
+      "DownstreamPathTemplate": "/v1.0/manufacturers/{manufacturerId}/models",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 92
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/manufacturers/{manufacturerId}/models",
+      "Key": "ModelFromManufacturersFromVehicleServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* Manufacturers End **************************
+
+    //************************* Car Models Start **************************
+    //Models from vehicle Service
+    {
+      "DownstreamPathTemplate": "/v1.0/models",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 92
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/models",
+      "Key": "ModelsFromVehicleServiceV1",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Delete Models from vehicle Service
+    {
+      "DownstreamPathTemplate": "/v1.0/models/{modelId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 92
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/models/{modelId}",
+      "Key": "DeleeteModelsFromVehicleServiceV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+    //************************* Car Models End **************************
+
+    //=============================================================
+    //==================== Vehicles Service End ===================
+    //=============================================================
+
+
+
+    //==============================================================
+    //================ Advertisements Service Start ================
+    //==============================================================
+
+    //************************* Medias Start **************************
+
+    // Medias from Advertisements Service
+    {
+      "DownstreamPathTemplate": "/v1.0/medias",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/medias",
+      "Key": "MediasFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Medias by id from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/medias/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/medias/{id}",
+      "Key": "MediasByIdFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Medias from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/medias/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/medias/{id}",
+      "Key": "DeleteMediasFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* Medias End ****************************
+
+    //************************* Interval Start **************************
+    // Intervals from Advertisements Service
+    {
+      "DownstreamPathTemplate": "/v1.0/intervals",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/intervals",
+      "Key": "IntervalsFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Intervals by id from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/intervals/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/intervals/{id}",
+      "Key": "IntervalsByIdFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Interval from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/intervals/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/intervals/{id}",
+      "Key": "DeleteIntervalsFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+    //************************* Interval End **************************
+
+    //************************* Campaign Start **************************
+    // Campaigns Medias from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/campaigns",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/campaigns",
+      "Key": "CampaignsFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Campaigns By Id from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/campaigns/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/campaigns/{id}",
+      "Key": "CampaignsByIdFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Advertisements of Campaigns By Id from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/campaigns/{id}/advertisements/{advertisementsId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/campaigns/{id}/advertisements/{advertisementsId}",
+      "Key": "AdvertisementsOfCampaignsFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Advertisements of active campaign of Campaigns By Id from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/campaigns/advertisementsqr",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/campaigns/advertisementsqr",
+      "Key": "AdvertisementsOfActiveCampaignsFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Campaigns from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/campaigns/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/campaigns/{id}",
+      "Key": "DeleteCampaignsFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Post Broadcasts
+    {
+      "DownstreamPathTemplate": "/v1.0/campaigns/{campaignId}/broadcasts",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/campaigns/{campaignId}/broadcasts",
+      "Key": "PostBroadcastsV1",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Broadcasts
+    {
+      "DownstreamPathTemplate": "/v1.0/campaigns/{campaignId}/broadcasts/{broadcastId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/campaigns/{campaignId}/broadcasts/{broadcastId}",
+      "Key": "DeleteBroadcastsV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+    //************************* Campaign End **************************
+
+    //************************* Advertisements End **************************
+    // Advertisements from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/advertisements",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/advertisements",
+      "Key": "AdvertisementsFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Advertisements By Id from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/advertisements/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/advertisements/{id}",
+      "Key": "AdvertisementsByIdFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Advertisements By Institution Id from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/institutions/{institutionId}/advertisements/{advertisementsId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionId}/advertisements/{advertisementsId}",
+      "Key": "AdvertisementsByInstitutionIdFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Advertisements from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/advertisements/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/advertisements/{id}",
+      "Key": "DeleteAdvertisementsFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Get contents from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/contents",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/contents",
+      "Key": "GetContentsFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get contents by id from Advertisements Services
+    {
+      "DownstreamPathTemplate": "/v1.0/contents/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/contents/{id}",
+      "Key": "GetContentsByIdFromAdvertisementsServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+
+    // Update Campaign Advertisement by Id
+    {
+      "DownstreamPathTemplate": "/v1.0/campaigns/{campaignsId}/advertisements/{advertisementsId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/campaigns/{campaignsId}/advertisements/{advertisementsId}",
+      "Key": "UpdateCampaignAdvertisementV1",
+      "UpstreamHttpMethod": [ "PATCH" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Update Campaign Advertisement by List
+    {
+      "DownstreamPathTemplate": "/v1.0/campaigns/{campaignsId}/advertisements",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 94
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/campaigns/{campaignsId}/advertisements",
+      "Key": "UpdateCampaignAdvertisementListV1",
+      "UpstreamHttpMethod": [ "PATCH" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* Advertisements End **************************
+
+    //==============================================================
+    //================ Advertisements Service End ==================
+    //==============================================================
+
+
+
+    //=============================================================
+    //===================== Institutions Start ====================
+    //=============================================================
+
+    //************************* Institutions Start **************************
+
+    // Institutions from Institutions Service
+    {
+      "DownstreamPathTemplate": "/v1.0/institutions",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 91
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/institutions",
+      "Key": "InstitutionsFromInstitutionsServiceV1",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Institutions By Id from Institutions Service
+    {
+      "DownstreamPathTemplate": "/v1.0/institutions/{institutionId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 91
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionId}",
+      "Key": "InstitutionsByIdFromInstitutionsServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get all officers By Institution Id from Institution Services
+    {
+      "DownstreamPathTemplate": "/v1.0/institutions/{institutionId}/officers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 91
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionId}/officers",
+      "Key": "OfficersByInstitutionIdFromInstitutionsServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Institutions from Institutions Service
+    {
+      "DownstreamPathTemplate": "/v1.0/institutions/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 91
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/institutions/{id}",
+      "Key": "DeleteInstitutionsFromInstitutionsServiceV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* Institutions End **************************
+
+    //************************* Officers Start **************************
+    // Officers from Institutions Service
+    {
+      "DownstreamPathTemplate": "/v1.0/officers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 91
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/officers",
+      "Key": "OfficersFromInstitutionsServiceV1",
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Officers By Id from Institutions Service
+    {
+      "DownstreamPathTemplate": "/v1.0/officers/{officersId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 91
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/officers/{officersId}",
+      "Key": "OfficersByIdFromInstitutionsServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Officers from Institutions Service
+    {
+      "DownstreamPathTemplate": "/v1.0/officers/{officersId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 91
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/officers/{officersId}",
+      "Key": "DeleteOfficersFromInstitutionsServiceV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+    //************************* Officers End **************************
+
+    //************************* Services Start **************************
+    // Services from Institutions Service
+    {
+      "DownstreamPathTemplate": "/v1.0/services",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 91
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/services",
+      "Key": "ServicesFromInstitutionsServiceV1",
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // GetServices By Id from Institutions Service
+    {
+      "DownstreamPathTemplate": "/v1.0/services/{servicesId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 91
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/services/{servicesId}",
+      "Key": "ServicesByIdFromInstitutionsServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Services from Institutions Service
+    {
+      "DownstreamPathTemplate": "/v1.0/services/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 91
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/services/{id}",
+      "Key": "DeleteServicesFromInstitutionsServiceV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+    //************************* Services End **************************
+
+    //************************* ServicesInstitutions Start **************************
+    // ServicesInstitutions from Institutions Service
+    {
+      "DownstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 91
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services",
+      "Key": "ServicesInstitutionsFromInstitutionsServiceV1",
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get ServicesInstitutions By Id from Institutions Service
+    {
+      "DownstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services/{servicesId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 91
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services/{servicesId}",
+      "Key": "ServicesInstitutionsByIdFromInstitutionsServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete ServicesInstitutions By Id from Institutions Service
+    {
+      "DownstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services/{servicesId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 91
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/institutions/{institutionsId}/services/{servicesId}",
+      "Key": "DeleteServicesInstitutionsFromInstitutionsServiceV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Add Authorities
+    {
+      "DownstreamPathTemplate": "/v1.0/institutions/authorities",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 91
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/institutions/authorities",
+      "Key": "AddAuthoritiesV1",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* ServicesInstitutions End **************************
+
+    //=============================================================
+    //==================== Institutions End =======================
+    //=============================================================
+
+
+
+    //=============================================================
+    //====================== Users Start ==========================
+    //=============================================================
+
+    // Users from Users Service
+    {
+      "DownstreamPathTemplate": "/v1.0/users",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/users",
+      "Key": "UsersFromUserServiceV1",
+      "UpstreamHttpMethod": [ "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Users By Id from Users Service
+    {
+      "DownstreamPathTemplate": "/v1.0/users/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/users/{id}",
+      "Key": "UsersByIdFromUserServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Users from Users Service
+    {
+      "DownstreamPathTemplate": "/v1.0/users/{userId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/users/{userId}",
+      "Key": "DeleteUsersFromUserServiceV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //=============================================================
+    //======================== Users End ==========================
+    //=============================================================
+
+
+
+    //=============================================================
+    //===================== Coupon Start ==========================
+    //=============================================================
+
+
+    //************************* places Start **************************
+    // CRUD for places from coupon
+    {
+      "DownstreamPathTemplate": "/v1.0/places",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 96
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/places",
+      "Key": "PlacesFromCouponV1",
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get with id for places from coupon
+    {
+      "DownstreamPathTemplate": "/v1.0/places/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 96
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/places/{id}",
+      "Key": "GetPlacesFromCouponV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get with id for places from coupon
+    {
+      "DownstreamPathTemplate": "/v1.0/places/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 96
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/places/{id}",
+      "Key": "DeletePlacesFromCouponV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* places End **************************
+
+    //************************* authorities Start **************************
+    // CRUD for authorities from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/authorities",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 96
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/authorities",
+      "Key": "PlacesFromCouponV1",
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get with id for authorities from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/authorities/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 96
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/authorities/{id}",
+      "Key": "GetAuthoritiesFromCouponV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get with id for authorities from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/authorities/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 96
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/authorities/{id}",
+      "Key": "DeletePlacesFromCouponV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* authorities End **************************
+
+
+    //************************* coupons Start **************************
+
+    // CRUD for coupons from authorities
+    {
+      "DownstreamPathTemplate": "/v1.0/coupons",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 96
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/coupons",
+      "Key": "PlacesFromCouponV1",
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get with id for coupons from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/coupons/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 96
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/coupons/{id}",
+      "Key": "GetCouponsFromCouponV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get with id for coupons from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/coupons/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 96
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/coupons/{id}",
+      "Key": "DeletePlacesFromCouponV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+
+    //************************* coupons End **************************
+
+    //************************* promotions start **************************
+
+    // CRUD for promotions from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/promotions",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 96
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/promotions",
+      "Key": "PlacesFromCouponV1",
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get with id for promotions from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/promotions/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 96
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/promotions/{id}",
+      "Key": "GetPromotionsFromCouponV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get with id for contents from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/promotions/contents/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 96
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/promotions/contents/{id}",
+      "Key": "GetContentsFromCouponByIdV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+
+    // Get with id for contents from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/promotions/contents",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 96
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/promotions/contents",
+      "Key": "GetContentsFromCouponV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+
+    // Get with id for promotions from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/promotions/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 96
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/promotions/{id}",
+      "Key": "DeletePlacesFromCouponV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+
+    //************************* promotions end **************************
+
+    //************************* redeem start **************************
+
+    // CRUD for redeem from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/coupons/redeem",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 96
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/coupons/redeem",
+      "Key": "PlacesFromCouponV1",
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get with id for redeem from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/coupons/redeem/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 96
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/coupons/redeem/{id}",
+      "Key": "GetRedeemFromCouponV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get with id for redeem from coupons
+    {
+      "DownstreamPathTemplate": "/v1.0/coupons/redeem/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 96
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/coupons/redeem/{id}",
+      "Key": "DeletePlacesFromCouponV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Search redeem
+    {
+      "DownstreamPathTemplate": "/v1.0/coupons/redeem/search",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 96
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/coupons/redeem/search",
+      "Key": "SearchRedeemV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+
+    //************************* redeem end **************************
+
+
+    //************************* Links start **************************
+
+    {
+      "DownstreamPathTemplate": "/v1.0/links",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 96
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/links",
+      "Key": "SearchRedeemV1",
+      "UpstreamHttpMethod": [ "POST", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/v1.0/links",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 96
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/links",
+      "Key": "SearchRedeemV1",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/v1.0/links/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 96
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/links/{id}",
+      "Key": "SearchRedeemV1",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/v1.0/links/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 96
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/links/{id}",
+      "Key": "SearchRedeemV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* Links end **************************
+
+    //=============================================================
+    //======================= Coupon End ==========================
+    //=============================================================
+
+
+
+    //=============================================================
+    //=================== Analytics Start =========================
+    //=============================================================
+
+    {
+      "DownstreamPathTemplate": "/v1.0/analytics/promotions",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 97
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/analytics/promotions",
+      "Key": "GetAnalyticsV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // POST playbacks from Analytics Services
+    {
+      "DownstreamPathTemplate": "/v1.0/analytics/devices/{deviceId}/playbacks",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 97
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/analytics/devices/{deviceId}/playbacks",
+      "Key": "PostPlaybacksV1",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    // get playbacks
+    {
+      "DownstreamPathTemplate": "/v1.0/analytics/playbacks",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 97
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/analytics/playbacks",
+      "Key": "GetPlaybacks",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // get Linklogs
+    {
+      "DownstreamPathTemplate": "/v1.0/analytics/linklogs",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 97
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/analytics/linklogs",
+      "Key": "GETLinklogs",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/v1.0/analytics/promotions/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 97
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/analytics/promotions/{id}",
+      "Key": "GetAnalyticsByIdV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get device running time By Device Id from Analytics Services
+    {
+      "DownstreamPathTemplate": "/v1.0/analytics/devices/{deviceId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 97
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/analytics/devices/{deviceId}",
+      "Key": "GetDevicesByIdV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //=============================================================
+    //==================== Analytics End ==========================
+    //=============================================================
+
+
+
+    //=============================================================
+    //======================== Live Tracking Start =========================
+    //=============================================================
+
+    //{
+    //  "DownstreamPathTemplate": "/v1.0/tracking/vehicles/{vehicleId?}",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+    //      "Port": 5002
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/v1.0/tracking/vehicles/{vehicleId?}",
+    //  "Key": "Getvehiclesidles",
+    //  "UpstreamHttpMethod": [ "GET", "DELETE" ],
+    //  "AuthenticationOptions": {
+    //    "AuthenticationProviderKey": "sessionToken",
+    //    "AllowedScopes": []
+    //  }
+    //},
+
+    //=============================================================
+    //==================== Live Tracking End ======================
+    //=============================================================
+
+
+
+    ////=============================================================
+    ////============ Archive track Service Start=====================
+    ////=============================================================
+
+    //{
+    //  "DownstreamPathTemplate": "/v1.0/feeds",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+    //      "Port": 95
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/v1.0/feeds",
+    //  "Key": "PostFeedFromArchiveTrackService",
+    //  "UpstreamHttpMethod": [ "POST" ],
+    //  "AuthenticationOptions": {
+    //    "AuthenticationProviderKey": "sessionToken",
+    //    "AllowedScopes": []
+    //  }
+    //},
+
+    //{
+    //  "DownstreamPathTemplate": "/v1.0/feeds/{coordinateId?}",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+    //      "Port": 95
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/v1.0/feeds/{coordinateId?}",
+    //  "Key": "GetFeedFromArchiveTrackService",
+    //  "UpstreamHttpMethod": [ "GET","DELETE" ],
+    //  "AuthenticationOptions": {
+    //    "AuthenticationProviderKey": "sessionToken",
+    //    "AllowedScopes": []
+    //  }
+    //},
+
+    //{
+    //  "DownstreamPathTemplate": "/v1.0/feeds/{coordinateId}",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+    //      "Port": 95
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/v1.0/feeds/{coordinateId}",
+    //  "Key": "DeleteFeedFromArchiveTrackService",
+    //  "UpstreamHttpMethod": [ "DELETE" ],
+    //  "AuthenticationOptions": {
+    //    "AuthenticationProviderKey": "sessionToken",
+    //    "AllowedScopes": []
+    //  }
+    //},
+
+    {
+      "DownstreamPathTemplate": "/v1.0/vehicles/{vehicleId}/coordinates",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 95
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/vehicles/{vehicleId}/coordinates",
+      "Key": "PostCoordinatesOfVehicle",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    //=============================================================
+    //============== Archive track Service End ====================
+    //=============================================================
+
+
+
+    //=============================================================
+    //============ Vehicle-analytics Service start ================
+    //=============================================================
+
+    // Post operation logs
+    // {
+    //   "DownstreamPathTemplate": "/v1.0/operations/devices/logs",
+    //   "DownstreamScheme": "http",
+    //   "DownstreamHostAndPorts": [
+    //     {
+    //       "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+    //       "Port": 98
+    //     }
+    //   ],
+    //   "UpstreamPathTemplate": "/v1.0/operations/devices/logs",
+    //   "Key": "PostOperationLogs",
+    //   "UpstreamHttpMethod": [ "POST" ],
+    //   "AuthenticationOptions": {
+    //     "AuthenticationProviderKey": "sessionToken",
+    //     "AllowedScopes": []
+    //   }
+    // },
+
+    //=============================================================
+    //============= Vehicle-analytics Service end =================
+    //=============================================================
+
+
+
+    //=============================================================
+    //================== Routes Service start =====================
+    //=============================================================
+
+    // Routes post and get all
+    {
+      "DownstreamPathTemplate": "/v1.0/routes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 103
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/routes",
+      "Key": "RoutesPostAndGetAll",
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Routes delete, update and get by Id
+    {
+      "DownstreamPathTemplate": "/v1.0/routes/{routeId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 103
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/routes/{routeId}",
+      "Key": "RoutesDeleteUpdateAndGetById",
+      "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Tariffs post and get all
+    {
+      "DownstreamPathTemplate": "/v1.0/tariffs",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 103
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/tariffs",
+      "Key": "TariffsPostAndGetAll",
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Tariffs get by routeId
+    {
+      "DownstreamPathTemplate": "/v1.0/tariffs/{routeId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 103
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/tariffs/{routeId}",
+      "Key": "TariffsGetById",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Tariffs delete
+    {
+      "DownstreamPathTemplate": "/v1.0/tariffs/{ticketId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 103
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/tariffs/{ticketId}",
+      "Key": "TariffsDelete",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Carriages post and get all
+    {
+      "DownstreamPathTemplate": "/v1.0/carriages",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 103
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/carriages",
+      "Key": "CarriagesPostAndGetAll",
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Carriages get by routeId
+    {
+      "DownstreamPathTemplate": "/v1.0/carriages/{routeId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 103
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/carriages/{routeId}",
+      "Key": "CarriagesGetById",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Carriages delete
+    {
+      "DownstreamPathTemplate": "/v1.0/carriages/{vehicleId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 103
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/carriages/{vehicleId}",
+      "Key": "CarriagesDelete",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Carriers
+    {
+      "DownstreamPathTemplate": "/v1.0/carriers/{vehicleId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 103
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/carriers/{vehicleId}",
+      "Key": "GetCarriers",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //=============================================================
+    //=================== Routes Service end ======================
+    //=============================================================
+
+
+
+    //=============================================================
+    //================= Tickets Service start =====================
+    //=============================================================
+
+    // Tickets post and get all
+    {
+      "DownstreamPathTemplate": "/v1.0/tickets",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 104
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/tickets",
+      "Key": "TicketsPostAndGetAll",
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Tickets delete, update and get by Id
+    {
+      "DownstreamPathTemplate": "/v1.0/tickets/{ticketId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 104
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/tickets/{ticketId}",
+      "Key": "TicketsDeleteUpdateAndGetById",
+      "UpstreamHttpMethod": [ "GET", "DELETE", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //=============================================================
+    //================== Tickets Service end ======================
+    //=============================================================
+
+
+
+    //=============================================================
+    //============= Internationalization Service start ============
+    //=============================================================
+
+    // Countries post, update and get all
+    {
+      "DownstreamPathTemplate": "/v1.0/countries",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 105
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/countries",
+      "Key": "CountriesPostUpdateAndGetAll",
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Countries delete and get by Id
+    {
+      "DownstreamPathTemplate": "/v1.0/countries/{countryId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 105
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/countries/{countryId}",
+      "Key": "CountriesDeleteAndGetById",
+      "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Currencies post and get all
+    {
+      "DownstreamPathTemplate": "/v1.0/currencies",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 105
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/currencies",
+      "Key": "CurrenciesPostAndGetAll",
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Currencies delete and get by Id
+    {
+      "DownstreamPathTemplate": "/v1.0/currencies/{currencyId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 105
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/currencies/{currencyId}",
+      "Key": "CurrenciesDeleteAndGetById",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Nationalities post and get all
+    {
+      "DownstreamPathTemplate": "/v1.0/nationalities",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 105
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/nationalities",
+      "Key": "NationalitiesPostAndGetAll",
+      "UpstreamHttpMethod": [ "POST", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Nationalities delete and get by Id
+    {
+      "DownstreamPathTemplate": "/v1.0/nationalities/{nationalityId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 105
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/nationalities/{nationalityId}",
+      "Key": "NationalitiesDeleteAndGetById",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //=============================================================
+    //============= Internationalization Service end ==============
+    //=============================================================
+
+
+
+    //=============================================================
+    //================ Invitation Service Start====================
+    //=============================================================
+
+    // Post Invitations
+    {
+      "DownstreamPathTemplate": "/v1.0/invitations",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 106
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/invitations",
+      "Key": "PostInvitations",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get ALL Invitations
+    {
+      "DownstreamPathTemplate": "/v1.0/invitations",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 106
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/invitations",
+      "Key": "GetAllInvitations",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "invitationToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Invitations by Id
+    {
+      "DownstreamPathTemplate": "/v1.0/invitations/{invitationId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 106
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/invitations/{invitationId}",
+      "Key": "GetInvitationsById",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "invitationToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Invitations
+    {
+      "DownstreamPathTemplate": "/v1.0/invitations/{invitationId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 106
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/invitations/{invitationId}",
+      "Key": "DeleteInvitations",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //=============================================================
+    //================ Invitation Service end =====================
+    //=============================================================
+
+
+
+    //=============================================================
+    //================ Terminals Service Start ====================
+    //=============================================================
+
+    // Post and get ALL Terminals
+    {
+      "DownstreamPathTemplate": "/v1.0/terminals",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 107
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/terminals",
+      "Key": "PostAndGetAllTerminals",
+      "UpstreamHttpMethod": [ "POST", "GET" ]
+    },
+
+    // Delete, put and get Invitations by Id
+    {
+      "DownstreamPathTemplate": "/v1.0/terminals/{terminalId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 107
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/terminals/{terminalId}",
+      "Key": "DeletePutAndGetTerminalsById",
+      "UpstreamHttpMethod": [ "DELETE", "GET", "PUT" ]
+    },
+
+    //=============================================================
+    //================= Terminals Service end =====================
+    //=============================================================
+
+
+
+    //=============================================================
+    //============== Vehicle Checkin Service start ================
+    //=============================================================
+
+    // Checkins get all
+    {
+      "DownstreamPathTemplate": "/v1.0/checkins",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 108
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/checkins",
+      "Key": "CheckinsGetAll",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get offline vehicles
+    {
+      "DownstreamPathTemplate": "/v1.0/checkins/offline-vehicles",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 108
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/checkins/offline-vehicles",
+      "Key": "GetOfflineVehicles",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //=============================================================
+    //============== Vehicle Checkin Service end ==================
+    //=============================================================
+
+
+
+    //=============================================================
+    //=============== Identities Service start ====================
+    //=============================================================
+
+    //************************* Accounts Start **********************
+    // Generate a pair of Tokens
+    {
+      "DownstreamPathTemplate": "/v1.0/authentications",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/authentications",
+      "Key": "AuthenticationsTokensV1",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    // Renew Tokens
+    {
+      "DownstreamPathTemplate": "/v1.0/authentications/renewals",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/authentications/renewals",
+      "Key": "RenewTokensV1",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    // Revoke Refresh token
+    {
+      "DownstreamPathTemplate": "/v1.0/identities/tokens/revoke-refresh",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/identities/tokens/revoke-refresh",
+      "Key": "RevokeRefreshTokenV1",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Revoke access token
+    {
+      "DownstreamPathTemplate": "/v1.0/identities/tokens/revoke-access",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/identities/tokens/revoke-access",
+      "Key": "RevokeAccessTokenV1",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* Accounts End **********************
+
+    //************************* Identities Start **********************
+
+    // Put, Post and Get all identities
+    {
+      "DownstreamPathTemplate": "/v1.0/identities",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/identities",
+      "Key": "IdentitiesPutPostAndGetAllV1",
+      "UpstreamHttpMethod": [ "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get identities By Id
+    {
+      "DownstreamPathTemplate": "/v1.0/identities/{identityId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/identities/{identityId}",
+      "Key": "IdentitiesByIdV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete identities
+    {
+      "DownstreamPathTemplate": "/v1.0/identities/{identityId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/identities/{identityId}",
+      "Key": "DeleteIdentitiesV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* Identities End **********************
+
+    //************************* Roles Start **************************
+    // Roles from Identities Service
+    {
+      "DownstreamPathTemplate": "/v1.0/roles",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/roles",
+      "Key": "RolesFromIdentitiesServiceV1",
+      "UpstreamHttpMethod": [ "PUT", "GET", "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Roles from Identities Service
+    {
+      "DownstreamPathTemplate": "/v1.0/roles/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/roles/{id}",
+      "Key": "DeleteRolesFromIdentitiesServiceV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Roles By Id from Identities Service
+    {
+      "DownstreamPathTemplate": "/v1.0/roles/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/roles/{id}",
+      "Key": "RolesByIdFromIdentitiesServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* Roles End **************************
+
+    //************************* Applications Start **************************
+
+    // CRUD for applications from Identities
+    {
+      "DownstreamPathTemplate": "/v1.0/applications",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/applications",
+      "Key": "ApplicationsFromIdentitiesV1",
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // GET applications by Id from Identities
+    {
+      "DownstreamPathTemplate": "/v1.0/applications/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/applications/{id}",
+      "Key": "GetApplicationsFromIdentitiesV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete aplication from Identities
+    {
+      "DownstreamPathTemplate": "/v1.0/applications/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/applications/{id}",
+      "Key": "DeleteApplicationsFromIdentitiesV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* Applications End **************************
+
+    //************************* Privileges Start **************************
+
+    // CRUD for applications from Identities
+    {
+      "DownstreamPathTemplate": "/v1.0/privileges",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/privileges",
+      "Key": "PrivilegesFromIdentitiesV1",
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // GET applications by Id from Identities
+    {
+      "DownstreamPathTemplate": "/v1.0/privileges/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/privileges/{id}",
+      "Key": "GetPrivilegesFromIdentitiesV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete aplication from Identities
+    {
+      "DownstreamPathTemplate": "/v1.0/privileges/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 99
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/privileges/{id}",
+      "Key": "DeletePrivilegesFromIdentitiesV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //************************* Privileges End **************************
+
+    //=============================================================
+    //================== Identities Service end ===================
+    //=============================================================
+
+
+
+    //=============================================================
+    //================== Identifiers Service start ================
+    //=============================================================
+
+    // Generate new Identifiers
+    {
+      "DownstreamPathTemplate": "/identifiers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 100
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/identifiers",
+      "Key": "GenerateIdentifiers",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+    //=============================================================
+    //=================== Identifiers Service end =================
+    //=============================================================
+
+
+
+    //=============================================================
+    //================== Registrations Service start ==============
+    //=============================================================
+
+    // Register screen
+    {
+      "DownstreamPathTemplate": "/v1.0/registrations/screen-app",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 102
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/registrations/screen-app",
+      "Key": "RegisterScreenApp",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    // Register dashboard
+    {
+      "DownstreamPathTemplate": "/v1.0/registrations/dashboard-app",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 102
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/registrations/dashboard-app",
+      "Key": "RegisterDashboardApp",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "invitationToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Register routes pay app
+    {
+      "DownstreamPathTemplate": "/v1.0/registrations/routes-pay-app",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 102
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/registrations/routes-pay-app",
+      "Key": "RegisterRoutesPayApp",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    // Register driver app
+    {
+      "DownstreamPathTemplate": "/v1.0/registrations/driver-app",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 102
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/registrations/driver-app",
+      "Key": "RegisterDriverApp",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    // Register bus validator
+    {
+      "DownstreamPathTemplate": "/v1.0/registrations/bus-validators",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 102
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/registrations/bus-validators",
+      "Key": "RegisterBusValidator",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    // Register enterprise promotion app
+    {
+      "DownstreamPathTemplate": "/v1.0/registrations/enterprise-promotion-app",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 102
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/registrations/enterprise-promotion-app",
+      "Key": "RegisterEnterprisePromotionApp",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    //=============================================================
+    //=================== Registrations Service end ===============
+    //=============================================================
+
+
+
+    //=============================================================
+    //================= Prize Service Start =======================
+    //=============================================================
+
+    // Post,Get,Put candidates
+
+    {
+      "DownstreamPathTemplate": "/v1.0/draws/{drawsId}/candidates",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 93
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/draws/{drawsId}/candidates",
+      "Key": "PostCandidates",
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Get candidates
+    {
+      "DownstreamPathTemplate": "/v1.0/draws/{drawsId}/candidates/{candidatesId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 93
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/draws/{drawsId}/candidates/{candidatesId}",
+      "Key": "GetCandidates",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Delete candidates
+    {
+      "DownstreamPathTemplate": "/v1.0/draws/{drawsId}/candidates/{candidatesId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 93
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/draws/{drawsId}/candidates/{candidatesId}",
+      "Key": "DeleteCandidates",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Post,Get,Put draws
+    {
+      "DownstreamPathTemplate": "/v1.0/draws",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 93
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/draws",
+      "Key": "PostDraws",
+      "UpstreamHttpMethod": [ "POST", "GET", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Get draws
+    {
+      "DownstreamPathTemplate": "/v1.0/draws/{drawsId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 93
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/draws/{drawsId}",
+      "Key": "GetDraws",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Delete draws
+    {
+      "DownstreamPathTemplate": "/v1.0/draws/{drawsId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 93
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/draws/{drawsId}",
+      "Key": "DeleteDraws",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    }
+
+    //=============================================================
+    //==================== Prize Service End ======================
+    //=============================================================
 
   ],
   "GlobalConfiguration": {

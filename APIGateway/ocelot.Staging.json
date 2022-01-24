@@ -267,7 +267,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-          "Port": 110
+          "Port": 109
         }
       ],
       "UpstreamPathTemplate": "/v1.0/drivers",
@@ -286,7 +286,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-          "Port": 110
+          "Port": 109
         }
       ],
       "UpstreamPathTemplate": "/v1.0/drivers/{id}",
@@ -305,7 +305,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-          "Port": 110
+          "Port": 109
         }
       ],
       "UpstreamPathTemplate": "/v1.0/drivers/{id}",
@@ -322,7 +322,7 @@
         "DownstreamHostAndPorts": [
           {
             "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 110
+            "Port": 109
           }
         ],
         "UpstreamPathTemplate": "/v1.0/drivers/devices",
@@ -341,7 +341,7 @@
         "DownstreamHostAndPorts": [
           {
             "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 110
+            "Port": 109
           }
         ],
         "UpstreamPathTemplate": "/v1.0/drivers/devices/{DeviceId}",
@@ -360,7 +360,7 @@
         "DownstreamHostAndPorts": [
           {
             "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 110
+            "Port": 109
           }
         ],
         "UpstreamPathTemplate": "/v1.0/drivers/UpdateToken/{deviceId}",
@@ -379,7 +379,7 @@
         "DownstreamHostAndPorts": [
           {
             "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 110
+            "Port": 109
           }
         ],
         "UpstreamPathTemplate": "/v1.0/drivers/{number}/{IdentifierId}",

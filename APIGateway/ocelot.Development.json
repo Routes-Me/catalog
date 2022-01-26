@@ -111,24 +111,7 @@
       ],
       "UpstreamPathTemplate": "/v1.0/users/{userId}/devices/{deviceId}",
       "Key": "PutFcmTokenAndDeleteDeviceFromUserServiceV1",
-      "UpstreamHttpMethod": [ "PUT" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
-    },
-    {
-      "DownstreamPathTemplate": "/v1.0/users/{userId}/devices/{deviceId}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5004
-        }
-      ],
-      "UpstreamPathTemplate": "/v1.0/users/{userId}/devices/{deviceId}",
-      "Key": "PutFcmTokenAndDeleteDeviceFromUserServiceV1",
-      "UpstreamHttpMethod": [ "DELETE" ],
+      "UpstreamHttpMethod": [ "PUT" , "DELETE" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
@@ -436,7 +419,7 @@
       }
     },
 
-    //Get Driver By Id
+    //Get and Delete Driver By Id
     {
       "DownstreamPathTemplate": "/v1.0/drivers/{id}",
       "DownstreamScheme": "http",
@@ -448,26 +431,7 @@
       ],
       "UpstreamPathTemplate": "/v1.0/drivers/{id}",
       "Key": "DriverWithIdServiceV1",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
-    },
-
-    //Delete Driver
-    {
-      "DownstreamPathTemplate": "/v1.0/drivers/{id}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5069
-        }
-      ],
-      "UpstreamPathTemplate": "/v1.0/drivers/{id}",
-      "Key": "DeleteDriverServiceV1",
-      "UpstreamHttpMethod": [ "DELETE" ],
+      "UpstreamHttpMethod": [ "GET" , "DELETE" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []

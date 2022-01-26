@@ -2,6 +2,146 @@
   "ReRoutes": [
 
     //=============================================================
+    //====================== Users Start ==========================
+    //=============================================================
+
+    //Verify Number and Device from User Serivice
+    {
+      "DownstreamPathTemplate": "/v1.0/users/{phone}/{uniqueId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/users/{phone}/{uniqueId}",
+      "Key": "VerifyNumberAndDeviceFromUserServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Users from Users Service
+    {
+      "DownstreamPathTemplate": "/v1.0/users",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/users",
+      "Key": "UsersFromUserServiceV1",
+      "UpstreamHttpMethod": [ "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Users By Id from Users Service
+    {
+      "DownstreamPathTemplate": "/v1.0/users/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/users/{id}",
+      "Key": "UsersByIdFromUserServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Users from Users Service
+    {
+      "DownstreamPathTemplate": "/v1.0/users/{userId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/users/{userId}",
+      "Key": "DeleteUsersFromUserServiceV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Post Devices from User Service
+    {
+      "DownstreamPathTemplate": "/v1.0/users/{userId}/devices",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/users/{userId}/devices",
+      "Key": "PostDeviceFromUserServiceV1",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Put FcmToken and Delete from User Service
+    {
+      "DownstreamPathTemplate": "/v1.0/users/{userId}/devices/{deviceId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/users/{userId}/devices/{deviceId}",
+      "Key": "PutFcmTokenAndDeleteDeviceFromUserServiceV1",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/v1.0/users/{userId}/devices/{deviceId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 90
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/users/{userId}/devices/{deviceId}",
+      "Key": "PutFcmTokenAndDeleteDeviceFromUserServiceV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //=============================================================
+    //======================== Users End ==========================
+    //=============================================================
+
+
+    //=============================================================
     //================== Vehicles Service Start ===================
     //=============================================================
 
@@ -314,81 +454,6 @@
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",
         "AllowedScopes": []
-      },
-      //Post Device From Driver
-      {
-        "DownstreamPathTemplate": "/v1.0/drivers/devices",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 109
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/drivers/devices",
-        "Key": "PostDeviceFromDriver",
-        "UpstreamHttpMethod": [ "POST" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //Delete Device From Driver
-      {
-        "DownstreamPathTemplate": "/v1.0/drivers/devices/{DeviceId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 109
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/drivers/devices/{DeviceId}",
-        "Key": "RemoveDeviceFromDriver",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //Put-Post FcmToken From Driver
-      {
-        "DownstreamPathTemplate": "/v1.0/drivers/UpdateToken/{deviceId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 109
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/drivers/UpdateToken/{deviceId}",
-        "Key": "PutPostFcmTokenFromDriver",
-        "UpstreamHttpMethod": [ "PUT" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Verify Phone from Driver
-      {
-        "DownstreamPathTemplate": "/v1.0/drivers/{number}/{IdentifierId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 109
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/drivers/{number}/{IdentifierId}",
-        "Key": "VerifyPhoneFromDriver",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
       },
 
       //************************* Driver End **************************
@@ -1223,74 +1288,6 @@
       //=============================================================
       //==================== Institutions End =======================
       //=============================================================
-
-
-
-      //=============================================================
-      //====================== Users Start ==========================
-      //=============================================================
-
-      // Users from Users Service
-      {
-        "DownstreamPathTemplate": "/v1.0/users",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 90
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/users",
-        "Key": "UsersFromUserServiceV1",
-        "UpstreamHttpMethod": [ "PUT", "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Get Users By Id from Users Service
-      {
-        "DownstreamPathTemplate": "/v1.0/users/{id}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 90
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/users/{id}",
-        "Key": "UsersByIdFromUserServiceV1",
-        "UpstreamHttpMethod": [ "GET" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      // Delete Users from Users Service
-      {
-        "DownstreamPathTemplate": "/v1.0/users/{userId}",
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
-            "Port": 90
-          }
-        ],
-        "UpstreamPathTemplate": "/v1.0/users/{userId}",
-        "Key": "DeleteUsersFromUserServiceV1",
-        "UpstreamHttpMethod": [ "DELETE" ],
-        "AuthenticationOptions": {
-          "AuthenticationProviderKey": "sessionToken",
-          "AllowedScopes": []
-        }
-      },
-
-      //=============================================================
-      //======================== Users End ==========================
-      //=============================================================
-
 
 
       //=============================================================

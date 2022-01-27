@@ -1,5 +1,125 @@
 {
   "ReRoutes": [
+    //=============================================================
+    //==================== Users Start ============================
+    //=============================================================
+
+    //Verify Number and Device from User Serivice
+    {
+      "DownstreamPathTemplate": "/v1.0/users/{phone}/{uniqueId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/users/{phone}/{uniqueId}",
+      "Key": "VerifyNumberAndDeviceFromUserServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Users from Users Service
+    {
+      "DownstreamPathTemplate": "/v1.0/users",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/users",
+      "Key": "UsersFromUserServiceV1",
+      "UpstreamHttpMethod": [ "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Get Users By Id from Users Service
+    {
+      "DownstreamPathTemplate": "/v1.0/users/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/users/{id}",
+      "Key": "UsersByIdFromUserServiceV1",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Delete Users from Users Service
+    {
+      "DownstreamPathTemplate": "/v1.0/users/{userId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/users/{userId}",
+      "Key": "DeleteUsersFromUserServiceV1",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Post Devices from User Service
+    {
+      "DownstreamPathTemplate": "/v1.0/users/{userId}/devices",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/users/{userId}/devices",
+      "Key": "PostDeviceFromUserServiceV1",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    //Put FcmToken and Delete from User Service
+    {
+      "DownstreamPathTemplate": "/v1.0/users/{userId}/devices/{deviceId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/users/{userId}/devices/{deviceId}",
+      "Key": "PutFcmTokenAndDeleteDeviceFromUserServiceV1",
+      "UpstreamHttpMethod": [ "PUT" , "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+    //=============================================================
+    //========================= Users End =========================
+    //=============================================================
 
     //=============================================================
     //================ Vehicles Service Start =====================
@@ -225,55 +345,73 @@
 
     //************************* Driver Start **************************
     //Driver from vehicle Service
+    //{
+    //  "DownstreamPathTemplate": "/v1.0/drivers",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 54282
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/v1.0/drivers",
+    //  "Key": "DriverFromVehicleServiceV1",
+    //  "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+    //  "AuthenticationOptions": {
+    //    "AuthenticationProviderKey": "sessionToken",
+    //    "AllowedScopes": []
+    //  }
+    //},
+
+    //Delete Driver from vehicle Service
+    //{
+    //  "DownstreamPathTemplate": "/v1.0/drivers/{id}",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 54282
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/v1.0/drivers/{id}",
+    //  "Key": "DeleteDriverFromVehicleServiceV1",
+    //  "UpstreamHttpMethod": [ "DELETE" ],
+    //  "AuthenticationOptions": {
+    //    "AuthenticationProviderKey": "sessionToken",
+    //    "AllowedScopes": []
+    //  }
+    //},
+
+    //Get Driver with id from vehicle Service
+    //{
+    //  "DownstreamPathTemplate": "/v1.0/drivers/{driverId}",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 54282
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/v1.0/drivers/{driverId}",
+    //  "Key": "DriverWithIdFromVehicleServiceV1",
+    //  "UpstreamHttpMethod": [ "GET" ],
+    //  "AuthenticationOptions": {
+    //    "AuthenticationProviderKey": "sessionToken",
+    //    "AllowedScopes": []
+    //  }
+    //},
+    //Get Driver
     {
       "DownstreamPathTemplate": "/v1.0/drivers",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 54282
+          "Port": 5069
         }
       ],
       "UpstreamPathTemplate": "/v1.0/drivers",
-      "Key": "DriverFromVehicleServiceV1",
-      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
-    },
-
-    //Delete Driver from vehicle Service
-    {
-      "DownstreamPathTemplate": "/v1.0/drivers/{id}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 54282
-        }
-      ],
-      "UpstreamPathTemplate": "/v1.0/drivers/{id}",
-      "Key": "DeleteDriverFromVehicleServiceV1",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
-    },
-
-    //Get Driver with id from vehicle Service
-    {
-      "DownstreamPathTemplate": "/v1.0/drivers/{driverId}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 54282
-        }
-      ],
-      "UpstreamPathTemplate": "/v1.0/drivers/{driverId}",
-      "Key": "DriverWithIdFromVehicleServiceV1",
+      "Key": "DriverServiceV1",
       "UpstreamHttpMethod": [ "GET" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "sessionToken",
@@ -281,6 +419,24 @@
       }
     },
 
+    //Get and Delete Driver By Id
+    {
+      "DownstreamPathTemplate": "/v1.0/drivers/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5069
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/drivers/{id}",
+      "Key": "DriverWithIdServiceV1",
+      "UpstreamHttpMethod": [ "GET" , "DELETE" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
     //************************* Driver End **************************
 
     //************************* Manufacturers Start **************************
@@ -1098,74 +1254,6 @@
     //=============================================================
     //==================== Institutions End =======================
     //=============================================================
-
-
-
-    //=============================================================
-    //==================== Users Start ============================
-    //=============================================================
-
-    // Users from Users Service
-    {
-      "DownstreamPathTemplate": "/v1.0/users",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5004
-        }
-      ],
-      "UpstreamPathTemplate": "/v1.0/users",
-      "Key": "UsersFromUserServiceV1",
-      "UpstreamHttpMethod": [ "PUT", "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
-    },
-
-    // Get Users By Id from Users Service
-    {
-      "DownstreamPathTemplate": "/v1.0/users/{id}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 51770
-        }
-      ],
-      "UpstreamPathTemplate": "/v1.0/users/{id}",
-      "Key": "UsersByIdFromUserServiceV1",
-      "UpstreamHttpMethod": [ "GET" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
-    },
-
-    // Delete Users from Users Service
-    {
-      "DownstreamPathTemplate": "/v1.0/users/{userId}",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 51770
-        }
-      ],
-      "UpstreamPathTemplate": "/v1.0/users/{userId}",
-      "Key": "DeleteUsersFromUserServiceV1",
-      "UpstreamHttpMethod": [ "DELETE" ],
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "sessionToken",
-        "AllowedScopes": []
-      }
-    },
-
-    //=============================================================
-    //========================= Users End =========================
-    //=============================================================
-
 
 
     //=============================================================
@@ -2698,7 +2786,7 @@
       ],
       "UpstreamPathTemplate": "/v1.0/terminals/{terminalId}",
       "Key": "DeletePutAndGetTerminalsById",
-      "UpstreamHttpMethod": [ "DELETE" , "GET" , "PUT" ]
+      "UpstreamHttpMethod": [ "DELETE", "GET", "PUT" ]
     },
 
     //=============================================================

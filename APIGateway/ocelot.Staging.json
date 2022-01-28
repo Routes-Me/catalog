@@ -547,6 +547,56 @@
     //=============================================================
 
 
+    //=============================================================
+    //=============== Verifications Service Start =================
+    //=============================================================
+
+
+    // Create Challenge
+    {
+      "DownstreamPathTemplate": "/v1.0/verification-challenges",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 111
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/verification-challenges",
+      "Key": "CreateChallenge",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+    // Verify Challenge
+    {
+      "DownstreamPathTemplate": "/v1.0/verification-challenges/{challenge_id}/verifications",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "vmtprojectstage.uaenorth.cloudapp.azure.com",
+          "Port": 111
+        }
+      ],
+      "UpstreamPathTemplate": "/v1.0/verification-challenges/{challenge_id}/verifications",
+      "Key": "VerifyChallenge",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "sessionToken",
+        "AllowedScopes": []
+      }
+    },
+
+
+
+    //=============================================================
+    //=============== Verifications Service END ===================
+    //=============================================================
+
+
 
     //==============================================================
     //================ Advertisements Service Start ================
